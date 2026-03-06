@@ -260,8 +260,10 @@
   async function fetchSignals() {
     try {
       const data = await fetch('./data/signals.json').then(r => r.json());
-      if (!data.scores || Object.keys(data.scores).length === 0) throw new Error('empty');
-      countryScores = data.scores;
+      const scores = data.composite || data.scores;
+      if (!scores || Object.keys(scores).length === 0) throw new Error('empty');
+      countryScores = scores;
+      console.log('countryScores', countryScores);
       if (geoLayer) geoLayer.setStyle(styleFeature);
       if (data.updated) {
         document.getElementById('updated').textContent =

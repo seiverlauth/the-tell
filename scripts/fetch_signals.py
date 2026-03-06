@@ -2,6 +2,7 @@
 """
 fetch_signals.py
 Fetch RSS feeds, count country mentions, write data/signals.json.
+Outputs layered scores: wire, think_tank, government, plus a weighted composite.
 """
 
 import json
@@ -13,17 +14,40 @@ from pathlib import Path
 
 import feedparser
 
-# ── Feeds ──────────────────────────────────────────────────────────────────────
-FEEDS = [
-    ("AP",        "https://news.google.com/rss/search?q=site%3Aapnews.com&hl=en-US&gl=US&ceid=US%3Aen"),
-    ("Reuters",   "https://news.google.com/rss/search?q=site%3Areuters.com&hl=en-US&gl=US&ceid=US%3Aen"),
-    ("AFP",       "https://news.google.com/rss/search?q=site%3Aafp.com&hl=en-US&gl=US&ceid=US%3Aen"),
-    ("BBC",       "http://feeds.bbci.co.uk/news/world/rss.xml"),
-    ("Al Jazeera","https://www.aljazeera.com/xml/rss/all.xml"),
+# ── Browser User-Agent to avoid blocks ─────────────────────────────────────────
+REQUEST_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
+}
+
+# ── Feeds by layer ─────────────────────────────────────────────────────────────
+WIRE_FEEDS = [
+    ("AP",         "https://news.google.com/rss/search?q=site%3Aapnews.com&hl=en-US&gl=US&ceid=US%3Aen"),
+    ("Reuters",    "https://news.google.com/rss/search?q=site%3Areuters.com&hl=en-US&gl=US&ceid=US%3Aen"),
+    ("AFP",        "https://news.google.com/rss/search?q=site%3Aafp.com&hl=en-US&gl=US&ceid=US%3Aen"),
+    ("BBC",        "http://feeds.bbci.co.uk/news/world/rss.xml"),
+    ("Al Jazeera", "https://www.aljazeera.com/xml/rss/all.xml"),
 ]
 
+THINK_TANK_FEEDS = [
+    ("Atlantic Council", "https://www.atlanticcouncil.org/feed/"),
+]
+
+GOVERNMENT_FEEDS = [
+    ("Congressional Record",       "https://www.congress.gov/rss/congressional-record.xml"),
+    ("GAO Reports",                "https://www.gao.gov/rss/reports.xml"),
+    ("State Dept Press Releases",  "https://www.state.gov/rss-feed/press-releases/feed/"),
+    ("State Dept Sec Remarks",     "https://www.state.gov/rss-feed/secretarys-remarks/feed/"),
+    ("State Dept Travel Advisories","https://travel.state.gov/_res/rss/TAsTWs.xml"),
+]
+
+# Layer weights for composite score
+LAYER_WEIGHTS = {
+    "wire":       1,
+    "think_tank": 2,
+    "government": 3,
+}
+
 # ── Country name → ISO alpha-2 ─────────────────────────────────────────────────
-# Longer/more specific names first to avoid substring false matches.
 COUNTRY_NAMES = {
     "Afghanistan": "AF",
     "Albania": "AL",
@@ -184,7 +208,6 @@ def score_article(entry, feed_name):
     """
     Return list of (iso, weight, feed_name) for a single article.
     Weights: title=3, first quarter of description=2, rest of description=1.
-    Each zone is checked independently — a country can accumulate from multiple zones.
     """
     title  = entry.get("title", "")
     desc   = entry.get("summary", "") or entry.get("description", "")
@@ -204,7 +227,7 @@ def fetch_feed(name, url):
     """Fetch one RSS feed, return list of (iso, weight, feed_name) tuples."""
     hits = []
     try:
-        feed = feedparser.parse(url)
+        feed = feedparser.parse(url, request_headers=REQUEST_HEADERS)
         for entry in feed.entries:
             hits.extend(score_article(entry, name))
         total_weight = sum(w for _, w, _ in hits)
@@ -213,6 +236,18 @@ def fetch_feed(name, url):
     except Exception as exc:
         print("  {}: FAILED — {}".format(name, exc), file=sys.stderr)
     return hits
+
+
+def hits_to_scores(hits):
+    """Convert (iso, weight, feed_name) hits to normalized 0-100 scores and sources dict."""
+    weighted_counts = {}
+    sources = {}
+    for iso, weight, feed_name in hits:
+        weighted_counts[iso] = weighted_counts.get(iso, 0) + weight
+        sources.setdefault(iso, set()).add(feed_name)
+    scores = normalize(weighted_counts)
+    sources_sorted = {iso: sorted(feeds) for iso, feeds in sources.items()}
+    return scores, sources_sorted
 
 
 def normalize(counts):
@@ -225,39 +260,74 @@ def normalize(counts):
     return {iso: round((v - lo) / span * 100) for iso, v in log_counts.items()}
 
 
-def main():
-    print("Fetching feeds...")
+def fetch_layer(feeds, label):
+    print("{}:".format(label))
     all_hits = []
-    for name, url in FEEDS:
+    for name, url in feeds:
         all_hits.extend(fetch_feed(name, url))
+    return all_hits
 
-    # Accumulate weighted counts and sources per country
-    weighted_counts = {}
-    sources = {}
-    for iso, weight, feed_name in all_hits:
-        weighted_counts[iso] = weighted_counts.get(iso, 0) + weight
-        sources.setdefault(iso, set()).add(feed_name)
 
-    scores = normalize(weighted_counts)
+def build_composite(layer_scores):
+    """
+    Weighted blend of layer scores: wire×1 + think_tank×2 + government×3.
+    Missing layers contribute 0. Renormalize to 0-100 with log scale.
+    """
+    all_isos = set()
+    for scores in layer_scores.values():
+        all_isos.update(scores.keys())
+
+    raw = {}
+    for iso in all_isos:
+        total = 0
+        for layer, weight in LAYER_WEIGHTS.items():
+            total += layer_scores.get(layer, {}).get(iso, 0) * weight
+        raw[iso] = total
+
+    return normalize(raw)
+
+
+def main():
+    layer_hits = {}
+    layer_scores = {}
+    layer_sources = {}
+
+    print("Fetching wire feeds...")
+    layer_hits["wire"] = fetch_layer(WIRE_FEEDS, "wire")
+
+    print("Fetching think_tank feeds...")
+    layer_hits["think_tank"] = fetch_layer(THINK_TANK_FEEDS, "think_tank")
+
+    print("Fetching government feeds...")
+    layer_hits["government"] = fetch_layer(GOVERNMENT_FEEDS, "government")
+
+    for layer, hits in layer_hits.items():
+        scores, sources = hits_to_scores(hits)
+        layer_scores[layer] = scores
+        layer_sources[layer] = sources
+
+    composite = build_composite(layer_scores)
 
     # Write output
     out_path = Path(__file__).parent.parent / "data" / "signals.json"
     out_path.parent.mkdir(exist_ok=True)
     payload = {
         "updated": datetime.now(timezone.utc).isoformat(),
-        "scores":  scores,
-        "sources": {iso: sorted(feeds) for iso, feeds in sources.items()},
+        "layers":  layer_scores,
+        "sources": layer_sources,
+        "composite": composite,
     }
+    # index.html reads data.scores — keep composite as scores for backwards compat
+    payload["scores"] = composite
     out_path.write_text(json.dumps(payload, indent=2))
 
     # Summary
-    print("\nDone. {} countries scored.".format(len(scores)))
-    top = sorted(scores.items(), key=lambda x: -x[1])[:10]
-    print("Top 10:")
+    print("\nDone. Composite: {} countries scored.".format(len(composite)))
+    top = sorted(composite.items(), key=lambda x: -x[1])[:10]
+    print("Top 10 composite:")
     for iso, score in top:
         bar = "█" * (score // 5)
-        feeds = ", ".join(sources.get(iso, []))
-        print("  {}  {:>3}  {}  [{}]".format(iso, score, bar, feeds))
+        print("  {}  {:>3}  {}".format(iso, score, bar))
     print("\nWrote {}".format(out_path))
 
 
