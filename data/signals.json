@@ -1,58 +1,63 @@
 {
-  "updated": "2026-03-06T07:51:41.157518+00:00",
+  "updated": "2026-03-06T19:22:55.220214+00:00",
   "layers": {
     "wire": {
       "AZ": 0,
       "IR": 100,
-      "LB": 22,
-      "IL": 63,
-      "RU": 18,
-      "FR": 13,
-      "UA": 37,
+      "IL": 62,
+      "HU": 7,
+      "CN": 41,
+      "LB": 26,
+      "IN": 0,
+      "RU": 36,
+      "UA": 38,
       "PK": 13,
-      "CN": 40,
-      "GB": 7,
-      "LK": 7,
-      "KW": 7,
-      "CU": 0,
-      "VE": 0,
-      "AE": 0,
-      "HU": 0,
-      "IQ": 0
+      "FR": 18,
+      "GB": 0,
+      "VE": 7,
+      "ID": 7,
+      "SY": 0,
+      "QA": 0,
+      "FI": 0,
+      "AU": 7,
+      "PS": 0
     },
     "think_tank": {
-      "UA": 75,
       "IR": 100,
-      "CN": 16,
-      "RU": 53,
-      "IL": 16,
+      "UA": 73,
+      "CN": 0,
+      "RU": 52,
+      "IL": 0,
       "MX": 0
     },
     "government": {
-      "AR": 5,
+      "AE": 13,
       "US": 100,
-      "CD": 19,
-      "FR": 0,
-      "QA": 5,
-      "KW": 25,
-      "CA": 0,
-      "AE": 9,
       "SA": 5,
-      "IR": 37,
+      "IL": 0,
+      "KW": 29,
+      "QA": 9,
+      "OM": 0,
+      "RW": 0,
+      "CD": 27,
+      "AR": 5,
+      "FR": 0,
+      "CA": 0,
+      "IR": 34,
       "BG": 0,
       "VE": 5,
       "UA": 0,
       "RU": 5,
-      "CN": 22,
+      "CN": 24,
       "JP": 5,
       "YE": 0,
       "SY": 5,
-      "GN": 25,
+      "GN": 27,
       "ML": 0,
       "NE": 5,
-      "SD": 13,
-      "CO": 5,
-      "LY": 5,
+      "CO": 0,
+      "SD": 9,
+      "LY": 0,
       "MM": 0
     }
   },
@@ -70,13 +75,6 @@
         "BBC",
         "Reuters"
       ],
-      "LB": [
-        "AFP",
-        "AP",
-        "Al Jazeera",
-        "BBC",
-        "Reuters"
-      ],
       "IL": [
         "AFP",
         "AP",
@@ -84,18 +82,37 @@
         "BBC",
         "Reuters"
       ],
-      "RU": [
+      "HU": [
         "AP",
         "BBC",
         "Reuters"
       ],
-      "FR": [
+      "CN": [
+        "AFP",
         "AP",
+        "Al Jazeera",
+        "BBC",
+        "Reuters"
+      ],
+      "LB": [
+        "AFP",
+        "AP",
+        "Al Jazeera",
+        "Reuters"
+      ],
+      "IN": [
+        "AP",
+        "Reuters"
+      ],
+      "RU": [
+        "AP",
+        "Al Jazeera",
         "Reuters"
       ],
       "UA": [
         "AFP",
         "AP",
+        "Al Jazeera",
         "BBC",
         "Reuters"
       ],
@@ -103,52 +120,53 @@
         "AFP",
         "AP"
       ],
-      "CN": [
+      "FR": [
         "AFP",
         "AP",
-        "BBC",
         "Reuters"
       ],
       "GB": [
         "AP",
         "Reuters"
       ],
-      "LK": [
-        "AFP",
-        "AP",
-        "Reuters"
-      ],
-      "KW": [
-        "AP",
-        "Al Jazeera",
-        "Reuters"
-      ],
-      "CU": [
-        "AP",
-        "Al Jazeera",
-        "Reuters"
-      ],
       "VE": [
+        "AP",
         "BBC",
         "Reuters"
       ],
-      "AE": [
-        "Reuters"
-      ],
-      "HU": [
+      "ID": [
+        "AP",
         "BBC",
         "Reuters"
       ],
-      "IQ": [
+      "SY": [
         "AFP",
         "Reuters"
+      ],
+      "QA": [
+        "Al Jazeera",
+        "Reuters"
+      ],
+      "FI": [
+        "BBC",
+        "Reuters"
+      ],
+      "AU": [
+        "AFP",
+        "Al Jazeera",
+        "BBC",
+        "Reuters"
+      ],
+      "PS": [
+        "AFP",
+        "Al Jazeera"
       ]
     },
     "think_tank": {
-      "UA": [
+      "IR": [
         "Atlantic Council"
       ],
-      "IR": [
+      "UA": [
         "Atlantic Council"
       ],
       "CN": [
@@ -165,40 +183,12 @@
       ]
     },
     "government": {
-      "AR": [
+      "AE": [
         "State Dept Press Releases",
+        "State Dept Sec Remarks",
         "State Dept Travel Advisories"
       ],
       "US": [
-        "State Dept Press Releases",
-        "State Dept Sec Remarks",
-        "State Dept Travel Advisories"
-      ],
-      "CD": [
-        "State Dept Press Releases",
-        "State Dept Travel Advisories"
-      ],
-      "FR": [
-        "State Dept Press Releases",
-        "State Dept Sec Remarks",
-        "State Dept Travel Advisories"
-      ],
-      "QA": [
-        "State Dept Press Releases",
-        "State Dept Sec Remarks",
-        "State Dept Travel Advisories"
-      ],
-      "KW": [
-        "State Dept Press Releases",
-        "State Dept Sec Remarks",
-        "State Dept Travel Advisories"
-      ],
-      "CA": [
-        "State Dept Press Releases",
-        "State Dept Sec Remarks",
-        "State Dept Travel Advisories"
-      ],
-      "AE": [
         "State Dept Press Releases",
         "State Dept Sec Remarks",
         "State Dept Travel Advisories"
@@ -208,8 +198,50 @@
         "State Dept Sec Remarks",
         "State Dept Travel Advisories"
       ],
-      "IR": [
+      "IL": [
         "State Dept Press Releases",
+        "State Dept Sec Remarks",
+        "State Dept Travel Advisories"
+      ],
+      "KW": [
+        "State Dept Press Releases",
+        "State Dept Sec Remarks",
+        "State Dept Travel Advisories"
+      ],
+      "QA": [
+        "State Dept Press Releases",
+        "State Dept Sec Remarks",
+        "State Dept Travel Advisories"
+      ],
+      "OM": [
+        "State Dept Press Releases",
+        "State Dept Travel Advisories"
+      ],
+      "RW": [
+        "State Dept Press Releases",
+        "State Dept Sec Remarks",
+        "State Dept Travel Advisories"
+      ],
+      "CD": [
+        "State Dept Press Releases",
+        "State Dept Sec Remarks",
+        "State Dept Travel Advisories"
+      ],
+      "AR": [
+        "State Dept Press Releases",
+        "State Dept Travel Advisories"
+      ],
+      "FR": [
+        "State Dept Press Releases",
+        "State Dept Sec Remarks",
+        "State Dept Travel Advisories"
+      ],
+      "CA": [
+        "State Dept Press Releases",
+        "State Dept Sec Remarks",
+        "State Dept Travel Advisories"
+      ],
+      "IR": [
         "State Dept Sec Remarks",
         "State Dept Travel Advisories"
       ],
@@ -252,10 +284,10 @@
       "NE": [
         "State Dept Travel Advisories"
       ],
-      "SD": [
+      "CO": [
         "State Dept Travel Advisories"
       ],
-      "CO": [
+      "SD": [
         "State Dept Travel Advisories"
       ],
       "LY": [
@@ -267,57 +299,55 @@
     }
   },
   "composite": {
-    "FR": 14,
-    "VE": 18,
-    "QA": 18,
-    "LY": 18,
-    "KW": 59,
-    "LK": 0,
-    "LB": 27,
-    "CO": 18,
-    "SY": 18,
-    "PK": 14,
-    "RU": 73,
-    "JP": 18,
-    "CD": 50,
-    "GB": 0,
-    "US": 92,
-    "GN": 57,
-    "IL": 63,
-    "UA": 80,
-    "CN": 72,
-    "AE": 32,
+    "VE": 27,
+    "KW": 61,
+    "GN": 59,
+    "FR": 22,
+    "RU": 76,
+    "ID": 0,
+    "LB": 31,
     "SA": 18,
+    "CN": 68,
+    "SD": 32,
+    "JP": 18,
+    "UA": 80,
+    "CD": 59,
     "NE": 18,
-    "SD": 41,
+    "IR": 100,
+    "AE": 41,
+    "IL": 53,
+    "SY": 18,
+    "US": 93,
+    "QA": 32,
+    "PK": 14,
+    "AU": 0,
     "AR": 18,
-    "IR": 100
+    "HU": 0
   },
   "scores": {
-    "FR": 14,
-    "VE": 18,
-    "QA": 18,
-    "LY": 18,
-    "KW": 59,
-    "LK": 0,
-    "LB": 27,
-    "CO": 18,
-    "SY": 18,
-    "PK": 14,
-    "RU": 73,
-    "JP": 18,
-    "CD": 50,
-    "GB": 0,
-    "US": 92,
-    "GN": 57,
-    "IL": 63,
-    "UA": 80,
-    "CN": 72,
-    "AE": 32,
+    "VE": 27,
+    "KW": 61,
+    "GN": 59,
+    "FR": 22,
+    "RU": 76,
+    "ID": 0,
+    "LB": 31,
     "SA": 18,
+    "CN": 68,
+    "SD": 32,
+    "JP": 18,
+    "UA": 80,
+    "CD": 59,
     "NE": 18,
-    "SD": 41,
+    "IR": 100,
+    "AE": 41,
+    "IL": 53,
+    "SY": 18,
+    "US": 93,
+    "QA": 32,
+    "PK": 14,
+    "AU": 0,
     "AR": 18,
-    "IR": 100
+    "HU": 0
   }
 }
