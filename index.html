@@ -88,7 +88,7 @@
     #legend-label { font-size: 10px; color: #999; }
     #legend-bar {
       width: 160px; height: 4px; border-radius: 2px;
-      background: linear-gradient(to right, #4a9e4a, #f5d000, #f57600, #cc0000);
+      background: linear-gradient(to right, #e8edf2, #a8b8cc, #5878a0, #2a4a7a, #0a1628);
     }
     #legend-ticks {
       display: flex; justify-content: space-between;
@@ -150,8 +150,8 @@
 
   // ── Color scale: muted green → yellow → red ───────────────────────────────
   const colorScale = d3.scaleLinear()
-    .domain([0, 33, 66, 100])
-    .range(['#4a9e4a', '#f5d000', '#f57600', '#cc0000']);
+    .domain([0, 25, 50, 75, 100])
+    .range(['#e8edf2', '#a8b8cc', '#5878a0', '#2a4a7a', '#0a1628']);
 
   function scoreToColor(score) { return colorScale(score); }
 
@@ -227,7 +227,7 @@
     const iso = getCountryISO(feature);
     const score = iso != null ? countryScores[iso] : undefined;
     return {
-      fillColor: score != null ? scoreToColor(score) : '#e8e8e8',
+      fillColor: score != null ? scoreToColor(score) : '#f0f0f0',
       fillOpacity: 1,
       color: '#ccc',
       weight: 0.5,
@@ -244,7 +244,7 @@
             const iso = getCountryISO(feature);
             const score = iso != null ? countryScores[iso] : undefined;
             e.target.setStyle({
-              fillColor: score != null ? scoreToColor(score) : '#d4d4d4',
+              fillColor: score != null ? scoreToColor(score) : '#e0e0e0',
               weight: 1.5,
               color: '#888',
             });
