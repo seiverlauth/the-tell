@@ -289,107 +289,44 @@
       '?query=%28war%20OR%20conflict%20OR%20military%20OR%20crisis%29' +
       '&mode=artlist&maxrecords=250&timespan=24h&format=json';
 
-    console.log('[GDELT] requesting:', GDELT_URL);
-
-    let resp;
+    let resp, text, raw;
     try {
       resp = await fetch(GDELT_URL);
-    } catch (err) {
-      console.error('[GDELT] fetch() threw — network error or CORS block:', err);
-      document.getElementById('error-banner').style.display = 'block';
-      return;
-    }
-
-    console.log('[GDELT] response status:', resp.status, resp.statusText);
-    console.log('[GDELT] response headers:', Object.fromEntries(resp.headers.entries()));
-
-    let text;
-    try {
       text = await resp.text();
+      raw  = JSON.parse(text);
     } catch (err) {
-      console.error('[GDELT] failed to read response body:', err);
       document.getElementById('error-banner').style.display = 'block';
       return;
-    }
-
-    console.log('[GDELT] raw response text (first 2000 chars):', text.slice(0, 2000));
-
-    let raw;
-    try {
-      raw = JSON.parse(text);
-    } catch (err) {
-      console.error('[GDELT] JSON.parse failed:', err);
-      console.error('[GDELT] unparseable body:', text);
-      document.getElementById('error-banner').style.display = 'block';
-      return;
-    }
-
-    console.log('[GDELT] parsed JSON:', raw);
-    console.log('[GDELT] top-level keys:', Object.keys(raw));
-    console.log('[GDELT] has "articles" key:', 'articles' in raw);
-    console.log('[GDELT] articles is array:', Array.isArray(raw.articles));
-    if (Array.isArray(raw.articles)) {
-      console.log('[GDELT] articles.length:', raw.articles.length);
-      if (raw.articles.length > 0) {
-        console.log('[GDELT] articles[0] sample:', raw.articles[0]);
-        console.log('[GDELT] articles[0] keys:', Object.keys(raw.articles[0]));
-      }
     }
 
     const scores = parseGDELT(raw);
-
-    console.log('[GDELT] parseGDELT output:', scores);
-    console.log('[GDELT] scored country count:', Object.keys(scores).length);
-
     if (Object.keys(scores).length === 0) {
-      console.warn('[GDELT] 0 countries after parsing — raw structure for inspection:', raw);
       document.getElementById('error-banner').style.display = 'block';
       return;
     }
 
     countryScores = scores;
-    console.log('[GDELT] countryScores loaded, count:', Object.keys(countryScores).length);
     if (geoLayer) geoLayer.setStyle(styleFeature);
   }
 
   function parseGDELT(raw) {
-    if (!raw || !Array.isArray(raw.articles)) {
-      console.warn('[GDELT:parse] no articles array — raw:', raw);
-      return {};
-    }
+    if (!raw || !Array.isArray(raw.articles)) return {};
 
-    // Count articles per source country (FIPS code)
     const counts = {};
     for (const article of raw.articles) {
       const fips = article.sourcecountry;
       if (fips) counts[fips] = (counts[fips] || 0) + 1;
     }
 
-    console.log('[GDELT:parse] article counts by FIPS (', Object.keys(counts).length, 'countries):', counts);
-
-    // Map FIPS → ISO
     const isoTotals = {};
-    const unmapped = [];
     for (const [fips, count] of Object.entries(counts)) {
       const iso = FIPS_TO_ISO[fips];
-      if (iso) {
-        isoTotals[iso] = (isoTotals[iso] || 0) + count;
-      } else {
-        unmapped.push(fips);
-      }
+      if (iso) isoTotals[iso] = (isoTotals[iso] || 0) + count;
     }
 
-    console.log('[GDELT:parse] ISO totals (', Object.keys(isoTotals).length, 'countries):', isoTotals);
-    if (unmapped.length) console.warn('[GDELT:parse] unmapped FIPS codes:', unmapped);
-
-    // Normalize to 0–100
     const vals = Object.values(isoTotals);
-    if (!vals.length) {
-      console.warn('[GDELT:parse] isoTotals is empty after FIPS mapping');
-      return {};
-    }
+    if (!vals.length) return {};
     const min = Math.min(...vals), max = Math.max(...vals), range = max - min || 1;
-    console.log('[GDELT:parse] normalization — min:', min, 'max:', max, 'range:', range);
     return Object.fromEntries(
       Object.entries(isoTotals).map(([iso, v]) => [iso, Math.round((v - min) / range * 100)])
     );
