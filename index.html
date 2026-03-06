@@ -88,7 +88,7 @@
     #legend-label { font-size: 10px; color: #999; }
     #legend-bar {
       width: 160px; height: 4px; border-radius: 2px;
-      background: linear-gradient(to right, #ffffff, #ffdd00, #ff6600, #cc0000);
+      background: linear-gradient(to right, #4a9e4a, #f5d000, #f57600, #cc0000);
     }
     #legend-ticks {
       display: flex; justify-content: space-between;
@@ -151,7 +151,7 @@
   // ── Color scale: muted green → yellow → red ───────────────────────────────
   const colorScale = d3.scaleLinear()
     .domain([0, 33, 66, 100])
-    .range(['#ffffff', '#ffdd00', '#ff6600', '#cc0000']);
+    .range(['#4a9e4a', '#f5d000', '#f57600', '#cc0000']);
 
   function scoreToColor(score) { return colorScale(score); }
 
