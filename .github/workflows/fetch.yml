@@ -33,6 +33,6 @@ jobs:
           git pull origin main --rebase
           git add data/signals.json
           git commit -m "update signals [skip ci]" || echo "nothing to commit"
-          git push origin main
+          git push origin main --force-with-lease
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
