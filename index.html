@@ -115,6 +115,7 @@
 
 <header>
   <h1>Conflict and Regional Event Signal Tracker</h1>
+  <span id="updated"></span>
 </header>
 
 <div id="map-container">
@@ -144,36 +145,8 @@
 </div>
 
 <script>
-  // ── Active scores: ISO alpha-2 → 0–100, populated from GDELT ──────────────
+  // ── Active scores: ISO alpha-2 → 0–100, populated from signals.json ────────
   let countryScores = {};
-
-  // ── FIPS 10-4 → ISO alpha-2 (GDELT returns FIPS codes) ────────────────────
-  const FIPS_TO_ISO = {
-    'AF':'AF','AL':'AL','AG':'DZ','AO':'AO','AR':'AR','AS':'AU','AU':'AT',
-    'BA':'BH','BC':'BW','BE':'BE','BG':'BD','BK':'BA','BL':'BO','BM':'MM',
-    'BN':'BJ','BO':'BY','BR':'BR','BT':'BT','BU':'BG','BY':'BI','CA':'CA',
-    'CB':'KH','CD':'TD','CE':'LK','CF':'CG','CG':'CD','CH':'CN','CI':'CL',
-    'CM':'CM','CO':'CO','CS':'CR','CT':'CF','CU':'CU','CV':'CV','CY':'CY',
-    'CZ':'CZ','DA':'DK','DR':'DO','EC':'EC','EG':'EG','EI':'IE','EK':'GQ',
-    'EN':'EE','ER':'ER','ET':'ET','EZ':'CZ','FI':'FI','FJ':'FJ','FR':'FR',
-    'GA':'GM','GB':'GA','GG':'GE','GH':'GH','GL':'GL','GM':'DE','GN':'GN',
-    'GR':'GR','GT':'GT','GV':'GW','GY':'GY','HA':'HT','HO':'HN','HU':'HU',
-    'IC':'IS','ID':'ID','IN':'IN','IR':'IR','IS':'IL','IT':'IT','IV':'CI',
-    'IZ':'IQ','JA':'JP','JM':'JM','JO':'JO','KE':'KE','KG':'KG','KN':'KP',
-    'KS':'KR','KU':'KW','KZ':'KZ','LA':'LA','LE':'LB','LG':'LV','LH':'LT',
-    'LI':'LR','LO':'SK','LT':'LS','LU':'LU','LY':'LY','MA':'MG','MC':'MO',
-    'MD':'MD','MG':'MN','MI':'MW','MK':'MK','ML':'ML','MN':'MC','MO':'MA',
-    'MP':'MU','MR':'MR','MT':'MT','MU':'OM','MV':'MV','MX':'MX','MY':'MY',
-    'MZ':'MZ','NG':'NE','NI':'NG','NL':'NL','NO':'NO','NP':'NP','NS':'SR',
-    'NU':'NI','NZ':'NZ','PA':'PG','PE':'PE','PK':'PK','PL':'PL','PM':'PA',
-    'PO':'PL','PU':'GW','QA':'QA','RI':'RS','RO':'RO','RP':'PH','RS':'RU',
-    'RW':'RW','SA':'SA','SE':'SC','SF':'ZA','SG':'SN','SI':'SI','SL':'SL',
-    'SM':'SM','SN':'SG','SO':'SO','SP':'ES','SS':'SS','SU':'SD','SW':'SE',
-    'SY':'SY','SZ':'SZ','TD':'TT','TH':'TH','TI':'TJ','TN':'TO','TO':'TG',
-    'TP':'TL','TS':'TN','TU':'TR','TX':'TM','TW':'TW','TZ':'TZ','UG':'UG',
-    'UK':'GB','UP':'UA','US':'US','UY':'UY','UZ':'UZ','VE':'VE','VM':'VN',
-    'WA':'NA','WE':'PS','WS':'WS','YM':'YE','ZA':'ZM','ZI':'ZW',
-  };
 
   // ── Color scale: muted green → yellow → red ───────────────────────────────
   const colorScale = d3.scaleLinear()
@@ -217,10 +190,10 @@
 
   let geoLayer = null;
 
-  // ── Load topojson lib, then geo data, then GDELT ───────────────────────────
+  // ── Load topojson lib, then geo data, then signals ────────────────────────
   const script = document.createElement('script');
   script.src = 'https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js';
-  script.onload = () => fetchGeoData().then(fetchGDELT);
+  script.onload = () => fetchGeoData().then(fetchSignals);
   document.head.appendChild(script);
 
   async function fetchGeoData() {
@@ -283,53 +256,20 @@
     }).addTo(map);
   }
 
-  // ── GDELT fetch ────────────────────────────────────────────────────────────
-  async function fetchGDELT() {
-    const GDELT_URL = 'https://api.gdeltproject.org/api/v2/doc/doc' +
-      '?query=%28war%20OR%20conflict%20OR%20military%20OR%20crisis%29' +
-      '&mode=artlist&maxrecords=250&timespan=24h&format=json';
-
-    let resp, text, raw;
+  // ── Fetch signals.json ─────────────────────────────────────────────────────
+  async function fetchSignals() {
     try {
-      resp = await fetch(GDELT_URL);
-      text = await resp.text();
-      raw  = JSON.parse(text);
+      const data = await fetch('./data/signals.json').then(r => r.json());
+      if (!data.scores || Object.keys(data.scores).length === 0) throw new Error('empty');
+      countryScores = data.scores;
+      if (geoLayer) geoLayer.setStyle(styleFeature);
+      if (data.updated) {
+        document.getElementById('updated').textContent =
+          'Updated ' + new Date(data.updated).toLocaleString();
+      }
     } catch (err) {
       document.getElementById('error-banner').style.display = 'block';
-      return;
     }
-
-    const scores = parseGDELT(raw);
-    if (Object.keys(scores).length === 0) {
-      document.getElementById('error-banner').style.display = 'block';
-      return;
-    }
-
-    countryScores = scores;
-    if (geoLayer) geoLayer.setStyle(styleFeature);
-  }
-
-  function parseGDELT(raw) {
-    if (!raw || !Array.isArray(raw.articles)) return {};
-
-    const counts = {};
-    for (const article of raw.articles) {
-      const fips = article.sourcecountry;
-      if (fips) counts[fips] = (counts[fips] || 0) + 1;
-    }
-
-    const isoTotals = {};
-    for (const [fips, count] of Object.entries(counts)) {
-      const iso = FIPS_TO_ISO[fips];
-      if (iso) isoTotals[iso] = (isoTotals[iso] || 0) + count;
-    }
-
-    const vals = Object.values(isoTotals);
-    if (!vals.length) return {};
-    const min = Math.min(...vals), max = Math.max(...vals), range = max - min || 1;
-    return Object.fromEntries(
-      Object.entries(isoTotals).map(([iso, v]) => [iso, Math.round((v - min) / range * 100)])
-    );
   }
 
   // ── Panel ──────────────────────────────────────────────────────────────────
@@ -351,7 +291,7 @@
       panelScore.style.color    = scoreToColor(score);
       panelFill.style.width     = score + '%';
       panelFill.style.background = scoreToColor(score);
-      panelDesc.textContent     = 'Coverage volume from GDELT 24h news index. Normalized 0–100 across all countries.';
+      panelDesc.textContent     = 'News mention volume from RSS feeds, normalized 0–100 across all countries in the current window.';
     } else {
       panelScore.textContent    = '—';
       panelScore.style.color    = '#111';
