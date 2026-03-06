@@ -96,6 +96,7 @@ COUNTRY_NAMES = {
     "France": "FR",
     "Gaza": "PS",
     "Georgia": "GE",
+    "Greenland": "GL",
     "Germany": "DE",
     "Ghana": "GH",
     "Greece": "GR",
