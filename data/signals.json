@@ -1,28 +1,24 @@
 {
-  "updated": "2026-03-07T20:28:37.475635+00:00",
+  "updated": "2026-03-07T20:51:27.910008+00:00",
   "layers": {
     "wire": {
+      "IL": 63,
       "HU": 0,
       "RU": 19,
       "IR": 100,
       "CN": 34,
-      "IL": 62,
       "LK": 14,
       "LB": 27,
-      "IN": 31,
+      "IN": 34,
       "PK": 14,
-      "CU": 27,
+      "CU": 31,
       "AF": 0,
-      "KW": 8,
-      "VE": 8,
-      "GB": 0,
-      "FR": 8,
+      "KW": 7,
+      "VE": 7,
+      "PS": 14,
       "TR": 0,
       "UA": 19,
-      "US": 8,
-      "PS": 14,
-      "IQ": 0,
-      "SY": 0,
+      "US": 7,
       "NZ": 0
     },
     "think_tank": {
@@ -68,6 +64,12 @@
   },
   "sources": {
     "wire": {
+      "IL": [
+        "AFP",
+        "AP",
+        "Al Jazeera",
+        "Reuters"
+      ],
       "HU": [
         "AP",
         "BBC",
@@ -91,12 +93,6 @@
         "BBC",
         "Reuters"
       ],
-      "IL": [
-        "AFP",
-        "AP",
-        "Al Jazeera",
-        "Reuters"
-      ],
       "LK": [
         "AFP",
         "AP",
@@ -109,6 +105,7 @@
         "Reuters"
       ],
       "IN": [
+        "AFP",
         "AP",
         "Al Jazeera",
         "Reuters"
@@ -136,14 +133,10 @@
         "BBC",
         "Reuters"
       ],
-      "GB": [
-        "AP",
-        "BBC",
-        "Reuters"
-      ],
-      "FR": [
+      "PS": [
         "AFP",
-        "AP"
+        "Al Jazeera",
+        "Reuters"
       ],
       "TR": [
         "AFP",
@@ -151,6 +144,7 @@
       ],
       "UA": [
         "AFP",
+        "Al Jazeera",
         "BBC",
         "Reuters"
       ],
@@ -158,21 +152,6 @@
         "AFP",
         "Al Jazeera",
         "BBC",
-        "Reuters"
-      ],
-      "PS": [
-        "AFP",
-        "Al Jazeera",
-        "Reuters"
-      ],
-      "IQ": [
-        "AFP",
-        "Al Jazeera",
-        "Reuters"
-      ],
-      "SY": [
-        "AFP",
-        "Al Jazeera",
         "Reuters"
       ],
       "NZ": [
@@ -328,63 +307,61 @@
     }
   },
   "composite": {
-    "CD": 55,
-    "VE": 26,
-    "GN": 55,
-    "NE": 15,
-    "IL": 51,
-    "CU": 30,
-    "AZ": 15,
-    "LK": 13,
-    "KW": 48,
-    "FR": 0,
-    "LY": 15,
-    "JP": 15,
-    "UA": 78,
-    "SY": 15,
-    "PS": 13,
-    "AR": 37,
-    "US": 93,
+    "AE": 19,
+    "US": 91,
+    "NE": 2,
+    "SD": 27,
+    "GN": 48,
+    "IL": 44,
+    "CO": 2,
+    "PS": 0,
     "IR": 100,
-    "CO": 15,
-    "AE": 30,
-    "LB": 30,
-    "PK": 13,
-    "SD": 37,
-    "CN": 71,
-    "IN": 33,
-    "OM": 15,
-    "RU": 74,
-    "QA": 15
+    "LY": 2,
+    "CN": 66,
+    "SY": 2,
+    "LK": 0,
+    "JP": 2,
+    "LB": 19,
+    "VE": 13,
+    "OM": 2,
+    "KW": 40,
+    "AR": 27,
+    "RU": 70,
+    "CU": 23,
+    "PK": 0,
+    "IN": 26,
+    "UA": 74,
+    "AZ": 2,
+    "QA": 2,
+    "CD": 48
   },
   "scores": {
-    "CD": 55,
-    "VE": 26,
-    "GN": 55,
-    "NE": 15,
-    "IL": 51,
-    "CU": 30,
-    "AZ": 15,
-    "LK": 13,
-    "KW": 48,
-    "FR": 0,
-    "LY": 15,
-    "JP": 15,
-    "UA": 78,
-    "SY": 15,
-    "PS": 13,
-    "AR": 37,
-    "US": 93,
+    "AE": 19,
+    "US": 91,
+    "NE": 2,
+    "SD": 27,
+    "GN": 48,
+    "IL": 44,
+    "CO": 2,
+    "PS": 0,
     "IR": 100,
-    "CO": 15,
-    "AE": 30,
-    "LB": 30,
-    "PK": 13,
-    "SD": 37,
-    "CN": 71,
-    "IN": 33,
-    "OM": 15,
-    "RU": 74,
-    "QA": 15
+    "LY": 2,
+    "CN": 66,
+    "SY": 2,
+    "LK": 0,
+    "JP": 2,
+    "LB": 19,
+    "VE": 13,
+    "OM": 2,
+    "KW": 40,
+    "AR": 27,
+    "RU": 70,
+    "CU": 23,
+    "PK": 0,
+    "IN": 26,
+    "UA": 74,
+    "AZ": 2,
+    "QA": 2,
+    "CD": 48
   }
 }
