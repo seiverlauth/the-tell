@@ -1,22 +1,21 @@
 {
-  "updated": "2026-03-11T14:27:33.020509+00:00",
+  "updated": "2026-03-11T15:24:49.577032+00:00",
   "layers": {
     "wire": {
       "IR": 100,
-      "CD": 0,
-      "RU": 29,
+      "GB": 18,
+      "CD": 13,
+      "RU": 26,
       "AU": 13,
       "LK": 0,
-      "LB": 13,
-      "IL": 66,
+      "LB": 18,
+      "IL": 65,
       "GE": 7,
       "KR": 0,
-      "ES": 0,
-      "GB": 13,
+      "CN": 40,
       "IT": 0,
       "FR": 0,
-      "CN": 42,
-      "UA": 18,
+      "UA": 22,
       "TH": 0,
       "IN": 0,
       "KP": 0,
@@ -24,12 +23,12 @@
       "PS": 7
     },
     "think_tank": {
-      "TR": 14,
       "IR": 100,
-      "RU": 46,
-      "UA": 61,
-      "CN": 14,
-      "IL": 0,
+      "IL": 13,
+      "TR": 13,
+      "RU": 45,
+      "UA": 60,
+      "CN": 13,
       "MX": 0
     },
     "government": {
@@ -37,9 +36,9 @@
       "US": 100,
       "FR": 10,
       "GB": 0,
-      "IR": 51,
+      "IR": 53,
       "SA": 0,
-      "AF": 24,
+      "AF": 25,
       "IQ": 0,
       "CL": 10,
       "AE": 5,
@@ -52,13 +51,13 @@
       "BG": 0,
       "VE": 0,
       "UA": 0,
-      "CN": 24,
+      "CN": 25,
       "YE": 0,
       "SY": 0,
-      "GN": 27,
+      "GN": 28,
       "ML": 0,
       "NE": 5,
-      "CO": 5,
+      "CO": 0,
       "LY": 0,
       "MM": 0
     }
@@ -72,9 +71,17 @@
         "BBC",
         "Reuters"
       ],
+      "GB": [
+        "AP",
+        "Al Jazeera",
+        "BBC",
+        "Reuters"
+      ],
       "CD": [
         "AP",
-        "Al Jazeera"
+        "Al Jazeera",
+        "BBC",
+        "Reuters"
       ],
       "RU": [
         "AP",
@@ -94,7 +101,8 @@
       ],
       "LB": [
         "AFP",
-        "AP"
+        "AP",
+        "Reuters"
       ],
       "IL": [
         "AFP",
@@ -111,12 +119,8 @@
         "AP",
         "Reuters"
       ],
-      "ES": [
-        "AP",
-        "Al Jazeera",
-        "Reuters"
-      ],
-      "GB": [
+      "CN": [
+        "AFP",
         "AP",
         "Al Jazeera",
         "BBC",
@@ -130,13 +134,6 @@
       "FR": [
         "AFP",
         "AP"
-      ],
-      "CN": [
-        "AFP",
-        "AP",
-        "Al Jazeera",
-        "BBC",
-        "Reuters"
       ],
       "UA": [
         "AFP",
@@ -168,10 +165,13 @@
       ]
     },
     "think_tank": {
-      "TR": [
+      "IR": [
         "Atlantic Council"
       ],
-      "IR": [
+      "IL": [
+        "Atlantic Council"
+      ],
+      "TR": [
         "Atlantic Council"
       ],
       "RU": [
@@ -181,9 +181,6 @@
         "Atlantic Council"
       ],
       "CN": [
-        "Atlantic Council"
-      ],
-      "IL": [
         "Atlantic Council"
       ],
       "MX": [
@@ -310,51 +307,49 @@
     }
   },
   "composite": {
-    "AE": 17,
-    "FR": 34,
-    "IL": 58,
-    "AF": 55,
-    "US": 90,
-    "GN": 58,
+    "CD": 48,
+    "PS": 0,
+    "LB": 21,
+    "CN": 71,
     "UA": 71,
-    "GB": 14,
-    "TR": 32,
+    "RU": 74,
     "NE": 17,
-    "CL": 34,
+    "GB": 21,
+    "FR": 33,
+    "CL": 33,
+    "TR": 30,
+    "AF": 56,
+    "GN": 58,
     "IQ": 0,
     "SD": 48,
-    "CD": 42,
-    "PS": 0,
-    "CO": 17,
-    "GE": 0,
-    "RU": 75,
-    "CN": 71,
     "IR": 100,
-    "AU": 14,
-    "LB": 14
+    "US": 90,
+    "GE": 0,
+    "IL": 64,
+    "AE": 17,
+    "AU": 14
   },
   "scores": {
-    "AE": 17,
-    "FR": 34,
-    "IL": 58,
-    "AF": 55,
-    "US": 90,
-    "GN": 58,
+    "CD": 48,
+    "PS": 0,
+    "LB": 21,
+    "CN": 71,
     "UA": 71,
-    "GB": 14,
-    "TR": 32,
+    "RU": 74,
     "NE": 17,
-    "CL": 34,
+    "GB": 21,
+    "FR": 33,
+    "CL": 33,
+    "TR": 30,
+    "AF": 56,
+    "GN": 58,
     "IQ": 0,
     "SD": 48,
-    "CD": 42,
-    "PS": 0,
-    "CO": 17,
-    "GE": 0,
-    "RU": 75,
-    "CN": 71,
     "IR": 100,
-    "AU": 14,
-    "LB": 14
+    "US": 90,
+    "GE": 0,
+    "IL": 64,
+    "AE": 17,
+    "AU": 14
   }
 }
