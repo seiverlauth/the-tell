@@ -1,27 +1,26 @@
 {
-  "updated": "2026-03-12T15:31:51.832820+00:00",
+  "updated": "2026-03-12T17:00:06.133475+00:00",
   "layers": {
     "wire": {
       "ET": 0,
       "IR": 100,
       "GE": 7,
-      "RU": 22,
-      "AU": 7,
-      "IL": 50,
-      "CN": 43,
-      "JP": 0,
+      "RU": 18,
+      "AU": 0,
+      "IL": 47,
+      "CN": 38,
       "LB": 0,
-      "IN": 7,
-      "GB": 0,
-      "UA": 22
+      "IN": 13,
+      "PK": 0,
+      "UA": 18
     },
     "think_tank": {
-      "US": 0,
+      "TR": 23,
       "IR": 100,
+      "US": 0,
       "IL": 13,
-      "TR": 13,
-      "RU": 45,
-      "UA": 55,
+      "RU": 44,
+      "UA": 54,
       "CN": 13,
       "MX": 0
     },
@@ -31,23 +30,24 @@
       "AE": 0,
       "FR": 5,
       "GB": 0,
-      "IR": 49,
-      "AF": 22,
+      "IR": 45,
+      "AF": 20,
       "IQ": 0,
-      "CL": 10,
-      "RU": 5,
-      "SD": 14,
-      "CD": 14,
+      "CL": 9,
+      "RU": 9,
+      "SD": 17,
+      "CD": 13,
       "BG": 0,
       "YE": 0,
       "SY": 0,
-      "GN": 28,
+      "GN": 26,
       "ML": 0,
       "NE": 5,
-      "CO": 0,
-      "LY": 0,
+      "UA": 0,
+      "CO": 5,
+      "LY": 5,
       "MM": 0,
-      "CN": 22
+      "CN": 20
     }
   },
   "sources": {
@@ -74,8 +74,7 @@
       ],
       "AU": [
         "AP",
-        "Al Jazeera",
-        "Reuters"
+        "Al Jazeera"
       ],
       "IL": [
         "AFP",
@@ -90,19 +89,15 @@
         "BBC",
         "Reuters"
       ],
-      "JP": [
-        "AFP",
-        "AP",
-        "Reuters"
-      ],
       "LB": [
         "AFP",
         "AP"
       ],
       "IN": [
+        "Al Jazeera",
         "Reuters"
       ],
-      "GB": [
+      "PK": [
         "Al Jazeera",
         "Reuters"
       ],
@@ -114,16 +109,16 @@
       ]
     },
     "think_tank": {
-      "US": [
+      "TR": [
         "Atlantic Council"
       ],
       "IR": [
         "Atlantic Council"
       ],
-      "IL": [
+      "US": [
         "Atlantic Council"
       ],
-      "TR": [
+      "IL": [
         "Atlantic Council"
       ],
       "RU": [
@@ -212,6 +207,9 @@
       "NE": [
         "State Dept Travel Advisories"
       ],
+      "UA": [
+        "State Dept Travel Advisories"
+      ],
       "CO": [
         "State Dept Travel Advisories"
       ],
@@ -227,41 +225,43 @@
     }
   },
   "composite": {
+    "AF": 51,
     "IL": 56,
-    "IN": 0,
-    "FR": 17,
-    "AF": 53,
-    "GE": 0,
-    "UA": 70,
-    "AU": 0,
-    "CL": 34,
-    "TR": 30,
-    "SD": 42,
-    "RU": 69,
-    "CD": 42,
+    "RU": 70,
     "IR": 100,
-    "CN": 70,
+    "CD": 40,
+    "LY": 17,
+    "FR": 17,
+    "US": 91,
+    "CN": 69,
+    "CO": 17,
+    "TR": 44,
+    "IN": 14,
+    "UA": 69,
     "NE": 17,
-    "GN": 59,
-    "US": 90
+    "SD": 47,
+    "CL": 31,
+    "GE": 0,
+    "GN": 57
   },
   "scores": {
+    "AF": 51,
     "IL": 56,
-    "IN": 0,
-    "FR": 17,
-    "AF": 53,
-    "GE": 0,
-    "UA": 70,
-    "AU": 0,
-    "CL": 34,
-    "TR": 30,
-    "SD": 42,
-    "RU": 69,
-    "CD": 42,
+    "RU": 70,
     "IR": 100,
-    "CN": 70,
+    "CD": 40,
+    "LY": 17,
+    "FR": 17,
+    "US": 91,
+    "CN": 69,
+    "CO": 17,
+    "TR": 44,
+    "IN": 14,
+    "UA": 69,
     "NE": 17,
-    "GN": 59,
-    "US": 90
+    "SD": 47,
+    "CL": 31,
+    "GE": 0,
+    "GN": 57
   }
 }
