@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-14T19:28:44.733093+00:00",
+  "updated": "2026-03-14T19:50:08.774660+00:00",
   "layers": {
     "wire": {
       "IR": 100,
@@ -35,28 +35,28 @@
       "SV": 0,
       "TN": 0,
       "HN": 0,
-      "SN": 10,
       "CM": 0,
       "NG": 0,
-      "GN": 30,
+      "GN": 27,
       "RW": 0,
-      "CD": 17,
-      "NE": 10,
+      "CD": 16,
+      "NE": 9,
       "AE": 0,
       "FR": 5,
       "GB": 0,
-      "IR": 45,
-      "AF": 10,
-      "RU": 5,
-      "SD": 14,
+      "IR": 42,
+      "AF": 9,
+      "RU": 9,
+      "SD": 16,
       "BG": 0,
       "YE": 0,
       "SY": 0,
       "ML": 0,
-      "CO": 0,
-      "LY": 0,
+      "UA": 0,
+      "CO": 5,
+      "LY": 5,
       "MM": 0,
-      "CN": 21
+      "CN": 19
     }
   },
   "sources": {
@@ -195,10 +195,6 @@
         "State Dept Press Releases",
         "State Dept Travel Advisories"
       ],
-      "SN": [
-        "State Dept Press Releases",
-        "State Dept Travel Advisories"
-      ],
       "CM": [
         "State Dept Press Releases",
         "State Dept Travel Advisories"
@@ -267,6 +263,9 @@
       "ML": [
         "State Dept Travel Advisories"
       ],
+      "UA": [
+        "State Dept Travel Advisories"
+      ],
       "CO": [
         "State Dept Travel Advisories"
       ],
@@ -282,53 +281,55 @@
     }
   },
   "composite": {
-    "TR": 22,
-    "BR": 0,
-    "JP": 15,
-    "IQ": 22,
-    "UA": 65,
-    "AE": 15,
-    "FR": 25,
-    "US": 90,
+    "RU": 56,
     "PS": 0,
-    "CU": 22,
-    "AF": 32,
-    "SD": 40,
-    "LB": 34,
     "SA": 0,
-    "IL": 44,
-    "RU": 51,
-    "CD": 45,
-    "IN": 31,
     "IR": 100,
-    "CN": 58,
-    "GN": 60,
-    "SN": 32,
-    "NE": 32
+    "AF": 29,
+    "LY": 15,
+    "SD": 44,
+    "CO": 15,
+    "US": 91,
+    "LB": 34,
+    "BR": 0,
+    "GN": 57,
+    "CD": 44,
+    "UA": 66,
+    "IN": 31,
+    "CN": 56,
+    "IL": 44,
+    "CU": 22,
+    "FR": 25,
+    "AE": 15,
+    "JP": 15,
+    "NE": 29,
+    "TR": 22,
+    "IQ": 22
   },
   "scores": {
-    "TR": 22,
-    "BR": 0,
-    "JP": 15,
-    "IQ": 22,
-    "UA": 65,
-    "AE": 15,
-    "FR": 25,
-    "US": 90,
+    "RU": 56,
     "PS": 0,
-    "CU": 22,
-    "AF": 32,
-    "SD": 40,
-    "LB": 34,
     "SA": 0,
-    "IL": 44,
-    "RU": 51,
-    "CD": 45,
-    "IN": 31,
     "IR": 100,
-    "CN": 58,
-    "GN": 60,
-    "SN": 32,
-    "NE": 32
+    "AF": 29,
+    "LY": 15,
+    "SD": 44,
+    "CO": 15,
+    "US": 91,
+    "LB": 34,
+    "BR": 0,
+    "GN": 57,
+    "CD": 44,
+    "UA": 66,
+    "IN": 31,
+    "CN": 56,
+    "IL": 44,
+    "CU": 22,
+    "FR": 25,
+    "AE": 15,
+    "JP": 15,
+    "NE": 29,
+    "TR": 22,
+    "IQ": 22
   }
 }
