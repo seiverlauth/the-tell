@@ -10943,33 +10943,37 @@
       "source": "dsca",
       "signal_date": "2025-01-02",
       "title": "PRESS RELEASE - JAPAN 25-08 CN - V2 FINAL.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 3640000000.0,
+      "description": "AIM-120D-3 and AIM-120C-8 Advanced Medium-Range Air-to-Air Missiles (AMRAAM)",
       "raw_score": null,
       "cn_number": "25-08",
-      "pdf_url": "https://media.defense.gov/2025/Jan/02/2003623493/-1/-1/0/PRESS RELEASE - JAPAN 25-08 CN - V2 FINAL.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jan/02/2003623493/-1/-1/0/PRESS RELEASE - JAPAN 25-08 CN - V2 FINAL.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4020619/japan-aim-120d-3-and-aim-120c-8-advanced-medium-range-air-to-air-missiles-amraam"
     },
     {
       "iso": "JP",
       "source": "dsca",
       "signal_date": "2025-01-02",
       "title": "PRESS RELEASE - JAPAN 25-08 CN - V2 FINAL.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 3640000000.0,
+      "description": "AIM-120D-3 and AIM-120C-8 Advanced Medium-Range Air-to-Air Missiles (AMRAAM)",
       "raw_score": null,
       "cn_number": "25-08",
-      "pdf_url": "https://media.defense.gov/2025/Jan/02/2003623492/-1/-1/0/PRESS RELEASE - JAPAN 25-08 CN - V2 FINAL.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jan/02/2003623492/-1/-1/0/PRESS RELEASE - JAPAN 25-08 CN - V2 FINAL.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4020619/japan-aim-120d-3-and-aim-120c-8-advanced-medium-range-air-to-air-missiles-amraam"
     },
     {
       "iso": "SA",
       "source": "dsca",
       "signal_date": "2025-01-03",
       "title": "PRESS RELEASE - SAUDI ARABIA 24-80 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 78500000.0,
+      "description": "MK 54 MOD 0 Lightweight Torpedoes",
       "raw_score": null,
       "cn_number": "24-80",
-      "pdf_url": "https://media.defense.gov/2025/Jan/03/2003623813/-1/-1/0/PRESS RELEASE - SAUDI ARABIA 24-80 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jan/03/2003623813/-1/-1/0/PRESS RELEASE - SAUDI ARABIA 24-80 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4021295/kingdom-of-saudi-arabia-mk-54-mod-0-lightweight-torpedoes",
+      "quantity": 20
     },
     {
       "iso": "ZM",
@@ -10987,121 +10991,139 @@
       "source": "dsca",
       "signal_date": "2025-01-31",
       "title": "PRESS RELEASE - JAPAN 25-06 CN - V2.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 900000000.0,
+      "description": "Standard Missile 6 (SM-6) Block I Missiles",
       "raw_score": null,
       "cn_number": "25-06",
-      "pdf_url": "https://media.defense.gov/2025/Jan/31/2003636217/-1/-1/0/PRESS RELEASE - JAPAN 25-06 CN - V2.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jan/31/2003636217/-1/-1/0/PRESS RELEASE - JAPAN 25-06 CN - V2.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4049967/japan-standard-missile-6-sm-6-block-i-missiles",
+      "quantity": 150
     },
     {
       "iso": "JP",
       "source": "dsca",
       "signal_date": "2025-01-31",
       "title": "PRESS RELEASE - JAPAN 24-125 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 900000000.0,
+      "description": "Standard Missile 6 (SM-6) Block I Missiles",
       "raw_score": null,
       "cn_number": "24-125",
-      "pdf_url": "https://media.defense.gov/2025/Jan/31/2003636210/-1/-1/0/PRESS RELEASE - JAPAN 24-125 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jan/31/2003636210/-1/-1/0/PRESS RELEASE - JAPAN 24-125 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4049967/japan-standard-missile-6-sm-6-block-i-missiles",
+      "quantity": 150
     },
     {
       "iso": "EG",
       "source": "dsca",
       "signal_date": "2025-02-04",
       "title": "PRESS RELEASE - EGYPT 24-100 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 304000000.0,
+      "description": "AN/TPS-78 Long Range Radar",
       "raw_score": null,
       "cn_number": "24-100",
-      "pdf_url": "https://media.defense.gov/2025/Feb/04/2003637361/-1/-1/0/PRESS RELEASE - EGYPT 24-100 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Feb/04/2003637361/-1/-1/0/PRESS RELEASE - EGYPT 24-100 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4053498/egypt-antps-78-long-range-radar"
     },
     {
       "iso": "EG",
       "source": "dsca",
       "signal_date": "2025-02-04",
       "title": "PRESS RELEASE - EGYPT 24-50 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 625000000.0,
+      "description": "Fast Missile Craft Modernization",
       "raw_score": null,
       "cn_number": "24-50",
-      "pdf_url": "https://media.defense.gov/2025/Feb/04/2003637340/-1/-1/0/PRESS RELEASE - EGYPT 24-50 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Feb/04/2003637340/-1/-1/0/PRESS RELEASE - EGYPT 24-50 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4053400/egypt-fast-missile-craft-modernization",
+      "quantity": 4
     },
     {
       "iso": "KW",
       "source": "dsca",
       "signal_date": "2025-02-06",
       "title": "PRESS RELEASE - KUWAIT 24-113 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 1000000000.0,
+      "description": "Design and Construction Services",
       "raw_score": null,
       "cn_number": "24-113",
-      "pdf_url": "https://media.defense.gov/2025/Feb/06/2003640871/-1/-1/0/PRESS RELEASE - KUWAIT 24-113 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Feb/06/2003640871/-1/-1/0/PRESS RELEASE - KUWAIT 24-113 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4059021/kuwait-design-and-construction-services"
     },
     {
       "iso": "QA",
       "source": "dsca",
       "signal_date": "2025-03-26",
       "title": "PRESS RELEASE - QATAR 25-16 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 1960000000.0,
+      "description": "MQ-9B Remotely Piloted Aircraft",
       "raw_score": null,
       "cn_number": "25-16",
-      "pdf_url": "https://media.defense.gov/2025/Mar/26/2003676607/-1/-1/0/PRESS RELEASE - QATAR 25-16 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Mar/26/2003676607/-1/-1/0/PRESS RELEASE - QATAR 25-16 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4136302/qatar-mq-9b-remotely-piloted-aircraft",
+      "quantity": 8
     },
     {
       "iso": "PH",
       "source": "dsca",
       "signal_date": "2025-04-01",
       "title": "PRESS RELEASE - PHILIPPINES 25-11 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 5580000000.0,
+      "description": "F-16 Aircraft",
       "raw_score": null,
       "cn_number": "25-11",
-      "pdf_url": "https://media.defense.gov/2025/Apr/01/2003680480/-1/-1/0/PRESS RELEASE - PHILIPPINES 25-11 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Apr/01/2003680480/-1/-1/0/PRESS RELEASE - PHILIPPINES 25-11 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4142323/philippines-f-16-aircraft",
+      "quantity": 16
     },
     {
       "iso": "EC",
       "source": "dsca",
       "signal_date": "2025-04-01",
       "title": "PRESS RELEASE - ECUADOR 25-21 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 64000000.0,
+      "description": "M4A1 Rifles and Support",
       "raw_score": null,
       "cn_number": "25-21",
-      "pdf_url": "https://media.defense.gov/2025/Apr/01/2003680478/-1/-1/0/PRESS RELEASE - ECUADOR 25-21 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Apr/01/2003680478/-1/-1/0/PRESS RELEASE - ECUADOR 25-21 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4142306/ecuador-m4a1-rifles-and-support"
     },
     {
       "iso": "AU",
       "source": "dsca",
       "signal_date": "2025-04-09",
       "title": "PRESS RELEASE - AUSTRALIA 25-10 CN - V3.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 1040000000.0,
+      "description": "AIM-120C and AIM-120D Advanced Medium Range Air-to-Air Missiles",
       "raw_score": null,
       "cn_number": "25-10",
-      "pdf_url": "https://media.defense.gov/2025/Apr/09/2003686226/-1/-1/0/PRESS RELEASE - AUSTRALIA 25-10 CN - V3.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Apr/09/2003686226/-1/-1/0/PRESS RELEASE - AUSTRALIA 25-10 CN - V3.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4150603/australia-aim-120c-and-aim-120d-advanced-medium-range-air-to-air-missiles",
+      "quantity": 200
     },
     {
       "iso": "IL",
       "source": "dsca",
       "signal_date": "2025-04-14",
       "title": "PRESS RELEASE - ISRAEL 25-28 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 180000000.0,
+      "description": "Eitan Powerpack Engines",
       "raw_score": null,
       "cn_number": "25-28",
-      "pdf_url": "https://media.defense.gov/2025/Apr/14/2003688658/-1/-1/0/PRESS RELEASE ISRAEL 25-28.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Apr/14/2003688658/-1/-1/0/PRESS RELEASE ISRAEL 25-28.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4154118/israel-eitan-powerpack-engines"
     },
     {
       "iso": "IE",
       "source": "dsca",
       "signal_date": "2025-04-23",
       "title": "Press Release - Ireland 25-27 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 46000000.0,
+      "description": "FGM-148 Javelin Missiles and Lightweight Command Launch Units",
       "raw_score": null,
       "cn_number": "25-27",
-      "pdf_url": "https://media.defense.gov/2025/Apr/23/2003696192/-1/-1/0/PRESS RELEASE - IRELAND 25-27 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Apr/23/2003696192/-1/-1/0/PRESS RELEASE - IRELAND 25-27 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4164095/ireland-fgm-148-javelin-missiles-and-lightweight-command-launch-units",
+      "quantity": 36
     },
     {
       "iso": "NL",
@@ -11119,88 +11141,99 @@
       "source": "dsca",
       "signal_date": "2025-04-29",
       "title": "PRESS RELEASE - POLAND 25-15 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 1330000000.0,
+      "description": "AIM-120D Advanced Medium Range Air-to-Air Missiles",
       "raw_score": null,
       "cn_number": "25-15",
-      "pdf_url": "https://media.defense.gov/2025/Apr/29/2003700816/-1/-1/0/PRESS RELEASE - POLAND 25-15 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Apr/29/2003700816/-1/-1/0/PRESS RELEASE - POLAND 25-15 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4168673/poland-aim-120d-advanced-medium-range-air-to-air-missiles",
+      "quantity": 400
     },
     {
       "iso": "KW",
       "source": "dsca",
       "signal_date": "2025-04-30",
       "title": "PRESS RELEASE - KUWAIT 25-07 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 425000000.0,
+      "description": "PATRIOT Post-Deployment Build 8.1",
       "raw_score": null,
       "cn_number": "25-07",
-      "pdf_url": "https://media.defense.gov/2025/Apr/30/2003701987/-1/-1/0/PRESS RELEASE - KUWAIT 25-07 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Apr/30/2003701987/-1/-1/0/PRESS RELEASE - KUWAIT 25-07 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4170479/kuwait-patriot-post-deployment-build-81"
     },
     {
       "iso": "IN",
       "source": "dsca",
       "signal_date": "2025-04-30",
       "title": "PRESS RELEASE - INDIA 25-22 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 131000000.0,
+      "description": "Indo-Pacific Maritime Domain Awareness",
       "raw_score": null,
       "cn_number": "25-22",
-      "pdf_url": "https://media.defense.gov/2025/Apr/30/2003701983/-1/-1/0/PRESS RELEASE - INDIA 25-22 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Apr/30/2003701983/-1/-1/0/PRESS RELEASE - INDIA 25-22 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4170460/india-indo-pacific-maritime-domain-awareness"
     },
     {
       "iso": "NO",
       "source": "dsca",
       "signal_date": "2025-05-02",
       "title": "PRESS RELEASE - NORWAY 25-14 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 370900000.0,
+      "description": "AIM-9X Block II Tactical Missiles",
       "raw_score": null,
       "cn_number": "25-14",
-      "pdf_url": "https://media.defense.gov/2025/May/02/2003703416/-1/-1/0/PRESS RELEASE (NORWAY - 25-14).PDF"
+      "pdf_url": "https://media.defense.gov/2025/May/02/2003703416/-1/-1/0/PRESS RELEASE (NORWAY - 25-14).PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4173194/norway-aim-9x-block-ii-tactical-missiles",
+      "quantity": 300
     },
     {
       "iso": "UA",
       "source": "dsca",
       "signal_date": "2025-05-02",
       "title": "PRESS RELEASE - UKRAINE CN 25-32.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 310500000.0,
+      "description": "F-16 Training and Sustainment",
       "raw_score": null,
       "cn_number": "25-32",
-      "pdf_url": "https://media.defense.gov/2025/May/02/2003703414/-1/-1/0/PRESS RELEASE - UKRAINE CN 25-32.PDF"
+      "pdf_url": "https://media.defense.gov/2025/May/02/2003703414/-1/-1/0/PRESS RELEASE - UKRAINE CN 25-32.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4173182/ukraine-f-16-training-and-sustainment"
     },
     {
       "iso": "SA",
       "source": "dsca",
       "signal_date": "2025-05-02",
       "title": "PRESS RELEASE - KINGDOM OF SAUDI ARABIA 25-33 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 3500000000.0,
+      "description": "AIM-120C-8 Advanced Medium Range Air-to-Air Missiles",
       "raw_score": null,
       "cn_number": "25-33",
-      "pdf_url": "https://media.defense.gov/2025/May/02/2003703408/-1/-1/0/PRESS RELEASE - KINGDOM OF SAUDI ARABIA 25-33 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/May/02/2003703408/-1/-1/0/PRESS RELEASE - KINGDOM OF SAUDI ARABIA 25-33 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4173146/kingdom-of-saudi-arabia-aim-120c-8-advanced-medium-range-air-to-air-missiles"
     },
     {
       "iso": "AE",
       "source": "dsca",
       "signal_date": "2025-05-12",
       "title": "PRESS RELEASE - UAE 25-25 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 130000000.0,
+      "description": "F-16 Sustainment",
       "raw_score": null,
       "cn_number": "25-25",
-      "pdf_url": "https://media.defense.gov/2025/May/12/2003708549/-1/-1/0/PRESS RELEASE - UAE 25-25 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/May/12/2003708549/-1/-1/0/PRESS RELEASE - UAE 25-25 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4182037/united-arab-emirates-f-16-sustainment"
     },
     {
       "iso": "AE",
       "source": "dsca",
       "signal_date": "2025-05-12",
       "title": "PRESS RELEASE - UAE 24-118 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 1320000000.0,
+      "description": "CH-47F Chinook Helicopters",
       "raw_score": null,
       "cn_number": "24-118",
-      "pdf_url": "https://media.defense.gov/2025/May/12/2003708545/-1/-1/0/PRESS RELEASE - UAE 24-118 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/May/12/2003708545/-1/-1/0/PRESS RELEASE - UAE 24-118 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4182033/united-arab-emirates-ch-47f-chinook-helicopters",
+      "quantity": 6
     },
     {
       "iso": "NL",
@@ -11218,187 +11251,208 @@
       "source": "dsca",
       "signal_date": "2025-06-16",
       "title": "PRESS RELEASE - ITALY 25-44 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 211000000.0,
+      "description": "Advanced Medium-Range Air-to-Air Missiles",
       "raw_score": null,
       "cn_number": "25-44",
-      "pdf_url": "https://media.defense.gov/2025/Jun/16/2003738828/-1/-1/0/PRESS RELEASE - ITALY 25-44 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jun/16/2003738828/-1/-1/0/PRESS RELEASE - ITALY 25-44 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4217573/italy-advanced-medium-range-air-to-air-missiles",
+      "quantity": 30
     },
     {
       "iso": "LB",
       "source": "dsca",
       "signal_date": "2025-07-11",
       "title": "PRESS RELEASE - LEBANON 25-38 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 100000000.0,
+      "description": "A-29 Super Tucano Aircraft Sustainment",
       "raw_score": null,
       "cn_number": "25-38",
-      "pdf_url": "https://media.defense.gov/2025/Jul/11/2003752539/-1/-1/0/PRESS RELEASE - LEBANON 25-38 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jul/11/2003752539/-1/-1/0/PRESS RELEASE - LEBANON 25-38 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4241763/lebanon-a-29-super-tucano-aircraft-sustainment"
     },
     {
       "iso": "NO",
       "source": "dsca",
       "signal_date": "2025-07-11",
       "title": "PRESS RELEASE - NORWAY 25-36 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 2600000000.0,
+      "description": "HH-60W Helicopters",
       "raw_score": null,
       "cn_number": "25-36",
-      "pdf_url": "https://media.defense.gov/2025/Jul/11/2003752531/-1/-1/0/PRESS RELEASE - NORWAY 25-36 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jul/11/2003752531/-1/-1/0/PRESS RELEASE - NORWAY 25-36 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4241742/norway-hh-60w-helicopters",
+      "quantity": 9
     },
     {
       "iso": "BG",
       "source": "dsca",
       "signal_date": "2025-07-21",
       "title": "PRESS RELEASE - BULGARIA 25-42 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 620000000.0,
+      "description": "Naval Strike Missile Coastal Defense System",
       "raw_score": null,
       "cn_number": "25-42",
-      "pdf_url": "https://media.defense.gov/2025/Jul/21/2003758073/-1/-1/0/PRESS RELEASE - BULGARIA 25-42 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jul/21/2003758073/-1/-1/0/PRESS RELEASE - BULGARIA 25-42 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4250841/bulgaria-naval-strike-missile-coastal-defense-system"
     },
     {
       "iso": "UA",
       "source": "dsca",
       "signal_date": "2025-07-23",
       "title": "PRESS RELEASE - UKRAINE 25-48 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 172000000.0,
+      "description": "HAWK Phase III Missile System and Sustainment",
       "raw_score": null,
       "cn_number": "25-48",
-      "pdf_url": "https://media.defense.gov/2025/Jul/23/2003759809/-1/-1/0/PRESS RELEASE - UKRAINE 25-48 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jul/23/2003759809/-1/-1/0/PRESS RELEASE - UKRAINE 25-48 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4253428/ukraine-hawk-phase-iii-missile-system-and-sustainment"
     },
     {
       "iso": "UA",
       "source": "dsca",
       "signal_date": "2025-07-23",
       "title": "PRESS RELEASE - UKRAINE 25-53 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 150000000.0,
+      "description": "Bradley Infantry Fighting Vehicles and Maintenance, Repair, and Overhaul Capability",
       "raw_score": null,
       "cn_number": "25-53",
-      "pdf_url": "https://media.defense.gov/2025/Jul/23/2003759789/-1/-1/0/PRESS RELEASE - UKRAINE 25-53 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jul/23/2003759789/-1/-1/0/PRESS RELEASE - UKRAINE 25-53 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4253473/ukraine-bradley-infantry-fighting-vehicles-and-maintenance-repair-and-overhaul"
     },
     {
       "iso": "UA",
       "source": "dsca",
       "signal_date": "2025-07-24",
       "title": "PRESS RELEASE - UKRAINE 25-57 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 180000000.0,
+      "description": "Air Defense Sustainment",
       "raw_score": null,
       "cn_number": "25-57",
-      "pdf_url": "https://media.defense.gov/2025/Jul/24/2003760585/-1/-1/0/PRESS RELEASE - UKRAINE 25-57 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jul/24/2003760585/-1/-1/0/PRESS RELEASE - UKRAINE 25-57 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4254530/ukraine-air-defense-sustainment"
     },
     {
       "iso": "UA",
       "source": "dsca",
       "signal_date": "2025-07-24",
       "title": "PRESS RELEASE - UKRAINE 25-54 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 150000000.0,
+      "description": "M109 Self-Propelled Howitzer Maintenance, Repair, and Overhaul Capability",
       "raw_score": null,
       "cn_number": "25-54",
-      "pdf_url": "https://media.defense.gov/2025/Jul/24/2003760576/-1/-1/0/PRESS RELEASE - UKRAINE 25-54 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jul/24/2003760576/-1/-1/0/PRESS RELEASE - UKRAINE 25-54 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4254520/ukraine-m109-self-propelled-howitzer-maintenance-repair-and-overhaul-capability"
     },
     {
       "iso": "EG",
       "source": "dsca",
       "signal_date": "2025-07-24",
       "title": "PRESS RELEASE - EGYPT 24-93 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 4670000000.0,
+      "description": "National Advanced Surface-to-Air Missile System",
       "raw_score": null,
       "cn_number": "24-93",
-      "pdf_url": "https://media.defense.gov/2025/Jul/24/2003760570/-1/-1/0/PRESS RELEASE - EGYPT 24-93 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Jul/24/2003760570/-1/-1/0/PRESS RELEASE - EGYPT 24-93 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4254503/egypt-national-advanced-surface-to-air-missile-system"
     },
     {
       "iso": "UA",
       "source": "dsca",
       "signal_date": "2025-08-05",
       "title": "PRESS RELEASE - UKRAINE 25-61 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 104000000.0,
+      "description": "Equipment, Repair Services, and Sustainment Support for M777 Howitzers",
       "raw_score": null,
       "cn_number": "25-61",
-      "pdf_url": "https://media.defense.gov/2025/Aug/05/2003773301/-1/-1/0/PRESS RELEASE - UKRAINE 25-61 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Aug/05/2003773301/-1/-1/0/PRESS RELEASE - UKRAINE 25-61 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4266194/ukraine-equipment-repair-services-and-sustainment-support-for-m777-howitzers"
     },
     {
       "iso": "UA",
       "source": "dsca",
       "signal_date": "2025-08-05",
       "title": "PRESS RELEASE - UKRAINE 25-52 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 99500000.0,
+      "description": "Transportation and Consolidation Services",
       "raw_score": null,
       "cn_number": "25-52",
-      "pdf_url": "https://media.defense.gov/2025/Aug/05/2003773281/-1/-1/0/PRESS RELEASE - UKRAINE 25-52 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Aug/05/2003773281/-1/-1/0/PRESS RELEASE - UKRAINE 25-52 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4266161/ukraine-transportation-and-consolidation-services"
     },
     {
       "iso": "AU",
       "source": "dsca",
       "signal_date": "2025-08-06",
       "title": "PRESS RELEASE - AUSTRALIA 25-50 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 404000000.0,
+      "description": "MC-55A Baseline 2 Upgrade",
       "raw_score": null,
       "cn_number": "25-50",
-      "pdf_url": "https://media.defense.gov/2025/Aug/06/2003774014/-1/-1/0/PRESS RELEASE - AUSTRALIA 25-50 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Aug/06/2003774014/-1/-1/0/PRESS RELEASE - AUSTRALIA 25-50 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4267141/australia-mc-55a-baseline-2-upgrade"
     },
     {
       "iso": "CA",
       "source": "dsca",
       "signal_date": "2025-08-08",
       "title": "PRESS RELEASE - CANADA 25-40 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 160000000.0,
+      "description": "Joint Light Tactical Vehicles",
       "raw_score": null,
       "cn_number": "25-40",
-      "pdf_url": "https://media.defense.gov/2025/Aug/08/2003775771/-1/-1/0/PRESS RELEASE - CANADA 25-40 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Aug/08/2003775771/-1/-1/0/PRESS RELEASE - CANADA 25-40 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4270288/canada-joint-light-tactical-vehicles",
+      "quantity": 60
     },
     {
       "iso": "NG",
       "source": "dsca",
       "signal_date": "2025-08-13",
       "title": "PRESS RELEASE - NIGERIA 21-47 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 346000000.0,
+      "description": "Munitions, Precision Bombs, and Precision Rockets",
       "raw_score": null,
       "cn_number": "21-47",
-      "pdf_url": "https://media.defense.gov/2025/Aug/13/2003780073/-1/-1/0/PRESS RELEASE - NIGERIA 21-47 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Aug/13/2003780073/-1/-1/0/PRESS RELEASE - NIGERIA 21-47 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4273754/nigeria-munitions-precision-bombs-and-precision-rockets"
     },
     {
       "iso": "BH",
       "source": "dsca",
       "signal_date": "2025-08-14",
       "title": "PRESS RELEASE - BAHRAIN 25-47 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 500000000.0,
+      "description": "M142 High Mobility Artillery Rocket System",
       "raw_score": null,
       "cn_number": "25-47",
-      "pdf_url": "https://media.defense.gov/2025/Aug/14/2003780886/-1/-1/0/PRESS RELEASE - BAHRAIN 25-47 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Aug/14/2003780886/-1/-1/0/PRESS RELEASE - BAHRAIN 25-47 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4274789/bahrain-m142-high-mobility-artillery-rocket-system",
+      "quantity": 4
     },
     {
       "iso": "GB",
       "source": "dsca",
       "signal_date": "2025-08-26",
       "title": "PRESS RELEASE - UNITED KINGDOM 25-45 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 861000000.0,
+      "description": "C-17 Globemaster III Aircraft Sustainment Support",
       "raw_score": null,
       "cn_number": "25-45",
-      "pdf_url": "https://media.defense.gov/2025/Aug/26/2003788268/-1/-1/0/PRESS RELEASE - UNITED KINGDOM 25-45 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Aug/26/2003788268/-1/-1/0/PRESS RELEASE - UNITED KINGDOM 25-45 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4285993/united-kingdom-c-17-globemaster-iii-aircraft-sustainment-support"
     },
     {
       "iso": "PL",
       "source": "dsca",
       "signal_date": "2025-08-26",
       "title": "PRESS RELEASE - POLAND 25-64 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 1850000000.0,
+      "description": "F-35 Sustainment",
       "raw_score": null,
       "cn_number": "25-64",
-      "pdf_url": "https://media.defense.gov/2025/Aug/26/2003788251/-1/-1/0/PRESS RELEASE - POLAND 25-64 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Aug/26/2003788251/-1/-1/0/PRESS RELEASE - POLAND 25-64 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4285956/poland-f-35-sustainment"
     },
     {
       "iso": "PL",
@@ -11416,44 +11470,49 @@
       "source": "dsca",
       "signal_date": "2025-08-28",
       "title": "PRESS RELEASE - UKRAINE 25-46 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 825000000.0,
+      "description": "Air Delivered Munitions",
       "raw_score": null,
       "cn_number": "25-46",
-      "pdf_url": "https://media.defense.gov/2025/Aug/28/2003789897/-1/-1/0/PRESS RELEASE - UKRAINE 25-46 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Aug/28/2003789897/-1/-1/0/PRESS RELEASE - UKRAINE 25-46 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions"
     },
     {
       "iso": "UA",
       "source": "dsca",
       "signal_date": "2025-08-29",
       "title": "PRESS RELEASE - UKRAINE 25-69 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 179100000.0,
+      "description": "Patriot Air Defense System Sustainment",
       "raw_score": null,
       "cn_number": "25-69",
-      "pdf_url": "https://media.defense.gov/2025/Aug/29/2003790448/-1/-1/0/PRESS RELEASE - UKRAINE 25-69 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Aug/29/2003790448/-1/-1/0/PRESS RELEASE - UKRAINE 25-69 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4290514/ukraine-patriot-air-defense-system-sustainment"
     },
     {
       "iso": "UA",
       "source": "dsca",
       "signal_date": "2025-08-29",
       "title": "PRESS RELEASE - UKRAINE 25-58 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 150000000.0,
+      "description": "Satellite Communications Services",
       "raw_score": null,
       "cn_number": "25-58",
-      "pdf_url": "https://media.defense.gov/2025/Aug/29/2003790442/-1/-1/0/PRESS RELEASE - UKRAINE 25-58 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Aug/29/2003790442/-1/-1/0/PRESS RELEASE - UKRAINE 25-58 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4290506/ukraine-satellite-communications-services"
     },
     {
       "iso": "DK",
       "source": "dsca",
       "signal_date": "2025-08-29",
       "title": "PRESS RELEASE - DENMARK 25-51 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 8500000000.0,
+      "description": "Integrated Battle Command System Enabled PATRIOT",
       "raw_score": null,
       "cn_number": "25-51",
-      "pdf_url": "https://media.defense.gov/2025/Aug/29/2003790440/-1/-1/0/PRESS RELEASE - DENMARK 25-51 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Aug/29/2003790440/-1/-1/0/PRESS RELEASE - DENMARK 25-51 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4290498/denmark-integrated-battle-command-system-enabled-patriot",
+      "quantity": 36
     },
     {
       "iso": "FI",
@@ -11592,11 +11651,13 @@
       "source": "dsca",
       "signal_date": "2025-10-01",
       "title": "PRESS RELEASE - CANADA 25-76 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 1750000000.0,
+      "description": "M142 High Mobility Artillery Rocket Systems",
       "raw_score": null,
       "cn_number": "25-76",
-      "pdf_url": "https://media.defense.gov/2025/Oct/01/2003813821/-1/-1/0/PRESS RELEASE - CANADA 25-76 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Oct/01/2003813821/-1/-1/0/PRESS RELEASE - CANADA 25-76 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4320012/canada-m142-high-mobility-artillery-rocket-systems",
+      "quantity": 26
     },
     {
       "iso": "SG",
@@ -11614,154 +11675,176 @@
       "source": "dsca",
       "signal_date": "2025-11-12",
       "title": "PRESS RELEASE - DENMARK 25-80 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 318400000.0,
+      "description": "AIM-9X Block II Tactical Missiles",
       "raw_score": null,
       "cn_number": "25-80",
-      "pdf_url": "https://media.defense.gov/2025/Nov/12/2003819770/-1/-1/0/PRESS RELEASE - DENMARK 25-80 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Nov/12/2003819770/-1/-1/0/PRESS RELEASE - DENMARK 25-80 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4329708/denmark-aim-9x-block-ii-tactical-missiles",
+      "quantity": 340
     },
     {
       "iso": "IQ",
       "source": "dsca",
       "signal_date": "2025-11-13",
       "title": "PRESS RELEASE - IRAQ 25-05 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 100000000.0,
+      "description": "Country Wide Repeater System",
       "raw_score": null,
       "cn_number": "25-05",
-      "pdf_url": "https://media.defense.gov/2025/Nov/13/2003820204/-1/-1/0/PRESS RELEASE - IRAQ 25-05 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Nov/13/2003820204/-1/-1/0/PRESS RELEASE - IRAQ 25-05 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4330710/iraq-country-wide-repeater-system"
     },
     {
       "iso": "DE",
       "source": "dsca",
       "signal_date": "2025-11-14",
       "title": "PRESS RELEASE - GERMANY 25-74 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 3500000000.0,
+      "description": "Standard Missile 6 Block I and Standard Missile 2 Block IIIC",
       "raw_score": null,
       "cn_number": "25-74",
-      "pdf_url": "https://media.defense.gov/2025/Nov/14/2003820825/-1/-1/0/PRESS RELEASE - GERMANY 25-74 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Nov/14/2003820825/-1/-1/0/PRESS RELEASE - GERMANY 25-74 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4332014/germany-standard-missile-6-block-i-and-standard-missile-2-block-iiic",
+      "quantity": 173
     },
     {
       "iso": "UA",
       "source": "dsca",
       "signal_date": "2025-11-18",
       "title": "PRESS RELEASE - UKRAINE 25-91 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 105000000.0,
+      "description": "PATRIOT Air Defense System Sustainment",
       "raw_score": null,
       "cn_number": "25-91",
-      "pdf_url": "https://media.defense.gov/2025/Nov/18/2003824583/-1/-1/0/PRESS RELEASE - UKRAINE 25-91 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Nov/18/2003824583/-1/-1/0/PRESS RELEASE - UKRAINE 25-91 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4334941/ukraine-patriot-air-defense-system-sustainment"
     },
     {
       "iso": "IN",
       "source": "dsca",
       "signal_date": "2025-11-19",
       "title": "PRESS RELEASE - INDIA 25-107.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 47100000.0,
+      "description": "Excalibur Projectiles",
       "raw_score": null,
       "cn_number": "25-107",
-      "pdf_url": "https://media.defense.gov/2025/Nov/19/2003826347/-1/-1/0/PRESS RELEASE - INDIA 25-107.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Nov/19/2003826347/-1/-1/0/PRESS RELEASE - INDIA 25-107.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4337518/india-excalibur-projectiles",
+      "quantity": 216
     },
     {
       "iso": "GB",
       "source": "dsca",
       "signal_date": "2025-11-24",
       "title": "PRESS RELEASE - UNITED KINGDOM 25-95 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 200000000.0,
+      "description": "Navy Multiband Terminals",
       "raw_score": null,
       "cn_number": "25-95",
-      "pdf_url": "https://media.defense.gov/2025/Nov/24/2003831117/-1/-1/0/PRESS RELEASE - UNITED KINGDOM 25-95 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Nov/24/2003831117/-1/-1/0/PRESS RELEASE - UNITED KINGDOM 25-95 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4341361/united-kingdom-navy-multiband-terminals",
+      "quantity": 6
     },
     {
       "iso": "SA",
       "source": "dsca",
       "signal_date": "2025-12-01",
       "title": "PRESS RELEASE - SAUDI ARABIA 25-78 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 500000000.0,
+      "description": "Blanket Order Training",
       "raw_score": null,
       "cn_number": "25-78",
-      "pdf_url": "https://media.defense.gov/2025/Dec/01/2003833266/-1/-1/0/PRESS RELEASE - SAUDI ARABIA 25-78 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/01/2003833266/-1/-1/0/PRESS RELEASE - SAUDI ARABIA 25-78 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4345481/kingdom-of-saudi-arabia-blanket-order-training"
     },
     {
       "iso": "SA",
       "source": "dsca",
       "signal_date": "2025-12-01",
       "title": "PRESS RELEASE - SAUDI ARABIA 25-77 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 500000000.0,
+      "description": "Cooperative Logistics Supply Support Arrangement Program, Foreign Military Sales Order II Case",
       "raw_score": null,
       "cn_number": "25-77",
-      "pdf_url": "https://media.defense.gov/2025/Dec/01/2003833251/-1/-1/0/PRESS RELEASE - SAUDI ARABIA 25-77 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/01/2003833251/-1/-1/0/PRESS RELEASE - SAUDI ARABIA 25-77 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4345453/kingdom-of-saudi-arabia-cooperative-logistics-supply-support-arrangement-progra"
     },
     {
       "iso": "BH",
       "source": "dsca",
       "signal_date": "2025-12-01",
       "title": "PRESS RELEASE - BAHRAIN 25-84 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 445000000.0,
+      "description": "F-16 Sustainment",
       "raw_score": null,
       "cn_number": "25-84",
-      "pdf_url": "https://media.defense.gov/2025/Dec/01/2003833245/-1/-1/0/PRESS RELEASE - BAHRAIN 25-84 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/01/2003833245/-1/-1/0/PRESS RELEASE - BAHRAIN 25-84 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4345416/bahrain-f-16-sustainment"
     },
     {
       "iso": "CA",
       "source": "dsca",
       "signal_date": "2025-12-04",
       "title": "PRESS RELEASE - CANADA 25-98 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 2680000000.0,
+      "description": "Air Strike Weapons",
       "raw_score": null,
       "cn_number": "25-98",
-      "pdf_url": "https://media.defense.gov/2025/Dec/04/2003834974/-1/-1/0/PRESS RELEASE - CANADA 25-98 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/04/2003834974/-1/-1/0/PRESS RELEASE - CANADA 25-98 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4348692/canada-air-strike-weapons",
+      "quantity": 750
     },
     {
       "iso": "IT",
       "source": "dsca",
       "signal_date": "2025-12-05",
       "title": "PRESS RELEASE - ITALY 26-11 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 301000000.0,
+      "description": "Joint Air-to-Surface Standoff Missiles with Extended Range",
       "raw_score": null,
       "cn_number": "26-11",
-      "pdf_url": "https://media.defense.gov/2025/Dec/05/2003837878/-1/-1/0/PRESS RELEASE - ITALY 26-11 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/05/2003837878/-1/-1/0/PRESS RELEASE - ITALY 26-11 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4351311/italy-joint-air-to-surface-standoff-missiles-with-extended-range",
+      "quantity": 100
     },
     {
       "iso": "DK",
       "source": "dsca",
       "signal_date": "2025-12-05",
       "title": "PRESS RELEASE - DENMARK 26-05 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 730000000.0,
+      "description": "AIM-120C-8 Advanced Medium Range Air-to-Air Missiles",
       "raw_score": null,
       "cn_number": "26-05",
-      "pdf_url": "https://media.defense.gov/2025/Dec/05/2003837877/-1/-1/0/PRESS RELEASE - DENMARK 26-05 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/05/2003837877/-1/-1/0/PRESS RELEASE - DENMARK 26-05 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4351295/denmark-aim-120c-8-advanced-medium-range-air-to-air-missiles",
+      "quantity": 200
     },
     {
       "iso": "DK",
       "source": "dsca",
       "signal_date": "2025-12-05",
       "title": "PRESS RELEASE - DENMARK 25-75 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 3000000000.0,
+      "description": "Integrated Battle Command System with Indirect Fire Protection Capability",
       "raw_score": null,
       "cn_number": "25-75",
-      "pdf_url": "https://media.defense.gov/2025/Dec/05/2003837761/-1/-1/0/PRESS RELEASE - DENMARK 25-75 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/05/2003837761/-1/-1/0/PRESS RELEASE - DENMARK 25-75 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4351038/denmark-integrated-battle-command-system-with-indirect-fire-protection-capabili",
+      "quantity": 24
     },
     {
       "iso": "LB",
       "source": "dsca",
       "signal_date": "2025-12-05",
       "title": "PRESS RELEASE - LEBANON 25-63 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 90500000.0,
+      "description": "M1085A2 and M1078A2 Medium Tactical Vehicles",
       "raw_score": null,
       "cn_number": "25-63",
-      "pdf_url": "https://media.defense.gov/2025/Dec/05/2003837724/-1/-1/0/PRESS RELEASE - LEBANON 25-63 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/05/2003837724/-1/-1/0/PRESS RELEASE - LEBANON 25-63 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4350902/lebanon-m1085a2-and-m1078a2-medium-tactical-vehicles"
     },
     {
       "iso": "BE",
@@ -11769,10 +11852,12 @@
       "signal_date": "2025-12-08",
       "title": "PRESS RELEASE - BELGIUM 25-92.PDF",
       "value_usd": null,
-      "description": null,
+      "description": "Hellfire Missiles",
       "raw_score": null,
       "cn_number": "25-92",
-      "pdf_url": "https://media.defense.gov/2025/Dec/08/2003839643/-1/-1/0/PRESS RELEASE - BELGIUM 25-92.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/08/2003839643/-1/-1/0/PRESS RELEASE - BELGIUM 25-92.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4354471/belgium-hellfire-missiles",
+      "quantity": 240
     },
     {
       "iso": "BE",
@@ -11780,10 +11865,12 @@
       "signal_date": "2025-12-08",
       "title": "PRESS RELEASE - BELGIUM 25-92 CN.PDF",
       "value_usd": null,
-      "description": null,
+      "description": "Hellfire Missiles",
       "raw_score": null,
       "cn_number": "25-92",
-      "pdf_url": "https://media.defense.gov/2025/Dec/08/2003839544/-1/-1/0/PRESS RELEASE - BELGIUM 25-92 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/08/2003839544/-1/-1/0/PRESS RELEASE - BELGIUM 25-92 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4354471/belgium-hellfire-missiles",
+      "quantity": 240
     },
     {
       "iso": "BE",
@@ -11801,33 +11888,38 @@
       "source": "dsca",
       "signal_date": "2025-12-16",
       "title": "PRESS RELEASE - LEBANON 25-79 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 34500000.0,
+      "description": "M1151A1 High Mobility Multi-Purpose Wheeled Vehicles",
       "raw_score": null,
       "cn_number": "25-79",
-      "pdf_url": "https://media.defense.gov/2025/Dec/16/2003843344/-1/-1/0/PRESS RELEASE - LEBANON 25-79 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/16/2003843344/-1/-1/0/PRESS RELEASE - LEBANON 25-79 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4361462/lebanon-m1151a1-high-mobility-multi-purpose-wheeled-vehicles",
+      "quantity": 90
     },
     {
       "iso": "JP",
       "source": "dsca",
       "signal_date": "2025-12-16",
       "title": "PRESS RELEASE - JAPAN 26-10 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 100200000.0,
+      "description": "Aegis Class Destroyer Support",
       "raw_score": null,
       "cn_number": "26-10",
-      "pdf_url": "https://media.defense.gov/2025/Dec/16/2003843335/-1/-1/0/PRESS RELEASE - JAPAN 26-10 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/16/2003843335/-1/-1/0/PRESS RELEASE - JAPAN 26-10 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4361445/japan-aegis-class-destroyer-support"
     },
     {
       "iso": "ES",
       "source": "dsca",
       "signal_date": "2025-12-22",
       "title": "PRESS RELEASE - SPAIN 25-100.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 200000000.0,
+      "description": "F-404 Engine Fans",
       "raw_score": null,
       "cn_number": "25-100",
-      "pdf_url": "https://media.defense.gov/2025/Dec/22/2003848596/-1/-1/0/PRESS RELEASE - SPAIN 25-100.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/22/2003848596/-1/-1/0/PRESS RELEASE - SPAIN 25-100.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4366877/spain-f-404-engine-fans",
+      "quantity": 200
     },
     {
       "iso": "DK",
@@ -11835,10 +11927,12 @@
       "signal_date": "2025-12-22",
       "title": "PRESS RELEASE - DENMARK 25-99.PDF",
       "value_usd": null,
-      "description": null,
+      "description": "Advanced Medium Range Air-to-Air Missiles \u2013 Extended Range",
       "raw_score": null,
       "cn_number": "25-99",
-      "pdf_url": "https://media.defense.gov/2025/Dec/22/2003848593/-1/-1/0/PRESS RELEASE - DENMARK 25-99.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/22/2003848593/-1/-1/0/PRESS RELEASE - DENMARK 25-99.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4366864/denmark-advanced-medium-range-air-to-air-missiles-extended-range",
+      "quantity": 236
     },
     {
       "iso": "DK",
@@ -11856,176 +11950,199 @@
       "source": "dsca",
       "signal_date": "2025-12-29",
       "title": "PRESS RELEASE - POLAND 25-106 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 200000000.0,
+      "description": "Blanket Order Training",
       "raw_score": null,
       "cn_number": "25-106",
-      "pdf_url": "https://media.defense.gov/2025/Dec/29/2003849459/-1/-1/0/PRESS RELEASE - POLAND 25-106 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/29/2003849459/-1/-1/0/PRESS RELEASE - POLAND 25-106 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4368289/poland-blanket-order-training"
     },
     {
       "iso": "DK",
       "source": "dsca",
       "signal_date": "2025-12-29",
       "title": "PRESS RELEASE - DENMARK 25-102 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 1800000000.0,
+      "description": "Multi-Mission Maritime Patrol and Reconnaissance Aircraft P-8A",
       "raw_score": null,
       "cn_number": "25-102",
-      "pdf_url": "https://media.defense.gov/2025/Dec/29/2003849452/-1/-1/0/PRESS RELEASE - DENMARK 25-102 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2025/Dec/29/2003849452/-1/-1/0/PRESS RELEASE - DENMARK 25-102 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4368281/denmark-multi-mission-maritime-patrol-and-reconnaissance-aircraft-p-8a",
+      "quantity": 3
     },
     {
       "iso": "DK",
       "source": "dsca",
       "signal_date": "2026-01-08",
       "title": "PRESS RELEASE - DENMARK 25-101 CNV3.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 45000000.0,
+      "description": "AGM-114R Hellfire Missiles",
       "raw_score": null,
       "cn_number": "25-101",
-      "pdf_url": "https://media.defense.gov/2026/Jan/08/2003852494/-1/-1/0/PRESS RELEASE - DENMARK 25-101 CNV3.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Jan/08/2003852494/-1/-1/0/PRESS RELEASE - DENMARK 25-101 CNV3.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4373826/denmark-agm-114r-hellfire-missiles",
+      "quantity": 100
     },
     {
       "iso": "DK",
       "source": "dsca",
       "signal_date": "2026-01-08",
       "title": "PRESS RELEASE - DENMARK 25-101 CNV2.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 45000000.0,
+      "description": "AGM-114R Hellfire Missiles",
       "raw_score": null,
       "cn_number": "25-101",
-      "pdf_url": "https://media.defense.gov/2026/Jan/08/2003852490/-1/-1/0/PRESS RELEASE - DENMARK 25-101 CNV2.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Jan/08/2003852490/-1/-1/0/PRESS RELEASE - DENMARK 25-101 CNV2.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4373826/denmark-agm-114r-hellfire-missiles",
+      "quantity": 100
     },
     {
       "iso": "DK",
       "source": "dsca",
       "signal_date": "2026-01-08",
       "title": "PRESS RELEASE - DENMARK 25-101 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 45000000.0,
+      "description": "AGM-114R Hellfire Missiles",
       "raw_score": null,
       "cn_number": "25-101",
-      "pdf_url": "https://media.defense.gov/2026/Jan/08/2003852481/-1/-1/0/PRESS RELEASE - DENMARK 25-101 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Jan/08/2003852481/-1/-1/0/PRESS RELEASE - DENMARK 25-101 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4373826/denmark-agm-114r-hellfire-missiles",
+      "quantity": 100
     },
     {
       "iso": "KW",
       "source": "dsca",
       "signal_date": "2026-01-14",
       "title": "PRESS RELEASE - KUWAIT 25-65 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 800000000.0,
+      "description": "PATRIOT Program Sustainment and Follow-On Technical Support",
       "raw_score": null,
       "cn_number": "25-65",
-      "pdf_url": "https://media.defense.gov/2026/Jan/14/2003856563/-1/-1/0/PRESS RELEASE - KUWAIT 25-65 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Jan/14/2003856563/-1/-1/0/PRESS RELEASE - KUWAIT 25-65 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4379701/kuwait-patriot-program-sustainment-and-follow-on-technical-support"
     },
     {
       "iso": "IQ",
       "source": "dsca",
       "signal_date": "2026-01-14",
       "title": "PRESS RELEASE - IRAQ 24-121 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 110000000.0,
+      "description": "Very Small Aperture Terminals",
       "raw_score": null,
       "cn_number": "24-121",
-      "pdf_url": "https://media.defense.gov/2026/Jan/14/2003856556/-1/-1/0/PRESS RELEASE - IRAQ 24-121 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Jan/14/2003856556/-1/-1/0/PRESS RELEASE - IRAQ 24-121 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4379668/iraq-very-small-aperture-terminals"
     },
     {
       "iso": "PE",
       "source": "dsca",
       "signal_date": "2026-01-15",
       "title": "PRESS RELEASE - PERU 25-37 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 1500000000.0,
+      "description": "Design and Construction at Callao Naval Base",
       "raw_score": null,
       "cn_number": "25-37",
-      "pdf_url": "https://media.defense.gov/2026/Jan/15/2003857016/-1/-1/0/PRESS RELEASE - PERU 25-37 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Jan/15/2003857016/-1/-1/0/PRESS RELEASE - PERU 25-37 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4380611/peru-design-and-construction-at-callao-naval-base"
     },
     {
       "iso": "SG",
       "source": "dsca",
       "signal_date": "2026-01-20",
       "title": "PRESS RELEASE - SINGAPORE 26-12 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 2316000000.0,
+      "description": "Maritime Patrol and Reconnaissance Aircraft P-8A and MK 54 Lightweight Torpedoes",
       "raw_score": null,
       "cn_number": "26-12",
-      "pdf_url": "https://media.defense.gov/2026/Jan/20/2003858101/-1/-1/0/PRESS RELEASE - SINGAPORE 26-12 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Jan/20/2003858101/-1/-1/0/PRESS RELEASE - SINGAPORE 26-12 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4382957/singapore-maritime-patrol-and-reconnaissance-aircraft-p-8a-and-mk-54-lightweigh",
+      "quantity": 4
     },
     {
       "iso": "ES",
       "source": "dsca",
       "signal_date": "2026-01-29",
       "title": "PRESS RELEASE - SPAIN 25-104 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 1700000000.0,
+      "description": "F-100 Frigate Mid-Life Upgrade",
       "raw_score": null,
       "cn_number": "25-104",
-      "pdf_url": "https://media.defense.gov/2026/Jan/29/2003867951/-1/-1/0/PRESS RELEASE - SPAIN 25-104 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Jan/29/2003867951/-1/-1/0/PRESS RELEASE - SPAIN 25-104 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4393093/spain-f-100-frigate-mid-life-upgrade",
+      "quantity": 5
     },
     {
       "iso": "SA",
       "source": "dsca",
       "signal_date": "2026-01-30",
       "title": "PRESS RELEASE - SAUDI ARABIA 26-13 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 9000000000.0,
+      "description": "PATRIOT Advanced Capability-3 Missile Segment Enhancement Missiles",
       "raw_score": null,
       "cn_number": "26-13",
-      "pdf_url": "https://media.defense.gov/2026/Jan/30/2003868787/-1/-1/0/PRESS RELEASE - SAUDI ARABIA 26-13 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Jan/30/2003868787/-1/-1/0/PRESS RELEASE - SAUDI ARABIA 26-13 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4394629/kingdom-of-saudi-arabia-patriot-advanced-capability-3-missile-segment-enhanceme",
+      "quantity": 730
     },
     {
       "iso": "IL",
       "source": "dsca",
       "signal_date": "2026-01-30",
       "title": "PRESS RELEASE - ISRAEL 25-87 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 1980000000.0,
+      "description": "Joint Light Tactical Vehicle",
       "raw_score": null,
       "cn_number": "25-87",
-      "pdf_url": "https://media.defense.gov/2026/Jan/30/2003868755/-1/-1/0/PRESS RELEASE - ISRAEL 25-87 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Jan/30/2003868755/-1/-1/0/PRESS RELEASE - ISRAEL 25-87 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4394563/israel-joint-light-tactical-vehicle"
     },
     {
       "iso": "IL",
       "source": "dsca",
       "signal_date": "2026-01-30",
       "title": "PRESS RELEASE - ISRAEL 25-86 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 740000000.0,
+      "description": "Namer Armored Personnel Carrier Power Packs Less Transmissions and Integrated Logistics Support",
       "raw_score": null,
       "cn_number": "25-86",
-      "pdf_url": "https://media.defense.gov/2026/Jan/30/2003868753/-1/-1/0/PRESS RELEASE - ISRAEL 25-86 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Jan/30/2003868753/-1/-1/0/PRESS RELEASE - ISRAEL 25-86 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4394549/israel-namer-armored-personnel-carrier-power-packs-less-transmissions-and-integ"
     },
     {
       "iso": "SA",
       "source": "dsca",
       "signal_date": "2026-02-03",
       "title": "PRESS RELEASE - SAUDI ARABIA 25-103 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 3000000000.0,
+      "description": "F-15 Sustainment",
       "raw_score": null,
       "cn_number": "25-103",
-      "pdf_url": "https://media.defense.gov/2026/Feb/03/2003870318/-1/-1/0/PRESS RELEASE - SAUDI ARABIA 25-103 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Feb/03/2003870318/-1/-1/0/PRESS RELEASE - SAUDI ARABIA 25-103 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4396586/kingdom-of-saudi-arabia-f-15-sustainment"
     },
     {
       "iso": "IQ",
       "source": "dsca",
       "signal_date": "2026-02-05",
       "title": "PRESS RELEASE - IRAQ 25-90 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 90000000.0,
+      "description": "Contracted Logistical Services for VACIS XPL Passenger Vehicle Scanning Systems",
       "raw_score": null,
       "cn_number": "25-90",
-      "pdf_url": "https://media.defense.gov/2026/Feb/05/2003871386/-1/-1/0/PRESS RELEASE - IRAQ 25-90 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Feb/05/2003871386/-1/-1/0/PRESS RELEASE - IRAQ 25-90 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4398638/iraq-contracted-logistical-services-for-vacis-xpl-passenger-vehicle-scanning-sy"
     },
     {
       "iso": "UA",
       "source": "dsca",
       "signal_date": "2026-02-06",
       "title": "PRESS RELEASE - UKRAINE 25-105 CN.PDF",
-      "value_usd": null,
-      "description": null,
+      "value_usd": 185000000.0,
+      "description": "Class IX Spare Parts",
       "raw_score": null,
       "cn_number": "25-105",
-      "pdf_url": "https://media.defense.gov/2026/Feb/06/2003871961/-1/-1/0/PRESS RELEASE - UKRAINE 25-105 CN.PDF"
+      "pdf_url": "https://media.defense.gov/2026/Feb/06/2003871961/-1/-1/0/PRESS RELEASE - UKRAINE 25-105 CN.PDF",
+      "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4399552/ukraine-class-ix-spare-parts"
     }
   ]
 }

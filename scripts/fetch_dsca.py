@@ -28,7 +28,9 @@ from bs4 import BeautifulSoup
 # ---------------------------------------------------------------------------
 
 DSCA_LIBRARY_URL = "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Major-Arms-Sales-Library"
-REQUEST_DELAY = 1.5  # seconds between page requests
+DSCA_MAIN_URL    = "https://www.dsca.mil/Press-Media/Major-Arms-Sales"
+REQUEST_DELAY    = 1.5  # seconds between library page requests
+ENRICH_DELAY     = 1.0  # seconds between article page fetches (be polite)
 
 # Comprehensive country name → ISO alpha-2 map.
 # Covers all countries that commonly appear in DSCA arms sale notifications.
@@ -208,6 +210,289 @@ def parse_page(html):
 
 
 # ---------------------------------------------------------------------------
+# Article enrichment — page_url discovery + article page parsing
+# ---------------------------------------------------------------------------
+
+def parse_listing_date(date_str):
+    """Parse 'Feb. 6, 2026' or 'Feb 6, 2026' → '2026-02-06'."""
+    date_str = re.sub(r"\.", "", date_str.strip())   # strip trailing dots on month abbrev
+    date_str = re.sub(r"\s+", " ", date_str)
+    for fmt in ("%b %d, %Y", "%B %d, %Y"):
+        try:
+            return datetime.strptime(date_str, fmt).date().isoformat()
+        except ValueError:
+            pass
+    return None
+
+
+def country_iso_from_title(title):
+    """
+    Extract ISO alpha-2 from an article title like 'Ukraine – Class IX Spare Parts'
+    or 'Kingdom of Saudi Arabia – F-15 Sustainment'.
+    """
+    m = re.match(r"^(.+?)\s*[–—\-]\s*.+", title)
+    if not m:
+        return None
+    candidate = m.group(1).strip().upper()
+    if candidate in DSCA_COUNTRY_MAP:
+        return DSCA_COUNTRY_MAP[candidate]
+    for name in _DSCA_NAMES_SORTED:
+        if candidate == name or candidate.startswith(name + " "):
+            return DSCA_COUNTRY_MAP[name]
+    return None
+
+
+def scrape_listing_page(html):
+    """
+    Parse one page of the main DSCA arms sales listing.
+    Returns (items, last_page) where items = [{article_url, date_str, title}, ...].
+
+    The library page (used by the main scraper) only has PDF links — no article URLs.
+    This function scrapes the separate listing page that does have article links.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    items = []
+
+    for div in soup.find_all("div", class_="item"):
+        date_el  = div.find("p", class_="date")
+        title_el = div.find("p", class_="title")
+        if not date_el or not title_el:
+            continue
+        a = title_el.find("a", href=True)
+        if not a:
+            continue
+        date_str    = parse_listing_date(date_el.get_text(strip=True))
+        title       = a.get_text(strip=True)
+        article_url = a["href"]
+        if not article_url.startswith("http"):
+            article_url = "https://www.dsca.mil" + article_url
+        items.append({"article_url": article_url, "date_str": date_str, "title": title})
+
+    last_page = None
+    for a in soup.find_all("a", href=True):
+        m = re.search(r"[?&]Page=(\d+)", a["href"])
+        if m:
+            n = int(m.group(1))
+            if last_page is None or n > last_page:
+                last_page = n
+
+    return items, last_page
+
+
+def parse_article_page(html):
+    """
+    Extract description, value_usd, quantity, and cn_number from a DSCA article page.
+    Returns a dict; any field is None if not found.
+
+    - description: weapon system name from <h1> '{Country} – {Weapon System}'
+    - value_usd:   float in USD from 'estimated cost of $X million/billion'
+    - quantity:    int from 'requested to buy ... (N)'; None if not applicable
+    - cn_number:   from 'Transmittal No. YY-NNN' in body text (used for disambiguation)
+    """
+    soup = BeautifulSoup(html, "html.parser")
+
+    description = None
+    h1 = soup.find("h1")
+    if h1:
+        h1_text = h1.get_text(strip=True)
+        m = re.match(r"^.+?\s*[–—\-]\s*(.+)$", h1_text)
+        if m:
+            description = m.group(1).strip()
+
+    body = soup.select_one(".article-body")
+    body_text = body.get_text(" ", strip=True) if body else ""
+
+    cn_number = None
+    m = re.search(r"Transmittal No\.?\s+(\d{2,4}-\d{1,3})", body_text)
+    if m:
+        cn_number = m.group(1)
+
+    value_usd = None
+    m = re.search(
+        r"estimated(?:\s+total)?\s+cost(?:\s+(?:of|is))?\s+\$([0-9,.]+)\s*(million|billion)",
+        body_text, re.IGNORECASE,
+    )
+    if m:
+        raw        = float(m.group(1).replace(",", ""))
+        multiplier = 1_000_000_000 if m.group(2).lower() == "billion" else 1_000_000
+        value_usd  = raw * multiplier
+
+    quantity = None
+    m = re.search(r"requested to buy\s+[\w\s\-]+?\((\d+)\)", body_text, re.IGNORECASE)
+    if m:
+        quantity = int(m.group(1))
+
+    return {
+        "description": description,
+        "value_usd":   value_usd,
+        "quantity":    quantity,
+        "cn_number":   cn_number,
+    }
+
+
+def build_article_url_map(target_signals, session):
+    """
+    Scrape the main DSCA listing page (with pagination) until we've covered the
+    date range of target_signals.
+
+    Returns {(date_str, iso2): [article_url, ...]} — one or more articles per
+    date+country combination (multiple sales to the same country on the same date
+    are common).
+    """
+    if not target_signals:
+        return {}
+
+    oldest_date = min(s.get("signal_date") or "9999" for s in target_signals)
+    by_date_iso = {}
+    page = 1
+
+    while True:
+        url = DSCA_MAIN_URL if page == 1 else f"{DSCA_MAIN_URL}?Page={page}"
+        print(f"[enrich] Fetching listing page {page}: {url}")
+        if page > 1:
+            time.sleep(ENRICH_DELAY)
+
+        try:
+            resp = session.get(url, timeout=30)
+        except requests.exceptions.RequestException as e:
+            print(f"[enrich] Listing page {page} error: {e} — stopping")
+            break
+
+        if resp.status_code != 200:
+            print(f"[enrich] Listing page {page} HTTP {resp.status_code} — stopping")
+            break
+
+        items, last_page = scrape_listing_page(resp.text)
+        if not items:
+            break
+
+        for item in items:
+            iso2 = country_iso_from_title(item["title"])
+            if item["date_str"] and iso2:
+                key = (item["date_str"], iso2)
+                by_date_iso.setdefault(key, []).append(item["article_url"])
+
+        page_dates = [item["date_str"] for item in items if item["date_str"]]
+        if page_dates and min(page_dates) < oldest_date:
+            break
+        if last_page and page >= last_page:
+            break
+        page += 1
+
+    return by_date_iso
+
+
+def find_page_url_for_signal(signal, by_date_iso, session):
+    """
+    Resolve the DSCA article page URL for a signal.
+
+    Matches by (signal_date, iso2). When multiple articles share the same date
+    and country, fetches each candidate to check for the matching CN number.
+    Returns the article URL string, or None if not found.
+    """
+    key        = (signal.get("signal_date"), signal.get("iso"))
+    candidates = by_date_iso.get(key, [])
+
+    if not candidates:
+        return None
+    if len(candidates) == 1:
+        return candidates[0]
+
+    # Disambiguate by CN number
+    cn = signal.get("cn_number")
+    if not cn:
+        return candidates[0]
+
+    for article_url in candidates:
+        time.sleep(ENRICH_DELAY)
+        try:
+            resp = session.get(article_url, timeout=30)
+        except requests.exceptions.RequestException:
+            continue
+        if resp.status_code != 200:
+            continue
+        parsed = parse_article_page(resp.text)
+        if parsed.get("cn_number") == cn:
+            return article_url
+
+    return candidates[0]   # fallback: first candidate
+
+
+def enrich_signals(signals_path, session, test_n=None):
+    """
+    Populate description, value_usd, quantity, and page_url for signals that
+    currently have description=null.
+
+    Skips any signal where description is already set.
+    Rate-limits article fetches to ENRICH_DELAY seconds.
+
+    test_n: if set, process only the N most recent unenriched signals, print
+            results, and do NOT write to disk.
+    """
+    data    = json.loads(signals_path.read_text())
+    signals = data["signals"]
+
+    to_enrich = [s for s in signals if not s.get("description")]
+    to_enrich.sort(key=lambda s: s.get("signal_date") or "", reverse=True)
+
+    if test_n is not None:
+        to_enrich = to_enrich[:test_n]
+        print(f"[test-enrich] {len(to_enrich)} most recent unenriched signals")
+
+    if not to_enrich:
+        print("[enrich] All signals already have descriptions — nothing to do")
+        return
+
+    by_date_iso = build_article_url_map(to_enrich, session)
+    enriched    = 0
+
+    for signal in to_enrich:
+        page_url = signal.get("page_url") or find_page_url_for_signal(
+            signal, by_date_iso, session
+        )
+        if not page_url:
+            iso = signal.get("iso")
+            cn  = signal.get("cn_number")
+            dt  = signal.get("signal_date")
+            print(f"[enrich] No article URL found for {iso} CN {cn} ({dt}) — skipping")
+            continue
+
+        time.sleep(ENRICH_DELAY)
+        print(f"[enrich] Fetching {page_url}")
+        try:
+            resp = session.get(page_url, timeout=30)
+        except requests.exceptions.RequestException as e:
+            print(f"[enrich] Error: {e}")
+            continue
+        if resp.status_code != 200:
+            print(f"[enrich] HTTP {resp.status_code}")
+            continue
+
+        parsed = parse_article_page(resp.text)
+
+        if test_n is not None:
+            iso = signal.get("iso")
+            cn  = signal.get("cn_number")
+            dt  = signal.get("signal_date")
+            print(f"\n  {iso}  CN {cn}  {dt}")
+            print(f"    page_url:    {page_url}")
+            print(f"    description: {parsed['description']}")
+            print(f"    value_usd:   {parsed['value_usd']}")
+            print(f"    quantity:    {parsed['quantity']}")
+        else:
+            signal["page_url"]    = page_url
+            signal["description"] = parsed["description"]
+            signal["value_usd"]   = parsed["value_usd"]
+            if parsed.get("quantity") is not None:
+                signal["quantity"] = parsed["quantity"]
+            enriched += 1
+
+    if test_n is None:
+        signals_path.write_text(json.dumps(data, indent=2))
+        print(f"[enrich] Enriched {enriched} signals → {signals_path}")
+
+
+# ---------------------------------------------------------------------------
 # Probe mode
 # ---------------------------------------------------------------------------
 
@@ -330,9 +615,11 @@ def write_signals(notifications_path, signals_path):
             "title":       r.get("title"),
             "value_usd":   None,
             "description": None,
+            "quantity":    None,
             "raw_score":   None,
             "cn_number":   r.get("cn_number"),
             "pdf_url":     r.get("pdf_url"),
+            "page_url":    None,
         }
         if iso2 == "XN":
             nato.append(entry)
@@ -387,10 +674,15 @@ def main():
                         help="Dump page 1 records and pagination info, exit")
     parser.add_argument("--backtest", action="store_true",
                         help=f"Print {BACKTEST_START}→{BACKTEST_END} records from saved data")
+    parser.add_argument("--enrich", action="store_true",
+                        help="Fetch article pages to populate description, value_usd, quantity, page_url")
+    parser.add_argument("--test-enrich", action="store_true",
+                        help="Dry-run enrich on 5 most recent records — print results, do not write")
     args = parser.parse_args()
 
-    repo_root = Path(__file__).parent.parent
-    output_path = repo_root / "data" / "dsca_notifications.json"
+    repo_root    = Path(__file__).parent.parent
+    output_path  = repo_root / "data" / "dsca_notifications.json"
+    signals_path = repo_root / "data" / "dsca_signals.json"
 
     if args.probe:
         probe()
@@ -400,7 +692,14 @@ def main():
         backtest(output_path)
         sys.exit(0)
 
-    signals_path = repo_root / "data" / "dsca_signals.json"
+    if args.test_enrich:
+        enrich_signals(signals_path, get_session(), test_n=5)
+        sys.exit(0)
+
+    if args.enrich:
+        enrich_signals(signals_path, get_session())
+        sys.exit(0)
+
     scrape(output_path)
     # write_signals is called inside scrape, but also handle the case
     # where notifications already exist and signals need to be regenerated
