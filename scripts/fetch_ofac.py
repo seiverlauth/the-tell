@@ -106,7 +106,7 @@ KNOWN_UIDS_PATH = REPO_ROOT / "data" / "ofac_known_uids.json"
 # ---------------------------------------------------------------------------
 
 
-def country_to_iso2(name: str) -> str | None:
+def country_to_iso2(name: str):
     return COUNTRY_NAME_TO_ISO2.get(name.strip().lower())
 
 
@@ -118,7 +118,7 @@ def parse_publish_date(raw: str) -> str:
         return raw.strip()
 
 
-def load_known_uids() -> set[int] | None:
+def load_known_uids():
     """Return set of known UIDs, or None if the file doesn't exist (first run)."""
     if not KNOWN_UIDS_PATH.exists():
         return None
@@ -132,7 +132,7 @@ def save_known_uids(uids: set[int]):
     KNOWN_UIDS_PATH.write_text(json.dumps(sorted(uids)))
 
 
-def load_profile_score(iso2: str) -> int | None:
+def load_profile_score(iso2: str):
     p = REPO_ROOT / "data" / "profiles" / f"{iso2}.json"
     if not p.exists():
         return None
@@ -142,7 +142,7 @@ def load_profile_score(iso2: str) -> int | None:
         return None
 
 
-def should_include(iso2: str | None) -> bool:
+def should_include(iso2) -> bool:
     """Keep if: no iso (unknown), no profile (unknown), or score >= MIN_SCORE."""
     if iso2 is None:
         return True
