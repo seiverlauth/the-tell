@@ -20,7 +20,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-import requests
+from curl_cffi import requests
 from bs4 import BeautifulSoup
 
 # ---------------------------------------------------------------------------
@@ -115,7 +115,7 @@ BACKTEST_END   = "2022-02-24"
 # ---------------------------------------------------------------------------
 
 def get_session():
-    s = requests.Session()
+    s = requests.Session(impersonate="chrome120")
     s.headers.update(HEADERS)
     return s
 
