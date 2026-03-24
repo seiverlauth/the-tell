@@ -43,12 +43,16 @@ jobs:
         run: python3 scripts/fetch_fara.py
         continue-on-error: true
 
+      - name: Run fetch_lda.py
+        run: python3 scripts/fetch_lda.py
+        continue-on-error: true
+
       - name: Run build_signals.py
         run: python3 scripts/build_signals.py
 
       - name: Commit updated data
         run: |
-          git add data/signals.json data/dsca_signals.json data/dsca_nato.json data/sam_signals.json data/ofac_signals.json data/ofac_known_uids.json data/fara_signals.json
+          git add data/signals.json data/dsca_signals.json data/dsca_nato.json data/sam_signals.json data/ofac_signals.json data/ofac_known_uids.json data/fara_signals.json data/lda_signals.json
           git commit -m "update signals [skip ci]" || echo "nothing to commit"
           git push origin main --force-with-lease
         env:
