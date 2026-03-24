@@ -149,21 +149,14 @@
     }
     .source-link:hover { text-decoration: underline; }
 
-    /* ── Source legend ── */
-    #legend {
-      display: flex;
-      gap: 8px;
-      padding: 20px 16px 4px;
-    }
-
-    .legend-tag {
+    .source-tag {
       font-size: 10px;
       font-weight: 600;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
       border: 1px solid var(--sep);
-      padding: 2px 7px;
+      padding: 1px 5px;
     }
 
     /* ── Tooltip ── */
@@ -200,12 +193,6 @@
   </header>
   <div class="outer">
     <div id="status">fetching signals…</div>
-    <div id="legend">
-      <span class="legend-tag">DSCA</span>
-      <span class="legend-tag">SAM</span>
-      <span class="legend-tag">OFAC</span>
-      <span class="legend-tag">FARA</span>
-    </div>
     <div id="feed"></div>
   </div>
   <div id="tooltip"></div>
@@ -324,9 +311,7 @@
       }
 
       // Source link (inline on row 2)
-      const sourceUrl = sig.source === 'fara' && sig.registration_number
-        ? `https://efile.fara.gov/ords/fara/f?p=181:200:0::NO:RP,200:P200_REG_NUMBER:${sig.registration_number}`
-        : sig.page_url || null;
+      const sourceUrl = sig.page_url || null;
       const sourceInline = sourceUrl
         ? `<span class="sep">·</span>${fmtDate(sig.signal_date)}<span class="sep">·</span><a class="source-link" href="${esc(sourceUrl)}" target="_blank" rel="noopener">source →</a>`
         : `<span class="sep">·</span>${fmtDate(sig.signal_date)}`;
@@ -336,7 +321,7 @@
           <span class="item-desc">${esc(sig.title || sig.description || '—')}</span>
           <span class="item-val">${fmtValue(sig.value_usd)}</span>
         </div>
-        <div class="row2"><span class="item-country">${esc(country)}</span>${sourceInline}</div>
+        <div class="row2"><span class="source-tag">${esc(sig.source || '')}</span><span class="sep">·</span><span class="item-country">${esc(country)}</span>${sourceInline}</div>
       `.trim();
 
       return el;

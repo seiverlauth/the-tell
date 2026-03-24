@@ -214,8 +214,11 @@ def main():
         fp_short    = fp_name.split(",")[0].strip() if fp_name else ""
         title       = f"{registrant} — {fp_short}" if fp_short else registrant
         desc        = ", ".join(filter(None, [registrant, fp_name, country_name]))
-        page_url    = (f"https://efile.fara.gov/ords/fara/f"
-                       f"?p=181:200:0::NO:RP,200:P200_REG_NUMBER:{reg_number}")
+
+        # Direct PDF link: efile.fara.gov/docs/{reg}-Registration-Statement-{YYYYMMDD}-1.pdf
+        raw_date    = (row.get("REGISTRATION_x0020_DATE") or "")[:10].replace("-", "")
+        page_url    = (f"https://efile.fara.gov/docs/{reg_number}"
+                       f"-Registration-Statement-{raw_date}-1.pdf")
 
         sig = {
             "registration_number": reg_number,
