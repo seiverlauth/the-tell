@@ -1,7 +1,18 @@
 {
-  "generated_at": "2026-03-24T06:21:20.581168+00:00",
+  "generated_at": "2026-03-24T06:40:24.337875+00:00",
   "sources": [
     "sam"
   ],
-  "signals": []
+  "signals": [
+    {
+      "iso": "TH",
+      "source": "sam",
+      "signal_date": "2026-03-24",
+      "title": "Drone Show Services",
+      "value_usd": null,
+      "description": null,
+      "raw_score": 1.0,
+      "page_url": "https://sam.gov/workspace/contract/opp/ffc9c7b226a845f78de96dd2cde50ec5/view"
+    }
+  ]
 }
