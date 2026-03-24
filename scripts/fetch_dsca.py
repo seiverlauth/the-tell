@@ -15,12 +15,13 @@ Usage:
 import argparse
 import json
 import re
+import subprocess
 import sys
+import tempfile
 import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-from curl_cffi import requests
 from bs4 import BeautifulSoup
 
 # ---------------------------------------------------------------------------
@@ -114,10 +115,27 @@ BACKTEST_END   = "2022-02-24"
 # Helpers
 # ---------------------------------------------------------------------------
 
-def get_session():
-    s = requests.Session(impersonate="chrome120")
-    s.headers.update(HEADERS)
-    return s
+_UA = HEADERS["User-Agent"]
+
+class _Resp:
+    def __init__(self, status_code, text):
+        self.status_code = status_code
+        self.text        = text
+
+def _get(url, timeout=30):
+    with tempfile.NamedTemporaryFile(suffix='.html', delete=False) as f:
+        tmp = f.name
+    try:
+        r = subprocess.run(
+            ['curl', '-s', '-A', _UA, '--compressed', '-L',
+             '--max-time', str(timeout), '-o', tmp, '-w', '%{http_code}', url],
+            capture_output=True, text=True
+        )
+        status = int(r.stdout.strip()) if r.stdout.strip().isdigit() else 0
+        text   = Path(tmp).read_text(encoding='utf-8', errors='replace')
+    finally:
+        Path(tmp).unlink(missing_ok=True)
+    return _Resp(status, text)
 
 
 def _country_name(iso2: str) -> str:
@@ -360,7 +378,7 @@ def parse_article_page(html):
     }
 
 
-def build_article_url_map(target_signals, session):
+def build_article_url_map(target_signals):
     """
     Scrape the main DSCA listing page (with pagination) until we've covered the
     date range of target_signals.
@@ -383,8 +401,8 @@ def build_article_url_map(target_signals, session):
             time.sleep(ENRICH_DELAY)
 
         try:
-            resp = session.get(url, timeout=30)
-        except requests.exceptions.RequestException as e:
+            resp = _get(url, timeout=30)
+        except Exception as e:
             print(f"[enrich] Listing page {page} error: {e} — stopping")
             break
 
@@ -412,7 +430,7 @@ def build_article_url_map(target_signals, session):
     return by_date_iso
 
 
-def find_page_url_for_signal(signal, by_date_iso, session):
+def find_page_url_for_signal(signal, by_date_iso):
     """
     Resolve the DSCA article page URL for a signal.
 
@@ -436,8 +454,8 @@ def find_page_url_for_signal(signal, by_date_iso, session):
     for article_url in candidates:
         time.sleep(ENRICH_DELAY)
         try:
-            resp = session.get(article_url, timeout=30)
-        except requests.exceptions.RequestException:
+            resp = _get(article_url, timeout=30)
+        except Exception:
             continue
         if resp.status_code != 200:
             continue
@@ -448,7 +466,7 @@ def find_page_url_for_signal(signal, by_date_iso, session):
     return candidates[0]   # fallback: first candidate
 
 
-def enrich_signals(signals_path, session, test_n=None):
+def enrich_signals(signals_path, test_n=None):
     """
     Populate description, value_usd, quantity, and page_url for signals that
     currently have description=null.
@@ -473,12 +491,12 @@ def enrich_signals(signals_path, session, test_n=None):
         print("[enrich] All signals already have descriptions — nothing to do")
         return
 
-    by_date_iso = build_article_url_map(to_enrich, session)
+    by_date_iso = build_article_url_map(to_enrich)
     enriched    = 0
 
     for signal in to_enrich:
         page_url = signal.get("page_url") or find_page_url_for_signal(
-            signal, by_date_iso, session
+            signal, by_date_iso
         )
         if not page_url:
             iso = signal.get("iso")
@@ -490,8 +508,8 @@ def enrich_signals(signals_path, session, test_n=None):
         time.sleep(ENRICH_DELAY)
         print(f"[enrich] Fetching {page_url}")
         try:
-            resp = session.get(page_url, timeout=30)
-        except requests.exceptions.RequestException as e:
+            resp = _get(page_url, timeout=30)
+        except Exception as e:
             print(f"[enrich] Error: {e}")
             continue
         if resp.status_code != 200:
@@ -528,7 +546,7 @@ def enrich_signals(signals_path, session, test_n=None):
 # Daily scrape — listing page only, append new records, dedupe by cn_number
 # ---------------------------------------------------------------------------
 
-def scrape_daily(signals_path, session):
+def scrape_daily(signals_path):
     """
     Daily update mode. Scrapes the main DSCA listing page (not the library
     pagination) for articles published in the last DAILY_LOOKBACK_DAYS days.
@@ -560,8 +578,8 @@ def scrape_daily(signals_path, session):
             time.sleep(ENRICH_DELAY)
 
         try:
-            resp = session.get(url, timeout=30)
-        except requests.exceptions.RequestException as e:
+            resp = _get(url, timeout=30)
+        except Exception as e:
             print(f"[ERROR] Listing page {page} request error: {e}", file=sys.stderr)
             sys.exit(1)
 
@@ -595,8 +613,8 @@ def scrape_daily(signals_path, session):
         time.sleep(ENRICH_DELAY)
         print(f"[daily] GET {item['article_url']}")
         try:
-            resp = session.get(item["article_url"], timeout=30)
-        except requests.exceptions.RequestException as e:
+            resp = _get(item["article_url"], timeout=30)
+        except Exception as e:
             print(f"[daily] Request error: {e} — skipping")
             continue
         if resp.status_code != 200:
@@ -645,9 +663,8 @@ def scrape_daily(signals_path, session):
 
 def probe():
     """Fetch page 1, print pagination summary and first 10 target-country records."""
-    session = get_session()
     print(f"[probe] GET {DSCA_LIBRARY_URL}", file=sys.stderr)
-    resp = session.get(DSCA_LIBRARY_URL, timeout=30)
+    resp = _get(DSCA_LIBRARY_URL, timeout=30)
     print(f"[probe] HTTP {resp.status_code}", file=sys.stderr)
 
     records, last_page = parse_page(resp.text)
@@ -663,13 +680,12 @@ def probe():
 
 def scrape(output_path):
     """Paginate all pages, collect target-country records, write JSON."""
-    session = get_session()
     all_records = []
     seen_urls = set()
 
     # Page 1 — also discover last_page
     print(f"[scrape] Fetching page 1...")
-    resp = session.get(DSCA_LIBRARY_URL, timeout=30)
+    resp = _get(DSCA_LIBRARY_URL, timeout=30)
     if resp.status_code != 200:
         print(f"[ERROR] Page 1 returned HTTP {resp.status_code}", file=sys.stderr)
         sys.exit(1)
@@ -695,13 +711,13 @@ def scrape(output_path):
         resp = None
         for attempt in range(3):
             try:
-                resp = session.get(url, timeout=60)
+                resp = _get(url, timeout=60)
                 break
-            except requests.exceptions.Timeout:
+            except subprocess.TimeoutExpired:
                 wait = 5 * (attempt + 1)
                 print(f"[scrape] Page {page_num} timeout (attempt {attempt+1}/3) — waiting {wait}s")
                 time.sleep(wait)
-            except requests.exceptions.RequestException as e:
+            except Exception as e:
                 print(f"[scrape] Page {page_num} error: {e} — skipping")
                 break
 
@@ -868,11 +884,11 @@ def main():
         sys.exit(0)
 
     if args.test_enrich:
-        enrich_signals(signals_path, get_session(), test_n=5)
+        enrich_signals(signals_path, test_n=5)
         sys.exit(0)
 
     if args.enrich:
-        enrich_signals(signals_path, get_session())
+        enrich_signals(signals_path)
         sys.exit(0)
 
     if args.backfill_titles:
@@ -889,7 +905,7 @@ def main():
         sys.exit(0)
 
     # Default: daily incremental update from listing page
-    scrape_daily(signals_path, get_session())
+    scrape_daily(signals_path)
 
 
 if __name__ == "__main__":
