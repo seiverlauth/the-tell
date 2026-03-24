@@ -1,7 +1,8 @@
 {
-  "generated_at": "2026-03-23T22:54:12.741134+00:00",
+  "generated_at": "2026-03-24T05:28:18.845448+00:00",
   "sources": [
     "dsca",
+    "ofac",
     "sam"
   ],
   "signals": [
@@ -13236,17 +13237,6 @@
       "cn_number": "25-105",
       "pdf_url": "https://media.defense.gov/2026/Feb/06/2003871961/-1/-1/0/PRESS RELEASE - UKRAINE 25-105 CN.PDF",
       "page_url": "https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4399552/ukraine-class-ix-spare-parts",
-      "weight": 1.0
-    },
-    {
-      "iso": "IN",
-      "source": "sam",
-      "signal_date": "2026-03-23",
-      "title": "Solicitation for Supply &  Installation of metal corrugated skin on top of HU",
-      "value_usd": null,
-      "description": null,
-      "raw_score": 1.0,
-      "page_url": "https://sam.gov/workspace/contract/opp/ff1af15a1c854641997b77adea8a41de/view",
       "weight": 1.0
     }
   ]
