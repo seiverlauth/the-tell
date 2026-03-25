@@ -76,7 +76,7 @@
     }
     #status.error { color: #f87171; }
 
-    /* ── Section header (shared by clusters + month) ── */
+    /* ── Section header ── */
     .section-hdr {
       font-size: 10px;
       font-weight: 600;
@@ -88,14 +88,9 @@
     }
 
     /* ── Clusters ── */
-    #clusters-wrap {
-      margin-bottom: 4px;
-    }
+    #clusters-wrap { margin-bottom: 4px; }
 
     .cluster-row {
-      display: flex;
-      align-items: baseline;
-      gap: 0;
       padding: 5px 0;
       border-bottom: 1px solid rgba(58,58,60,0.5);
       cursor: pointer;
@@ -103,55 +98,26 @@
       font-size: 12px;
       color: var(--muted);
       user-select: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    .cluster-row:hover { color: var(--text); }
-    .cluster-row.active {
-      color: var(--text);
-      background: rgba(255,255,255,0.04);
-    }
+    .cluster-row:hover       { color: var(--text); }
+    .cluster-row.active      { color: var(--text); background: rgba(255,255,255,0.04); }
+    .cluster-row.hot         { background: rgba(239,68,68,0.10); }
+    .cluster-row.hot:hover   { background: rgba(239,68,68,0.16); color: var(--text); }
+    .cluster-row.hot.active  { background: rgba(239,68,68,0.18); }
 
     .cl-name {
       font-weight: 600;
-      color: var(--text);
-      min-width: 130px;
-      flex-shrink: 0;
+      color: var(--muted);
     }
-    .cluster-row:not(.active) .cl-name { color: var(--muted); }
     .cluster-row:hover .cl-name,
     .cluster-row.active .cl-name { color: var(--text); }
 
-    .cl-sep { color: var(--sep); margin: 0 6px; user-select: none; }
-
-    .cl-sources {
-      display: flex;
-      gap: 4px;
-      flex-shrink: 0;
-    }
-    .cl-src {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      border: 1px solid var(--sep);
-      padding: 0px 4px;
-      line-height: 1.7;
-    }
-    .cluster-row.active .cl-src,
-    .cluster-row:hover .cl-src {
-      color: var(--text);
-      border-color: var(--muted);
-    }
-
-    .cl-count {
-      flex-shrink: 0;
-    }
-
-    .cl-date {
-      flex-shrink: 0;
-    }
-
-    /* ── Feed section ── */
-    #feed-section { margin-top: 0; }
+    .cl-meta { color: var(--muted); }
+    .cl-anomaly { color: var(--muted); }
+    .cluster-row.hot .cl-anomaly { color: #f87171; }
 
     /* ── Month header ── */
     .month-header {
@@ -166,19 +132,18 @@
 
     /* ── Feed item — compact log line ── */
     .item {
-      padding: 6px 0 6px 0;
+      padding: 6px 0;
       border-bottom: 1px solid rgba(58,58,60,0.6);
       cursor: default;
       transition: background 0.08s;
     }
 
-    .item:hover                 { background: rgba(255,255,255,0.025); }
-    .item.tint-amber            { background: rgba(245,158,11,0.10); }
-    .item.tint-red              { background: rgba(239,68,68,0.13); }
-    .item.tint-amber:hover      { background: rgba(245,158,11,0.15); }
-    .item.tint-red:hover        { background: rgba(239,68,68,0.18); }
+    .item:hover             { background: rgba(255,255,255,0.025); }
+    .item.tint-amber        { background: rgba(245,158,11,0.10); }
+    .item.tint-red          { background: rgba(239,68,68,0.13); }
+    .item.tint-amber:hover  { background: rgba(245,158,11,0.15); }
+    .item.tint-red:hover    { background: rgba(239,68,68,0.18); }
 
-    /* Line 1: title + value */
     .row1 {
       display: flex;
       align-items: baseline;
@@ -205,7 +170,6 @@
       flex-shrink: 0;
     }
 
-    /* Line 2: country · source · date */
     .row2 {
       display: flex;
       align-items: center;
@@ -215,16 +179,12 @@
       color: var(--muted);
     }
 
-    .item-country {
-      color: var(--muted);
-      cursor: default;
-    }
+    .item-country { color: var(--muted); cursor: default; }
     .item-country[data-tooltip] { cursor: help; }
     .item-country[data-tooltip]:hover { color: var(--text); }
 
     .sep { color: var(--sep); user-select: none; }
 
-    /* ── Details (subtle) ── */
     .details-row {
       display: flex;
       align-items: center;
@@ -266,7 +226,7 @@
       z-index: 100;
     }
 
-    .tt-score    { font-weight: 600; color: var(--text); margin-bottom: 3px; }
+    .tt-score     { font-weight: 600; color: var(--text); margin-bottom: 3px; }
     .tt-rationale { color: var(--muted); }
   </style>
 </head>
@@ -279,7 +239,7 @@
   <div class="outer">
     <div id="status">fetching signals…</div>
     <div id="clusters-wrap" style="display:none">
-      <div class="section-hdr">clusters · 2+ sources · 30d</div>
+      <div class="section-hdr">clusters · 2+ sources · anomaly</div>
       <div id="clusters"></div>
     </div>
     <div id="feed-section">
@@ -318,6 +278,17 @@
 
     function sourceShort(s) {
       return SOURCE_SHORT[s && s.toLowerCase()] || (s || '').toUpperCase().slice(0, 5);
+    }
+
+    // ── Date helpers ─────────────────────────────────────────────────────────
+
+    // Returns YYYY-MM-DD for N days ago (local time)
+    function isoOffset(daysAgo) {
+      const d = new Date();
+      d.setDate(d.getDate() - daysAgo);
+      return d.getFullYear() + '-' +
+        String(d.getMonth() + 1).padStart(2, '0') + '-' +
+        String(d.getDate()).padStart(2, '0');
     }
 
     // ── Formatters ──────────────────────────────────────────────────────────
@@ -404,8 +375,9 @@
     // ── Cluster computation ──────────────────────────────────────────────────
 
     function computeClusters(signals) {
-      const now     = new Date();
-      const cutoff  = new Date(now - 30 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+      // Date cutoffs computed fresh against today (local time)
+      const cutoff30 = isoOffset(30);   // 30 days ago
+      const cutoff90 = isoOffset(90);   // 90 days ago
 
       const byIso = new Map();
       for (const sig of signals) {
@@ -420,34 +392,38 @@
       for (const [iso, { sigs, sources }] of byIso) {
         if (sources.size < 2) continue;
 
-        const recent = sigs.filter(s => (s.signal_date || '') >= cutoff);
-        if (!recent.length) continue;
+        // Recent window: last 30 days
+        const recent30 = sigs.filter(s => (s.signal_date || '') >= cutoff30);
+        if (!recent30.length) continue;
 
-        const allDates   = sigs.map(s => s.signal_date).filter(Boolean).sort();
+        // Baseline window: days 31-90 ago (60 days), normalized to 30-day equivalent
+        const baseline60 = sigs.filter(s => {
+          const d = s.signal_date || '';
+          return d >= cutoff90 && d < cutoff30;
+        });
+        const baselineNorm = baseline60.length / 2;  // 60d → 30d equivalent
+
+        // anomaly = recent_30d / (baseline_30d_normalized + 1)
+        // +1 prevents div/0 and ensures cold-start countries score high
+        const anomaly = recent30.length / (baselineNorm + 1);
+
+        const allDates  = sigs.map(s => s.signal_date).filter(Boolean).sort();
         const mostRecent = allDates[allDates.length - 1] || null;
-
-        const recentDates    = recent.map(s => s.signal_date).filter(Boolean).sort();
-        const firstRecentDate = recentDates[0];
-        const daysSinceFirst  = firstRecentDate
-          ? Math.floor((now - new Date(firstRecentDate)) / (24 * 60 * 60 * 1000))
-          : null;
 
         clusters.push({
           iso,
           sourceDiversity: sources.size,
           sources: [...sources].sort(),
           totalSignals: sigs.length,
-          recentSignals: recent.length,
+          recent30: recent30.length,
+          baseline30: baselineNorm,
+          anomaly,
           mostRecent,
-          daysSinceFirst,
         });
       }
 
-      clusters.sort((a, b) => {
-        if (b.sourceDiversity !== a.sourceDiversity) return b.sourceDiversity - a.sourceDiversity;
-        return (b.mostRecent || '').localeCompare(a.mostRecent || '');
-      });
-
+      // Sort by anomaly score descending
+      clusters.sort((a, b) => b.anomaly - a.anomaly);
       return clusters;
     }
 
@@ -464,25 +440,23 @@
       container.innerHTML = '';
 
       for (const cl of clusters) {
-        const profile = profileCache[cl.iso] || null;
-        const name    = profile ? profile.name : cl.iso;
+        const profile   = profileCache[cl.iso] || null;
+        const name      = (profile ? profile.name : cl.iso).toUpperCase();
+        const anomalyFmt = cl.anomaly >= 10
+          ? '\xd7' + Math.round(cl.anomaly)
+          : '\xd7' + cl.anomaly.toFixed(1);
+        const hot = cl.anomaly > 2;
 
         const row = document.createElement('div');
-        row.className = 'cluster-row';
+        row.className = 'cluster-row' + (hot ? ' hot' : '');
         row.dataset.iso = cl.iso;
-
-        const sourceTags = cl.sources
-          .map(s => `<span class="cl-src">${esc(sourceShort(s))}</span>`)
-          .join('');
 
         row.innerHTML =
           `<span class="cl-name">${esc(name)}</span>` +
-          `<span class="cl-sep">·</span>` +
-          `<span class="cl-sources">${sourceTags}</span>` +
-          `<span class="cl-sep">·</span>` +
-          `<span class="cl-count">${cl.totalSignals}</span>` +
-          `<span class="cl-sep">·</span>` +
-          `<span class="cl-date">${esc(fmtDateShort(cl.mostRecent))}</span>`;
+          `<span class="cl-meta"> — ${cl.sourceDiversity} source${cl.sourceDiversity !== 1 ? 's' : ''}` +
+          ` — ${cl.totalSignals} signal${cl.totalSignals !== 1 ? 's' : ''}` +
+          ` — <span class="cl-anomaly">anomaly ${esc(anomalyFmt)}</span>` +
+          ` — last ${esc(fmtDateShort(cl.mostRecent))}</span>`;
 
         row.addEventListener('click', () => {
           if (activeFilter === cl.iso) {
@@ -569,9 +543,7 @@
       const sourceBtn  = sourceUrl
         ? `<a class="details-btn" href="${esc(sourceUrl)}" target="_blank" rel="noopener">${esc(srcShort)}</a>`
         : `<span>${esc(srcShort)}</span>`;
-      const detailsBtn = descTrunc
-        ? `<span class="details-btn details-expand">details</span>`
-        : '';
+      const detailsBtn  = descTrunc ? `<span class="details-btn details-expand">details</span>` : '';
       const detailsPipe = detailsBtn ? `<span class="sep">·</span>` : '';
 
       const detailsHtml = (descTrunc || sourceUrl)
@@ -583,7 +555,7 @@
         ? `<span class="item-val">${esc(fmtValue(sig.value_usd))}</span>`
         : '';
 
-      el.innerHTML = (
+      el.innerHTML =
         `<div class="row1">` +
           `<span class="item-desc">${esc(sig.title || sig.description || '—')}</span>` +
           valHtml +
@@ -593,8 +565,7 @@
           `<span class="sep">·</span>` +
           `<span>${esc(fmtDate(sig.signal_date))}</span>` +
         `</div>` +
-        detailsHtml
-      );
+        detailsHtml;
 
       const expand = el.querySelector('.details-expand');
       if (expand) {
@@ -628,10 +599,11 @@
 
       updatedEl.textContent = fmtUpdated(data.generated_at);
 
-      // Dedupe, skip US/null iso, sort newest first
+      // Dedupe, skip US/null iso, filter to 2025+, sort newest first
       const seen = new Set();
       const signals = (data.signals || [])
         .filter(s => s.iso && s.iso !== 'US')
+        .filter(s => (s.signal_date || '') >= '2025-01-01')
         .filter(s => {
           const key = s.cn_number || `${s.iso}|${s.signal_date}|${s.description}`;
           if (seen.has(key)) return false;
