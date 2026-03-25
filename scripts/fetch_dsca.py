@@ -336,9 +336,22 @@ def parse_article_page(html):
                 break
         if not weapon_system:
             weapon_system = h1_text.strip() or None
+    # Strip trailing boilerplate ("– Media/Public Contact..." suffix)
+    if weapon_system:
+        m = re.search(r"\s+[\u2013\u2014\-]\s+Media\b", weapon_system)
+        if m:
+            weapon_system = weapon_system[:m.start()].strip() or None
 
     body = soup.select_one(".article-body")
     body_text = body.get_text(" ", strip=True) if body else ""
+
+    # Skip header boilerplate ("NEWS | date country – weapon – Contact:...")
+    # Anchor to the actual notification text
+    for anchor in ("WASHINGTON,", "The State Department has made", "The U.S. Department of State"):
+        idx = body_text.find(anchor)
+        if idx >= 0:
+            body_text = body_text[idx:]
+            break
 
     # First 1-2 sentences from body as description
     if body_text:
@@ -759,8 +772,12 @@ def scrape_state_arms(signals_path):
             multiplier = 1_000_000_000 if m.group(2).lower() == "billion" else 1_000_000
             value_usd  = raw * multiplier
 
-        # Description: first 400 chars of the notification body
-        first_para = content_text.strip()[:400] if content_text else None
+        # Description: first 2 sentences of the notification body
+        if content_text:
+            _sents = re.split(r"(?<=\.)\s+(?=[A-Z])", content_text.strip())
+            first_para = " ".join(_sents[:2]).strip() or None
+        else:
+            first_para = None
 
         entry = {
             "iso":         iso2,
