@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T23:26:50.991135+00:00",
+  "generated_at": "2026-03-25T00:17:52.035651+00:00",
   "sources": [
     "dsca",
     "fara",
@@ -66,6 +66,17 @@
       "description": "SPO, TAX; Switzerland; Issues related to the preparation to host the FIFA World Cup 2026 - no specific legislation.",
       "url": "https://lda.gov/filings/public/filing/22ea354d-6fed-4032-88ef-2d8378529bc6/print/",
       "raw_score": 0.0,
+      "weight": 1.0
+    },
+    {
+      "iso": "TH",
+      "source": "sam",
+      "signal_date": "2026-03-24",
+      "title": "Drone Show Services",
+      "value_usd": null,
+      "description": "Solicitation \u00b7 R499",
+      "raw_score": 1.0,
+      "page_url": "https://sam.gov/workspace/contract/opp/ffc9c7b226a845f78de96dd2cde50ec5/view",
       "weight": 1.0
     }
   ]

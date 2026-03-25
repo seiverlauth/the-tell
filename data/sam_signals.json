@@ -1,8 +1,18 @@
 {
-  "generated_at": "2026-03-24T23:26:32.899312+00:00",
+  "generated_at": "2026-03-25T00:17:36.642293+00:00",
   "sources": [
     "sam"
   ],
-  "error": "HTTP Error 429: Too Many Requests",
-  "signals": []
+  "signals": [
+    {
+      "iso": "TH",
+      "source": "sam",
+      "signal_date": "2026-03-24",
+      "title": "Drone Show Services",
+      "value_usd": null,
+      "description": "Solicitation \u00b7 R499",
+      "raw_score": 1.0,
+      "page_url": "https://sam.gov/workspace/contract/opp/ffc9c7b226a845f78de96dd2cde50ec5/view"
+    }
+  ]
 }
