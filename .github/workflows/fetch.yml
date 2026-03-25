@@ -21,7 +21,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies
-        run: $PIP install --upgrade --no-cache-dir curl_cffi requests beautifulsoup4
+        run: $PIP install --upgrade --no-cache-dir curl_cffi requests beautifulsoup4 pypdf
 
       - name: Configure git and pull latest
         run: |
