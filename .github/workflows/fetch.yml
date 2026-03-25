@@ -17,6 +17,9 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Use Homebrew arm64 Python
+        run: echo "/opt/homebrew/bin" >> $GITHUB_PATH
+
       - name: Install dependencies
         run: pip3 install --upgrade --no-cache-dir curl_cffi requests beautifulsoup4
 
