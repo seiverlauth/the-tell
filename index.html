@@ -84,34 +84,54 @@
     /* ── Clusters ── */
     #clusters-wrap { margin-bottom: 4px; }
 
-    .cluster-row {
-      padding: 5px 0;
+    .cluster-entry {
+      padding: 8px 0;
       border-bottom: 1px solid rgba(58,58,60,0.5);
       cursor: pointer;
       transition: background 0.08s;
-      font-size: 12px;
-      color: var(--muted);
       user-select: none;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
-    .cluster-row:hover       { color: var(--text); }
-    .cluster-row.active      { color: var(--text); background: rgba(255,255,255,0.04); }
-    .cluster-row.hot         { background: rgba(239,68,68,0.10); }
-    .cluster-row.hot:hover   { background: rgba(239,68,68,0.16); color: var(--text); }
-    .cluster-row.hot.active  { background: rgba(239,68,68,0.18); }
+    .cluster-entry:hover  { background: rgba(255,255,255,0.025); }
+    .cluster-entry.active { background: rgba(255,255,255,0.04); }
 
+    .cl-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+    }
     .cl-name {
+      font-size: 12px;
       font-weight: 600;
       color: var(--muted);
     }
-    .cluster-row:hover .cl-name,
-    .cluster-row.active .cl-name { color: var(--text); }
+    .cluster-entry:hover .cl-name,
+    .cluster-entry.active .cl-name { color: var(--text); }
 
-    .cl-meta { color: var(--muted); }
-    .cl-anomaly { color: var(--muted); }
-    .cluster-row.hot .cl-anomaly { color: #f87171; }
+    .cl-score {
+      font-size: 11px;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+    .cl-layers { margin-top: 3px; }
+    .cl-layer {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.5;
+      opacity: 0.75;
+    }
+    .cluster-entry:hover .cl-layer,
+    .cluster-entry.active .cl-layer { opacity: 1; }
+
+    .cl-factors {
+      margin-top: 2px;
+      font-size: 10px;
+      color: var(--muted);
+      opacity: 0.45;
+      letter-spacing: 0.02em;
+    }
+    .cluster-entry:hover .cl-factors,
+    .cluster-entry.active .cl-factors { opacity: 0.75; }
 
     /* ── Month header ── */
     .month-header {
@@ -232,7 +252,7 @@
   <div class="outer">
     <div id="status">fetching signals…</div>
     <div id="clusters-wrap" style="display:none">
-      <div class="section-hdr">clusters · multi-source · anomaly</div>
+      <div class="section-hdr">clusters · top 5 · structural × lift × convergence</div>
       <div id="clusters"></div>
     </div>
     <div id="feed-section">
@@ -365,66 +385,193 @@
       tooltipEl.style.top  = Math.min(y, window.innerHeight - tooltipEl.offsetHeight - 8) + 'px';
     });
 
+    // ── Layer definitions ────────────────────────────────────────────────────
+
+    // Maps signal source → semantic layer name.
+    // FARA and LDA both count as one "influence" layer — 40 LDA filings = 1 layer,
+    // same as 1 FARA filing. Convergence counts channels, not volume.
+    const LAYER_MAP = {
+      dsca:            'military',
+      fara:            'influence',
+      lda:             'influence',
+      federalregister: 'regulatory',
+      sam:             'procurement',
+    };
+
+    function sigLayer(sig) {
+      return LAYER_MAP[(sig.source || '').toLowerCase()] || null;
+    }
+
     // ── Cluster computation ──────────────────────────────────────────────────
 
     function computeClusters(signals) {
-      // Date cutoffs computed fresh against today (local time)
-      const cutoff14 = isoOffset(14);   // 14 days ago  — recent window
-      const cutoff98 = isoOffset(98);   // 98 days ago  — baseline start (14 + 84)
+      // Eight cutoffs: today, -14, -28, -42, -56, -70, -84, -98 days
+      // cutoffs[i] = isoOffset(i * 14)
+      // Recent window:     signal_date >= cutoffs[1]
+      // Baseline period p: cutoffs[p+2] <= signal_date < cutoffs[p+1]  (p = 0..5)
+      const cutoffs = [0, 14, 28, 42, 56, 70, 84, 98].map(d => isoOffset(d));
 
+      // Group all signals by ISO
       const byIso = new Map();
       for (const sig of signals) {
         if (!sig.iso) continue;
-        if (!byIso.has(sig.iso)) byIso.set(sig.iso, { sigs: [], sources: new Set() });
-        const e = byIso.get(sig.iso);
-        e.sigs.push(sig);
-        if (sig.source) e.sources.add(sig.source.toLowerCase());
+        if (!byIso.has(sig.iso)) byIso.set(sig.iso, []);
+        byIso.get(sig.iso).push(sig);
       }
 
       const clusters = [];
-      for (const [iso, { sigs, sources }] of byIso) {
-        if (sources.size < 2) continue;
 
-        // Recent window: last 14 days
-        const recent14 = sigs.filter(s => (s.signal_date || '') >= cutoff14);
-        if (!recent14.length) continue;
+      for (const [iso, sigs] of byIso) {
+        const profile         = profileCache[iso] || null;
+        const structuralScore = profile ? (profile.structural_interest_score || 1) : 1;
 
-        // Baseline: days 15–98 ago (84 days = six 14-day periods), normalized to 14-day rate
-        const baseline84 = sigs.filter(s => {
-          const d = s.signal_date || '';
-          return d >= cutoff98 && d < cutoff14;
-        });
-        const baseline14Avg = baseline84.length / 6;
+        // ── Recent window (14d): collect signals per layer ──────────────────
+        const layerSigs = { military: [], influence: [], regulatory: [], procurement: [] };
+        for (const sig of sigs) {
+          if ((sig.signal_date || '') < cutoffs[1]) continue;
+          const layer = sigLayer(sig);
+          if (layer) layerSigs[layer].push(sig);
+        }
 
-        // Rate ratio: how many times busier than the rolling 14-day baseline?
-        // Floor baseline at 0.5 so cold-start countries score high but interpretably
-        // (a country with no history and 1 recent signal → anomaly 2.0, not infinity)
-        const anomaly = recent14.length / Math.max(baseline14Avg, 0.5);
+        const recentLayers = Object.values(layerSigs).filter(a => a.length > 0).length;
+        if (recentLayers === 0) continue;
 
-        // Combined score weights rate ratio by source diversity:
-        // log2(n+1): 1 src→1.0, 2→1.58, 3→2.0, 4→2.32
-        // Ensures DSCA+SAM+FARA convergence ranks above two-source noise at same rate
-        const score = anomaly * Math.log2(sources.size + 1);
+        // ── Baseline: six 14d periods (days 15-98) — distinct layers per period ──
+        // Stored as array for Z-score upgrade: when data matures, swap lift formula to
+        //   lift = (recentLayers - baselineMean) / Math.max(baselineStd, 0.5)
+        const periodCounts = [];
+        for (let p = 0; p < 6; p++) {
+          const pEnd   = cutoffs[p + 1];  // exclusive upper bound
+          const pStart = cutoffs[p + 2];  // inclusive lower bound
+          const layers = new Set();
+          for (const sig of sigs) {
+            const d = sig.signal_date || '';
+            if (d >= pStart && d < pEnd) {
+              const layer = sigLayer(sig);
+              if (layer) layers.add(layer);
+            }
+          }
+          periodCounts.push(layers.size);
+        }
 
-        const allDates  = sigs.map(s => s.signal_date).filter(Boolean).sort();
-        const mostRecent = allDates[allDates.length - 1] || null;
+        const hasBaseline   = periodCounts.some(c => c > 0);
+        const baselineMean  = periodCounts.reduce((a, b) => a + b, 0) / 6;
+        const baselineVar   = periodCounts.reduce((a, b) => a + (b - baselineMean) ** 2, 0) / 6;
+        const baselineStd   = Math.sqrt(baselineVar);  // stored for Z-score upgrade path
+
+        // Current lift: ratio. Default 1.0 if no 90d history exists yet.
+        const lift = hasBaseline ? recentLayers / Math.max(baselineMean, 0.5) : 1.0;
+
+        // ── Recency weight: median signal date within the convergence window ──
+        // Split 0-14d into 0-7d (1.0) and 7-14d (0.7) — flat 1.0 would have no
+        // discriminating power since all convergence-window signals are ≤14d old.
+        const windowDates = Object.values(layerSigs).flat()
+          .map(s => s.signal_date).filter(Boolean).sort();
+        const medianDate    = windowDates[Math.floor(windowDates.length / 2)] || null;
+        const recencyWeight = !medianDate              ? 0.7
+          : medianDate >= isoOffset(7)  ? 1.0
+          : medianDate >= isoOffset(14) ? 0.7
+          :                               0.5;
+
+        const convergence = recentLayers;
+        const score = Math.round(structuralScore * lift * convergence * recencyWeight * 100) / 100;
+
+        // ── Weekly layer counts (6 weeks) — stored for future CUSUM upgrade ──
+        // weeks[0] = 0-7d, weeks[1] = 7-14d, ..., weeks[5] = 35-42d
+        // CUSUM would track consecutive weeks above baselineMean to boost persistent spikes.
+        const weeklyLayerCounts = [];
+        for (let w = 0; w < 6; w++) {
+          const wStart = isoOffset((w + 1) * 7);
+          const wEnd   = isoOffset(w * 7);
+          const wLayers = new Set();
+          for (const sig of sigs) {
+            const d = sig.signal_date || '';
+            if (d >= wStart && d <= wEnd) {
+              const layer = sigLayer(sig);
+              if (layer) wLayers.add(layer);
+            }
+          }
+          weeklyLayerCounts.push(wLayers.size);
+        }
 
         clusters.push({
           iso,
-          sourceDiversity: sources.size,
-          sources: [...sources].sort(),
-          totalSignals: sigs.length,
-          recent14: recent14.length,
-          baseline14Avg,
-          anomaly,
+          structuralScore,
+          lift:            Math.round(lift * 100) / 100,
+          convergence,
+          recencyWeight,
           score,
-          mostRecent,
+          layerSigs,
+          medianDate,
+          baselineStats:   { mean: Math.round(baselineMean * 100) / 100, std: Math.round(baselineStd * 100) / 100, periods: periodCounts },
+          weeklyLayerCounts,
         });
       }
 
-      // Sort by combined score descending
       clusters.sort((a, b) => b.score - a.score);
-      return clusters;
+      const top5 = clusters.slice(0, 5);
+
+      // ── Console diagnostic — sanity-check component values ──────────────
+      console.table(top5.map(cl => ({
+        iso:          cl.iso,
+        structural:   cl.structuralScore,
+        lift:         cl.lift,
+        convergence:  cl.convergence,
+        recency:      cl.recencyWeight,
+        score:        cl.score,
+        b_mean:       cl.baselineStats.mean,
+        median_date:  cl.medianDate,
+        weeks:        cl.weeklyLayerCounts.join(','),
+      })));
+
+      return top5;
+    }
+
+    // ── Layer line synthesis ─────────────────────────────────────────────────
+
+    // Produces one human-readable line per firing layer.
+    // Uses the most-recent signal in that layer's 14d window for the summary.
+    function synthesizeLayerLine(layer, sigs) {
+      if (!sigs.length) return null;
+      const sorted = [...sigs].sort((a, b) => (b.signal_date || '').localeCompare(a.signal_date || ''));
+      const top    = sorted[0];
+      const date   = fmtDateShort(top.signal_date);
+      const extra  = sigs.length > 1 ? ' +' + (sigs.length - 1) : '';
+
+      if (layer === 'military') {
+        const val       = top.value_usd ? fmtValue(top.value_usd) + ' ' : '';
+        const titleRaw  = top.title || '';
+        // DSCA titles are often "Country \u2014 Weapon System" — strip the country prefix
+        const titleClean = titleRaw.includes(' \u2014 ')
+          ? titleRaw.split(' \u2014 ').slice(1).join(' \u2014 ')
+          : titleRaw;
+        const title = titleClean.length > 45 ? titleClean.slice(0, 42) + '\u2026' : titleClean;
+        return `Military: ${val}${title} ${date}${extra}`;
+      }
+
+      if (layer === 'influence') {
+        const faraCount = sigs.filter(s => (s.source || '').toLowerCase() === 'fara').length;
+        const ldaCount  = sigs.filter(s => (s.source || '').toLowerCase() === 'lda').length;
+        const parts = [];
+        if (faraCount) parts.push(faraCount + ' FARA');
+        if (ldaCount)  parts.push(ldaCount + ' LDA');
+        return 'Influence: ' + parts.join(', ') + ' \u2014 last ' + date;
+      }
+
+      if (layer === 'regulatory') {
+        const titleRaw = top.title || '';
+        const title    = titleRaw.length > 50 ? titleRaw.slice(0, 47) + '\u2026' : titleRaw;
+        return `Regulatory: ${title} ${date}${extra}`;
+      }
+
+      if (layer === 'procurement') {
+        const val      = top.value_usd ? fmtValue(top.value_usd) + ' ' : '';
+        const titleRaw = top.title || '';
+        const title    = titleRaw.length > 45 ? titleRaw.slice(0, 42) + '\u2026' : titleRaw;
+        return `Procurement: ${val}${title} ${date}${extra}`;
+      }
+
+      return layer + ': ' + sigs.length + ' signal' + (sigs.length !== 1 ? 's' : '') + ' \u2014 last ' + date;
     }
 
     // ── Render clusters ──────────────────────────────────────────────────────
@@ -439,39 +586,55 @@
       wrap.style.display = '';
       container.innerHTML = '';
 
+      // clusters is already sliced to top 5 in computeClusters
       for (const cl of clusters) {
-        const profile   = profileCache[cl.iso] || null;
-        const name      = (profile ? profile.name : cl.iso).toUpperCase();
-        const anomalyFmt = cl.anomaly >= 10
-          ? '\xd7' + Math.round(cl.anomaly)
-          : '\xd7' + cl.anomaly.toFixed(1);
-        const hot = cl.score > 5;
+        const profile = profileCache[cl.iso] || null;
+        const name    = (profile ? profile.name : cl.iso).toUpperCase();
 
-        const row = document.createElement('div');
-        row.className = 'cluster-row' + (hot ? ' hot' : '');
-        row.dataset.iso = cl.iso;
+        const entry = document.createElement('div');
+        entry.className = 'cluster-entry';
+        entry.dataset.iso = cl.iso;
 
-        row.innerHTML =
+        // Header: country name + score
+        const scoreFmt = cl.score >= 10 ? cl.score.toFixed(0) : cl.score.toFixed(1);
+        let html = `<div class="cl-header">` +
           `<span class="cl-name">${esc(name)}</span>` +
-          `<span class="cl-meta"> — ${cl.sourceDiversity} source${cl.sourceDiversity !== 1 ? 's' : ''}` +
-          ` — ${cl.totalSignals} signal${cl.totalSignals !== 1 ? 's' : ''}` +
-          ` — <span class="cl-anomaly">anomaly ${esc(anomalyFmt)}</span>` +
-          ` — last ${esc(fmtDateShort(cl.mostRecent))}</span>`;
+          `<span class="cl-score">${esc(scoreFmt)}</span>` +
+          `</div>`;
 
-        row.addEventListener('click', () => {
+        // One line per firing layer, in fixed order
+        const layerOrder = ['military', 'influence', 'regulatory', 'procurement'];
+        const layerLines = layerOrder
+          .map(l => synthesizeLayerLine(l, cl.layerSigs[l]))
+          .filter(Boolean);
+        if (layerLines.length) {
+          html += `<div class="cl-layers">` +
+            layerLines.map(l => `<div class="cl-layer">${esc(l)}</div>`).join('') +
+            `</div>`;
+        }
+
+        // Top 3 structural interest factors from profile
+        const factors = profile && profile.key_structural_interests;
+        if (factors && factors.length) {
+          html += `<div class="cl-factors">${esc(factors.slice(0, 3).join(' \xb7 '))}</div>`;
+        }
+
+        entry.innerHTML = html;
+
+        entry.addEventListener('click', () => {
           if (activeFilter === cl.iso) {
             activeFilter = null;
-            row.classList.remove('active');
+            entry.classList.remove('active');
           } else {
-            container.querySelectorAll('.cluster-row.active')
+            container.querySelectorAll('.cluster-entry.active')
               .forEach(r => r.classList.remove('active'));
             activeFilter = cl.iso;
-            row.classList.add('active');
+            entry.classList.add('active');
           }
           renderFeed(signals);
         });
 
-        container.appendChild(row);
+        container.appendChild(entry);
       }
     }
 
@@ -589,9 +752,9 @@
             activeFilter = sig.iso;
           }
           // Sync cluster bar active state
-          document.querySelectorAll('.cluster-row.active').forEach(r => r.classList.remove('active'));
+          document.querySelectorAll('.cluster-entry.active').forEach(r => r.classList.remove('active'));
           if (activeFilter) {
-            const clRow = document.querySelector(`.cluster-row[data-iso="${activeFilter}"]`);
+            const clRow = document.querySelector(`.cluster-entry[data-iso="${activeFilter}"]`);
             if (clRow) clRow.classList.add('active');
           }
           renderFeed(signals);
