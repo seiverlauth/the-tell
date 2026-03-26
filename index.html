@@ -57,7 +57,7 @@
 
     /* ── Outer ── */
     .outer {
-      max-width: 760px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 0 28px 80px;
     }
@@ -82,10 +82,10 @@
     }
 
     /* ── Clusters ── */
-    #clusters-wrap { margin-bottom: 4px; }
+    #clusters-wrap { margin-bottom: 12px; }
 
     .cluster-entry {
-      padding: 8px 0;
+      padding: 10px 0;
       border-bottom: 1px solid rgba(58,58,60,0.5);
       cursor: pointer;
       transition: background 0.08s;
@@ -96,31 +96,29 @@
 
     .cl-header { display: flex; align-items: baseline; gap: 8px; }
     .cl-name {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.03em;
     }
-    .cluster-entry:hover .cl-name,
-    .cluster-entry.active .cl-name { color: var(--text); }
-    .cl-layers { margin-top: 3px; }
+    .cl-layers { margin-top: 4px; }
     .cl-layer {
       font-size: 11px;
       color: var(--muted);
-      line-height: 1.5;
-      opacity: 0.75;
+      line-height: 1.6;
     }
     .cluster-entry:hover .cl-layer,
-    .cluster-entry.active .cl-layer { opacity: 1; }
+    .cluster-entry.active .cl-layer { color: var(--text); }
 
     .cl-factors {
-      margin-top: 2px;
+      margin-top: 3px;
       font-size: 10px;
       color: var(--muted);
-      opacity: 0.45;
+      opacity: 0.5;
       letter-spacing: 0.02em;
     }
     .cluster-entry:hover .cl-factors,
-    .cluster-entry.active .cl-factors { opacity: 0.75; }
+    .cluster-entry.active .cl-factors { opacity: 0.8; }
 
     /* ── Month header ── */
     .month-header {
@@ -133,81 +131,88 @@
       border-bottom: 1px solid var(--sep);
     }
 
-    /* ── Feed item — compact log line ── */
+    /* ── Feed item — single Finder-style row ── */
     .item {
-      padding: 6px 0;
-      border-bottom: 1px solid rgba(58,58,60,0.6);
-      cursor: default;
-      transition: background 0.08s;
+      border-bottom: 1px solid rgba(58,58,60,0.4);
     }
+    .item:hover { background: rgba(255,255,255,0.02); }
 
-    .item:hover             { background: rgba(255,255,255,0.025); }
-
-    .row1 {
+    .item-row {
       display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 16px;
+      align-items: center;
+      padding: 4px 0;
+      gap: 0;
+      min-width: 0;
+      white-space: nowrap;
     }
 
-    .item-desc {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text);
-      line-height: 1.35;
+    .item-country {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .item-country:hover,
+    .item-country.active-filter { color: var(--text); }
+
+    .item-sep { color: var(--sep); user-select: none; padding: 0 5px; flex-shrink: 0; }
+
+    .item-title {
       flex: 1;
-      white-space: nowrap;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--text);
+      font-size: 12px;
+      padding-right: 16px;
+    }
+
+    .item-source {
+      flex-shrink: 0;
+      color: var(--muted);
+      font-size: 11px;
+      padding-right: 14px;
+      max-width: 260px;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
-    .item-val {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text);
-      white-space: nowrap;
+    .item-date {
       flex-shrink: 0;
+      color: var(--muted);
+      font-size: 11px;
+      padding-right: 10px;
+      min-width: 80px;
+      text-align: right;
     }
 
-    .row2 {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      margin-top: 1px;
-      font-size: 11px;
+    .item-toggle {
+      flex-shrink: 0;
+      width: 18px;
+      text-align: center;
+      cursor: pointer;
       color: var(--muted);
-    }
-
-    .item-country { color: var(--muted); font-weight: 600; cursor: pointer; }
-    .item-country:hover, .item-country.active-filter { color: var(--text); }
-
-    .sep { color: var(--sep); user-select: none; }
-
-    .details-row {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      margin-top: 2px;
-      font-size: 11px;
-      color: var(--muted);
-      opacity: 0.6;
+      font-size: 10px;
       user-select: none;
+      transition: color 0.08s;
     }
-    .details-row:hover { opacity: 1; }
+    .item-toggle:hover { color: var(--text); }
+    .item.expanded .item-toggle { color: var(--text); }
 
-    .details-btn { cursor: pointer; }
-    .details-btn:hover { text-decoration: underline; }
-
-    .details-body {
+    .item-detail {
       display: none;
-      margin-top: 4px;
+      padding: 2px 0 8px 0;
       font-size: 11px;
       color: var(--muted);
-      opacity: 0.7;
-      line-height: 1.5;
+      line-height: 1.55;
+      white-space: normal;
     }
-    .item.expanded .details-body { display: block; }
-    .item.expanded .details-row  { opacity: 1; }
+    .item.expanded .item-detail { display: block; }
+    .item-detail a {
+      color: var(--accent);
+    }
+    .item-detail a:hover { text-decoration: underline; }
 
     /* ── Tooltip ── */
     #tooltip {
@@ -662,57 +667,58 @@
 
     function renderItem(sig, profile, signals) {
       const country = profile ? profile.name : sig.iso;
-      const score   = profile ? profile.structural_interest_score : null;
+      const el      = document.createElement('div');
+      el.className  = 'item';
 
-      const el = document.createElement('div');
-      el.className = 'item';
-
+      // Country tooltip with structural interest context
       let countryTooltip = '';
       if (profile) {
         const ttParts = [];
-        if (score != null) ttParts.push(`Structural interest: ${score}/10`);
+        const s = profile.structural_interest_score;
+        if (s != null) ttParts.push(`Structural interest: ${s}/10`);
         if (profile.score_rationale) ttParts.push(profile.score_rationale);
         if (ttParts.length) countryTooltip = ` data-tooltip="${esc(ttParts.join('\n'))}"`;
       }
 
-      const sourceUrl  = sig.page_url || sig.url || null;
-      const descRaw    = sig.description || '';
-      const descTrunc  = descRaw.length > 800 ? descRaw.slice(0, 800) + '\u2026' : descRaw;
-      const srcShort   = sourceShort(sig.source);
+      const sourceUrl = sig.page_url || sig.url || null;
+      const descRaw   = sig.description || '';
+      const srcFull   = sourceLabel(sig.source);
 
-      const sourceBtn  = sourceUrl
-        ? `<a class="details-btn" href="${esc(sourceUrl)}" target="_blank" rel="noopener">${esc(srcShort)}</a>`
-        : `<span>${esc(srcShort)}</span>`;
-      const detailsBtn  = descTrunc ? `<span class="details-btn details-expand">details</span>` : '';
-      const detailsPipe = detailsBtn ? `<span class="sep">·</span>` : '';
+      // Title: strip "Country — " prefix common in DSCA titles; append value if present
+      let titleStr = sig.title || sig.description || '—';
+      if (titleStr.includes(' \u2014 ')) {
+        titleStr = titleStr.split(' \u2014 ').slice(1).join(' \u2014 ');
+      }
+      if (sig.value_usd != null) titleStr += '  ' + fmtValue(sig.value_usd);
 
-      const detailsHtml = (descTrunc || sourceUrl)
-        ? `<div class="details-row">${sourceBtn}${detailsPipe}${detailsBtn}</div>` +
-          (descTrunc ? `<div class="details-body">${esc(descTrunc)}</div>` : '')
-        : '';
-
-      const valHtml = sig.value_usd != null
-        ? `<span class="item-val">${esc(fmtValue(sig.value_usd))}</span>`
-        : '';
-
-      const isFiltered = activeFilter === sig.iso;
+      const hasDetail = !!(descRaw || sourceUrl);
+      const isFiltered   = activeFilter === sig.iso;
       const countryClass = 'item-country' + (isFiltered ? ' active-filter' : '');
 
-      el.innerHTML =
-        `<div class="row1">` +
-          `<span class="item-desc">${esc(sig.title || sig.description || '—')}</span>` +
-          valHtml +
-        `</div>` +
-        `<div class="row2">` +
-          `<span class="${countryClass}"${countryTooltip}>${esc(country)}</span>` +
-          `<span class="sep">·</span>` +
-          `<span>${esc(fmtDate(sig.signal_date))}</span>` +
-        `</div>` +
-        detailsHtml;
+      // Expanded detail: description + source link
+      let detailInner = '';
+      if (descRaw) {
+        const trunc = descRaw.length > 800 ? descRaw.slice(0, 800) + '\u2026' : descRaw;
+        detailInner += esc(trunc);
+      }
+      if (sourceUrl) {
+        detailInner += (detailInner ? '  ' : '') +
+          `<a href="${esc(sourceUrl)}" target="_blank" rel="noopener">source \u2197</a>`;
+      }
 
-      const expand = el.querySelector('.details-expand');
-      if (expand) {
-        expand.addEventListener('click', e => {
+      el.innerHTML =
+        `<div class="item-row">` +
+          `<span class="${countryClass}"${countryTooltip}>${esc(country)}</span>` +
+          `<span class="item-sep">\xb7</span>` +
+          `<span class="item-title">${esc(titleStr)}</span>` +
+          `<span class="item-source">${esc(srcFull)}</span>` +
+          `<span class="item-date">${esc(fmtDate(sig.signal_date))}</span>` +
+          (hasDetail ? `<span class="item-toggle">\u25be</span>` : `<span class="item-toggle"></span>`) +
+        `</div>` +
+        (hasDetail ? `<div class="item-detail">${detailInner}</div>` : '');
+
+      if (hasDetail) {
+        el.querySelector('.item-toggle').addEventListener('click', e => {
           e.stopPropagation();
           const wasExpanded = el.classList.contains('expanded');
           document.querySelectorAll('.item.expanded').forEach(i => i.classList.remove('expanded'));
@@ -723,12 +729,7 @@
       if (sig.iso) {
         el.querySelector('.item-country').addEventListener('click', e => {
           e.stopPropagation();
-          if (activeFilter === sig.iso) {
-            activeFilter = null;
-          } else {
-            activeFilter = sig.iso;
-          }
-          // Sync cluster bar active state
+          activeFilter = activeFilter === sig.iso ? null : sig.iso;
           document.querySelectorAll('.cluster-entry.active').forEach(r => r.classList.remove('active'));
           if (activeFilter) {
             const clRow = document.querySelector(`.cluster-entry[data-iso="${activeFilter}"]`);
