@@ -93,7 +93,8 @@
     /* ── Map ── */
     #map {
       flex: 0 0 55%;
-      height: 380px;
+      height: 100%;
+      min-height: 280px;
       background: var(--bg);
     }
     .leaflet-container { background: var(--bg) !important; }
@@ -190,6 +191,14 @@
       color: var(--text);
       font-size: 12px;
       padding-right: 16px;
+    }
+
+    .item-src {
+      flex-shrink: 0;
+      color: var(--muted);
+      font-size: 11px;
+      padding-right: 12px;
+      opacity: 0.65;
     }
 
     .item-date {
@@ -623,21 +632,10 @@
 
         let html = `<div class="cl-header"><span class="cl-name">${esc(name)}</span></div>`;
 
-        // One line per firing layer, in fixed order
-        const layerOrder = ['military', 'influence', 'regulatory', 'procurement'];
-        const layerLines = layerOrder
-          .map(l => synthesizeLayerLine(l, cl.layerSigs[l]))
-          .filter(Boolean);
-        if (layerLines.length) {
-          html += `<div class="cl-layers">` +
-            layerLines.map(l => `<div class="cl-layer">${esc(l)}</div>`).join('') +
-            `</div>`;
-        }
-
-        // Top 3 structural interest factors from profile
+        // Structural interest factors only — no source labels
         const factors = profile && profile.key_structural_interests;
         if (factors && factors.length) {
-          html += `<div class="cl-factors">${esc(factors.slice(0, 3).join(' \xb7 '))}</div>`;
+          html += `<div class="cl-factors" style="opacity:0.8">${esc(factors.slice(0, 3).join(' \xb7 '))}</div>`;
         }
 
         entry.innerHTML = html;
@@ -765,6 +763,7 @@
           `<span class="${countryClass}"${countryTooltip}>${esc(country)}</span>` +
           `<span class="item-sep">\xb7</span>` +
           `<span class="item-title">${esc(titleStr)}</span>` +
+          `<span class="item-src">${esc(sourceShort(sig.source))}</span>` +
           `<span class="item-date">${esc(fmtDate(sig.signal_date))}</span>` +
         `</div>` +
         (hasDetail ? `<div class="item-detail">${detailInner}</div>` : '');
@@ -906,6 +905,46 @@
         return;
       }
 
+      const countries = topojson.feature(world, world.objects.countries);
+
+      // ── Antimeridian fix ─────────────────────────────────────────────────
+      // Russia's polygon has vertices that jump from ~170° to ~-170°. The fix
+      // is NOT to clamp to ±180 (coordinates are already within range), but to
+      // "unwrap" each ring so consecutive vertices stay within 180° of each other.
+      // This lets Russia's coords legitimately exceed ±180°, so Leaflet draws a
+      // continuous polygon instead of a straight line across the whole map.
+      function unwrapRing(ring) {
+        if (!ring.length) return ring;
+        const out = [[ring[0][0], ring[0][1]]];
+        for (let i = 1; i < ring.length; i++) {
+          let lng = ring[i][0], lat = ring[i][1];
+          const prev = out[i - 1][0];
+          while (lng - prev >  180) lng -= 360;
+          while (lng - prev < -180) lng += 360;
+          out.push([lng, lat]);
+        }
+        return out;
+      }
+      function unwrapGeometry(geom) {
+        if (!geom) return geom;
+        if (geom.type === 'Polygon') {
+          return { ...geom, coordinates: geom.coordinates.map(unwrapRing) };
+        }
+        if (geom.type === 'MultiPolygon') {
+          return { ...geom, coordinates: geom.coordinates.map(poly => poly.map(unwrapRing)) };
+        }
+        return geom;
+      }
+      const fixedCountries = {
+        ...countries,
+        features: countries.features.map(f => ({ ...f, geometry: unwrapGeometry(f.geometry) })),
+      };
+
+      // ── Match map height to cluster panel height ──────────────────────────
+      const clustersWrap = document.getElementById('clusters-wrap');
+      const panelH = clustersWrap.offsetHeight;
+      if (panelH > 100) mapEl.style.height = panelH + 'px';
+
       if (leafletMap) { leafletMap.remove(); leafletMap = null; }
 
       leafletMap = L.map('map', {
@@ -914,49 +953,29 @@
         scrollWheelZoom: true,
       });
 
-      const countries = topojson.feature(world, world.objects.countries);
+      const BASE_COLOR      = '#4a5568';
+      const CLUSTER_COLOR   = '#6b7f99';
+      const HOVER_COLOR     = '#8fa8c0';
+      const BORDER_COLOR    = '#252530';
 
-      // ── Antimeridian fix ─────────────────────────────────────────────────
-      // Russia's polygon crosses ±180° longitude, causing Leaflet to draw a
-      // straight horizontal line across the map. Clamp all coords to [-180,180].
-      function wrapRing(ring) {
-        return ring.map(([lng, lat]) => {
-          while (lng >  180) lng -= 360;
-          while (lng < -180) lng += 360;
-          return [lng, lat];
-        });
+      function countryStyle(iso) {
+        return {
+          fillColor:   iso && clusterIsos.has(iso) ? CLUSTER_COLOR : BASE_COLOR,
+          fillOpacity: 1,
+          color:       BORDER_COLOR,
+          weight:      1.5,
+        };
       }
-      function wrapGeometry(geom) {
-        if (!geom) return geom;
-        if (geom.type === 'Polygon') {
-          return { ...geom, coordinates: geom.coordinates.map(wrapRing) };
-        }
-        if (geom.type === 'MultiPolygon') {
-          return { ...geom, coordinates: geom.coordinates.map(poly => poly.map(wrapRing)) };
-        }
-        return geom;
-      }
-      const wrappedCountries = {
-        ...countries,
-        features: countries.features.map(f => ({ ...f, geometry: wrapGeometry(f.geometry) })),
-      };
 
-      L.geoJSON(wrappedCountries, {
+      L.geoJSON(fixedCountries, {
         renderer: L.svg({ padding: 0.5 }),
-        style: f => {
-          const iso = ISO_NUM_TO_A2[+f.id];
-          return {
-            fillColor:   iso && clusterIsos.has(iso) ? '#232330' : '#2c2c33',
-            fillOpacity: 1,
-            color:       '#1a1a20',
-            weight:      1.5,
-          };
-        },
+        style: f => countryStyle(ISO_NUM_TO_A2[+f.id]),
         onEachFeature: (f, layer) => {
           const iso     = ISO_NUM_TO_A2[+f.id];
           const profile = iso ? profileCache[iso] : null;
 
           layer.on('mouseover', e => {
+            layer.setStyle({ fillColor: HOVER_COLOR });
             if (!profile) return;
             const parts = [];
             if (profile.structural_interest_score != null)
@@ -980,7 +999,10 @@
             tooltipEl.style.top  = Math.min(me.clientY + 14, window.innerHeight - tooltipEl.offsetHeight - 8) + 'px';
           });
 
-          layer.on('mouseout', () => { tooltipEl.style.display = 'none'; });
+          layer.on('mouseout', () => {
+            layer.setStyle({ fillColor: iso && clusterIsos.has(iso) ? CLUSTER_COLOR : BASE_COLOR });
+            tooltipEl.style.display = 'none';
+          });
 
           layer.on('click', () => {
             if (!iso) return;
