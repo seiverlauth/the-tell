@@ -798,10 +798,11 @@
 
       updatedEl.textContent = fmtUpdated(data.generated_at);
 
-      // Dedupe, skip US/null iso, filter to 2025+, sort newest first
+      // Dedupe, skip US/null/XX iso, filter to 2025+, sort newest first
+      // XX = FARA records where country extraction failed in fetch_fara.py pipeline
       const seen = new Set();
       const signals = (data.signals || [])
-        .filter(s => s.iso && s.iso !== 'US')
+        .filter(s => s.iso && s.iso !== 'US' && s.iso !== 'XX')
         .filter(s => (s.signal_date || '') >= '2025-01-01')
         .filter(s => {
           const key = s.cn_number || `${s.iso}|${s.signal_date}|${s.description}`;
