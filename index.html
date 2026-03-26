@@ -236,7 +236,7 @@
       padding: 8px 12px;
       max-width: 300px;
       pointer-events: none;
-      z-index: 100;
+      z-index: 9999;
     }
 
     .tt-score     { font-weight: 600; color: var(--text); margin-bottom: 3px; }
@@ -1028,7 +1028,7 @@
         },
       }).addTo(leafletMap);
 
-      // Expose map highlight so cluster/feed clicks can sync the map
+      // Expose map highlight + zoom so cluster/feed clicks can sync the map
       syncMapFilter = function(activeIso) {
         for (const [layerIso, lyr] of isoToLayer) {
           let color;
@@ -1036,6 +1036,12 @@
           else if (clusterIsos.has(layerIso)) color = CLUSTER_COLOR;
           else color = BASE_COLOR;
           lyr.setStyle({ fillColor: color });
+        }
+        if (activeIso) {
+          const lyr = isoToLayer.get(activeIso);
+          if (lyr) leafletMap.fitBounds(lyr.getBounds(), { padding: [30, 30] });
+        } else {
+          leafletMap.setView([20, 10], 1.5);
         }
       };
     }
