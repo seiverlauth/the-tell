@@ -48,12 +48,6 @@
       flex-shrink: 0;
     }
 
-    header > span:first-of-type {
-      font-size: 13px;
-      color: var(--muted);
-      flex: 1;
-    }
-
     header #updated {
       font-size: 12px;
       color: var(--muted);
@@ -163,12 +157,13 @@
     }
 
     .item-val {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
       white-space: nowrap;
       flex-shrink: 0;
     }
+    .item-val.val-billion { color: #4ade80; }
 
     .row2 {
       display: flex;
@@ -179,9 +174,8 @@
       color: var(--muted);
     }
 
-    .item-country { color: var(--muted); cursor: default; }
-    .item-country[data-tooltip] { cursor: help; }
-    .item-country[data-tooltip]:hover { color: var(--text); }
+    .item-country { color: var(--muted); font-weight: 600; cursor: pointer; }
+    .item-country:hover, .item-country.active-filter { color: var(--text); }
 
     .sep { color: var(--sep); user-select: none; }
 
@@ -238,7 +232,7 @@
   <div class="outer">
     <div id="status">fetching signals…</div>
     <div id="clusters-wrap" style="display:none">
-      <div class="section-hdr">clusters · 2+ sources · anomaly</div>
+      <div class="section-hdr">clusters · multi-source · anomaly</div>
       <div id="clusters"></div>
     </div>
     <div id="feed-section">
@@ -375,8 +369,8 @@
 
     function computeClusters(signals) {
       // Date cutoffs computed fresh against today (local time)
-      const cutoff30 = isoOffset(30);   // 30 days ago
-      const cutoff90 = isoOffset(90);   // 90 days ago
+      const cutoff14 = isoOffset(14);   // 14 days ago  — recent window
+      const cutoff98 = isoOffset(98);   // 98 days ago  — baseline start (14 + 84)
 
       const byIso = new Map();
       for (const sig of signals) {
@@ -391,20 +385,26 @@
       for (const [iso, { sigs, sources }] of byIso) {
         if (sources.size < 2) continue;
 
-        // Recent window: last 30 days
-        const recent30 = sigs.filter(s => (s.signal_date || '') >= cutoff30);
-        if (!recent30.length) continue;
+        // Recent window: last 14 days
+        const recent14 = sigs.filter(s => (s.signal_date || '') >= cutoff14);
+        if (!recent14.length) continue;
 
-        // Baseline window: days 31-90 ago (60 days), normalized to 30-day equivalent
-        const baseline60 = sigs.filter(s => {
+        // Baseline: days 15–98 ago (84 days = six 14-day periods), normalized to 14-day rate
+        const baseline84 = sigs.filter(s => {
           const d = s.signal_date || '';
-          return d >= cutoff90 && d < cutoff30;
+          return d >= cutoff98 && d < cutoff14;
         });
-        const baselineNorm = baseline60.length / 2;  // 60d → 30d equivalent
+        const baseline14Avg = baseline84.length / 6;
 
-        // anomaly = recent_30d / (baseline_30d_normalized + 1)
-        // +1 prevents div/0 and ensures cold-start countries score high
-        const anomaly = recent30.length / (baselineNorm + 1);
+        // Rate ratio: how many times busier than the rolling 14-day baseline?
+        // Floor baseline at 0.5 so cold-start countries score high but interpretably
+        // (a country with no history and 1 recent signal → anomaly 2.0, not infinity)
+        const anomaly = recent14.length / Math.max(baseline14Avg, 0.5);
+
+        // Combined score weights rate ratio by source diversity:
+        // log2(n+1): 1 src→1.0, 2→1.58, 3→2.0, 4→2.32
+        // Ensures DSCA+SAM+FARA convergence ranks above two-source noise at same rate
+        const score = anomaly * Math.log2(sources.size + 1);
 
         const allDates  = sigs.map(s => s.signal_date).filter(Boolean).sort();
         const mostRecent = allDates[allDates.length - 1] || null;
@@ -414,15 +414,16 @@
           sourceDiversity: sources.size,
           sources: [...sources].sort(),
           totalSignals: sigs.length,
-          recent30: recent30.length,
-          baseline30: baselineNorm,
+          recent14: recent14.length,
+          baseline14Avg,
           anomaly,
+          score,
           mostRecent,
         });
       }
 
-      // Sort by anomaly score descending
-      clusters.sort((a, b) => b.anomaly - a.anomaly);
+      // Sort by combined score descending
+      clusters.sort((a, b) => b.score - a.score);
       return clusters;
     }
 
@@ -444,7 +445,7 @@
         const anomalyFmt = cl.anomaly >= 10
           ? '\xd7' + Math.round(cl.anomaly)
           : '\xd7' + cl.anomaly.toFixed(1);
-        const hot = cl.anomaly > 2;
+        const hot = cl.score > 3;
 
         const row = document.createElement('div');
         row.className = 'cluster-row' + (hot ? ' hot' : '');
@@ -507,14 +508,14 @@
         }
         feedEl.appendChild(hdr);
         for (const sig of monthSigs) {
-          feedEl.appendChild(renderItem(sig, profileCache[sig.iso] || null));
+          feedEl.appendChild(renderItem(sig, profileCache[sig.iso] || null, signals));
         }
       }
     }
 
     // ── Render one item ──────────────────────────────────────────────────────
 
-    function renderItem(sig, profile) {
+    function renderItem(sig, profile, signals) {
       const country = profile ? profile.name : sig.iso;
       const score   = profile ? profile.structural_interest_score : null;
 
@@ -551,8 +552,11 @@
         : '';
 
       const valHtml = sig.value_usd != null
-        ? `<span class="item-val">${esc(fmtValue(sig.value_usd))}</span>`
+        ? `<span class="item-val${sig.value_usd >= 1e9 ? ' val-billion' : ''}">${esc(fmtValue(sig.value_usd))}</span>`
         : '';
+
+      const isFiltered = activeFilter === sig.iso;
+      const countryClass = 'item-country' + (isFiltered ? ' active-filter' : '');
 
       el.innerHTML =
         `<div class="row1">` +
@@ -560,7 +564,7 @@
           valHtml +
         `</div>` +
         `<div class="row2">` +
-          `<span class="item-country"${countryTooltip}>${esc(country)}</span>` +
+          `<span class="${countryClass}"${countryTooltip}>${esc(country)}</span>` +
           `<span class="sep">·</span>` +
           `<span>${esc(fmtDate(sig.signal_date))}</span>` +
         `</div>` +
@@ -573,6 +577,24 @@
           const wasExpanded = el.classList.contains('expanded');
           document.querySelectorAll('.item.expanded').forEach(i => i.classList.remove('expanded'));
           if (!wasExpanded) el.classList.add('expanded');
+        });
+      }
+
+      if (sig.iso) {
+        el.querySelector('.item-country').addEventListener('click', e => {
+          e.stopPropagation();
+          if (activeFilter === sig.iso) {
+            activeFilter = null;
+          } else {
+            activeFilter = sig.iso;
+          }
+          // Sync cluster bar active state
+          document.querySelectorAll('.cluster-row.active').forEach(r => r.classList.remove('active'));
+          if (activeFilter) {
+            const clRow = document.querySelector(`.cluster-row[data-iso="${activeFilter}"]`);
+            if (clRow) clRow.classList.add('active');
+          }
+          renderFeed(signals);
         });
       }
 
