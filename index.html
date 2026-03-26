@@ -971,15 +971,14 @@
       if (leafletMap) { leafletMap.remove(); leafletMap = null; }
 
       leafletMap = L.map('map', {
-        center: [20, 0], zoom: 2,
         zoomControl: false, attributionControl: false,
         scrollWheelZoom: true,
       });
 
       const BASE_COLOR      = '#484848';
-      const CLUSTER_COLOR   = '#646464';
-      const HOVER_COLOR     = '#848484';
-      const ACTIVE_COLOR    = '#a0a0a0';
+      const CLUSTER_COLOR   = '#909090';
+      const HOVER_COLOR     = '#b8b8b8';
+      const ACTIVE_COLOR    = '#d8d8d8';
       const BORDER_COLOR    = '#252525';
 
       const isoToLayer = new Map();
@@ -1046,6 +1045,10 @@
         },
       }).addTo(leafletMap);
 
+      // Fit world after container has its final dimensions
+      const WORLD_BOUNDS = [[-60, -170], [75, 175]];
+      leafletMap.fitBounds(WORLD_BOUNDS, { padding: [8, 8] });
+
       // Expose map highlight + zoom so cluster/feed clicks can sync the map
       syncMapFilter = function(activeIso) {
         for (const [layerIso, lyr] of isoToLayer) {
@@ -1059,7 +1062,7 @@
           const lyr = isoToLayer.get(activeIso);
           if (lyr) leafletMap.fitBounds(lyr.getBounds(), { padding: [30, 30] });
         } else {
-          leafletMap.setView([20, 0], 2);
+          leafletMap.fitBounds(WORLD_BOUNDS, { padding: [8, 8] });
         }
       };
     }
