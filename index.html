@@ -1128,7 +1128,7 @@
       const notable  = computeNotableSignals(signals);
       renderClusters(clusters, notable, signals);
       renderFeed(signals);
-      initMap(clusters, signals);
+      initMap(clusters, notable, signals);
     }
 
     main();
@@ -1178,11 +1178,13 @@
     let leafletMap = null;
     let syncMapFilter = () => {};  // assigned after initMap; no-op until then
 
-    async function initMap(clusters, signals) {
+    async function initMap(clusters, notable, signals) {
       const mapEl = document.getElementById('map');
       mapEl.style.display = '';
 
       const clusterIsos = new Set(clusters.map(c => c.iso));
+      // Notable-only: countries in Zone 2 but not Zone 1
+      const notableIsos = new Set(notable.map(n => n.sig.iso).filter(iso => !clusterIsos.has(iso)));
 
       // Lazy-load world topology
       let world;
@@ -1241,17 +1243,19 @@
         scrollWheelZoom: true,
       });
 
-      const BASE_COLOR      = '#484848';
-      const ZONE1_COLOR     = '#6a9080';  // Zone 1 passive highlight — distinct teal-gray, not a neutral
-      const HOVER_COLOR     = '#b8b8b8';
-      const ACTIVE_COLOR    = '#d8d8d8';
-      const BORDER_COLOR    = '#252525';
+      const BASE_COLOR     = '#484848';
+      const NOTABLE_COLOR  = '#c8a800';  // Zone 2 only — warm yellow, readable on dark
+      const ZONE1_COLOR    = '#6b0000';  // Zone 1 convergence — red
+      const HOVER_COLOR    = '#b8b8b8';
+      const ACTIVE_COLOR   = '#d8d8d8';
+      const BORDER_COLOR   = '#252525';
 
       const isoToLayer = new Map();
 
       function baseColorFor(iso) {
         if (activeFilter && iso === activeFilter) return ACTIVE_COLOR;
-        if (iso && clusterIsos.has(iso)) return ZONE1_COLOR;
+        if (iso && clusterIsos.has(iso)) return ZONE1_COLOR;   // convergence wins
+        if (iso && notableIsos.has(iso)) return NOTABLE_COLOR;
         return BASE_COLOR;
       }
 
@@ -1311,26 +1315,29 @@
         },
       }).addTo(leafletMap);
 
-      // Default view: populated world centered, Antarctica excluded.
-      // [20, 10] centers on Africa/Europe which anchors the populated landmass.
-      // Zoom 2 fits all major populated regions with reasonable margins.
-      const DEFAULT_VIEW = { center: [20, 10], zoom: 2 };
-      leafletMap.setView(DEFAULT_VIEW.center, DEFAULT_VIEW.zoom);
+      // Default bounds: full populated world, Antarctica clipped at -60.
+      // invalidateSize() forces Leaflet to re-measure the container before fitting,
+      // preventing the sizing race condition where fitBounds runs before CSS layout.
+      const DEFAULT_BOUNDS = [[-60, -180], [75, 180]];
+      leafletMap.invalidateSize();
+      leafletMap.fitBounds(DEFAULT_BOUNDS, { padding: [4, 4] });
 
       // Expose map highlight + zoom so cluster/feed clicks can sync the map
       syncMapFilter = function(activeIso) {
         for (const [layerIso, lyr] of isoToLayer) {
           let color;
-          if (activeIso && layerIso === activeIso) color = ACTIVE_COLOR;
-          else if (clusterIsos.has(layerIso)) color = ZONE1_COLOR;
-          else color = BASE_COLOR;
+          if (activeIso && layerIso === activeIso)    color = ACTIVE_COLOR;
+          else if (clusterIsos.has(layerIso))         color = ZONE1_COLOR;
+          else if (notableIsos.has(layerIso))         color = NOTABLE_COLOR;
+          else                                        color = BASE_COLOR;
           lyr.setStyle({ fillColor: color });
         }
         if (activeIso) {
           const lyr = isoToLayer.get(activeIso);
           if (lyr) leafletMap.fitBounds(lyr.getBounds(), { padding: [30, 30] });
         } else {
-          leafletMap.setView(DEFAULT_VIEW.center, DEFAULT_VIEW.zoom);
+          leafletMap.invalidateSize();
+          leafletMap.fitBounds(DEFAULT_BOUNDS, { padding: [4, 4] });
         }
       };
     }
