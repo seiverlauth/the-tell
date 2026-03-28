@@ -1,5 +1,5 @@
 # ROADMAP.md — HARPY
-_Last updated: 2026-03-28_
+_Last updated: 2026-03-28 (quality scores done)_
 
 One thing at a time. Update this file when a task completes, a new idea gets approved, or priorities shift. Nothing moves to Done without a commit and push.
 
@@ -7,7 +7,6 @@ One thing at a time. Update this file when a task completes, a new idea gets app
 
 ## Now
 
-- **Quality score corrections** — update `utils.py`: `anchor_budget` 1.0→0.75, add `bis` explicit at 0.85, `cftc` at 0.55 (when CFTC is built)
 - **fetch_cftc.py** — CFTC COT anomaly pipeline, financial layer
   - Weekly COT report, 52-week z-score baseline
   - One signal per commodity when managed money positioning is anomalous
@@ -36,6 +35,8 @@ One thing at a time. Update this file when a task completes, a new idea gets app
 ---
 
 ## Done
+
+- **Quality score corrections** — `utils.py`: anchor_budget 1.0→0.75, bis 0.85, cftc 0.55, imf 0.5 explicit
 
 - `scripts/utils.py` — canonical shared utilities, all fetch scripts import from here
 - All fetch scripts refactored to use utils (removed ~300 lines of duplicated maps/helpers)
