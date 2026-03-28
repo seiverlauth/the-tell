@@ -18,13 +18,23 @@ One thing at a time. Update this file when a task completes, a new idea gets app
 
 ## Next (approved, in order)
 
-1. **FARA/LDA structured fields + signal quality** — prior audit found both sources are opaque to scoring/rendering because structured data is flattened into strings. Specific issues:
+1. **Map highlight color bug** — clicking a country zooms/pans the map but the active highlight (red for convergence, yellow for notable) gets overwritten by the default active color. Regression from a prior session. Fix `syncMapFilter` to preserve zone colors on active country.
+
+2. **Signal click → feed sync** — clicking a notable signal or convergence cluster entry should scroll to and expand that signal's row in the feed. Currently filters the feed by country but doesn't jump to or expand a specific item.
+
+3. **Source link audit** — IMF signals link to the IMF search page, not the individual document. Audit all sources: every feed item must link to the specific document/page, not a landing page. Fix `page_url` / `url` fields in fetch scripts as needed.
+
+4. **FARA/LDA structured fields + signal quality** — prior audit found both sources are opaque to scoring/rendering because structured data is flattened into strings. Specific issues:
    - `fetch_lda.py`: `is_high_signal` OR gate too broad — "non-US client" accepts all Canadian tariff/pharma noise. HCR in HIGH_SIGNAL_CODES is wrong. Issue codes captured but not stored as a field. Lobbying firm not a separate field. XX records dropped entirely.
    - `fetch_fara.py`: Sub-state entities (Republika Srpska, DRC, Bermuda) resolve to XX and vanish from map/convergence — 30 of 114 records. `target_groups`, `registrant`, `principal` buried in title/description strings instead of separate fields.
    - Fix: store `issue_codes`, `registrant`, `principal`, `lobbying_firm`, `target_groups` as separate signal fields. Fix XX resolution for known sub-state entities. Narrow LDA filter to DEF/FOR/TRD/ENE/SCI/HOM only (drop HCR, tighten the non-US client branch).
    - Context: Republika Srpska hired 6 DC firms in ~12 months — most anomalous influence pattern in the dataset. Currently invisible.
 
-2. **SAM monitoring** — watch whether adjective-matching fix actually surfaces signals after a few CI runs. Reassess extraction approach if still empty after 2 weeks.
+5. **UI surfacing / callouts** — the feed is flat and doesn't explain why anything matters. High-score signals look identical to low-quality noise. Needs interpretive context pulled from profile and signal structure — "why this matters" inline, stemmed from FARA/LDA conversation. Republika Srpska hiring 6 firms should read as alarming, not identical to a SAM filing.
+
+6. **Better feed filters** — filter by layer, source, or structural score threshold, not just by country. Low priority.
+
+7. **SAM monitoring** — watch whether adjective-matching fix actually surfaces signals after a few CI runs. Reassess extraction approach if still empty after 2 weeks.
 
 ---
 
