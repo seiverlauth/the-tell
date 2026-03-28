@@ -317,18 +317,18 @@
 
     // ── Source labels / short names ──────────────────────────────────────────
 
-    const SOURCE_COLORS = {
-      dsca:           '#4a9eff',
-      fara:           '#ff6b35',
-      lda:            '#a0a0b0',
-      federalregister:'#c084fc',
-      sam:            '#34d399',
-      ofac:           '#a0a0b0',
-      anchor_budget:  '#a0a0b0',
+    const LAYER_COLORS = {
+      military:    '#4a9eff',  // blue
+      influence:   '#ff6b35',  // orange
+      regulatory:  '#c084fc',  // purple
+      procurement: '#34d399',  // green
+      financial:   '#f59e0b',  // amber
+      legislative: '#64748b',  // slate
+      adversarial: '#ef4444',  // red
     };
 
-    function sourceColor(s) {
-      return SOURCE_COLORS[(s || '').toLowerCase()] || '#a0a0b0';
+    function layerColor(layer) {
+      return LAYER_COLORS[layer] || '#a0a0b0';
     }
 
     const SOURCE_LABELS = {
@@ -813,7 +813,7 @@
           : raw;
         if (title.length > 55) title = title.slice(0, 52) + '\u2026';
 
-        const color  = sourceColor(sig.source);
+        const color  = layerColor(sig.layer);
         const badge  = sourceShort(sig.source);
         const valStr = sig.value_usd ? fmtValue(sig.value_usd) : '';
 
@@ -938,7 +938,7 @@
           `<span class="${countryClass}"${countryTooltip}>${esc(country)}</span>` +
           `<span class="item-sep">\xb7</span>` +
           `<span class="item-title">${esc(titleStr)}</span>` +
-          `<span class="item-src" style="color:${sourceColor(sig.source)}">${esc(sourceShort(sig.source))}</span>` +
+          `<span class="item-src" style="color:${layerColor(sig.layer)}">${esc(sourceShort(sig.source))}</span>` +
           `<span class="item-date">${esc(fmtDate(sig.signal_date))}</span>` +
         `</div>` +
         (hasDetail ? `<div class="item-detail">${detailInner}</div>` : '');
