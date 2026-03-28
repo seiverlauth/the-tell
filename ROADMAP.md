@@ -18,8 +18,7 @@ One thing at a time. Update this file when a task completes, a new idea gets app
 
 ## Next (approved, in order)
 
-1. **Feed UI rebuild** — `index.html` primary view should be the feed, not the map. Ranked by recency × structural score. Map stays but secondary.
-2. **SAM monitoring** — watch whether adjective-matching fix actually surfaces signals after a few CI runs. Reassess extraction approach if still empty after 2 weeks.
+1. **SAM monitoring** — watch whether adjective-matching fix actually surfaces signals after a few CI runs. Reassess extraction approach if still empty after 2 weeks.
 
 ---
 
