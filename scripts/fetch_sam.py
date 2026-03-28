@@ -17,7 +17,7 @@ import urllib.request
 import urllib.parse
 
 sys.path.insert(0, str(Path(__file__).parent))
-from utils import COUNTRY_NAME_TO_ISO2, ALPHA3_TO_ALPHA2, profile_score
+from utils import COUNTRY_NAME_TO_ISO2, ALPHA3_TO_ALPHA2, profile_score, append_and_write, write_error
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -39,6 +39,29 @@ AGENCY_KEYWORDS = [
 _COUNTRY_NAMES_SORTED = sorted(COUNTRY_NAME_TO_ISO2.keys(), key=len, reverse=True)
 _COUNTRY_PATTERN = re.compile(
     r"\b(" + "|".join(re.escape(n) for n in _COUNTRY_NAMES_SORTED) + r")\b",
+    re.IGNORECASE,
+)
+
+# Adjective forms not in the country name map — expand title/description matching.
+ADJECTIVE_TO_ISO = {
+    "afghan": "AF", "iraqi": "IQ", "syrian": "SY", "iranian": "IR",
+    "pakistani": "PK", "saudi": "SA", "yemeni": "YE", "ukrainian": "UA",
+    "taiwanese": "TW", "israeli": "IL", "palestinian": "PS", "lebanese": "LB",
+    "libyan": "LY", "sudanese": "SD", "somali": "SO", "malian": "ML",
+    "congolese": "CD", "venezuelan": "VE", "cuban": "CU", "burmese": "MM",
+    "haitian": "HT", "belarusian": "BY", "georgian": "GE", "azerbaijani": "AZ",
+    "kosovar": "XK", "kenyan": "KE", "ethiopian": "ET", "ugandan": "UG",
+    "rwandan": "RW", "nigerian": "NG", "ghanaian": "GH", "senegalese": "SN",
+    "moroccan": "MA", "tunisian": "TN", "algerian": "DZ", "egyptian": "EG",
+    "jordanian": "JO", "kuwaiti": "KW", "bahraini": "BH", "emirati": "AE",
+    "qatari": "QA", "omani": "OM", "indonesian": "ID", "filipino": "PH",
+    "vietnamese": "VN", "thai": "TH", "cambodian": "KH", "bangladeshi": "BD",
+    "nepali": "NP", "colombian": "CO", "peruvian": "PE", "bolivian": "BO",
+    "ecuadorian": "EC", "guatemalan": "GT", "honduran": "HN",
+    "salvadoran": "SV", "nicaraguan": "NI", "rwandese": "RW",
+}
+_ADJECTIVE_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(k) for k in ADJECTIVE_TO_ISO) + r")\b",
     re.IGNORECASE,
 )
 
@@ -91,11 +114,15 @@ def extract_country(record):
         elif len(code) == 2:
             return code
 
-    # Fallback: scan title for country name
-    title = record.get("title") or ""
-    m = _COUNTRY_PATTERN.search(title)
+    # Scan title + description for country names, then adjective forms
+    text = " ".join(filter(None, [record.get("title"), record.get("description")]))
+    m = _COUNTRY_PATTERN.search(text)
     if m:
         return COUNTRY_NAME_TO_ISO2.get(m.group(1).lower())
+
+    m = _ADJECTIVE_PATTERN.search(text)
+    if m:
+        return ADJECTIVE_TO_ISO.get(m.group(1).lower())
 
     return None
 
@@ -131,7 +158,6 @@ def to_signal(record):
         "title": record.get("title"),
         "value_usd": value,
         "description": build_description(record),
-        "raw_score": profile_score(iso),
         "page_url": record.get("uiLink"),
     }
 
@@ -146,12 +172,7 @@ def main():
     key = load_api_key()
     if not key:
         print("ERROR: SAM_API_KEY not set", file=sys.stderr)
-        out_path.write_text(json.dumps({
-            "generated_at": datetime.now(timezone.utc).isoformat(),
-            "sources": ["sam"],
-            "error": "missing SAM_API_KEY",
-            "signals": [],
-        }, indent=2))
+        write_error(out_path, "sam", "missing SAM_API_KEY")
         sys.exit(0)
 
     today = datetime.now(timezone.utc)
@@ -173,24 +194,18 @@ def main():
             data = json.loads(resp.read())
     except Exception as e:
         print(f"ERROR: API call failed: {e}", file=sys.stderr)
-        out_path.write_text(json.dumps({
-            "generated_at": datetime.now(timezone.utc).isoformat(),
-            "sources": ["sam"],
-            "error": str(e),
-            "signals": [],
-        }, indent=2))
+        write_error(out_path, "sam", str(e))
         sys.exit(0)
 
     batch = data.get("opportunitiesData") or []
-    signals = [to_signal(r) for r in batch if is_agency_match(r) and not is_maintenance(r)]
+    new_signals = [to_signal(r) for r in batch if is_agency_match(r) and not is_maintenance(r)]
 
-    output = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "sources": ["sam"],
-        "signals": signals,
-    }
-    out_path.write_text(json.dumps(output, indent=2))
-    print(f"Wrote {len(signals)} signals to {out_path}")
+    def dedup_key(sig):
+        url = sig.get("page_url") or ""
+        return url or f"{sig.get('iso')}|{sig.get('signal_date')}|{sig.get('title')}"
+
+    added = append_and_write(out_path, "sam", new_signals, dedup_key)
+    print(f"Fetched {len(new_signals)} candidates, added {added} new signals → {out_path}")
 
 
 if __name__ == "__main__":
