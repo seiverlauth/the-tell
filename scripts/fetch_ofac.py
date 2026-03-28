@@ -176,7 +176,6 @@ def entry_to_signals(entry: dict, signal_date: str) -> list[dict]:
             "value_usd": None,
             "description": description,
             "programs": programs,
-            "raw_score": profile_score(iso2),
         })
 
     return signals
