@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-03-28T18:17:04.092265+00:00",
+  "generated_at": "2026-03-29T01:00:35.392380+00:00",
   "sources": [
     "anchor",
     "bis",
+    "cftc",
     "dsca",
     "fara",
     "federalregister",
@@ -96,6 +97,9 @@
       "value_usd": null,
       "description": "Javelin Advisors, LLC, Taipei Economic and Cultural Representative Office in the United States, on behalf of Taiwan, TAIWAN",
       "page_url": "https://efile.fara.gov/docs/7705-Registration-Statement-20260323-1.pdf",
+      "registrant": "Javelin Advisors, LLC",
+      "principal": "Taipei Economic and Cultural Representative Office in the United States",
+      "target_groups": [],
       "profile": {
         "name": "Taiwan",
         "score": 7,
@@ -534,8 +538,18 @@
       "signal_date": "2026-03-16",
       "title": "Keybridge Communications \u2014 Faith Whittlesey Society",
       "value_usd": null,
-      "description": "Keybridge Communications is a public relations firm. \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Keybridge Communications is a public relations firm.",
       "page_url": "https://efile.fara.gov/docs/7704-Registration-Statement-20260316-1.pdf",
+      "registrant": "Keybridge Communications",
+      "principal": "Faith Whittlesey Society",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Switzerland",
         "score": 2,
@@ -1428,8 +1442,18 @@
       "signal_date": "2026-02-26",
       "title": "James P. Fabiani LLC \u2014 FS Italian Railways USA Inc.",
       "value_usd": null,
-      "description": "Provide consultant services to corporations and non profit organizations for potential opportunities in the US private business sector and potential opportunities for them with the US government. \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Provide consultant services to corporations and non profit organizations for potential opportunities in the US private business sector and potential opportunities for them with the US government.",
       "page_url": "https://efile.fara.gov/docs/7701-Registration-Statement-20260226-1.pdf",
+      "registrant": "James P. Fabiani LLC",
+      "principal": "FS Italian Railways USA Inc.",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Italy",
         "score": 3,
@@ -1743,8 +1767,18 @@
       "signal_date": "2026-02-20",
       "title": "National Strategic Advisors PLLC \u2014 We Employment America Inc",
       "value_usd": null,
-      "description": "Government relations firm \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Government relations firm",
       "page_url": "https://efile.fara.gov/docs/7697-Registration-Statement-20260220-1.pdf",
+      "registrant": "National Strategic Advisors PLLC",
+      "principal": "We Employment America Inc",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Guatemala",
         "score": 1,
@@ -1765,8 +1799,18 @@
       "signal_date": "2026-02-20",
       "title": "JM Burkman & Associates LLC \u2014 Andean Medjedovic",
       "value_usd": null,
-      "description": "Lobbying and government relations \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Lobbying and government relations",
       "page_url": "https://efile.fara.gov/docs/7696-Registration-Statement-20260220-1.pdf",
+      "registrant": "JM Burkman & Associates LLC",
+      "principal": "Andean Medjedovic",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Canada",
         "score": 5,
@@ -1789,8 +1833,18 @@
       "signal_date": "2026-02-20",
       "title": "Beciri, Sam Semsedin \u2014 Democratic Union for Integration",
       "value_usd": null,
-      "description": "Beciri, Sam Semsedin, Democratic Union for Integration, NORTH MACEDONIA \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Beciri, Sam Semsedin, Democratic Union for Integration, NORTH MACEDONIA",
       "page_url": "https://efile.fara.gov/docs/7695-Registration-Statement-20260220-1.pdf",
+      "registrant": "Beciri, Sam Semsedin",
+      "principal": "Democratic Union for Integration",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "North Macedonia",
         "score": 2,
@@ -1877,7 +1931,7 @@
         "rationale": "Undeclared nuclear weapons program (+2), active conflict \u2014 Gaza war, Lebanon, regional escalation (+2), major US security guarantor and basing access (+1), regional power (+1), active sanctions against counterparties (+1)"
       },
       "layer": "military",
-      "quality": 1.0,
+      "quality": 0.75,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -1903,7 +1957,7 @@
         "rationale": "Undeclared nuclear weapons program (+2), active conflict \u2014 Gaza war, Lebanon, regional escalation (+2), major US security guarantor and basing access (+1), regional power (+1), active sanctions against counterparties (+1)"
       },
       "layer": "military",
-      "quality": 1.0,
+      "quality": 0.75,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -2038,8 +2092,18 @@
       "signal_date": "2026-02-13",
       "title": "AA Access Partnership Pte Ltd \u2014 PT REKAN BISNIS DAN INVESTASI INDONESIA (also known as Indonesia Business Partners)",
       "value_usd": null,
-      "description": "PUBLIC POLICY, LICENSING AND REGULATORY SERVICES FOR THE TECHNOLOGY SECTOR \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "PUBLIC POLICY, LICENSING AND REGULATORY SERVICES FOR THE TECHNOLOGY SECTOR",
       "page_url": "https://efile.fara.gov/docs/7694-Registration-Statement-20260213-1.pdf",
+      "registrant": "AA Access Partnership Pte Ltd",
+      "principal": "PT REKAN BISNIS DAN INVESTASI INDONESIA (also known as Indonesia Business Partners)",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Indonesia",
         "score": 7,
@@ -2051,6 +2115,39 @@
           "BRI exposure"
         ],
         "rationale": "Controls Malacca, Lombok, and Sunda Straits \u2014 critical global chokepoints (+3), major hydrocarbon producer (+2), regional power (+1), significant BRI/Chinese investment (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "registration_number": 7693,
+      "iso": "BA",
+      "source": "fara",
+      "signal_date": "2026-02-13",
+      "title": "Lucas Compton LLC \u2014 Government of Republika Srpska",
+      "value_usd": null,
+      "description": "Public affairs consultancy",
+      "page_url": "https://efile.fara.gov/docs/7693-Registration-Statement-20260213-1.pdf",
+      "registrant": "Lucas Compton LLC",
+      "principal": "Government of Republika Srpska",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
+      "profile": {
+        "name": "Bosnia and Herzegovina",
+        "score": 2,
+        "factors": [
+          "contested territory",
+          "proxy hub"
+        ],
+        "rationale": "Occupied/contested political structure, Republika Srpska separatism (+1), Russia-West proxy contest (+1)"
       },
       "layer": "influence",
       "quality": 0.9,
@@ -2281,8 +2378,18 @@
       "signal_date": "2026-02-12",
       "title": "Corvus Strategic Partners PLLC \u2014 Republic of Colombia",
       "value_usd": null,
-      "description": "Law and Government Relations \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Law and Government Relations",
       "page_url": "https://efile.fara.gov/docs/7692-Registration-Statement-20260212-1.pdf",
+      "registrant": "Corvus Strategic Partners PLLC",
+      "principal": "Republic of Colombia",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Colombia",
         "score": 6,
@@ -2602,8 +2709,18 @@
       "signal_date": "2026-02-05",
       "title": "Athens Fuel, LLC \u2014 Toni Dawra",
       "value_usd": null,
-      "description": "wholesale of Refined Fuel Products \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "wholesale of Refined Fuel Products",
       "page_url": "https://efile.fara.gov/docs/7691-Registration-Statement-20260205-1.pdf",
+      "registrant": "Athens Fuel, LLC",
+      "principal": "Toni Dawra",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Romania",
         "score": 2,
@@ -2830,8 +2947,18 @@
       "signal_date": "2026-01-30",
       "title": "Sergey Vladimirovich Bushnev \u2014 National Investments Agency under the President of the Kyrgyz Republic",
       "value_usd": null,
-      "description": "Sergey Vladimirovich Bushnev, National Investments Agency under the President of the Kyrgyz Republic, KYRGYZSTAN \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Sergey Vladimirovich Bushnev, National Investments Agency under the President of the Kyrgyz Republic, KYRGYZSTAN",
       "page_url": "https://efile.fara.gov/docs/7690-Registration-Statement-20260130-1.pdf",
+      "registrant": "Sergey Vladimirovich Bushnev",
+      "principal": "National Investments Agency under the President of the Kyrgyz Republic",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Kyrgyzstan",
         "score": 1,
@@ -3213,7 +3340,7 @@
         "rationale": "Undeclared nuclear weapons program (+2), active conflict \u2014 Gaza war, Lebanon, regional escalation (+2), major US security guarantor and basing access (+1), regional power (+1), active sanctions against counterparties (+1)"
       },
       "layer": "military",
-      "quality": 1.0,
+      "quality": 0.75,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -3397,8 +3524,18 @@
       "signal_date": "2026-01-25",
       "title": "U.S.-Kazakhstan Business Forum, Inc. \u2014 Freedom Holding Corp.",
       "value_usd": null,
-      "description": "U.S.-Kazakhstan Business Forum, Inc. is a 501(c)(6) business league that engages in activities to promote the common business interests of private Kazakhstan companies engaged in commerce with the United States, as well as U.S. companies doing business in Kazakhstan. \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "U.S.-Kazakhstan Business Forum, Inc. is a 501(c)(6) business league that engages in activities to promote the common business interests of private Kazakhstan companies engaged in commerce with the United States, as well as U.S. companies doing business in Kazakhstan.",
       "page_url": "https://efile.fara.gov/docs/7689-Registration-Statement-20260125-1.pdf",
+      "registrant": "U.S.-Kazakhstan Business Forum, Inc.",
+      "principal": "Freedom Holding Corp.",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Kazakhstan",
         "score": 5,
@@ -3520,8 +3657,18 @@
       "signal_date": "2026-01-21",
       "title": "Tourism Authority of Thailand, Chicago Office \u2014 Tourism Authority of Thailand",
       "value_usd": null,
-      "description": "The Tourism Authority of Thailand, Chicago office, operates solely to promote tourism to Thailand and serve as a tourist information resource. Our office\u2019s formal jurisdiction encompasses the sixteen states of Alaska, Arkansas, Illinois, Indiana, Iowa, Kansas, Louisiana, Michigan, Minnesota, Missouri, Nebraska, North Dakota, Ohio, Oklahoma, South Dakota, and wisconsin. \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "The Tourism Authority of Thailand, Chicago office, operates solely to promote tourism to Thailand and serve as a tourist information resource. Our office\u2019s formal jurisdiction encompasses the sixteen states of Alaska, Arkansas, Illinois, Indiana, Iowa, Kansas, Louisiana, Michigan, Minnesota, Missouri, Nebraska, North Dakota, Ohio, Oklahoma, South Dakota, and wisconsin.",
       "page_url": "https://efile.fara.gov/docs/7687-Registration-Statement-20260121-1.pdf",
+      "registrant": "Tourism Authority of Thailand, Chicago Office",
+      "principal": "Tourism Authority of Thailand",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Thailand",
         "score": 3,
@@ -4164,8 +4311,18 @@
       "signal_date": "2026-01-15",
       "title": "Fang Consulting LLC \u2014 The Government of Botswana",
       "value_usd": null,
-      "description": "Consulting and looking for strategic partnerships for North carolina/US Government with foreign opportunities for investment and development. \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Consulting and looking for strategic partnerships for North carolina/US Government with foreign opportunities for investment and development.",
       "page_url": "https://efile.fara.gov/docs/7686-Registration-Statement-20260115-1.pdf",
+      "registrant": "Fang Consulting LLC",
+      "principal": "The Government of Botswana",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Botswana",
         "score": 2,
@@ -4342,8 +4499,18 @@
       "signal_date": "2026-01-14",
       "title": "Venture Strategic Inc. \u2014 Oleh Viktorovych Shyriaiev",
       "value_usd": null,
-      "description": "Consulting services Citizenship UNITED STATES Position President & CEO Foreign Prine ipal(s) Mr. Oleh viktorovych shyriaiev Services Assist in organizing lectures and roundtable discussions on military technology innovation for think tank experts, universities and other interested parties. \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Consulting services Citizenship UNITED STATES Position President & CEO Foreign Prine ipal(s) Mr. Oleh viktorovych shyriaiev Services Assist in organizing lectures and roundtable discussions on military technology innovation for think tank experts, universities and other interested parties.",
       "page_url": "https://efile.fara.gov/docs/7685-Registration-Statement-20260114-1.pdf",
+      "registrant": "Venture Strategic Inc.",
+      "principal": "Oleh Viktorovych Shyriaiev",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Ukraine",
         "score": 8,
@@ -4928,8 +5095,18 @@
       "signal_date": "2026-01-06",
       "title": "Washington & Madison, LLC \u2014 Dr. Panayiotis Athanasoglou",
       "value_usd": null,
-      "description": "Government relations consulting services. Residence Address Washington, DC Citizenship UNITED STATES \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Government relations consulting services. Residence Address Washington, DC Citizenship UNITED STATES",
       "page_url": "https://efile.fara.gov/docs/7684-Registration-Statement-20260106-1.pdf",
+      "registrant": "Washington & Madison, LLC",
+      "principal": "Dr. Panayiotis Athanasoglou",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Greece",
         "score": 3,
@@ -5075,8 +5252,18 @@
       "signal_date": "2025-12-31",
       "title": "Adomi Advisory Group PLLC \u2014 Ministry of Finance",
       "value_usd": null,
-      "description": "Strategic High level advisory. Name See Appendix for Response Received by NSD/FARA Registration Unit 12/31/2025 2:08:02 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose Amount Subtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act. Foreign Principal Foreign Principal Address Ministry of Finance 816\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Strategic High level advisory. Name See Appendix for Response Received by NSD/FARA Registration Unit 12/31/2025 2:08:02 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose Amount Subtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act. Foreign Principal Foreign Principal Address Ministry of Finance 816\u2026",
       "page_url": "https://efile.fara.gov/docs/7683-Registration-Statement-20251231-1.pdf",
+      "registrant": "Adomi Advisory Group PLLC",
+      "principal": "Ministry of Finance",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Nigeria",
         "score": 5,
@@ -5197,8 +5384,18 @@
       "signal_date": "2025-12-30",
       "title": "Tricuro LLC \u2014 The Council for the Development of Cambodia",
       "value_usd": null,
-      "description": "Strategic communications, media relations, and advisory services including international investment promotion and stakeholder engagement. Residence Address 7170 Woodmont Avenue, PH04 Bethesda, MD 20815 Services Media engagement, strategic communications, and advisory support to promote foreign direct investment in Cambodia and to support communications on issues that may affect investor confidence in Cambodia. Received by NSD/FARA Registration Unit 12/30/2025 11:16:39 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL 7. List every foreign principal1 for whom the registrant is acting or has agreed to act.\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Strategic communications, media relations, and advisory services including international investment promotion and stakeholder engagement. Residence Address 7170 Woodmont Avenue, PH04 Bethesda, MD 20815 Services Media engagement, strategic communications, and advisory support to promote foreign direct investment in Cambodia and to support communications on issues that may affect investor confidence in Cambodia. Received by NSD/FARA Registration Unit 12/30/2025 11:16:39 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL 7. List every foreign principal1 for whom the registrant is acting or has agreed to act.\u2026",
       "page_url": "https://efile.fara.gov/docs/7682-Registration-Statement-20251230-1.pdf",
+      "registrant": "Tricuro LLC",
+      "principal": "The Council for the Development of Cambodia",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Cambodia",
         "score": 2,
@@ -5465,8 +5662,18 @@
       "signal_date": "2025-12-24",
       "title": "Eversheds Sutherland (US) LLP \u2014 Romanian-American Strategic Advancement Initiative",
       "value_usd": null,
-      "description": "Eversheds Sutherland (US) LLP is a law firm based in the United states that provides legal services across a broad array of sectors and industries. Name See Appendix for Response Name Mr. Theodore H Comi nos Jr. Mr. Mark Herlach Received by NSD/FARA Registration Unit 12/24/2025 11:20:07 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Date Received From Whom Purpose Amount Subtotal $\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Eversheds Sutherland (US) LLP is a law firm based in the United states that provides legal services across a broad array of sectors and industries. Name See Appendix for Response Name Mr. Theodore H Comi nos Jr. Mr. Mark Herlach Received by NSD/FARA Registration Unit 12/24/2025 11:20:07 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Date Received From Whom Purpose Amount Subtotal $\u2026",
       "page_url": "https://efile.fara.gov/docs/7681-Registration-Statement-20251224-1.pdf",
+      "registrant": "Eversheds Sutherland (US) LLP",
+      "principal": "Romanian-American Strategic Advancement Initiative",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Romania",
         "score": 2,
@@ -5488,8 +5695,18 @@
       "signal_date": "2025-12-23",
       "title": "Mira Estados Unidos \u2014 Partido Politico Mira",
       "value_usd": null,
-      "description": "See Appendix for Response Name See Appendix for Response Received by NSD/FARA Registration Unit 12/23/2025 1:15:13 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose Amount Subtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act. Foreign Principal Foreign Principal Address PARTIDO POLITICO MIRA\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "See Appendix for Response Name See Appendix for Response Received by NSD/FARA Registration Unit 12/23/2025 1:15:13 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose Amount Subtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act. Foreign Principal Foreign Principal Address PARTIDO POLITICO MIRA\u2026",
       "page_url": "https://efile.fara.gov/docs/7680-Registration-Statement-20251223-1.pdf",
+      "registrant": "Mira Estados Unidos",
+      "principal": "Partido Politico Mira",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Colombia",
         "score": 6,
@@ -5983,6 +6200,9 @@
       "value_usd": null,
       "description": "Arsenal Government and Public Affairs Group, Embassy of the Federal Republic of Somalia, SOMALIA",
       "page_url": "https://efile.fara.gov/docs/7678-Registration-Statement-20251215-1.pdf",
+      "registrant": "Arsenal Government and Public Affairs Group",
+      "principal": "Embassy of the Federal Republic of Somalia",
+      "target_groups": [],
       "profile": {
         "name": "Somalia",
         "score": 4,
@@ -6152,8 +6372,18 @@
       "signal_date": "2025-12-12",
       "title": "Putala Strategies, LLC \u2014 Romanian-American Strategic Advancement Initiative",
       "value_usd": null,
-      "description": "Public Policy and Business Advisory services See Appendix for Response Name See Appendix for Response Received by NSD/FARA Registration Unit 12/12/2025 11:12:03 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose AmountSubtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act. Foreign Principal Foreign\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Public Policy and Business Advisory services See Appendix for Response Name See Appendix for Response Received by NSD/FARA Registration Unit 12/12/2025 11:12:03 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose AmountSubtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act. Foreign Principal Foreign\u2026",
       "page_url": "https://efile.fara.gov/docs/7677-Registration-Statement-20251212-1.pdf",
+      "registrant": "Putala Strategies, LLC",
+      "principal": "Romanian-American Strategic Advancement Initiative",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Romania",
         "score": 2,
@@ -6521,8 +6751,18 @@
       "signal_date": "2025-12-05",
       "title": "Sandler, Travis & Rosenberg, P.A. \u2014 APEX-BRASIL CORPORATION",
       "value_usd": null,
-      "description": "Law Firm Received by NSD/FARA Registration Unit 12/05/2025 5:54:41 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose Amount Subtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act. Foreign Principal Foreign Principal Address APEX-BRASIL corporation 201 South Biscayne Boulevard, Suite 1200 Miami, FL\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Law Firm Received by NSD/FARA Registration Unit 12/05/2025 5:54:41 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose Amount Subtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act. Foreign Principal Foreign Principal Address APEX-BRASIL corporation 201 South Biscayne Boulevard, Suite 1200 Miami, FL\u2026",
       "page_url": "https://efile.fara.gov/docs/7674-Registration-Statement-20251205-1.pdf",
+      "registrant": "Sandler, Travis & Rosenberg, P.A.",
+      "principal": "APEX-BRASIL CORPORATION",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Brazil",
         "score": 5,
@@ -6848,6 +7088,9 @@
       "value_usd": null,
       "description": "Samuel Group Inc., IHI Corporation, JAPAN",
       "page_url": "https://efile.fara.gov/docs/7673-Registration-Statement-20251201-1.pdf",
+      "registrant": "Samuel Group Inc.",
+      "principal": "IHI Corporation",
+      "target_groups": [],
       "profile": {
         "name": "Japan",
         "score": 6,
@@ -7043,8 +7286,18 @@
       "signal_date": "2025-11-24",
       "title": "Clark Hill Public Strategies LLC \u2014 MEK Industrial Technology",
       "value_usd": null,
-      "description": "Lobbying firm with a primary focus on federal and state lobbying, consulting, and advocacy. Foreign Prine ipal(s) MEK Industrial Received by NSD/FARA Registration Unit 11/24/2025 9:39:54 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose Amount Subtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act.\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Lobbying firm with a primary focus on federal and state lobbying, consulting, and advocacy. Foreign Prine ipal(s) MEK Industrial Received by NSD/FARA Registration Unit 11/24/2025 9:39:54 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose Amount Subtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act.\u2026",
       "page_url": "https://efile.fara.gov/docs/7672-Registration-Statement-20251124-1.pdf",
+      "registrant": "Clark Hill Public Strategies LLC",
+      "principal": "MEK Industrial Technology",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Uzbekistan",
         "score": 3,
@@ -7090,8 +7343,18 @@
       "signal_date": "2025-11-23",
       "title": "Collins, Grace \u2014 One Naga Voice",
       "value_usd": null,
-      "description": "See Appendix for Response Name Duke Gerhart Wilhelm wal ch Ms. Lorraine Ambrose Boothby Ron Whitaker \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "See Appendix for Response Name Duke Gerhart Wilhelm wal ch Ms. Lorraine Ambrose Boothby Ron Whitaker",
       "page_url": "https://efile.fara.gov/docs/7671-Registration-Statement-20251123-1.pdf",
+      "registrant": "Collins, Grace",
+      "principal": "One Naga Voice",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "India",
         "score": 7,
@@ -7141,8 +7404,18 @@
       "signal_date": "2025-11-22",
       "title": "Corcoran & Associates, Inc. dba Corcoran Partners \u2014 Generations of Life and Liberty LLC",
       "value_usd": null,
-      "description": "Government relations firm Position Presi dent Chief Executive officer \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Government relations firm Position Presi dent Chief Executive officer",
       "page_url": "https://efile.fara.gov/docs/7670-Registration-Statement-20251122-1.pdf",
+      "registrant": "Corcoran & Associates, Inc. dba Corcoran Partners",
+      "principal": "Generations of Life and Liberty LLC",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Guatemala",
         "score": 1,
@@ -7395,7 +7668,7 @@
         "rationale": "Undeclared nuclear weapons program (+2), active conflict \u2014 Gaza war, Lebanon, regional escalation (+2), major US security guarantor and basing access (+1), regional power (+1), active sanctions against counterparties (+1)"
       },
       "layer": "military",
-      "quality": 1.0,
+      "quality": 0.75,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -7434,8 +7707,18 @@
       "signal_date": "2025-11-19",
       "title": "Universal Strategies Limited \u2014 Global Victoria - Victorian Government Trade & Investment Office",
       "value_usd": null,
-      "description": "commercial trade and investment support; B2B matchmaking; lead generation; trade mission logistics; event coordination; dissemination of company profiles, questionnaires, and capability statements; participation in meetings that may include U.S. state or federal officials in a trade context. Citizenship UNITED STATES \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "commercial trade and investment support; B2B matchmaking; lead generation; trade mission logistics; event coordination; dissemination of company profiles, questionnaires, and capability statements; participation in meetings that may include U.S. state or federal officials in a trade context. Citizenship UNITED STATES",
       "page_url": "https://efile.fara.gov/docs/7669-Registration-Statement-20251119-1.pdf",
+      "registrant": "Universal Strategies Limited",
+      "principal": "Global Victoria - Victorian Government Trade & Investment Office",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Australia",
         "score": 5,
@@ -7601,7 +7884,7 @@
         "rationale": "Undeclared nuclear weapons program (+2), active conflict \u2014 Gaza war, Lebanon, regional escalation (+2), major US security guarantor and basing access (+1), regional power (+1), active sanctions against counterparties (+1)"
       },
       "layer": "military",
-      "quality": 1.0,
+      "quality": 0.75,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -7612,8 +7895,18 @@
       "signal_date": "2025-11-17",
       "title": "Access Partnership Corp \u2014 Ministry of Economic Affairs",
       "value_usd": null,
-      "description": "Public policy, licensing, and regulatory services for the technology sector \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Public policy, licensing, and regulatory services for the technology sector",
       "page_url": "https://efile.fara.gov/docs/7668-Registration-Statement-20251117-1.pdf",
+      "registrant": "Access Partnership Corp",
+      "principal": "Ministry of Economic Affairs",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Taiwan",
         "score": 7,
@@ -8122,6 +8415,43 @@
       },
       "layer": "influence",
       "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "registration_number": 7667,
+      "iso": "CD",
+      "source": "fara",
+      "signal_date": "2025-11-11",
+      "title": "Widner, Robert S. \u2014 Democratic Republic of Congo",
+      "value_usd": null,
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. Services none Received by NSD/FARA Registration Unit 11/11/2025 1:26:35 AM",
+      "page_url": "https://efile.fara.gov/docs/7667-Registration-Statement-20251111-1.pdf",
+      "registrant": "Widner, Robert S.",
+      "principal": "Democratic Republic of Congo",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
+      "profile": {
+        "name": "Congo (Democratic Republic)",
+        "score": 6,
+        "factors": [
+          "active conflict",
+          "strategic minerals",
+          "cobalt",
+          "coltan",
+          "BRI exposure",
+          "proxy hub"
+        ],
+        "rationale": "Active multi-faction conflict (+2), world's largest cobalt reserves plus coltan and strategic minerals (+2), Chinese mining dominance/BRI (+1), regional proxy hub M23/Rwanda/Uganda (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.9,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -9509,8 +9839,18 @@
       "signal_date": "2025-10-12",
       "title": "Davis Media NY LLC \u2014 Government of Israel through L.D.R.S Group LTD",
       "value_usd": null,
-      "description": "Digital Media Name Mr. Yoav Davis Name Mr. Yoav Davis Citizenship UNITED STATES Foreign Prine ipal(s) Government of Israel through Havas Media Group Germany Government of Israel through L.D.R.S Group LTD Services online hostage awareness campaign \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Digital Media Name Mr. Yoav Davis Name Mr. Yoav Davis Citizenship UNITED STATES Foreign Prine ipal(s) Government of Israel through Havas Media Group Germany Government of Israel through L.D.R.S Group LTD Services online hostage awareness campaign",
       "page_url": "https://efile.fara.gov/docs/7662-Registration-Statement-20251012-1.pdf",
+      "registrant": "Davis Media NY LLC",
+      "principal": "Government of Israel through L.D.R.S Group LTD",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Israel",
         "score": 7,
@@ -9559,8 +9899,18 @@
       "signal_date": "2025-10-10",
       "title": "Ervin Graves Strategy Group LLC \u2014 The Ministry of Foreign Affairs and East African Cooperation",
       "value_usd": null,
-      "description": "Government Relations Position Member See Attached agreement for full scope of understanding and terms See Attached agreement for full scope of understanding and terms Citizenship UNITED STATES \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Government Relations Position Member See Attached agreement for full scope of understanding and terms See Attached agreement for full scope of understanding and terms Citizenship UNITED STATES",
       "page_url": "https://efile.fara.gov/docs/7660-Registration-Statement-20251010-1.pdf",
+      "registrant": "Ervin Graves Strategy Group LLC",
+      "principal": "The Ministry of Foreign Affairs and East African Cooperation",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Tanzania",
         "score": 3,
@@ -9582,8 +9932,18 @@
       "signal_date": "2025-10-10",
       "title": "Decision Boundaries LLC \u2014 Societe Generale de Banque au Liban S.A.L.",
       "value_usd": null,
-      "description": "Financial advisory, focused on financial restructuring, litigation support and financial engineering. Services Financial and strategic advisory services. \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Financial advisory, focused on financial restructuring, litigation support and financial engineering. Services Financial and strategic advisory services.",
       "page_url": "https://efile.fara.gov/docs/7659-Registration-Statement-20251010-1.pdf",
+      "registrant": "Decision Boundaries LLC",
+      "principal": "Societe Generale de Banque au Liban S.A.L.",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Lebanon",
         "score": 4,
@@ -9778,8 +10138,19 @@
       "signal_date": "2025-10-07",
       "title": "S-3 Group, LLC \u2014 Orlando Salvador Jorge Villegas",
       "value_usd": null,
-      "description": "Government consulting firm \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Radio, Editors, Libraries",
+      "description": "Government consulting firm",
       "page_url": "https://efile.fara.gov/docs/7658-Registration-Statement-20251007-1.pdf",
+      "registrant": "S-3 Group, LLC",
+      "principal": "Orlando Salvador Jorge Villegas",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Radio",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Dominican Republic",
         "score": 1,
@@ -10093,8 +10464,18 @@
       "signal_date": "2025-10-01",
       "title": "Praxis Global Strategies LLC \u2014 Confucian",
       "value_usd": null,
-      "description": "Registrant will help in representing clients and foreign principals in conversation involving US government personnels at no cost Citizenship UNITED STATES Residence Address 16463 los Gatos Blvd Los Gatos, CA 95032 Services registered agent will help foreign principal engage with US officials when necessary Position Managing officer \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Registrant will help in representing clients and foreign principals in conversation involving US government personnels at no cost Citizenship UNITED STATES Residence Address 16463 los Gatos Blvd Los Gatos, CA 95032 Services registered agent will help foreign principal engage with US officials when necessary Position Managing officer",
       "page_url": "https://efile.fara.gov/docs/7656-Registration-Statement-20251001-1.pdf",
+      "registrant": "Praxis Global Strategies LLC",
+      "principal": "Confucian",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Taiwan",
         "score": 7,
@@ -10245,8 +10626,18 @@
       "signal_date": "2025-09-30",
       "title": "Craft Media Digital \u2014 Embassy of Switzerland in the U.S.A",
       "value_usd": null,
-      "description": "Communications and media consulting and services DC 20009 Lane NW DC 20016 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Communications and media consulting and services DC 20009 Lane NW DC 20016",
       "page_url": "https://efile.fara.gov/docs/7655-Registration-Statement-20250930-1.pdf",
+      "registrant": "Craft Media Digital",
+      "principal": "Embassy of Switzerland in the U.S.A",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Switzerland",
         "score": 2,
@@ -10369,8 +10760,18 @@
       "signal_date": "2025-09-27",
       "title": "Show Faith by Works, LLC \u2014 Israel - Ministry of Foreign Affairs",
       "value_usd": null,
-      "description": "Pro-lsrael outreach and marketing to Christians. Name chad jonson schnitger Residence Address 511 Cherry valley Acres Beaumont, CA 92223 Citizenship UNITED STATES Israel - Ministry of Foreign Affai rs Israel - Ministry of Foreign Affai rs Israel - Ministry of Foreign Affai rs Foreign Prine ipal(s) Israel - Ministry of Foreign Affai rs \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Pro-lsrael outreach and marketing to Christians. Name chad jonson schnitger Residence Address 511 Cherry valley Acres Beaumont, CA 92223 Citizenship UNITED STATES Israel - Ministry of Foreign Affai rs Israel - Ministry of Foreign Affai rs Israel - Ministry of Foreign Affai rs Foreign Prine ipal(s) Israel - Ministry of Foreign Affai rs",
       "page_url": "https://efile.fara.gov/docs/7653-Registration-Statement-20250927-1.pdf",
+      "registrant": "Show Faith by Works, LLC",
+      "principal": "Israel - Ministry of Foreign Affairs",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Israel",
         "score": 7,
@@ -10395,8 +10796,18 @@
       "signal_date": "2025-09-26",
       "title": "Bridges Partners LLC \u2014 Government of Israel through Havas Media Group Germany",
       "value_usd": null,
-      "description": "Consulting firm providing strategic advice. Foreign Prine ipal(s) Government of Israel through Havas Media Group Germany Position owner 50% Owner 50% Residence Address ISRAEL ISRAEL Citizenship ISRAEL ISRAEL Services Assist with promoting cultural interchange between united states and Israel. Received by NSD/FARA Registration Unit 09/26/2025 3:18:16 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Subtotal 199,985.00 $\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Consulting firm providing strategic advice. Foreign Prine ipal(s) Government of Israel through Havas Media Group Germany Position owner 50% Owner 50% Residence Address ISRAEL ISRAEL Citizenship ISRAEL ISRAEL Services Assist with promoting cultural interchange between united states and Israel. Received by NSD/FARA Registration Unit 09/26/2025 3:18:16 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Subtotal 199,985.00 $\u2026",
       "page_url": "https://efile.fara.gov/docs/7652-Registration-Statement-20250926-1.pdf",
+      "registrant": "Bridges Partners LLC",
+      "principal": "Government of Israel through Havas Media Group Germany",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Israel",
         "score": 7,
@@ -10447,8 +10858,18 @@
       "signal_date": "2025-09-24",
       "title": "KNP Communications, LLC \u2014 Embassy of Canada to the United States",
       "value_usd": null,
-      "description": "Communications training, coaching, and consulting Position Founding Partner Name Mr. Matthew Kohut See Appendix for Additional Names \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Communications training, coaching, and consulting Position Founding Partner Name Mr. Matthew Kohut See Appendix for Additional Names",
       "page_url": "https://efile.fara.gov/docs/7651-Registration-Statement-20250924-1.pdf",
+      "registrant": "KNP Communications, LLC",
+      "principal": "Embassy of Canada to the United States",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Canada",
         "score": 5,
@@ -10791,8 +11212,18 @@
       "signal_date": "2025-09-18",
       "title": "Clock Tower X LLC \u2014 State of Israel via Havas Media Germany GmbH",
       "value_usd": null,
-      "description": "Clock Tower x LLC is engaged in creative strategy and media production, including the development of digital content, messaging campaigns, and related distribution services for political, cultural, and commercial initiatives. Citizenship UNITED STATES Name Mr. Bradley Parscale Name See Appendix for Response Residence Address 3745 Medina Road, Ste C Medina, OH 44256 Received by NSD/FARA Registration Unit 09/18/2025 7:32:06 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL HAVAS Media Network III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Clock Tower x LLC is engaged in creative strategy and media production, including the development of digital content, messaging campaigns, and related distribution services for political, cultural, and commercial initiatives. Citizenship UNITED STATES Name Mr. Bradley Parscale Name See Appendix for Response Residence Address 3745 Medina Road, Ste C Medina, OH 44256 Received by NSD/FARA Registration Unit 09/18/2025 7:32:06 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL HAVAS Media Network III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth\u2026",
       "page_url": "https://efile.fara.gov/docs/7649-Registration-Statement-20250918-1.pdf",
+      "registrant": "Clock Tower X LLC",
+      "principal": "State of Israel via Havas Media Germany GmbH",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Israel",
         "score": 7,
@@ -10867,8 +11298,18 @@
       "signal_date": "2025-09-17",
       "title": "Bendler, Dale Britt \u2014 Iskandar Safa",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 09/17/2025 6:42:47 PM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 09/17/2025 6:42:47 PM",
       "page_url": "https://efile.fara.gov/docs/7648-Registration-Statement-20250917-1.pdf",
+      "registrant": "Bendler, Dale Britt",
+      "principal": "Iskandar Safa",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "France",
         "score": 5,
@@ -10992,8 +11433,18 @@
       "signal_date": "2025-09-16",
       "title": "Bendler, Dale Britt \u2014 Jean Claude Bastos de Morais",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 09/16/2025 7:06:34 PM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 09/16/2025 7:06:34 PM",
       "page_url": "https://efile.fara.gov/docs/7647-Registration-Statement-20250916-1.pdf",
+      "registrant": "Bendler, Dale Britt",
+      "principal": "Jean Claude Bastos de Morais",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Angola",
         "score": 3,
@@ -11015,8 +11466,18 @@
       "signal_date": "2025-09-16",
       "title": "Univision Networks & Studios, Inc. (\"UN&S\") \u2014 Irismedia Agenci'a de Medios",
       "value_usd": null,
-      "description": "See Appendix for Response Residence Address Dallas, tx Mexico city MEXICO Mi ami , FL Short Hills, NJ Scotch Plains, NJ Mi ami, FL General Counsel & Coprorate Secretary Chief Administrative offi cer Di rector/Manager Di rector/Manager SVP & Chief Accounting offi cer Position Chief Executive Officer Chief Financial officer Received by NSD/FARA Registration Unit 09/16/2025 6:52:16 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "See Appendix for Response Residence Address Dallas, tx Mexico city MEXICO Mi ami , FL Short Hills, NJ Scotch Plains, NJ Mi ami, FL General Counsel & Coprorate Secretary Chief Administrative offi cer Di rector/Manager Di rector/Manager SVP & Chief Accounting offi cer Position Chief Executive Officer Chief Financial officer Received by NSD/FARA Registration Unit 09/16/2025 6:52:16 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such\u2026",
       "page_url": "https://efile.fara.gov/docs/7643-Registration-Statement-20250916-1.pdf",
+      "registrant": "Univision Networks & Studios, Inc. (\"UN&S\")",
+      "principal": "Irismedia Agenci'a de Medios",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Spain",
         "score": 2,
@@ -11266,8 +11727,18 @@
       "signal_date": "2025-09-11",
       "title": "Rabinowitz, Inc. d/b/a Bluelight Strategies \u2014 B Yahad Natzliach",
       "value_usd": null,
-      "description": "Media and communications consulting Position Presi dent Foreign Prine ipal(s) B'Yahad Natzliach Residence Address 3010 Ordway St. NW Washington, DC 20008-3254 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Media and communications consulting Position Presi dent Foreign Prine ipal(s) B'Yahad Natzliach Residence Address 3010 Ordway St. NW Washington, DC 20008-3254",
       "page_url": "https://efile.fara.gov/docs/7641-Registration-Statement-20250911-1.pdf",
+      "registrant": "Rabinowitz, Inc. d/b/a Bluelight Strategies",
+      "principal": "B Yahad Natzliach",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Israel",
         "score": 7,
@@ -11587,8 +12058,18 @@
       "signal_date": "2025-09-04",
       "title": "AN Consulting & Security LLC \u2014 Monica Maria Castro",
       "value_usd": null,
-      "description": "AN Consulting & Security offers consulting services in the areas of security and strategic training Name See Appendix for Response Received by NSD/FARA Registration Unit 09/04/2025 12:50:18 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL Castro Mr. Oscar Andres Triana III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Date Received From Whom Purpose AmountSubtotal None None $ .00 Fotal Foreign Principal Ms. Monica Maria Castro Mr. Oscar\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "AN Consulting & Security offers consulting services in the areas of security and strategic training Name See Appendix for Response Received by NSD/FARA Registration Unit 09/04/2025 12:50:18 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL Castro Mr. Oscar Andres Triana III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Date Received From Whom Purpose AmountSubtotal None None $ .00 Fotal Foreign Principal Ms. Monica Maria Castro Mr. Oscar\u2026",
       "page_url": "https://efile.fara.gov/docs/7640-Registration-Statement-20250904-1.pdf",
+      "registrant": "AN Consulting & Security LLC",
+      "principal": "Monica Maria Castro",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Colombia",
         "score": 6,
@@ -11660,8 +12141,18 @@
       "signal_date": "2025-09-02",
       "title": "Goldstein, Jonathan Charles \u2014 M.N. Target Consultants",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 09/02/2025 4:32:16 PM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 09/02/2025 4:32:16 PM",
       "page_url": "https://efile.fara.gov/docs/7639-Registration-Statement-20250902-1.pdf",
+      "registrant": "Goldstein, Jonathan Charles",
+      "principal": "M.N. Target Consultants",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Israel",
         "score": 7,
@@ -11686,8 +12177,18 @@
       "signal_date": "2025-09-02",
       "title": "First International Resources, LLC \u2014 State Oil Company of the Azerbaijan Republic (SOCAR)",
       "value_usd": null,
-      "description": "Strategic communications and consulting firm Citizenship UNITED STATES See Appendix for Response \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Strategic communications and consulting firm Citizenship UNITED STATES See Appendix for Response",
       "page_url": "https://efile.fara.gov/docs/7638-Registration-Statement-20250902-1.pdf",
+      "registrant": "First International Resources, LLC",
+      "principal": "State Oil Company of the Azerbaijan Republic (SOCAR)",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Azerbaijan",
         "score": 4,
@@ -11994,8 +12495,18 @@
       "signal_date": "2025-08-23",
       "title": "Bendler, Sandra Rosa \u2014 Francisco Higino Lopes Carneiro",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Received by NSD/FARA Registration Unit 08/23/20258:47:06 PM Dale Britt Bend!er, a board member of DAT LLC, will provide advice on all things Angolan to the LLC's president, Sandra Rosa Bendler, and to potential U.S. investors. Mr. Dale Britt Bendler Largo do Atletico #6, 4th Floor Apt 4 Luanda, Angola ANGOLA Mr. Francisco Higino Lopes Carnei ro Mr. Nilton Fernandes Rosa 951 Brickell Ave, Apt 3611 Miami, FL 33131 No we \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Received by NSD/FARA Registration Unit 08/23/20258:47:06 PM Dale Britt Bend!er, a board member of DAT LLC, will provide advice on all things Angolan to the LLC's president, Sandra Rosa Bendler, and to potential U.S. investors. Mr. Dale Britt Bendler Largo do Atletico #6, 4th Floor Apt 4 Luanda, Angola ANGOLA Mr. Francisco Higino Lopes Carnei ro Mr. Nilton Fernandes Rosa 951 Brickell Ave, Apt 3611 Miami, FL 33131 No we",
       "page_url": "https://efile.fara.gov/docs/7637-Registration-Statement-20250823-1.pdf",
+      "registrant": "Bendler, Sandra Rosa",
+      "principal": "Francisco Higino Lopes Carneiro",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Angola",
         "score": 3,
@@ -12019,6 +12530,9 @@
       "value_usd": null,
       "description": "Lee, Francis Marland, Confucian Co, LTD, TAIWAN",
       "page_url": "https://efile.fara.gov/docs/7636-Registration-Statement-20250822-1.pdf",
+      "registrant": "Lee, Francis Marland",
+      "principal": "Confucian Co",
+      "target_groups": [],
       "profile": {
         "name": "Taiwan",
         "score": 7,
@@ -12215,8 +12729,18 @@
       "signal_date": "2025-08-20",
       "title": "Dume, Manuel Jesus \u2014 Stilwell Museum of Chongqing",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 08/20/2025 4:11:58 AM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 08/20/2025 4:11:58 AM",
       "page_url": "https://efile.fara.gov/docs/7626-Registration-Statement-20250820-1.pdf",
+      "registrant": "Dume, Manuel Jesus",
+      "principal": "Stilwell Museum of Chongqing",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "China",
         "score": 10,
@@ -12460,8 +12984,18 @@
       "signal_date": "2025-08-14",
       "title": "Follin and Associates LLC (DBA Encounter Strategies) \u2014 Institut Macaya",
       "value_usd": null,
-      "description": "Strategic planning and management consulting for private sector, non-profits, trade associations, and government. Name Sean Foil in \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Strategic planning and management consulting for private sector, non-profits, trade associations, and government. Name Sean Foil in",
       "page_url": "https://efile.fara.gov/docs/7635-Registration-Statement-20250814-1.pdf",
+      "registrant": "Follin and Associates LLC (DBA Encounter Strategies)",
+      "principal": "Institut Macaya",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Haiti",
         "score": 3,
@@ -12498,7 +13032,7 @@
         "rationale": "Undeclared nuclear weapons program (+2), active conflict \u2014 Gaza war, Lebanon, regional escalation (+2), major US security guarantor and basing access (+1), regional power (+1), active sanctions against counterparties (+1)"
       },
       "layer": "military",
-      "quality": 1.0,
+      "quality": 0.75,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -12673,7 +13207,7 @@
         "rationale": "Undeclared nuclear weapons program (+2), active conflict \u2014 Gaza war, Lebanon, regional escalation (+2), major US security guarantor and basing access (+1), regional power (+1), active sanctions against counterparties (+1)"
       },
       "layer": "military",
-      "quality": 1.0,
+      "quality": 0.75,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -12684,8 +13218,18 @@
       "signal_date": "2025-08-11",
       "title": "OmniStrat Group LLC \u2014 Ulugbek Shadmanov",
       "value_usd": null,
-      "description": "Omnistrat Group LLC is a U.S.-based strategic advisory and consulting firm focused on international relations, government affairs, lobbying, public diplomacy, and high-level advocacy efforts on behalf of foreign principals. The firm offers services including political consulting, public policy communications, stakeholder engagement, and issue advocacy. Residence Address 201 178th Drive, Apt. 239 Sunny Isles Beach, FL 33160 Citizenship UNITED STATES Name See Appendix for Response Name Mr. Eugene Sergeevich Gourevitch Received by NSD/FARA Registration Unit 08/11/2025 1:53:18 PM (PAGE 3)\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Omnistrat Group LLC is a U.S.-based strategic advisory and consulting firm focused on international relations, government affairs, lobbying, public diplomacy, and high-level advocacy efforts on behalf of foreign principals. The firm offers services including political consulting, public policy communications, stakeholder engagement, and issue advocacy. Residence Address 201 178th Drive, Apt. 239 Sunny Isles Beach, FL 33160 Citizenship UNITED STATES Name See Appendix for Response Name Mr. Eugene Sergeevich Gourevitch Received by NSD/FARA Registration Unit 08/11/2025 1:53:18 PM (PAGE 3)\u2026",
       "page_url": "https://efile.fara.gov/docs/7632-Registration-Statement-20250811-1.pdf",
+      "registrant": "OmniStrat Group LLC",
+      "principal": "Ulugbek Shadmanov",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Uzbekistan",
         "score": 3,
@@ -12708,8 +13252,18 @@
       "signal_date": "2025-08-11",
       "title": "Genesis 21 Consulting LLC \u2014 Israeli Ministry of Foreign Affairs/Government Advertising Bureau",
       "value_usd": null,
-      "description": "Consulting in the areas of strategy, communications and content creation and dissemination Name See Appendix for Response Citizenship ISRAEL Received by NSD/FARA Registration Unit 08/11/2025 1:03:44 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose AmountSubtotal 1 The term \"foreign principal,\" as defined in Section 1(b) of the Act, includes\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Consulting in the areas of strategy, communications and content creation and dissemination Name See Appendix for Response Citizenship ISRAEL Received by NSD/FARA Registration Unit 08/11/2025 1:03:44 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose AmountSubtotal 1 The term \"foreign principal,\" as defined in Section 1(b) of the Act, includes\u2026",
       "page_url": "https://efile.fara.gov/docs/7631-Registration-Statement-20250811-1.pdf",
+      "registrant": "Genesis 21 Consulting LLC",
+      "principal": "Israeli Ministry of Foreign Affairs/Government Advertising Bureau",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Israel",
         "score": 7,
@@ -12822,6 +13376,39 @@
       "layer": "military",
       "quality": 1.0,
       "dollar_mod": 1.1653089986991942,
+      "is_fr_policy": null
+    },
+    {
+      "registration_number": 7630,
+      "iso": "BA",
+      "source": "fara",
+      "signal_date": "2025-08-08",
+      "title": "GS2 Law PLLC \u2014 Republika Srpska",
+      "value_usd": null,
+      "description": "Law Firm Received by NSD/FARA Registration Unit 08/08/2025 6:08:23 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose AmountSubtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act. Foreign Principal Foreign Principal Address Republika Srpska Bana Milosavljevica 4 Banja Luka, Republika Srpska BOSNIA &\u2026",
+      "page_url": "https://efile.fara.gov/docs/7630-Registration-Statement-20250808-1.pdf",
+      "registrant": "GS2 Law PLLC",
+      "principal": "Republika Srpska",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
+      "profile": {
+        "name": "Bosnia and Herzegovina",
+        "score": 2,
+        "factors": [
+          "contested territory",
+          "proxy hub"
+        ],
+        "rationale": "Occupied/contested political structure, Republika Srpska separatism (+1), Russia-West proxy contest (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
       "is_fr_policy": null
     },
     {
@@ -13008,8 +13595,18 @@
       "signal_date": "2025-08-04",
       "title": "Tiger Hill Partners LLC \u2014 Foundation for the Development of Western Syria through Joseph E. Schmitz",
       "value_usd": null,
-      "description": "Government relations and public affairs firm \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Government relations and public affairs firm",
       "page_url": "https://efile.fara.gov/docs/7629-Registration-Statement-20250804-1.pdf",
+      "registrant": "Tiger Hill Partners LLC",
+      "principal": "Foundation for the Development of Western Syria through Joseph E. Schmitz",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Syria",
         "score": 6,
@@ -13108,8 +13705,18 @@
       "signal_date": "2025-08-03",
       "title": "Cheatham, Andrew Craig \u2014 Institut Macaya",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 08/03/2025 11:55:39 AM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 08/03/2025 11:55:39 AM",
       "page_url": "https://efile.fara.gov/docs/7628-Registration-Statement-20250803-1.pdf",
+      "registrant": "Cheatham, Andrew Craig",
+      "principal": "Institut Macaya",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Haiti",
         "score": 3,
@@ -13151,6 +13758,40 @@
       "is_fr_policy": null
     },
     {
+      "registration_number": 7627,
+      "iso": "KR",
+      "source": "fara",
+      "signal_date": "2025-07-29",
+      "title": "Korea Inter-Parliamentary Exchange Center \u2014 The National Assembly of the Republic of Korea",
+      "value_usd": null,
+      "description": "Monitor legislative development in the U.S. congress and host seminars to support cooperation and mutual understanding between the legislative bodies of the Republic of Korea and the united states. All activities are educational and nonpartisan in nature. Citizenship UNITED STATES",
+      "page_url": "https://efile.fara.gov/docs/7627-Registration-Statement-20250729-1.pdf",
+      "registrant": "Korea Inter-Parliamentary Exchange Center",
+      "principal": "The National Assembly of the Republic of Korea",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
+      "profile": {
+        "name": "South Korea",
+        "score": 4,
+        "factors": [
+          "US basing",
+          "nuclear program",
+          "regional power"
+        ],
+        "rationale": "Major US basing \u2014 28,000 troops, USFK (+1), latent nuclear capability \u2014 active discussion of indigenous program (+2), regional power and semiconductor/industrial hub (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
       "iso": "IL",
       "source": "anchor_budget",
       "signal_date": "2025-07-28",
@@ -13172,7 +13813,7 @@
         "rationale": "Undeclared nuclear weapons program (+2), active conflict \u2014 Gaza war, Lebanon, regional escalation (+2), major US security guarantor and basing access (+1), regional power (+1), active sanctions against counterparties (+1)"
       },
       "layer": "military",
-      "quality": 1.0,
+      "quality": 0.75,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -13814,6 +14455,39 @@
       "is_fr_policy": null
     },
     {
+      "registration_number": 7625,
+      "iso": "BA",
+      "source": "fara",
+      "signal_date": "2025-07-18",
+      "title": "MO Strategies, Inc. \u2014 Republika Srpska",
+      "value_usd": null,
+      "description": "Consulting, public advocacy, and lobbying. Name Martin obst Name Martin obst",
+      "page_url": "https://efile.fara.gov/docs/7625-Registration-Statement-20250718-1.pdf",
+      "registrant": "MO Strategies, Inc.",
+      "principal": "Republika Srpska",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
+      "profile": {
+        "name": "Bosnia and Herzegovina",
+        "score": 2,
+        "factors": [
+          "contested territory",
+          "proxy hub"
+        ],
+        "rationale": "Occupied/contested political structure, Republika Srpska separatism (+1), Russia-West proxy contest (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
       "filing_uuid": "bd6bdbcb-8f9e-4dbb-b61e-b5a399ba0368",
       "iso": "DE",
       "source": "lda",
@@ -14162,8 +14836,18 @@
       "signal_date": "2025-07-16",
       "title": "IPG DXTRA Japan, Inc. d/b/a Weber Shandwick \u2014 Tokyo Metropolitan Government",
       "value_usd": null,
-      "description": "Public Relations (1) Give a complete description of the ownership and control structure of the registrant. The registrant is a wholly-owned subsidiary of the Interpublic Group of Companies, Inc. The individual will analyze news coverage of the foreign principal (outside of Japan), help the foreign principal to develop positive relationships with international media, and promote the interests of the foreign principal. Received by NSD/FARA Registration Unit 07/16/2025 5:46:20 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Public Relations (1) Give a complete description of the ownership and control structure of the registrant. The registrant is a wholly-owned subsidiary of the Interpublic Group of Companies, Inc. The individual will analyze news coverage of the foreign principal (outside of Japan), help the foreign principal to develop positive relationships with international media, and promote the interests of the foreign principal. Received by NSD/FARA Registration Unit 07/16/2025 5:46:20 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services\u2026",
       "page_url": "https://efile.fara.gov/docs/7624-Registration-Statement-20250716-1.pdf",
+      "registrant": "IPG DXTRA Japan, Inc. d/b/a Weber Shandwick",
+      "principal": "Tokyo Metropolitan Government",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Japan",
         "score": 6,
@@ -15070,8 +15754,18 @@
       "signal_date": "2025-07-08",
       "title": "Bendler, Dale Britt \u2014 Armado Capriles",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 07/08/2025 7:36:37 PM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 07/08/2025 7:36:37 PM",
       "page_url": "https://efile.fara.gov/docs/7623-Registration-Statement-20250708-1.pdf",
+      "registrant": "Bendler, Dale Britt",
+      "principal": "Armado Capriles",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Venezuela",
         "score": 4,
@@ -15167,8 +15861,18 @@
       "signal_date": "2025-07-03",
       "title": "Bennett, William \u2014 Embassy of the State of Qatar",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 07/03/2025 12:00:19 PM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 07/03/2025 12:00:19 PM",
       "page_url": "https://efile.fara.gov/docs/7620-Registration-Statement-20250703-1.pdf",
+      "registrant": "Bennett, William",
+      "principal": "Embassy of the State of Qatar",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Qatar",
         "score": 4,
@@ -15894,8 +16598,18 @@
       "signal_date": "2025-06-25",
       "title": "USRCA (United States Rwandan Community Abroad) \u2014 Mathilde Mukantabana",
       "value_usd": null,
-      "description": "See Appendix for Response \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "See Appendix for Response",
       "page_url": "https://efile.fara.gov/docs/7617-Registration-Statement-20250625-1.pdf",
+      "registrant": "USRCA (United States Rwandan Community Abroad)",
+      "principal": "Mathilde Mukantabana",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Rwanda",
         "score": 3,
@@ -16272,8 +16986,18 @@
       "signal_date": "2025-06-19",
       "title": "Rahimi, Haroon \u2014 Haroon Rahimi",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 06/19/2025 2:04:51 PM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 06/19/2025 2:04:51 PM",
       "page_url": "https://efile.fara.gov/docs/7615-Registration-Statement-20250619-1.pdf",
+      "registrant": "Rahimi, Haroon",
+      "principal": "Haroon Rahimi",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Afghanistan",
         "score": 5,
@@ -16396,8 +17120,18 @@
       "signal_date": "2025-06-17",
       "title": "Vision Communication ET Consultation, LLC \u2014 Counselor President Emmanuel Vertilaire",
       "value_usd": null,
-      "description": "The registrant\u2019s regular business involves providing international advisory services, strategic political consulting, and diplomatic communication support to government and political clients. MARC SONY JEAN BAPTISTE NICANORD MYRTHO Received by NSD/FARA Registration Unit 06/17/2025 1:14:08 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "The registrant\u2019s regular business involves providing international advisory services, strategic political consulting, and diplomatic communication support to government and political clients. MARC SONY JEAN BAPTISTE NICANORD MYRTHO Received by NSD/FARA Registration Unit 06/17/2025 1:14:08 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose\u2026",
       "page_url": "https://efile.fara.gov/docs/7613-Registration-Statement-20250617-1.pdf",
+      "registrant": "Vision Communication ET Consultation, LLC",
+      "principal": "Counselor President Emmanuel Vertilaire",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Haiti",
         "score": 3,
@@ -16904,6 +17638,38 @@
       "is_fr_policy": null
     },
     {
+      "registration_number": 7611,
+      "iso": "BM",
+      "source": "fara",
+      "signal_date": "2025-06-12",
+      "title": "Curley, John Harris \u2014 Government of Bermuda",
+      "value_usd": null,
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 06/12/2025 8:57:20 PM",
+      "page_url": "https://efile.fara.gov/docs/7611-Registration-Statement-20250612-1.pdf",
+      "registrant": "Curley, John Harris",
+      "principal": "Government of Bermuda",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
+      "profile": {
+        "name": "Bermuda",
+        "score": 1,
+        "factors": [
+          "offshore financial center"
+        ],
+        "rationale": "UK Overseas Territory; major offshore financial and insurance center \u2014 LDA signals reflect companies domiciled here, not Bermudian state interests"
+      },
+      "layer": "influence",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
       "registration_number": 7610,
       "iso": "JP",
       "source": "fara",
@@ -16912,6 +17678,9 @@
       "value_usd": null,
       "description": "Robertson Monagle & Eastaugh LLC, The Institute of Cetacean Research, JAPAN",
       "page_url": "https://efile.fara.gov/docs/7610-Registration-Statement-20250612-1.pdf",
+      "registrant": "Robertson Monagle & Eastaugh LLC",
+      "principal": "The Institute of Cetacean Research",
+      "target_groups": [],
       "profile": {
         "name": "Japan",
         "score": 6,
@@ -17178,8 +17947,18 @@
       "signal_date": "2025-06-09",
       "title": "Gittelman, Helena \u2014 NRW. Global Business",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 06/09/2025 2:05:44 PM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 06/09/2025 2:05:44 PM",
       "page_url": "https://efile.fara.gov/docs/7609-Registration-Statement-20250609-1.pdf",
+      "registrant": "Gittelman, Helena",
+      "principal": "NRW. Global Business",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Germany",
         "score": 4,
@@ -17392,8 +18171,18 @@
       "signal_date": "2025-06-02",
       "title": "Knight Law Firm, PC \u2014 The Government of the United Mexican States",
       "value_usd": null,
-      "description": "Law firm providing representation to individuals and consulting services. Name See Appendix for Response Received by NSD/FARA Registration Unit 06/02/2025 6:42:04 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose Amount Subtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act. Foreign Principal Foreign\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Law firm providing representation to individuals and consulting services. Name See Appendix for Response Received by NSD/FARA Registration Unit 06/02/2025 6:42:04 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose Amount Subtotal 7. List every foreign principal1 for whom the registrant is acting or has agreed to act. Foreign Principal Foreign\u2026",
       "page_url": "https://efile.fara.gov/docs/7604-Registration-Statement-20250602-1.pdf",
+      "registrant": "Knight Law Firm, PC",
+      "principal": "The Government of the United Mexican States",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Mexico",
         "score": 4,
@@ -17416,8 +18205,18 @@
       "signal_date": "2025-06-02",
       "title": "Spiral Hub \u2014 Kamal Almasi Jaf",
       "value_usd": null,
-      "description": "The registrant is a media consultant specializing in the development of television programming, public relations, strategic communications, and media outreach. Activities include content creation, message development, brand positioning, and media engagement for clients across cultural, nonprofit, and commercial sectors. Received by NSD/FARA Registration Unit 06/02/2025 3:21:26 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "The registrant is a media consultant specializing in the development of television programming, public relations, strategic communications, and media outreach. Activities include content creation, message development, brand positioning, and media engagement for clients across cultural, nonprofit, and commercial sectors. Received by NSD/FARA Registration Unit 06/02/2025 3:21:26 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign\u2026",
       "page_url": "https://efile.fara.gov/docs/7603-Registration-Statement-20250602-1.pdf",
+      "registrant": "Spiral Hub",
+      "principal": "Kamal Almasi Jaf",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Iraq",
         "score": 7,
@@ -17442,8 +18241,18 @@
       "signal_date": "2025-06-02",
       "title": "Barcroft, Jack Pascal \u2014 FramanAgridev Development Company WA Ltd",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 06/02/2025 1:13:30PM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 06/02/2025 1:13:30PM",
       "page_url": "https://efile.fara.gov/docs/7602-Registration-Statement-20250602-1.pdf",
+      "registrant": "Barcroft, Jack Pascal",
+      "principal": "FramanAgridev Development Company WA Ltd",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Nigeria",
         "score": 5,
@@ -17562,8 +18371,18 @@
       "signal_date": "2025-05-28",
       "title": "Tactic COC LLC \u2014 The Ministry of European Integration and International Cooperation for the Republic of Sprska",
       "value_usd": null,
-      "description": "Counsel and strategic planning concerning U.S. policy, regulation and opportunities. \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Counsel and strategic planning concerning U.S. policy, regulation and opportunities.",
       "page_url": "https://efile.fara.gov/docs/7600-Registration-Statement-20250528-1.pdf",
+      "registrant": "Tactic COC LLC",
+      "principal": "The Ministry of European Integration and International Cooperation for the Republic of Sprska",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Serbia",
         "score": 2,
@@ -17657,6 +18476,9 @@
       "value_usd": null,
       "description": "Special Guests Publicity LLC, National Council of Resistance of Iran through Media Strategy Consulting LTD, IRAN",
       "page_url": "https://efile.fara.gov/docs/7599-Registration-Statement-20250527-1.pdf",
+      "registrant": "Special Guests Publicity LLC",
+      "principal": "National Council of Resistance of Iran through Media Strategy Consulting LTD",
+      "target_groups": [],
       "profile": {
         "name": "Iran",
         "score": 9,
@@ -17755,8 +18577,18 @@
       "signal_date": "2025-05-22",
       "title": "K&L Gates, LLP \u2014 Mr. Alexander Morgulchik",
       "value_usd": null,
-      "description": "Legal Services Received by NSD/FARA Registration Unit 05/22/2025 10:49:08 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose Amount Subtotal 1 The term \"foreign principal,\" as defined in Section 1(b) of the Act, includes a foreign government, foreign political party, foreign organization, foreign individual and, for the purpose of\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Legal Services Received by NSD/FARA Registration Unit 05/22/2025 10:49:08 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose Amount Subtotal 1 The term \"foreign principal,\" as defined in Section 1(b) of the Act, includes a foreign government, foreign political party, foreign organization, foreign individual and, for the purpose of\u2026",
       "page_url": "https://efile.fara.gov/docs/7597-Registration-Statement-20250522-1.pdf",
+      "registrant": "K&L Gates, LLP",
+      "principal": "Mr. Alexander Morgulchik",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Israel",
         "score": 7,
@@ -17830,8 +18662,18 @@
       "signal_date": "2025-05-21",
       "title": "Southern Transitional Council \u2014 The Southern Transitional Council",
       "value_usd": null,
-      "description": "Nonprofit organization. Advocacy. Citizenship UNITED STATES \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Nonprofit organization. Advocacy. Citizenship UNITED STATES",
       "page_url": "https://efile.fara.gov/docs/7596-Registration-Statement-20250521-1.pdf",
+      "registrant": "Southern Transitional Council",
+      "principal": "The Southern Transitional Council",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Yemen",
         "score": 7,
@@ -17897,14 +18739,57 @@
       "is_fr_policy": null
     },
     {
+      "registration_number": 7595,
+      "iso": "CG",
+      "source": "fara",
+      "signal_date": "2025-05-20",
+      "title": "Ashcroft Law Firm, LLC \u2014 Republic of the Congo",
+      "value_usd": null,
+      "description": "Ashcroft Law Firm, or ALF, provides legal services to individuals and entities. Foreign Prine ipal(s) Republic of the Congo",
+      "page_url": "https://efile.fara.gov/docs/7595-Registration-Statement-20250520-1.pdf",
+      "registrant": "Ashcroft Law Firm, LLC",
+      "principal": "Republic of the Congo",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
+      "profile": {
+        "name": "Congo (Republic)",
+        "score": 3,
+        "factors": [
+          "hydrocarbons",
+          "BRI exposure"
+        ],
+        "rationale": "Hydrocarbon production (+2), Chinese BRI/debt exposure (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
       "registration_number": 7594,
       "iso": "ID",
       "source": "fara",
       "signal_date": "2025-05-20",
       "title": "Wanandi, Edward \u2014 Yayasan Usaha Bakti Diaspora Indonesia",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 05/20/2025 1:24:56 PM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 05/20/2025 1:24:56 PM",
       "page_url": "https://efile.fara.gov/docs/7594-Registration-Statement-20250520-1.pdf",
+      "registrant": "Wanandi, Edward",
+      "principal": "Yayasan Usaha Bakti Diaspora Indonesia",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Indonesia",
         "score": 7,
@@ -18002,8 +18887,18 @@
       "signal_date": "2025-05-16",
       "title": "Sitrick Group, LLC \u2014 BOE Technology America",
       "value_usd": null,
-      "description": "Si trick Group, LLC is a firm that provides litigation support by consulting with the client and the client's attorneys as necessary to render effective legal advice and in connection with preparation for possible or actual litigation. The firm also provides other strategic and crisis communications, corporate and financial advisory, and strategic planning services. Name Mr. Michael S. si trick \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Si trick Group, LLC is a firm that provides litigation support by consulting with the client and the client's attorneys as necessary to render effective legal advice and in connection with preparation for possible or actual litigation. The firm also provides other strategic and crisis communications, corporate and financial advisory, and strategic planning services. Name Mr. Michael S. si trick",
       "page_url": "https://efile.fara.gov/docs/7593-Registration-Statement-20250516-1.pdf",
+      "registrant": "Sitrick Group, LLC",
+      "principal": "BOE Technology America",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "China",
         "score": 10,
@@ -18273,8 +19168,18 @@
       "signal_date": "2025-05-12",
       "title": "Garcia, Julian Cardenas \u2014 Ad Hoc Board of Petroleos de Venezuela",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 05/12/2025 12:51:41 PM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 05/12/2025 12:51:41 PM",
       "page_url": "https://efile.fara.gov/docs/7590-Registration-Statement-20250512-1.pdf",
+      "registrant": "Garcia, Julian Cardenas",
+      "principal": "Ad Hoc Board of Petroleos de Venezuela",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Venezuela",
         "score": 4,
@@ -18297,8 +19202,18 @@
       "signal_date": "2025-05-12",
       "title": "Osio, Gustavo Antonio Garcia \u2014 Ad Hoc Board of Petroleos de Venezuela",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 05/12/2025 9:10:38 AM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 05/12/2025 9:10:38 AM",
       "page_url": "https://efile.fara.gov/docs/7589-Registration-Statement-20250512-1.pdf",
+      "registrant": "Osio, Gustavo Antonio Garcia",
+      "principal": "Ad Hoc Board of Petroleos de Venezuela",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Venezuela",
         "score": 4,
@@ -18492,8 +19407,18 @@
       "signal_date": "2025-05-07",
       "title": "Sovereign Global Solutions, LLC \u2014 National Democratic Alliance of Armenia",
       "value_usd": null,
-      "description": "Regular business activities include government relations and communications consulting pertaining to international human rights and, meeting and event planning and strategic planning and research. \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Regular business activities include government relations and communications consulting pertaining to international human rights and, meeting and event planning and strategic planning and research.",
       "page_url": "https://efile.fara.gov/docs/7587-Registration-Statement-20250507-1.pdf",
+      "registrant": "Sovereign Global Solutions, LLC",
+      "principal": "National Democratic Alliance of Armenia",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Armenia",
         "score": 4,
@@ -18610,8 +19535,18 @@
       "signal_date": "2025-05-05",
       "title": "Mintovate Technologies LLC \u2014 Amulus Security Limited",
       "value_usd": null,
-      "description": "See Appendix for Response Name See Appendix for Response Residence Address 500 E 3rd St, Apt 312 Dayton, OH 45402 500 E 3rd St, Apt 312 Dayton, OH 45402-5105 Received by NSD/FARA Registration Unit 05/05/2025 7:07:03 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose AmountSubtotal Foreign Principal Amulus Security Limited Activities/Services Mintovate Technologies LLC is pursuing\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "See Appendix for Response Name See Appendix for Response Residence Address 500 E 3rd St, Apt 312 Dayton, OH 45402 500 E 3rd St, Apt 312 Dayton, OH 45402-5105 Received by NSD/FARA Registration Unit 05/05/2025 7:07:03 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose AmountSubtotal Foreign Principal Amulus Security Limited Activities/Services Mintovate Technologies LLC is pursuing\u2026",
       "page_url": "https://efile.fara.gov/docs/7584-Registration-Statement-20250505-1.pdf",
+      "registrant": "Mintovate Technologies LLC",
+      "principal": "Amulus Security Limited",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "United Kingdom",
         "score": 5,
@@ -18708,8 +19643,18 @@
       "signal_date": "2025-05-03",
       "title": "Lighthouse Strategies LLC \u2014 Qatar",
       "value_usd": null,
-      "description": "Government affairs Name Mr. Sam Kuebler Name Mr. Sam Kuebler Services Provide government relations assistance and advice for the United states/Qatar relations with U.S. Members of Congress and staff. Residence Address 800 New Jersey Ave SE, unit 722 Washington, DC 20003 Foreign Prine ipal(s) Qatar Received by NSD/FARA Registration Unit 05/03/2025 9:21:40 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Government affairs Name Mr. Sam Kuebler Name Mr. Sam Kuebler Services Provide government relations assistance and advice for the United states/Qatar relations with U.S. Members of Congress and staff. Residence Address 800 New Jersey Ave SE, unit 722 Washington, DC 20003 Foreign Prine ipal(s) Qatar Received by NSD/FARA Registration Unit 05/03/2025 9:21:40 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of\u2026",
       "page_url": "https://efile.fara.gov/docs/7583-Registration-Statement-20250503-1.pdf",
+      "registrant": "Lighthouse Strategies LLC",
+      "principal": "Qatar",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Qatar",
         "score": 4,
@@ -18838,8 +19783,18 @@
       "signal_date": "2025-05-02",
       "title": "Al-Zamzami, Bashar \u2014 Yemeni National Resistance",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 05/02/2025 2:57:58 PM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 05/02/2025 2:57:58 PM",
       "page_url": "https://efile.fara.gov/docs/7582-Registration-Statement-20250502-1.pdf",
+      "registrant": "Al-Zamzami, Bashar",
+      "principal": "Yemeni National Resistance",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Yemen",
         "score": 7,
@@ -18864,8 +19819,18 @@
       "signal_date": "2025-05-02",
       "title": "Echelon Insights, LLC \u2014 Embassy of Japan in the United States of America",
       "value_usd": null,
-      "description": "Echelon Insights, LLC is a polling firm that provides opinion research, competitive intelligence, and data science services. Received by NSD/FARA Registration Unit 05/02/2025 12:01:09 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose AmountSubtotal 1 The term \"foreign principal,\" as defined in Section 1(b) of the Act, includes a foreign\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Echelon Insights, LLC is a polling firm that provides opinion research, competitive intelligence, and data science services. Received by NSD/FARA Registration Unit 05/02/2025 12:01:09 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose AmountSubtotal 1 The term \"foreign principal,\" as defined in Section 1(b) of the Act, includes a foreign\u2026",
       "page_url": "https://efile.fara.gov/docs/7581-Registration-Statement-20250502-1.pdf",
+      "registrant": "Echelon Insights, LLC",
+      "principal": "Embassy of Japan in the United States of America",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Japan",
         "score": 6,
@@ -19279,8 +20244,18 @@
       "signal_date": "2025-04-24",
       "title": "SHW Partners LLC \u2014 The Republic of India",
       "value_usd": null,
-      "description": "Strategic advisory, communications support, public relations, and government affairs. Citizenship UNITED STATES \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Strategic advisory, communications support, public relations, and government affairs. Citizenship UNITED STATES",
       "page_url": "https://efile.fara.gov/docs/7578-Registration-Statement-20250424-1.pdf",
+      "registrant": "SHW Partners LLC",
+      "principal": "The Republic of India",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "India",
         "score": 7,
@@ -19807,8 +20782,18 @@
       "signal_date": "2025-04-18",
       "title": "BGD Legal & Consulting LLC \u2014 National Investments Agency under the President of the Kyrgyz Republic",
       "value_usd": null,
-      "description": "Law firm and consulting company. Name Mr. Daniel Lee Delnero Name Mr. Daniel Lee Delnero Citizenship UNITED STATES Residence Address 184 Beverly Rd Atlanta, GA 30309 Services Daniel L Delnero will assist in securing meetings with political figures and journalists Received by NSD/FARA Registration Unit 04/18/2025 3:07:03 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign\u2026 \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Law firm and consulting company. Name Mr. Daniel Lee Delnero Name Mr. Daniel Lee Delnero Citizenship UNITED STATES Residence Address 184 Beverly Rd Atlanta, GA 30309 Services Daniel L Delnero will assist in securing meetings with political figures and journalists Received by NSD/FARA Registration Unit 04/18/2025 3:07:03 AM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign\u2026",
       "page_url": "https://efile.fara.gov/docs/7576-Registration-Statement-20250418-1.pdf",
+      "registrant": "BGD Legal & Consulting LLC",
+      "principal": "National Investments Agency under the President of the Kyrgyz Republic",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Kyrgyzstan",
         "score": 1,
@@ -19829,8 +20814,18 @@
       "signal_date": "2025-04-18",
       "title": "Chudd, Andrew \u2014 Civil Aviation Authority of Thailand",
       "value_usd": null,
-      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 04/18/2025 12:02:37 AM \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "(1) Give a complete description of the ownership and control structure of the registrant. ServicesName Residence Address Foreign Prine ipal(s) Received by NSD/FARA Registration Unit 04/18/2025 12:02:37 AM",
       "page_url": "https://efile.fara.gov/docs/7575-Registration-Statement-20250418-1.pdf",
+      "registrant": "Chudd, Andrew",
+      "principal": "Civil Aviation Authority of Thailand",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Thailand",
         "score": 3,
@@ -19976,8 +20971,18 @@
       "signal_date": "2025-04-17",
       "title": "Paradox Public Relations \u2014 Bravel Ukraine Government Initiative",
       "value_usd": null,
-      "description": "Public relations and media and communications consulting. Position Owner / President \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Public relations and media and communications consulting. Position Owner / President",
       "page_url": "https://efile.fara.gov/docs/7574-Registration-Statement-20250417-1.pdf",
+      "registrant": "Paradox Public Relations",
+      "principal": "Bravel Ukraine Government Initiative",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Ukraine",
         "score": 8,
@@ -20904,8 +21909,18 @@
       "signal_date": "2025-04-07",
       "title": "Williams & Jensen, PLLC \u2014 International Merchants LLC",
       "value_usd": null,
-      "description": "Law/lobbying firm with a primary focus on federal lobbying, consulting, and advocacy \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Law/lobbying firm with a primary focus on federal lobbying, consulting, and advocacy",
       "page_url": "https://efile.fara.gov/docs/7568-Registration-Statement-20250407-1.pdf",
+      "registrant": "Williams & Jensen, PLLC",
+      "principal": "International Merchants LLC",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Indonesia",
         "score": 7,
@@ -20924,14 +21939,57 @@
       "is_fr_policy": null
     },
     {
+      "registration_number": 7567,
+      "iso": "BA",
+      "source": "fara",
+      "signal_date": "2025-04-07",
+      "title": "Stokes Strategies LLC \u2014 State Strategies Company LLC on behalf of Republika Srpska Wirtschaftsinformationsburo GmbH",
+      "value_usd": null,
+      "description": "Lobbying business Citizenship UNITED STATES Residence Address 4259 Skyline Drive Ogden, UT 84403",
+      "page_url": "https://efile.fara.gov/docs/7567-Registration-Statement-20250407-1.pdf",
+      "registrant": "Stokes Strategies LLC",
+      "principal": "State Strategies Company LLC on behalf of Republika Srpska Wirtschaftsinformationsburo GmbH",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
+      "profile": {
+        "name": "Bosnia and Herzegovina",
+        "score": 2,
+        "factors": [
+          "contested territory",
+          "proxy hub"
+        ],
+        "rationale": "Occupied/contested political structure, Republika Srpska separatism (+1), Russia-West proxy contest (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
       "registration_number": 7566,
       "iso": "MX",
       "source": "fara",
       "signal_date": "2025-04-07",
       "title": "Rally Public & Investor Relations LLC \u2014 Hector Sulaiman",
       "value_usd": null,
-      "description": "Public Relations, investor Relations, Public Affairs Name Michael Holtzman Name Michael Holtzman Foreign Prine ipal(s) Hector Sulaiman Position Presi dent \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Public Relations, investor Relations, Public Affairs Name Michael Holtzman Name Michael Holtzman Foreign Prine ipal(s) Hector Sulaiman Position Presi dent",
       "page_url": "https://efile.fara.gov/docs/7566-Registration-Statement-20250407-1.pdf",
+      "registrant": "Rally Public & Investor Relations LLC",
+      "principal": "Hector Sulaiman",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Mexico",
         "score": 4,
@@ -21242,6 +22300,39 @@
       "is_fr_policy": null
     },
     {
+      "registration_number": 7565,
+      "iso": "CI",
+      "source": "fara",
+      "signal_date": "2025-04-02",
+      "title": "Earhart Turner LLC \u2014 Tidjane Thiam and the Democratic Party of Cote d'Ivoire - African Democratic Rally (PCDI-RDA)",
+      "value_usd": null,
+      "description": "Registrant is in the business of government and public affairs. We provide executive and legislative advocacy in addition to media outreach and informational public campaigns. Name Milo A. Yiannopoulos",
+      "page_url": "https://efile.fara.gov/docs/7565-Registration-Statement-20250402-1.pdf",
+      "registrant": "Earhart Turner LLC",
+      "principal": "Tidjane Thiam and the Democratic Party of Cote d'Ivoire - African Democratic Rally (PCDI-RDA)",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
+      "profile": {
+        "name": "C\u00f4te d'Ivoire",
+        "score": 2,
+        "factors": [
+          "regional hub",
+          "Sahel spillover"
+        ],
+        "rationale": "West African regional economic hub (+1), Sahel instability spillover risk (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
       "filing_uuid": "34e5f050-2e89-4537-9a2f-bf96c947f581",
       "iso": "GB",
       "source": "lda",
@@ -21440,6 +22531,39 @@
       "is_fr_policy": null
     },
     {
+      "registration_number": 7563,
+      "iso": "BA",
+      "source": "fara",
+      "signal_date": "2025-04-01",
+      "title": "Bosnian American Alliance Inc. \u2014 Ministry of Foreign Affairs of Bosnia and Herzegovina",
+      "value_usd": null,
+      "description": "Bosnian American Alliance is a nonprofit corporation that engages in community education and promotes civic engagement in Bosnian American communities within the united states of America and supports connection between the American and Bosnian peoples. Name Mirza Pilakovic Citizenship UNITED STATES Name See Appendix for Response Residence Address 630 3rd ave north, suite 1 JACKSONVILLE BEACH, FL 32250 3092 Orange Picker Rd Jacksonville, FL 32223 Received by NSD/FARA Registration Unit 04/01/2025 9:48:03 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. IV\u2014FINANCIAL\u2026",
+      "page_url": "https://efile.fara.gov/docs/7563-Registration-Statement-20250401-1.pdf",
+      "registrant": "Bosnian American Alliance Inc.",
+      "principal": "Ministry of Foreign Affairs of Bosnia and Herzegovina",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
+      "profile": {
+        "name": "Bosnia and Herzegovina",
+        "score": 2,
+        "factors": [
+          "contested territory",
+          "proxy hub"
+        ],
+        "rationale": "Occupied/contested political structure, Republika Srpska separatism (+1), Russia-West proxy contest (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
       "iso": "ST",
       "source": "imf",
       "signal_date": "2025-04-01",
@@ -21559,6 +22683,39 @@
       },
       "layer": "influence",
       "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "registration_number": 7562,
+      "iso": "BA",
+      "source": "fara",
+      "signal_date": "2025-03-31",
+      "title": "RRB Strategies LLC \u2014 Republic of Srpska",
+      "value_usd": null,
+      "description": "RRB strategies LLC provides public affairs consulting to businesses, companies and foreign entities. Received by NSD/FARA Registration Unit 03/31/2025 4:52:39 PM (PAGE 3) II\u2014FOREIGN PRINCIPAL III-ACTIVITIES If yes, describe fully. Foreign Principal Activities/Services IV\u2014FINANCIAL INFORMATION If yes, set forth below in the required detail and separately for each such foreign principal an account of such monies.3 Foreign PrincipalDate Received From Whom Purpose AmountSubtotal 1 The term \"foreign principal,\" as defined in Section 1(b) of the Act, includes a foreign government, foreign political\u2026",
+      "page_url": "https://efile.fara.gov/docs/7562-Registration-Statement-20250331-1.pdf",
+      "registrant": "RRB Strategies LLC",
+      "principal": "Republic of Srpska",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
+      "profile": {
+        "name": "Bosnia and Herzegovina",
+        "score": 2,
+        "factors": [
+          "contested territory",
+          "proxy hub"
+        ],
+        "rationale": "Occupied/contested political structure, Republika Srpska separatism (+1), Russia-West proxy contest (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.9,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -21715,8 +22872,18 @@
       "signal_date": "2025-03-27",
       "title": "Global Strategy Advisors LLC \u2014 Representative Office of Republika Srpska in Austria",
       "value_usd": null,
-      "description": "Global Strategy Advisors LLC, Representative Office of Republika Srpska in Austria, AUSTRIA \u2014 targets: Public officials, Legislators, Government agencies, Newspapers, Editors, Libraries",
+      "description": "Global Strategy Advisors LLC, Representative Office of Republika Srpska in Austria, AUSTRIA",
       "page_url": "https://efile.fara.gov/docs/7560-Registration-Statement-20250327-1.pdf",
+      "registrant": "Global Strategy Advisors LLC",
+      "principal": "Representative Office of Republika Srpska in Austria",
+      "target_groups": [
+        "Public officials",
+        "Legislators",
+        "Government agencies",
+        "Newspapers",
+        "Editors",
+        "Libraries"
+      ],
       "profile": {
         "name": "Austria",
         "score": 2,
