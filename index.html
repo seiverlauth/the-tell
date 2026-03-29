@@ -683,6 +683,12 @@
       return top5;
     }
 
+    // ── Signal identity key ──────────────────────────────────────────────────
+    // Stable, deterministic key for locating a specific signal's feed item.
+    function sigKey(sig) {
+      return (sig.source || '') + '|' + (sig.signal_date || '') + '|' + (sig.title || '').slice(0, 60);
+    }
+
     // ── Layer line synthesis ─────────────────────────────────────────────────
 
     // Produces one human-readable line per firing layer.
@@ -829,7 +835,30 @@
         html += `<div class="nt-title">${esc(title)}</div>`;
 
         entry.innerHTML = html;
-        bindFilter(entry, sig.iso);
+        // Zone 2: filter by country AND scroll to + expand the specific signal row
+        entry.addEventListener('click', () => {
+          if (activeFilter === sig.iso) {
+            activeFilter = null;
+            entry.classList.remove('active');
+          } else {
+            container.querySelectorAll('.cluster-entry.active').forEach(r => r.classList.remove('active'));
+            activeFilter = sig.iso;
+            entry.classList.add('active');
+          }
+          syncMapFilter(activeFilter);
+          renderFeed(signals);
+          if (activeFilter === sig.iso) {
+            const key = sigKey(sig);
+            const allItems = document.querySelectorAll('.item[data-sig-key]');
+            for (const feedItem of allItems) {
+              if (feedItem.dataset.sigKey === key) {
+                feedItem.classList.add('expanded');
+                feedItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                break;
+              }
+            }
+          }
+        });
         container.appendChild(entry);
       }
     }
@@ -896,6 +925,7 @@
       const country = profile ? profile.name : sig.iso;
       const el      = document.createElement('div');
       el.className  = 'item';
+      el.dataset.sigKey = sigKey(sig);
 
       // Country tooltip with structural interest context
       let countryTooltip = '';
@@ -1125,12 +1155,14 @@
         scrollWheelZoom: true,
       });
 
-      const BASE_COLOR     = '#484848';
-      const NOTABLE_COLOR  = '#c8a800';  // Zone 2 only — warm yellow, readable on dark
-      const ZONE1_COLOR    = '#6b0000';  // Zone 1 convergence — red
-      const HOVER_COLOR    = '#b8b8b8';
-      const ACTIVE_COLOR   = '#d8d8d8';
-      const BORDER_COLOR   = '#252525';
+      const BASE_COLOR          = '#484848';
+      const NOTABLE_COLOR       = '#c8a800';  // Zone 2 only — warm yellow, readable on dark
+      const ZONE1_COLOR         = '#6b0000';  // Zone 1 convergence — red
+      const ACTIVE_ZONE1_COLOR  = '#b52020';  // active + convergence: brighter red preserves zone identity
+      const ACTIVE_NOTABLE_COLOR = '#e8cc00'; // active + notable: brighter yellow
+      const HOVER_COLOR         = '#b8b8b8';
+      const ACTIVE_COLOR        = '#d8d8d8';  // active + no zone
+      const BORDER_COLOR        = '#252525';
 
       const isoToLayer = new Map();
 
@@ -1213,11 +1245,14 @@
       // Expose map highlight + zoom so cluster/feed clicks can sync the map
       syncMapFilter = function(activeIso) {
         for (const [layerIso, lyr] of isoToLayer) {
+          const isActive = activeIso && layerIso === activeIso;
           let color;
-          if (activeIso && layerIso === activeIso)    color = ACTIVE_COLOR;
-          else if (clusterIsos.has(layerIso))         color = ZONE1_COLOR;
-          else if (notableIsos.has(layerIso))         color = NOTABLE_COLOR;
-          else                                        color = BASE_COLOR;
+          if (isActive && clusterIsos.has(layerIso))    color = ACTIVE_ZONE1_COLOR;
+          else if (isActive && notableIsos.has(layerIso)) color = ACTIVE_NOTABLE_COLOR;
+          else if (isActive)                             color = ACTIVE_COLOR;
+          else if (clusterIsos.has(layerIso))            color = ZONE1_COLOR;
+          else if (notableIsos.has(layerIso))            color = NOTABLE_COLOR;
+          else                                           color = BASE_COLOR;
           lyr.setStyle({ fillColor: color });
         }
         if (activeIso) {
