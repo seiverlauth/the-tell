@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-03-29T01:14:39.486298+00:00",
+  "sources": [
+    "cftc"
+  ],
+  "signals": [
+    {
+      "iso": "RU",
+      "source": "cftc",
+      "signal_date": "2026-03-24",
+      "title": "Brent Crude \u2014 managed money net long anomaly (z=+2.0)",
+      "value_usd": null,
+      "description": "CFTC COT: managed money net long 22,277 contracts. 52-week z-score +2.00 (2.0\u03c3 above baseline). Basket: SA, RU, IQ, IR, NO, AE, NG.",
+      "z_score": 2.001,
+      "basket": [
+        "SA",
+        "RU",
+        "IQ",
+        "IR",
+        "NO",
+        "AE",
+        "NG"
+      ],
+      "commodity": "Brent Crude",
+      "net_position": 22277
+    },
+    {
+      "iso": "RU",
+      "source": "cftc",
+      "signal_date": "2026-03-24",
+      "title": "Wheat \u2014 managed money net short anomaly (z=+2.8)",
+      "value_usd": null,
+      "description": "CFTC COT: managed money net short 994 contracts. 52-week z-score +2.77 (2.8\u03c3 above baseline). Basket: RU, UA, US, AU, CA, IN.",
+      "z_score": 2.766,
+      "basket": [
+        "RU",
+        "UA",
+        "US",
+        "AU",
+        "CA",
+        "IN"
+      ],
+      "commodity": "Wheat",
+      "net_position": -994
+    },
+    {
+      "iso": "CN",
+      "source": "cftc",
+      "signal_date": "2026-03-24",
+      "title": "Corn \u2014 managed money net long anomaly (z=+2.9)",
+      "value_usd": null,
+      "description": "CFTC COT: managed money net long 279,630 contracts. 52-week z-score +2.89 (2.9\u03c3 above baseline). Basket: US, UA, BR, AR, CN.",
+      "z_score": 2.886,
+      "basket": [
+        "US",
+        "UA",
+        "BR",
+        "AR",
+        "CN"
+      ],
+      "commodity": "Corn",
+      "net_position": 279630
+    }
+  ]
+}
