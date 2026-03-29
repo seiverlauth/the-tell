@@ -5,7 +5,8 @@ fetch_lda.py — LDA lobbying disclosure pipeline for HARPY
 Polls https://lda.gov/api/v1/filings/ for new registrations (filing_type=RR)
 posted since yesterday. Filters to high-signal records:
   - foreign_entities is non-empty, OR
-  - any lobbying_activity general_issue_code in {DEF, FOR, TRD, ENE, SCI, HOM}
+  - any lobbying_activity general_issue_code in {DEF, FOR, TRD, ENE, SCI, HOM}, OR
+  - client country profile_score >= 6 (high-interest country — any lobbying matters)
 
 Deduplicates by filing_uuid. Appends to data/lda_signals.json.
 No API key required — anonymous rate limit (15 req/min) is sufficient.
@@ -89,6 +90,9 @@ def is_high_signal(filing: dict) -> bool:
     for act in (filing.get("lobbying_activities") or []):
         if (act.get("general_issue_code") or "").upper() in HIGH_SIGNAL_CODES:
             return True
+    iso = pick_iso(filing)
+    if iso and iso != "XX" and (profile_score(iso) or 0) >= 6:
+        return True
     return False
 
 
