@@ -263,6 +263,7 @@
       white-space: normal;
     }
     .item.expanded .item-detail { display: block; }
+    .item.expanded .item-src { color: var(--layer-color); opacity: 1; }
     .item-detail a {
       color: var(--accent);
     }
@@ -927,6 +928,7 @@
       const el      = document.createElement('div');
       el.className  = 'item';
       el.dataset.sigKey = sigKey(sig);
+      el.style.setProperty('--layer-color', layerColor(sig.layer));
 
       // Country tooltip with structural interest context
       let countryTooltip = '';
@@ -969,7 +971,7 @@
           `<span class="${countryClass}"${countryTooltip}>${esc(country)}</span>` +
           `<span class="item-sep">\xb7</span>` +
           `<span class="item-title">${esc(titleStr)}</span>` +
-          `<span class="item-src" style="color:${activeFilter ? layerColor(sig.layer) : 'var(--muted)'}">${esc(sourceShort(sig.source))}</span>` +
+          `<span class="item-src">${esc(sourceShort(sig.source))}</span>` +
           `<span class="item-date">${esc(fmtDate(sig.signal_date))}</span>` +
         `</div>` +
         (hasDetail ? `<div class="item-detail">${detailInner}</div>` : '');
