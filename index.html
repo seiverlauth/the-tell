@@ -317,18 +317,21 @@
 
     // ── Source labels / short names ──────────────────────────────────────────
 
-    const LAYER_COLORS = {
-      military:    '#4a9eff',  // blue
-      influence:   '#ff6b35',  // orange
-      regulatory:  '#c084fc',  // purple
-      procurement: '#34d399',  // green
-      financial:   '#f59e0b',  // amber
-      legislative: '#64748b',  // slate
-      adversarial: '#ef4444',  // red
+    const SOURCE_COLORS = {
+      dsca:            '#4a9eff',  // blue   — arms sale notification
+      fara:            '#f97316',  // orange — foreign agent registration
+      lda:             '#94a3b8',  // slate  — domestic lobbying
+      ofac:            '#ef4444',  // red    — sanctions designation
+      bis:             '#c084fc',  // purple — export control designation
+      federalregister: '#64748b',  // grey   — policy/regulatory notice
+      sam:             '#34d399',  // green  — procurement contract
+      imf:             '#f59e0b',  // amber  — financial monitoring
+      anchor_budget:   '#22d3ee',  // cyan   — Elbit 6-K
+      cftc:            '#a78bfa',  // violet — COT market positioning
     };
 
-    function layerColor(layer) {
-      return LAYER_COLORS[layer] || '#a0a0b0';
+    function sourceColor(source) {
+      return SOURCE_COLORS[(source || '').toLowerCase()] || '#a0a0b0';
     }
 
     const SOURCE_LABELS = {
@@ -819,7 +822,7 @@
           : raw;
         if (title.length > 55) title = title.slice(0, 52) + '\u2026';
 
-        const color  = layerColor(sig.layer);
+        const color  = sourceColor(sig.source);
         const badge  = sourceShort(sig.source);
         const valStr = sig.value_usd ? fmtValue(sig.value_usd) : '';
 
@@ -967,7 +970,7 @@
           `<span class="${countryClass}"${countryTooltip}>${esc(country)}</span>` +
           `<span class="item-sep">\xb7</span>` +
           `<span class="item-title">${esc(titleStr)}</span>` +
-          `<span class="item-src" style="color:${layerColor(sig.layer)}">${esc(sourceShort(sig.source))}</span>` +
+          `<span class="item-src" style="color:${sourceColor(sig.source)}">${esc(sourceShort(sig.source))}</span>` +
           `<span class="item-date">${esc(fmtDate(sig.signal_date))}</span>` +
         `</div>` +
         (hasDetail ? `<div class="item-detail">${detailInner}</div>` : '');
