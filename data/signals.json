@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-29T01:20:13.285689+00:00",
+  "generated_at": "2026-03-31T22:54:30.973118+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -13,6 +13,180 @@
     "sam"
   ],
   "signals": [
+    {
+      "document_number": "2026-06161",
+      "iso": "RU",
+      "source": "federalregister",
+      "signal_date": "2026-03-31",
+      "title": "Aviastar-TU, 5 b. 7 Leningradsky prospect g. Moskva, 125040, Moscow, Russia; Order Renewing Temporary Denial of Export Privileges",
+      "value_usd": null,
+      "description": "Notice",
+      "page_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06161/aviastar-tu-5-b-7-leningradsky-prospect-g-moskva-125040-moscow-russia-order-renewing-temporary",
+      "profile": {
+        "name": "Russia",
+        "score": 10,
+        "factors": [
+          "nuclear program",
+          "hydrocarbons",
+          "active conflict",
+          "sanctions",
+          "regional power",
+          "Arctic",
+          "proxy hub"
+        ],
+        "rationale": "Active nuclear weapons \u2014 largest arsenal (+2), major hydrocarbon producer and pipeline network (+2), active conflict \u2014 Ukraine war (+2), comprehensive sanctions regime (+1), regional power and global proxy hub (+1), controls Arctic sea routes (+1), strategic minerals (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.2,
+      "dollar_mod": 1.0,
+      "is_fr_policy": false
+    },
+    {
+      "filing_uuid": "29e67f85-e020-4714-8d85-9cf4e447eb0f",
+      "iso": "GB",
+      "source": "lda",
+      "signal_date": "2026-03-31",
+      "title": "Formula One Group \u2014 via R&R Partners, Inc.",
+      "value_usd": null,
+      "description": "HOM, SPO, TOU; United Kingdom; Federal event security, visa and entry issues",
+      "lobbying_firm": "R&R Partners, Inc.",
+      "issue_codes": [
+        "HOM",
+        "SPO",
+        "TOU"
+      ],
+      "url": "https://lda.gov/filings/public/filing/29e67f85-e020-4714-8d85-9cf4e447eb0f/print/",
+      "profile": {
+        "name": "United Kingdom",
+        "score": 5,
+        "factors": [
+          "nuclear program",
+          "regional power",
+          "US partner",
+          "maritime chokepoint"
+        ],
+        "rationale": "Active nuclear weapons program \u2014 Trident (+2), regional power and global basing network (+1), major US interoperability partner \u2014 Five Eyes, AUKUS (+1), controls Gibraltar and Diego Garcia chokepoints (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "3fc8defa-e8cf-4199-bbe1-750e367fd287",
+      "iso": "MA",
+      "source": "lda",
+      "signal_date": "2026-03-31",
+      "title": "Mutandis, Usa Inc. \u2014 via Akin Gump Strauss Hauer & Feld",
+      "value_usd": null,
+      "description": "TRD; Issues related to tariffs on imports of canned fish.",
+      "lobbying_firm": "Akin Gump Strauss Hauer & Feld",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/3fc8defa-e8cf-4199-bbe1-750e367fd287/print/",
+      "profile": {
+        "name": "Morocco",
+        "score": 4,
+        "factors": [
+          "strategic minerals",
+          "phosphates",
+          "maritime corridor",
+          "regional power"
+        ],
+        "rationale": "World's largest phosphate reserves \u2014 critical for global food security (+2), controls Gibraltar Strait approach from south (+1), regional power in Maghreb/Sahel (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "c5b48f7a-e0bf-4024-a6cd-64fe8818ce79",
+      "iso": "AT",
+      "source": "lda",
+      "signal_date": "2026-03-31",
+      "title": "Ams Osram Ag \u2014 via The Vogel Group",
+      "value_usd": null,
+      "description": "TRD; Austria; Issues related to international trade and investment",
+      "lobbying_firm": "The Vogel Group",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c5b48f7a-e0bf-4024-a6cd-64fe8818ce79/print/",
+      "profile": {
+        "name": "Austria",
+        "score": 2,
+        "factors": [
+          "Vienna diplomatic hub",
+          "transit corridor"
+        ],
+        "rationale": "Vienna hub for international organizations and diplomatic back-channels \u2014 OPEC, IAEA, OSCE headquarters (+1), historically significant as Eastern European transit corridor (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "a3aea893-0332-41c8-b112-7512f2ba2649",
+      "iso": "NO",
+      "source": "lda",
+      "signal_date": "2026-03-30",
+      "title": "1X Technologies, Inc. \u2014 via Miller Strategies, Llc",
+      "value_usd": null,
+      "description": "SCI; Issues related to embodied AI, secure supply chains, and advancing American leadership in humanoid r\u2026",
+      "lobbying_firm": "Miller Strategies, Llc",
+      "issue_codes": [
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/a3aea893-0332-41c8-b112-7512f2ba2649/print/",
+      "profile": {
+        "name": "Norway",
+        "score": 5,
+        "factors": [
+          "hydrocarbons",
+          "strategic minerals",
+          "rare earths",
+          "Arctic"
+        ],
+        "rationale": "Major hydrocarbon producer \u2014 European gas anchor (+2), rare earth deposits including world-class Fen discovery (+2), Arctic strategic position (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "76430917-06f9-43ff-be0c-13369705f513",
+      "iso": "GR",
+      "source": "lda",
+      "signal_date": "2026-03-30",
+      "title": "Ppc North America Corporation \u2014 via Catalyst Strategies, Llc",
+      "value_usd": null,
+      "description": "ENG, FUE, SCI; Engagement with the U.S Department of State, Department of the Interior, Department of Energy and Ex\u2026",
+      "lobbying_firm": "Catalyst Strategies, Llc",
+      "issue_codes": [
+        "ENG",
+        "FUE",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/76430917-06f9-43ff-be0c-13369705f513/print/",
+      "profile": {
+        "name": "Greece",
+        "score": 3,
+        "factors": [
+          "US basing",
+          "maritime corridor",
+          "NATO flank"
+        ],
+        "rationale": "Major US basing \u2014 Souda Bay, Alexandroupolis (+1), controls Aegean Sea access \u2014 strategic maritime corridor (+1), NATO southeastern flank and Eastern Med gas contest (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
     {
       "filing_uuid": "585860bc-af15-4e03-a51e-7b10e683c7cd",
       "iso": "GB",

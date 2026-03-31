@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T23:09:49.785626+00:00",
+  "generated_at": "2026-03-31T22:54:25.330729+00:00",
   "sources": [
     "federalregister"
   ],
@@ -5083,6 +5083,72 @@
       "description": "Notice of proposed rulemaking. \u00b7 The Office of the Comptroller of the Currency, the Board of Governors of the Federal Reserve System, and the Federal Deposit Insurance Corporation are proposing to modernize the capital requirements applicable to Category I and II depository institution holding companies and depository institutions, as well as revise the market risk capital framework for banking organizations with significant trading activity (the proposal). The proposal would improve the regulatory capital framework for covered banking organizations by enhancing its risk sensitivity and consistency and by simplifying core components of its design. The agencies expect the proposal would support the safety and soundness of covered banking organizations and U.S. financial stability while promoting lending and other financial intermediation activities in the banking system over a range of economic conditions.",
       "raw_score": 1.0,
       "page_url": "https://www.federalregister.gov/documents/2026/03/27/2026-05959/regulatory-capital-rule-category-i-and-ii-banking-organizations-banking-organizations-with"
+    },
+    {
+      "document_number": "2026-06070",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-03-30",
+      "title": "Marketable Treasury Securities Redemption Operations",
+      "value_usd": null,
+      "description": "Final rule. \u00b7 The Department of the Treasury (Treasury) is issuing in final form amendments to the terms and conditions for marketable Treasury securities redemption (buyback) operations. These amendments reflect expanded direct offer submission eligibility, update the certification statements to participate in buyback operations, enhance clarity, and make conforming changes to several sections of the buyback regulations to reflect Treasury's current practices.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/03/30/2026-06070/marketable-treasury-securities-redemption-operations"
+    },
+    {
+      "document_number": "2026-06221",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-03-31",
+      "title": "Submission for OMB Review; Comment Request",
+      "value_usd": null,
+      "description": "30-Day information collection notice. \u00b7 The DoD has submitted to OMB for clearance the following proposal for collection of information under the provisions of the Paperwork Reduction Act.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06221/submission-for-omb-review-comment-request"
+    },
+    {
+      "document_number": "2026-06218",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-03-31",
+      "title": "Submission for OMB Review; Comment Request",
+      "value_usd": null,
+      "description": "30-Day information collection notice. \u00b7 The DoD has submitted to OMB for clearance the following proposal for collection of information under the provisions of the Paperwork Reduction Act.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06218/submission-for-omb-review-comment-request"
+    },
+    {
+      "document_number": "2026-06217",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-03-31",
+      "title": "Revised Non-Foreign Overseas Per Diem Rates",
+      "value_usd": null,
+      "description": "Notice of revised per diem rates in non-foreign areas outside the continental United States (U.S.). \u00b7 DHRA publishes this Civilian Personnel Per Diem Bulletin Number 331. Bulletin Number 331 lists current per diem rates prescribed for reimbursement of subsistence expenses while on official Government travel to Alaska, Hawaii, the Commonwealth of Puerto Rico, and the possessions of the U.S. The Calendar Year (CY) 2026 lodging rate review for Puerto Rico resulted in rate changes for multiple locations.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06217/revised-non-foreign-overseas-per-diem-rates"
+    },
+    {
+      "document_number": "2026-06213",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-03-31",
+      "title": "Submission for OMB Review; Comment Request",
+      "value_usd": null,
+      "description": "30-Day information collection notice. \u00b7 The DoD has submitted to OMB for clearance the following proposal for collection of information under the provisions of the Paperwork Reduction Act.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06213/submission-for-omb-review-comment-request"
+    },
+    {
+      "document_number": "2026-06161",
+      "iso": "RU",
+      "source": "federalregister",
+      "signal_date": "2026-03-31",
+      "title": "Aviastar-TU, 5 b. 7 Leningradsky prospect g. Moskva, 125040, Moscow, Russia; Order Renewing Temporary Denial of Export Privileges",
+      "value_usd": null,
+      "description": "Notice",
+      "raw_score": 10.0,
+      "page_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06161/aviastar-tu-5-b-7-leningradsky-prospect-g-moskva-125040-moscow-russia-order-renewing-temporary"
     }
   ]
 }
