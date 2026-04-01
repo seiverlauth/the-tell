@@ -380,6 +380,22 @@ def _best_iso(basket: list[str]) -> str | None:
     return best_iso_
 
 
+def _country_name(iso2: str) -> str:
+    """Return human-readable country name from profile file, else the ISO code."""
+    p = Path(__file__).parent.parent / "data" / "profiles" / f"{iso2}.json"
+    try:
+        import json as _json
+        return _json.loads(p.read_text()).get("name") or iso2
+    except Exception:
+        return iso2
+
+
+def _basket_names(basket: list[str]) -> str:
+    """Expand basket ISO2 codes to country names, skipping US."""
+    names = [_country_name(iso) for iso in basket if iso != "US"]
+    return ", ".join(names) if names else ", ".join(basket)
+
+
 def _build_signal(
     *,
     name: str,
@@ -391,16 +407,26 @@ def _build_signal(
 ) -> dict:
     direction = "long" if net_position > 0 else "short"
     z_abs     = abs(z_score)
-    title = (
-        f"{name} — managed money net {direction} anomaly "
-        f"(z={z_score:+.1f})"
-    )
+    # Use z_score sign (not net_position sign) to label the anomaly direction.
+    # z > 0 + net long  = adding longs
+    # z > 0 + net short = covering shorts (less short than usual)
+    # z < 0 + net long  = reducing longs
+    # z < 0 + net short = adding shorts
+    if z_score > 0 and net_position > 0:
+        action = "adding longs"
+    elif z_score > 0 and net_position < 0:
+        action = "covering shorts"
+    elif z_score < 0 and net_position > 0:
+        action = "reducing longs"
+    else:
+        action = "adding shorts"
+    # "Managed money" is CFTC terminology for institutional investors and hedge funds.
+    title = f"{name} — hedge funds {action} ({z_score:+.1f}σ)"
     desc = (
-        f"CFTC COT: managed money net {direction} "
-        f"{abs(net_position):,} contracts. "
-        f"52-week z-score {z_score:+.2f} ({z_abs:.1f}σ "
-        f"{'above' if z_score > 0 else 'below'} baseline). "
-        f"Basket: {', '.join(basket)}."
+        f"Institutional traders (managed money) are net {direction} {name} "
+        f"at {abs(net_position):,} contracts — {z_abs:.1f}σ "
+        f"{'above' if z_score > 0 else 'below'} the 52-week norm. "
+        f"Exposed countries: {_basket_names(basket)}."
     )
     return {
         "iso":          iso,
