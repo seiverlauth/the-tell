@@ -31,7 +31,38 @@ from utils import profile_score, load_existing, append_and_write, write_error
 LDA_BASE               = "https://lda.gov/api/v1/filings"
 LOOKBACK_DAYS          = 1
 LOOKBACK_DAYS_BACKFILL = 365
-HIGH_SIGNAL_CODES      = {"DEF", "FOR", "TRD", "ENE", "SCI", "HOM"}
+# Note: LDA API uses "ENG" for energy, not "ENE". Both included defensively.
+HIGH_SIGNAL_CODES      = {"DEF", "FOR", "TRD", "ENE", "ENG", "SCI", "HOM"}
+
+# LDA general issue area codes → human-readable labels.
+# Full list: https://lda.congress.gov/api/v1/constants/filing/issue_area_codes/
+ISSUE_CODE_LABELS: dict[str, str] = {
+    "ACC": "Accounting",       "ADV": "Advertising",     "AER": "Aerospace",
+    "AGR": "Agriculture",      "ALC": "Alcohol/Drugs",   "ANI": "Animals",
+    "APP": "Appropriations",   "AUT": "Automotive",      "AVI": "Aviation",
+    "BAN": "Banking",          "BEV": "Beverage",        "BUD": "Budget",
+    "CAW": "Clean Air/Water",  "CDT": "Debt/Deficit",    "CHM": "Chemicals",
+    "CIV": "Civil Rights",     "COM": "Communications",  "CON": "Constitution",
+    "CPT": "Technology",       "CPI": "Consumer Issues", "CSP": "Consumer Safety",
+    "DEF": "Defense",          "DIS": "Disaster/Emergency", "ECN": "Economics",
+    "EDU": "Education",        "ENG": "Energy",          "ENE": "Energy",
+    "ENV": "Environment",      "FAM": "Family",          "FIN": "Finance",
+    "FIR": "Firearms",         "FOO": "Food",            "FOR": "Foreign Affairs",
+    "FUE": "Fuel/Oil",         "GAM": "Gaming",          "GOV": "Government",
+    "HCR": "Health",           "HOM": "Homeland Security", "HOU": "Housing",
+    "IMM": "Immigration",      "INS": "Insurance",       "INT": "Intelligence",
+    "LAW": "Law Enforcement",  "LBR": "Labor",           "MAR": "Maritime",
+    "MED": "Media",            "MIA": "Medicare/Medicaid", "MIA": "Medicare",
+    "MAN": "Manufacturing",    "MMM": "Manufacturing",
+    "NAT": "Natural Resources", "PHA": "Pharma",
+    "POS": "Postal",           "RES": "R&D",             "ROD": "Roads/Highway",
+    "RRR": "Railroads",        "SCI": "Science/Technology", "SMB": "Small Business",
+    "SPO": "Sports",           "TAR": "Tariffs",         "TAX": "Taxation",
+    "TEC": "Telecom",          "TOB": "Tobacco",         "TOU": "Tourism",
+    "TRA": "Transportation",   "TRD": "Trade",           "TRU": "Trucking",
+    "URB": "Urban Development", "UTI": "Utilities",      "VET": "Veterans",
+    "WAS": "Waste",            "WEL": "Welfare",
+}
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -96,6 +127,15 @@ def is_high_signal(filing: dict) -> bool:
     return False
 
 
+def _expand_codes(codes: list[str]) -> str:
+    """Convert raw LDA issue codes to human-readable labels."""
+    labels = [ISSUE_CODE_LABELS.get(c, c) for c in codes]
+    # Deduplicate while preserving order (ENG and ENE both map to "Energy")
+    seen: set[str] = set()
+    unique = [l for l in labels if not (l in seen or seen.add(l))]
+    return ", ".join(unique)
+
+
 def build_description(filing: dict) -> str:
     activities = filing.get("lobbying_activities") or []
     codes = []
@@ -112,7 +152,7 @@ def build_description(filing: dict) -> str:
 
     parts = []
     if codes:
-        parts.append(", ".join(sorted(set(codes))))
+        parts.append(_expand_codes(sorted(set(codes))))
     if client_country_display and client_country_display.upper() not in (
         "UNITED STATES OF AMERICA", "US", "UNITED STATES"
     ):
@@ -126,7 +166,25 @@ def build_description(filing: dict) -> str:
 def to_signal(filing: dict) -> dict:
     registrant_name = ((filing.get("registrant") or {}).get("name") or "").strip().title()
     client_name     = ((filing.get("client") or {}).get("name") or "").strip().title()
-    title           = f"{client_name} — via {registrant_name}" if client_name else registrant_name
+    # Surface the top issue domains in the title so the reader knows why this
+    # entry is in the feed without having to read the description.
+    activities  = filing.get("lobbying_activities") or []
+    raw_codes   = sorted(set(
+        (act.get("general_issue_code") or "").upper()
+        for act in activities
+        if act.get("general_issue_code")
+    ))
+    # Limit to 3 most-signal-relevant codes: HIGH_SIGNAL first, then others
+    priority = [c for c in raw_codes if c in HIGH_SIGNAL_CODES]
+    others   = [c for c in raw_codes if c not in HIGH_SIGNAL_CODES]
+    top_codes = (priority + others)[:3]
+    domain_str = _expand_codes(top_codes) if top_codes else ""
+    if client_name and domain_str:
+        title = f"{client_name} ({domain_str}) — via {registrant_name}"
+    elif client_name:
+        title = f"{client_name} — via {registrant_name}"
+    else:
+        title = registrant_name
 
     dt_posted   = filing.get("dt_posted") or ""
     signal_date = dt_posted[:10] if dt_posted else ""

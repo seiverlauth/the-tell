@@ -310,7 +310,10 @@ def main():
 
         iso         = fara_country_to_iso2(country_name)
         fp_short    = fp_name.split(",")[0].strip() if fp_name else ""
-        title       = f"{registrant} — {fp_short}" if fp_short else registrant
+        # Action-first: "Registrant registered to represent Principal" makes clear
+        # what happened, rather than just listing parties.
+        title       = (f"{registrant} registered to represent {fp_short}"
+                       if fp_short else registrant)
 
         # Direct PDF link: efile.fara.gov/docs/{reg}-Registration-Statement-{YYYYMMDD}-1.pdf
         raw_date    = (row.get("REGISTRATION_x0020_DATE") or "")[:10].replace("-", "")
