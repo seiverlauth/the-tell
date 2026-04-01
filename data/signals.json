@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T21:15:16.750696+00:00",
+  "generated_at": "2026-04-01T22:51:14.562974+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -13,6 +13,138 @@
     "sam"
   ],
   "signals": [
+    {
+      "filing_uuid": "7746cac9-9656-44f4-8f22-1e5f8ca1137c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-01",
+      "title": "Fl2024-008, Inc. (Defense, Science/Technology) \u2014 via Cornerstone Government Affairs, Inc.",
+      "value_usd": null,
+      "description": "Defense, Science/Technology; Briefings regarding emerging dual use AI technologies and potential implications and applications fo\u2026",
+      "lobbying_firm": "Cornerstone Government Affairs, Inc.",
+      "issue_codes": [
+        "DEF",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/7746cac9-9656-44f4-8f22-1e5f8ca1137c/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "073bfaff-18df-422f-9c7f-26756ec9c7fd",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-01",
+      "title": "Aquia Group, Llc On Behalf Of Comcast Corporation (Science/Technology) \u2014 via Alva Elliott Partners, Llc",
+      "value_usd": null,
+      "description": "Science/Technology; Issues related to artificial intelligence, broadband, privacy and media.",
+      "lobbying_firm": "Alva Elliott Partners, Llc",
+      "issue_codes": [
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/073bfaff-18df-422f-9c7f-26756ec9c7fd/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "4631fc2d-6aaa-487f-a513-7f5c0f76bef6",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-01",
+      "title": "Quanta Services Inc. (Energy) \u2014 via Vantageknight Llc",
+      "value_usd": null,
+      "description": "Energy; Monitor energy policy issues",
+      "lobbying_firm": "Vantageknight Llc",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/4631fc2d-6aaa-487f-a513-7f5c0f76bef6/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "611603a0-6bbf-4779-a122-a8391ae02549",
+      "iso": "IT",
+      "source": "lda",
+      "signal_date": "2026-04-01",
+      "title": "Leonardo S.P.A. (Homeland Security) \u2014 via Ballard Partners",
+      "value_usd": null,
+      "description": "Homeland Security; Italy; Interface with DHS and other agencies related to Leonardo Aircraft.",
+      "lobbying_firm": "Ballard Partners",
+      "issue_codes": [
+        "HOM"
+      ],
+      "url": "https://lda.gov/filings/public/filing/611603a0-6bbf-4779-a122-a8391ae02549/print/",
+      "profile": {
+        "name": "Italy",
+        "score": 3,
+        "factors": [
+          "US basing",
+          "nuclear hosting",
+          "Mediterranean hub"
+        ],
+        "rationale": "Major US basing \u2014 Sigonella, Aviano, Naples 6th Fleet (+1), US tactical nuclear weapons hosted (+2 latent nuclear), Mediterranean transit hub"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "c8807454-ae75-46fa-93cc-4a492d565ed9",
+      "iso": "ES",
+      "source": "lda",
+      "signal_date": "2026-04-01",
+      "title": "Elo Atlantic Sl (Foreign Affairs) \u2014 via Ballard Partners",
+      "value_usd": null,
+      "description": "Foreign Affairs; Spain; Providing strategic advisory services on potential natural resource exploration initiatives in Venez\u2026",
+      "lobbying_firm": "Ballard Partners",
+      "issue_codes": [
+        "FOR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c8807454-ae75-46fa-93cc-4a492d565ed9/print/",
+      "profile": {
+        "name": "Spain",
+        "score": 2,
+        "factors": [
+          "US basing",
+          "maritime corridor"
+        ],
+        "rationale": "Major US basing \u2014 Rota naval base, Mor\u00f3n Air Base (+1), Gibraltar Strait \u2014 controls northern approach (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "5392c34d-073b-4d3f-9dba-ff711cc04ace",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-01",
+      "title": "Armaments Research Company (Defense) \u2014 via Backstop Strategies, Llc",
+      "value_usd": null,
+      "description": "Defense; AI enabled weapons sensors",
+      "lobbying_firm": "Backstop Strategies, Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/5392c34d-073b-4d3f-9dba-ff711cc04ace/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
     {
       "document_number": "2026-06161",
       "iso": "RU",
@@ -271,6 +403,115 @@
       ],
       "url": "https://lda.gov/filings/public/filing/5c0e4a45-373e-47f4-96d9-b5d547391fc4/print/",
       "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "ed2f83c0-18ef-4300-b0a7-639839b209f3",
+      "iso": "JP",
+      "source": "lda",
+      "signal_date": "2026-03-31",
+      "title": "United States Steel Corporation (Manufacturing) \u2014 via Akin Gump Strauss Hauer & Feld",
+      "value_usd": null,
+      "description": "Manufacturing; Policy and regulatory issues related to US capital investments.",
+      "lobbying_firm": "Akin Gump Strauss Hauer & Feld",
+      "issue_codes": [
+        "MAN"
+      ],
+      "url": "https://lda.gov/filings/public/filing/ed2f83c0-18ef-4300-b0a7-639839b209f3/print/",
+      "profile": {
+        "name": "Japan",
+        "score": 6,
+        "factors": [
+          "nuclear program",
+          "regional power",
+          "strategic minerals",
+          "US basing"
+        ],
+        "rationale": "Latent nuclear program \u2014 plutonium stockpile, can weaponize rapidly (+2), regional power (+1), strategic minerals processing hub (+2), major US basing \u2014 Yokosuka, Kadena, Okinawa (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "eda7a0c7-5907-47ce-8581-30bd78fc3424",
+      "iso": "OM",
+      "source": "lda",
+      "signal_date": "2026-03-31",
+      "title": "United Solar Polysilicon (Fzc) Spc (Trade) \u2014 via Akin Gump Strauss Hauer & Feld",
+      "value_usd": null,
+      "description": "Trade; Oman; Issues related to section 232 investigation on polysilicon.",
+      "lobbying_firm": "Akin Gump Strauss Hauer & Feld",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/eda7a0c7-5907-47ce-8581-30bd78fc3424/print/",
+      "profile": {
+        "name": "Oman",
+        "score": 6,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "hydrocarbons",
+          "US basing"
+        ],
+        "rationale": "Controls southern shore of Strait of Hormuz \u2014 critical oil chokepoint (+3), significant hydrocarbon reserves (+2), US basing access agreements (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "86c05474-06da-4497-9dd9-8d328cf3f37c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-03-31",
+      "title": "Corvent Medical, Inc. (Defense, Health) \u2014 via Dla Piper Llp (Us)",
+      "value_usd": null,
+      "description": "Defense, Health; Legislative and regulatory proposals, policies, and appropriations regarding ventilators and remote \u2026",
+      "lobbying_firm": "Dla Piper Llp (Us)",
+      "issue_codes": [
+        "DEF",
+        "HCR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/86c05474-06da-4497-9dd9-8d328cf3f37c/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "e56bf1d6-a3ef-41b5-9273-a37f78aa63f0",
+      "iso": "CA",
+      "source": "lda",
+      "signal_date": "2026-03-31",
+      "title": "535 Group, Llc On Behalf Of D-Wave Government Inc. (Defense, Science/Technology, Budget) \u2014 via Capitol 6 Advisors",
+      "value_usd": null,
+      "description": "Budget, Consumer Issues, Defense, Science/Technology; 2027 Defense Appropriations Act, 2027 Energy and Water Appropriations Act, 2027 Commerce, Justice, S\u2026",
+      "lobbying_firm": "Capitol 6 Advisors",
+      "issue_codes": [
+        "BUD",
+        "CPI",
+        "DEF",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e56bf1d6-a3ef-41b5-9273-a37f78aa63f0/print/",
+      "profile": {
+        "name": "Canada",
+        "score": 5,
+        "factors": [
+          "hydrocarbons",
+          "strategic minerals",
+          "Western Hemisphere"
+        ],
+        "rationale": "Western Hemisphere presence (+1), major hydrocarbon producer (+2), strategic minerals including uranium and rare earths (+2)"
+      },
       "layer": "influence",
       "quality": 0.5,
       "dollar_mod": 1.0,

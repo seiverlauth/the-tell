@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31T22:54:25.330729+00:00",
+  "generated_at": "2026-04-01T22:51:12.513371+00:00",
   "sources": [
     "federalregister"
   ],
@@ -5149,6 +5149,28 @@
       "description": "Notice",
       "raw_score": 10.0,
       "page_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06161/aviastar-tu-5-b-7-leningradsky-prospect-g-moskva-125040-moscow-russia-order-renewing-temporary"
+    },
+    {
+      "document_number": "2026-06281",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-01",
+      "title": "Rescission of OCC Guidelines Establishing Standards for Recovery Planning by Certain Large Insured National Banks, Insured Federal Savings Associations, and Insured Federal Branches",
+      "value_usd": null,
+      "description": "Final rule. \u00b7 The OCC is amending its regulations by rescinding \"OCC Guidelines Establishing Standards for Recovery Planning by Certain Large Insured National Banks, Insured Federal Savings Associations, and Insured Federal Branches.\"",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/01/2026-06281/rescission-of-occ-guidelines-establishing-standards-for-recovery-planning-by-certain-large-insured"
+    },
+    {
+      "document_number": "2026-06271",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-01",
+      "title": "Whistleblower Incentives and Protections",
+      "value_usd": null,
+      "description": "Notice of proposed rulemaking. \u00b7 FinCEN is proposing a rule to establish a whistleblower program that offers incentives and protections to encourage individuals who have information about potential violations of the Bank Secrecy Act (BSA), International Emergency Economic Powers Act (IEEPA), Trading With the Enemy Act of 1917 (TWEA), and Foreign Narcotics Kingpin Designation Act (Kingpin Act) to voluntarily report such information (the \"Whistleblower Program\"). The proposed rule would implement section 6314 of the Anti-Money Laundering Act of 2020 (AML Act) and the Anti-Money Laundering Whistleblower Improvement Act (AML Whistleblower Improvement Act), which were enacted into law as part of the National Defense Authorization Act for Fiscal Year 2021 (FY21 NDAA) and the Consolidated Appropriations Act of 2023, respectively. The Whistleblower Program will contribute to the U.S. government's efforts to safeguard the financial system from illicit use, promote national security, and combat money laundering, terrorist financing, proliferation financing, and related crimes. This notice of proposed rulemaking invites comments from the public regarding all aspects of the proposed rule, as well as comments in response to specific questions.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/01/2026-06271/whistleblower-incentives-and-protections"
     }
   ]
 }
