@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T06:12:10.968631+00:00",
+  "generated_at": "2026-04-02T07:19:42.556346+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -19012,6 +19012,563 @@
       "quality": 1.0,
       "dollar_mod": 1.2670826037736793,
       "is_fr_policy": null
+    }
+  ],
+  "themes": [
+    {
+      "type": "velocity_anomaly",
+      "title": "United Kingdom \u2014 6 signals in 30 days (+3.7\u03c3)",
+      "score": 62.697,
+      "countries": [
+        "GB"
+      ],
+      "signal_keys": [
+        "lda:29e67f85-e020-4714-8d85-9cf4e447eb0f",
+        "lda:585860bc-af15-4e03-a51e-7b10e683c7cd",
+        "dsca:Submarine Combat and Weapon Systems, Tec",
+        "lda:5822c8aa-0ec7-4fcb-8649-dab9d8f07406",
+        "lda:0530d8ed-e131-4ee6-88ca-bd6a18e0c2ab",
+        "lda:fb7fed96-f152-4700-bb3d-6cd848a19cac"
+      ],
+      "why": "6 signals in 30 days vs 2.2 avg (1.0\u03c3 baseline, 12 windows)"
+    },
+    {
+      "type": "layer_sequence",
+      "title": "Israel \u2014 influence \u2192 military sequence (2d gap)",
+      "score": 29.705,
+      "countries": [
+        "IL"
+      ],
+      "signal_keys": [
+        "lda:3617103c-e5f5-499c-85e0-19d41d656217",
+        "lda:aa02bf22-db21-4088-9747-ef99383ce2d5",
+        "lda:b83f409b-3e87-4419-89ec-670d9b8c4388",
+        "dsca:25-86",
+        "lda:02b247dd-5ef5-4daf-8026-9aa9990c11ab",
+        "anchor_budget:0001178913-25-002820",
+        "fara:7653",
+        "lda:db02a0ad-016a-4d22-84b5-bea6199865a1",
+        "lda:95829355-4d3f-49e0-b58d-af95ef38aab2",
+        "lda:23a26e3e-93ac-454b-a73e-59ea7b246315",
+        "lda:61286692-a9d8-4f1b-ad6d-d9895aa68093",
+        "lda:895d05f5-ff41-4dcf-8a87-536c24a73d6b",
+        "fara:7641",
+        "fara:7649",
+        "lda:89d58de4-66ae-407a-ab26-5bb91515b346",
+        "fara:7662",
+        "anchor_budget:0001178913-26-000537",
+        "fara:7631",
+        "lda:b831c491-998c-4299-a6f9-00d248f5f9be",
+        "anchor_budget:0001178913-25-002470",
+        "lda:97b0efa1-dc2e-4b8e-b4be-08932e46042e",
+        "fara:7652",
+        "dsca:25-28",
+        "lda:abb42902-e3ce-4c4f-ae90-e18e2ac50d0b",
+        "anchor_budget:0001178913-26-000482",
+        "anchor_budget:0001178913-25-003866",
+        "lda:ce764ef3-8477-4669-b8e8-2ccdd3fb177d",
+        "fara:7639",
+        "dsca:25-87",
+        "lda:be2e4266-f514-4548-b671-3a98bfc8767c",
+        "lda:7997ced4-7bd2-4e54-9743-32ec1b25a83d",
+        "anchor_budget:0001178913-25-002709",
+        "lda:0f917ce3-cfa5-4aad-b185-7e24987959c3",
+        "lda:b9c836ec-0f69-482f-9662-b04da19414d7",
+        "fara:7597",
+        "lda:230cd9be-1b81-4399-8639-6cf996d8409c",
+        "lda:43d1bd09-d27f-4a4d-a303-bd49b2c14a46",
+        "anchor_budget:0001178913-26-000214",
+        "anchor_budget:0001178913-25-003892"
+      ],
+      "why": "fara filing on 2025-08-11 preceded anchor_budget on 2025-08-13 by 2d."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "27 firms lobbying on Japan issues",
+      "score": 16.274,
+      "countries": [
+        "JP"
+      ],
+      "signal_keys": [
+        "lda:ed2f83c0-18ef-4300-b0a7-639839b209f3",
+        "lda:0bdb1928-e35e-487e-9aeb-1c5f59121872",
+        "lda:c9cb5ae1-5448-40b7-8cc2-00927a5b951a",
+        "lda:0dde4e28-b044-496a-89f0-bb48708af48c",
+        "lda:30523921-2179-41ae-85b1-cfc7a5c90066",
+        "lda:7cb03d9d-a43c-422e-aa39-c3c3f3678deb",
+        "lda:0200656a-c22b-464c-a506-6fe1932e4dde",
+        "lda:49e249e4-b75b-4d22-a1c8-d9d99ffbfb82",
+        "lda:80d3171f-5d9f-42b1-ba98-a46fd7d6d97e",
+        "lda:f27223c6-4f7d-41eb-9100-b25240c4b222",
+        "lda:9b25dd5d-c34a-434d-af7a-b14b37284403",
+        "lda:06d22dba-40b9-443b-859f-d4f7cab561d5",
+        "lda:5ae3bcfc-37a9-43cd-a6a6-4e4b4617a683",
+        "lda:68ce0b13-49cb-48d3-b36d-ad55cbf41d6e",
+        "lda:5a174cfd-ca19-4128-a134-4e9a543e8b98",
+        "lda:37568a8c-1ba5-4b4a-a678-4a28dbac67e9",
+        "lda:464a9e15-6ac9-47b2-a607-d4c8e8aac435",
+        "lda:8c105394-a307-4185-9349-81b59a35d5d0",
+        "lda:2a154258-9eb8-4a64-bbf1-16c7e925f42f",
+        "lda:d76450a7-757a-4c4c-a322-0266c61a398e",
+        "lda:d4b3502a-85a6-42a8-857b-4e03d8177c00",
+        "lda:7252a152-4a01-455b-b2ca-2a1541ad7920",
+        "lda:7078e1ea-c5eb-4e7f-8bcc-93a4a5c2c4be",
+        "lda:cf53a64b-7c90-4593-822f-32f93d60fb20",
+        "lda:8729b8cb-6077-455e-ab4f-70d57167fe18",
+        "lda:bd30daf8-16f4-4371-ad3e-106fbdac42ed",
+        "lda:3193f805-bdeb-46e7-a952-b6fa1092ec6e",
+        "lda:85d06d9a-d5c6-4ef6-b4ae-de65c791580f",
+        "lda:8b38e59b-93e1-474c-ab64-ea64757c06e1",
+        "lda:b4b95c34-7ceb-4309-a6e2-4c7aa317f67a",
+        "lda:07f61cc0-575d-4c1a-8701-12b5a4e1ce42"
+      ],
+      "why": "27 distinct lobbying firms on JP in 369d."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "31 firms lobbying on Canada issues",
+      "score": 14.508,
+      "countries": [
+        "CA"
+      ],
+      "signal_keys": [
+        "lda:e56bf1d6-a3ef-41b5-9273-a37f78aa63f0",
+        "lda:47801959-b318-424b-9329-f7446a5f6fe9",
+        "lda:6b26dee6-1102-468a-94ce-2aa0c5f5ca4e",
+        "lda:6772dcc3-2c44-4863-81a6-b71e8a8dbd35",
+        "lda:351df1eb-cfb8-4910-ac5e-4c994706b529",
+        "lda:6aad996f-4f1d-4679-8fc4-60cbe09b4528",
+        "lda:f9c9d651-3cd4-4bc3-803e-e940e2af1e9b",
+        "lda:ebaafdc1-22c3-42de-ab5c-841d5984c131",
+        "lda:b50587f3-c842-45a9-8d92-65aa0d275bf7",
+        "lda:80988889-06cd-46ef-8e5e-44c38795ab17",
+        "lda:b3993f13-1622-499c-b0c4-38c4bad8d91f",
+        "lda:8020cfc0-263b-4453-baa3-5e28eb88d2b7",
+        "lda:4b59ed80-25c5-41fd-b853-f006b6cbd657",
+        "lda:f31fd7e2-34fd-44e6-9e8e-16a426a9e43d",
+        "lda:29c42575-0d47-4d6b-b27e-c995584d7839",
+        "lda:6cccb16f-ed34-4943-a2ff-a978cef3f98c",
+        "lda:ff600795-95d0-4936-862f-b49e2705ac39",
+        "lda:0e0dbb72-ad2e-43f1-ab01-7583265dc345",
+        "lda:71dfc6cc-008a-4c0b-9f7f-17c3326d9c51",
+        "lda:bd1e604e-2306-4142-b028-bd3295a59167",
+        "lda:13cf1f80-3e5c-4301-8861-97921823385a",
+        "lda:702ac4b3-e1e4-44bd-a844-4e9505f85284",
+        "lda:a32cf54e-69d5-4d71-ba45-54be6d6f2fd5",
+        "lda:40faf759-e496-4f78-95d3-f94019a9af8f",
+        "lda:90686b78-ffc3-4f99-a5ca-6683607ebde6",
+        "lda:5c882f8c-5516-4a08-b6b1-6ad5e4ffc5ff",
+        "lda:8572eb93-0306-47b0-bd26-18f88b0a96f7",
+        "lda:21ea2a4f-bd90-4d49-84ca-634015307750",
+        "lda:5ab73508-fdeb-4acb-9c9a-dc752f4015bc",
+        "lda:819c7516-26f2-4d48-aee6-801acd4fd6fd",
+        "lda:fdde5926-4772-4249-921c-3f3c4dadb641",
+        "lda:8121992c-a04e-4e59-83e9-29c90e7eb0ad",
+        "lda:296d0dc2-fb65-4f28-96ef-ec5ea18f28cf",
+        "lda:547f048b-f522-4e38-8c9f-2469b9439068"
+      ],
+      "why": "31 distinct lobbying firms on CA in 363d."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "26 firms lobbying on United Kingdom issues",
+      "score": 13.797,
+      "countries": [
+        "GB"
+      ],
+      "signal_keys": [
+        "lda:29e67f85-e020-4714-8d85-9cf4e447eb0f",
+        "lda:585860bc-af15-4e03-a51e-7b10e683c7cd",
+        "lda:5822c8aa-0ec7-4fcb-8649-dab9d8f07406",
+        "lda:0530d8ed-e131-4ee6-88ca-bd6a18e0c2ab",
+        "lda:fb7fed96-f152-4700-bb3d-6cd848a19cac",
+        "lda:bb69d0d4-0582-4274-9b63-3f259d449a17",
+        "lda:59d97468-7777-4bc4-98f9-d3712106c28b",
+        "lda:4a9becce-1dab-4de1-a0d9-2d5f042218e8",
+        "lda:d35f8b9f-28c8-45da-9a64-6aae1430b1da",
+        "lda:479f3c57-c8c4-42ce-9b02-df81c074950b",
+        "lda:d5c2c532-49eb-4383-b189-cbd100de8f6d",
+        "lda:a5ad2bf3-635d-413d-9f54-b6f983e4d72c",
+        "lda:4b85d57d-6e3a-4030-bd10-4b8adfb2e512",
+        "lda:611e7e33-829a-4fec-9baf-9ba49ea27f35",
+        "lda:5c08dc1a-7e69-4d2e-8de2-cf8d9444d87c",
+        "lda:0cbebfcc-8cfe-42eb-b8ed-6929892edb7d",
+        "lda:0a0eb801-ece9-445c-b137-93067243f611",
+        "lda:b98967f4-7f22-4baf-a976-483d5045882e",
+        "lda:7188da03-6553-429d-8a9f-8701c6ac8239",
+        "lda:56525500-d34c-4ca1-a48f-d5673043fa28",
+        "lda:66fdbb45-e0c5-4487-b779-063917e7bda4",
+        "lda:394a4baa-d7d4-4601-8df6-73164daa015d",
+        "lda:6d5640d5-2508-4763-ba47-e7671af466e3",
+        "lda:6659448e-df12-400c-a5e4-3ac186408495",
+        "lda:e5d44148-8dcc-4cd5-addf-711c8645b105",
+        "lda:42390480-4932-4cda-aed0-4cbabc0c7c4c",
+        "lda:927bb250-36ed-453d-8c80-9a54578b3012",
+        "lda:5b8cbd70-3fac-4c5a-8477-cad725752995"
+      ],
+      "why": "26 distinct lobbying firms on GB in 363d."
+    },
+    {
+      "type": "layer_sequence",
+      "title": "Canada \u2014 influence \u2192 military sequence (7d gap)",
+      "score": 11.856,
+      "countries": [
+        "CA"
+      ],
+      "signal_keys": [
+        "lda:71dfc6cc-008a-4c0b-9f7f-17c3326d9c51",
+        "lda:702ac4b3-e1e4-44bd-a844-4e9505f85284",
+        "fara:7651",
+        "dsca:25-76",
+        "lda:90686b78-ffc3-4f99-a5ca-6683607ebde6",
+        "lda:5c882f8c-5516-4a08-b6b1-6ad5e4ffc5ff",
+        "dsca:25-98",
+        "lda:0e0dbb72-ad2e-43f1-ab01-7583265dc345",
+        "lda:40faf759-e496-4f78-95d3-f94019a9af8f",
+        "lda:a32cf54e-69d5-4d71-ba45-54be6d6f2fd5",
+        "lda:4b59ed80-25c5-41fd-b853-f006b6cbd657",
+        "lda:b3993f13-1622-499c-b0c4-38c4bad8d91f",
+        "lda:80988889-06cd-46ef-8e5e-44c38795ab17",
+        "lda:8020cfc0-263b-4453-baa3-5e28eb88d2b7",
+        "lda:6cccb16f-ed34-4943-a2ff-a978cef3f98c",
+        "dsca:25-40",
+        "lda:bd1e604e-2306-4142-b028-bd3295a59167",
+        "lda:13cf1f80-3e5c-4301-8861-97921823385a",
+        "lda:29c42575-0d47-4d6b-b27e-c995584d7839",
+        "lda:ff600795-95d0-4936-862f-b49e2705ac39",
+        "lda:f31fd7e2-34fd-44e6-9e8e-16a426a9e43d"
+      ],
+      "why": "fara filing on 2025-09-24 preceded dsca on 2025-10-01 by 7d."
+    },
+    {
+      "type": "layer_sequence",
+      "title": "United Kingdom \u2014 influence \u2192 military sequence (1d gap)",
+      "score": 10.968,
+      "countries": [
+        "GB"
+      ],
+      "signal_keys": [
+        "lda:6659448e-df12-400c-a5e4-3ac186408495",
+        "lda:56525500-d34c-4ca1-a48f-d5673043fa28",
+        "lda:bb69d0d4-0582-4274-9b63-3f259d449a17",
+        "lda:fb7fed96-f152-4700-bb3d-6cd848a19cac",
+        "lda:0cbebfcc-8cfe-42eb-b8ed-6929892edb7d",
+        "dsca:Submarine Combat and Weapon Systems, Tec",
+        "lda:0530d8ed-e131-4ee6-88ca-bd6a18e0c2ab",
+        "lda:7188da03-6553-429d-8a9f-8701c6ac8239",
+        "lda:b98967f4-7f22-4baf-a976-483d5045882e",
+        "lda:59d97468-7777-4bc4-98f9-d3712106c28b",
+        "lda:d5c2c532-49eb-4383-b189-cbd100de8f6d",
+        "lda:e5d44148-8dcc-4cd5-addf-711c8645b105",
+        "lda:479f3c57-c8c4-42ce-9b02-df81c074950b",
+        "lda:4b85d57d-6e3a-4030-bd10-4b8adfb2e512",
+        "lda:5822c8aa-0ec7-4fcb-8649-dab9d8f07406",
+        "lda:611e7e33-829a-4fec-9baf-9ba49ea27f35",
+        "lda:5c08dc1a-7e69-4d2e-8de2-cf8d9444d87c",
+        "lda:a5ad2bf3-635d-413d-9f54-b6f983e4d72c",
+        "lda:66fdbb45-e0c5-4487-b779-063917e7bda4",
+        "lda:d35f8b9f-28c8-45da-9a64-6aae1430b1da",
+        "dsca:25-95",
+        "lda:0a0eb801-ece9-445c-b137-93067243f611",
+        "lda:4a9becce-1dab-4de1-a0d9-2d5f042218e8",
+        "lda:6d5640d5-2508-4763-ba47-e7671af466e3",
+        "dsca:25-45",
+        "lda:394a4baa-d7d4-4601-8df6-73164daa015d"
+      ],
+      "why": "lda filing on 2026-03-19 preceded dsca on 2026-03-20 by 1d."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "16 firms lobbying on China issues",
+      "score": 10.798,
+      "countries": [
+        "CN"
+      ],
+      "signal_keys": [
+        "lda:b607d4b4-b2a3-471c-8470-71fb5718c3a8",
+        "lda:3570c195-924c-4462-9dad-a2ec7bca9f6b",
+        "lda:483e74eb-7163-4279-952f-7bbda09ab401",
+        "lda:8bfb90a1-836c-4f5d-9bc1-94d7543a758c",
+        "lda:280f374d-e22e-4533-ab1b-e44279b1023a",
+        "lda:5d0c08a7-b16c-4848-8b9c-d62104e6996a",
+        "lda:0ec5feb8-5b0a-49db-b235-7e893869fd07",
+        "lda:3a6d4bab-1e9a-42fd-8e1e-b0758a99bec7",
+        "lda:f4e532fd-dd5e-4abe-9d8f-5793e9220df2",
+        "lda:28721173-15d2-4863-af01-145babb131e0",
+        "lda:b8b09920-a089-4e40-badb-eaaa93cf6a8d",
+        "lda:9a8ffa09-7d2e-439b-8454-180f2c3e3574",
+        "lda:48098416-eae4-4d70-ac5c-6de6eb1b0527",
+        "lda:255de4af-7bc5-4b6c-afc9-9a3d40289edd",
+        "lda:3cd449ee-1f35-48d1-bf83-8a9ef6a94f6c",
+        "lda:1964570a-131f-47e5-b8a3-b06aedeb8f49"
+      ],
+      "why": "16 distinct lobbying firms on CN in 322d."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "16 firms lobbying on Australia issues",
+      "score": 10.732,
+      "countries": [
+        "AU"
+      ],
+      "signal_keys": [
+        "lda:0aba115d-62b5-4226-aacd-e4b353d0852a",
+        "lda:2e5ee5f5-981f-4379-aaf7-cd37f560b9da",
+        "lda:06f041a9-2003-4e3c-8e5c-fcbed26fa750",
+        "lda:fb475305-8665-4755-8615-8f3b5348ee72",
+        "lda:55260929-56a0-41ad-ac70-996b41468f28",
+        "lda:2fe0ef7f-1cd0-48dc-8e3b-7fb1ecb6bf4d",
+        "lda:a591d6e7-9f7c-4303-ac02-ee889fc3bc5e",
+        "lda:f605f735-22d9-47dc-927e-09ae1b900729",
+        "lda:5c1abbc2-8016-41f7-8fe2-3599654c3c35",
+        "lda:15b374fc-075b-46bc-af89-035f1b111bde",
+        "lda:0f78f6c5-0768-43b6-b950-5d02a496b78c",
+        "lda:95355046-63dc-442e-a808-5599387fa24a",
+        "lda:1123d22d-4536-469c-ac24-9d62f88f5159",
+        "lda:a8c5f1d2-0cdf-487d-86c7-a1f25fbe626a",
+        "lda:79c081bd-371f-4cb0-87a7-0e467ebd7275",
+        "lda:735626a0-9c20-48f5-9a41-4cb8ee74861f",
+        "lda:632193bd-fd93-4218-95c4-21f3572be2ec",
+        "lda:f73cea5a-1a47-4a69-be75-73de58de16a9"
+      ],
+      "why": "16 distinct lobbying firms on AU in 364d."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "23 firms lobbying on Israel issues",
+      "score": 9.26,
+      "countries": [
+        "IL"
+      ],
+      "signal_keys": [
+        "lda:a0b3981d-2734-4af7-a21e-b9a58c04fd73",
+        "lda:89d58de4-66ae-407a-ab26-5bb91515b346",
+        "lda:db02a0ad-016a-4d22-84b5-bea6199865a1",
+        "lda:61286692-a9d8-4f1b-ad6d-d9895aa68093",
+        "lda:97b0efa1-dc2e-4b8e-b4be-08932e46042e",
+        "lda:aa02bf22-db21-4088-9747-ef99383ce2d5",
+        "lda:230cd9be-1b81-4399-8639-6cf996d8409c",
+        "lda:3617103c-e5f5-499c-85e0-19d41d656217",
+        "lda:95829355-4d3f-49e0-b58d-af95ef38aab2",
+        "lda:be2e4266-f514-4548-b671-3a98bfc8767c",
+        "lda:ce764ef3-8477-4669-b8e8-2ccdd3fb177d",
+        "lda:02b247dd-5ef5-4daf-8026-9aa9990c11ab",
+        "lda:0f917ce3-cfa5-4aad-b185-7e24987959c3",
+        "lda:b83f409b-3e87-4419-89ec-670d9b8c4388",
+        "lda:3acf0250-6a1c-41e3-a736-21d9bc20342d",
+        "lda:7997ced4-7bd2-4e54-9743-32ec1b25a83d",
+        "lda:b9c836ec-0f69-482f-9662-b04da19414d7",
+        "lda:43d1bd09-d27f-4a4d-a303-bd49b2c14a46",
+        "lda:895d05f5-ff41-4dcf-8a87-536c24a73d6b",
+        "lda:23a26e3e-93ac-454b-a73e-59ea7b246315",
+        "lda:d24482c0-753a-4198-b469-3f482567a7ec",
+        "lda:b831c491-998c-4299-a6f9-00d248f5f9be",
+        "lda:abb42902-e3ce-4c4f-ae90-e18e2ac50d0b"
+      ],
+      "why": "23 distinct lobbying firms on IL in 323d."
+    },
+    {
+      "type": "cftc_overlap",
+      "title": "Wheat positioning anomaly \u2014 2 exposed countries active",
+      "score": 8.768,
+      "countries": [
+        "CA",
+        "IN"
+      ],
+      "signal_keys": [
+        "cftc:Wheat"
+      ],
+      "why": "Wheat z=+2.8\u03c3. Active basket: CA, IN (2/6 exposed countries have recent signals)."
+    },
+    {
+      "type": "cftc_overlap",
+      "title": "Brent Crude positioning anomaly \u2014 3 exposed countries active",
+      "score": 8.576,
+      "countries": [
+        "AE",
+        "NO",
+        "SA"
+      ],
+      "signal_keys": [
+        "cftc:Brent Crude"
+      ],
+      "why": "Brent Crude z=+2.0\u03c3. Active basket: AE, NO, SA (3/7 exposed countries have recent signals)."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "5 firms lobbying on Norway issues",
+      "score": 7.377,
+      "countries": [
+        "NO"
+      ],
+      "signal_keys": [
+        "lda:a3aea893-0332-41c8-b112-7512f2ba2649",
+        "lda:5bdef9fd-f6ee-41f9-8787-b6cddaff1dbf",
+        "lda:fedcb26c-4373-4c37-8a03-c4baab850721",
+        "lda:fa2f6a39-cfa8-4072-a3b9-0ba3226a60bb",
+        "lda:e3dfbde7-e208-4d57-a2d2-7e35cf7aed5e",
+        "lda:eb480721-bffb-42a2-a5f3-e96647402b0f"
+      ],
+      "why": "5 distinct lobbying firms on NO in 325d."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "12 firms lobbying on France issues",
+      "score": 6.846,
+      "countries": [
+        "FR"
+      ],
+      "signal_keys": [
+        "lda:92fb004b-7621-485b-af8d-d60c7568c3d3",
+        "lda:3306f9b4-e43d-4f89-8453-7ff85adfe600",
+        "lda:b8376ef7-3b7a-4305-8f20-7d8aec6883ad",
+        "lda:73533da5-59d7-4b2c-b64a-ae025b5b9e06",
+        "lda:7ce63d6b-7954-4bde-9823-e5c4f3ca50ee",
+        "lda:13d82356-4a13-43f1-9554-62a9785c3637",
+        "lda:8b9fa82f-031a-424e-9c9a-e420e2450ad1",
+        "lda:75f43883-e9cc-41b1-9b25-6915840ed0a1",
+        "lda:4824219d-a87d-42a9-afb4-b39d5ea44bb4",
+        "lda:81b3f8cc-9e98-45dd-85d1-549af49c4c29",
+        "lda:9824945a-b61f-428d-9873-7d03b8850017",
+        "lda:28c544fa-25f4-4e31-ad98-17716e70db5b",
+        "lda:4a109e37-8ab0-486a-ae26-fbd34b36bb83",
+        "lda:0db03a68-e4eb-48e7-b766-170fe4b0a1c9"
+      ],
+      "why": "12 distinct lobbying firms on FR in 317d."
+    },
+    {
+      "type": "layer_sequence",
+      "title": "Australia \u2014 influence \u2192 military sequence (13d gap)",
+      "score": 6.809,
+      "countries": [
+        "AU"
+      ],
+      "signal_keys": [
+        "lda:15b374fc-075b-46bc-af89-035f1b111bde",
+        "lda:f73cea5a-1a47-4a69-be75-73de58de16a9",
+        "lda:0f78f6c5-0768-43b6-b950-5d02a496b78c",
+        "lda:5c1abbc2-8016-41f7-8fe2-3599654c3c35",
+        "lda:632193bd-fd93-4218-95c4-21f3572be2ec",
+        "dsca:25-50",
+        "lda:79c081bd-371f-4cb0-87a7-0e467ebd7275",
+        "dsca:25-88",
+        "lda:95355046-63dc-442e-a808-5599387fa24a",
+        "lda:735626a0-9c20-48f5-9a41-4cb8ee74861f",
+        "lda:a8c5f1d2-0cdf-487d-86c7-a1f25fbe626a",
+        "dsca:25-10",
+        "lda:1123d22d-4536-469c-ac24-9d62f88f5159"
+      ],
+      "why": "lda filing on 2025-07-24 preceded dsca on 2025-08-06 by 13d."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "15 firms lobbying on Germany issues",
+      "score": 6.376,
+      "countries": [
+        "DE"
+      ],
+      "signal_keys": [
+        "lda:ce850d1d-aefb-4733-9e32-7e13a074eac5",
+        "lda:7824ba93-c193-463b-9710-89bdc5af60da",
+        "lda:c64c4483-47d5-4239-af15-af0b7dd80867",
+        "lda:6b8fbb23-d070-452b-8bc5-3954f614e263",
+        "lda:cda4808a-58a4-4cc6-983a-662ff3f00332",
+        "lda:d091c9b4-a5a0-4fdf-9029-09cc9055a7bd",
+        "lda:6f7d0b0d-168d-4799-998a-3179c04395c7",
+        "lda:505b08c2-399b-43b0-9cbc-61b06fbfbb4b",
+        "lda:ee9cb308-122c-48ee-869e-c0d39411aeca",
+        "lda:0e1a4fda-b9a9-49bd-9a1e-7b4d8bf2f8e6",
+        "lda:d6bbaba8-cea7-4672-98b7-2612d07816b9",
+        "lda:2caee672-593a-4638-9bf1-6307451b8019",
+        "lda:e149abcf-fc29-4ce3-9884-ae6ef1607746",
+        "lda:2257cc54-3e7b-4183-ba21-d7ebec88d05b",
+        "lda:cf192ac6-8d01-4f07-ad69-45504b0217df",
+        "lda:d6bcd7f1-1510-4d5e-96d2-8c4bf268eb3b",
+        "lda:22888ad0-d652-4839-8b4e-0e70be73527c"
+      ],
+      "why": "15 distinct lobbying firms on DE in 318d."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "8 firms lobbying on Mexico issues",
+      "score": 5.97,
+      "countries": [
+        "MX"
+      ],
+      "signal_keys": [
+        "lda:2546e933-cf40-44b7-8a69-91c428ae13e8",
+        "lda:2ef359ee-f0c5-4586-a28c-0c7b5bc20152",
+        "lda:132e29be-136d-4443-b1b5-a0cac6af74a5",
+        "lda:2f2c9a63-d080-46ba-9616-0706aaa1772f",
+        "lda:a926a262-7eaf-44ac-810f-83eeb17fab4a",
+        "lda:7fce4739-977b-402c-a6b3-df6c165a6927",
+        "lda:e62ea394-3634-428d-af5a-43f7087b0c5a",
+        "lda:a00390d6-7009-4692-977c-7dcf5235f72b",
+        "lda:ab4ab513-c0ba-4cac-b336-830690997caa",
+        "lda:aa9149be-5a9b-4845-83f1-6f67d9b651c6"
+      ],
+      "why": "8 distinct lobbying firms on MX in 347d."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "7 firms lobbying on Italy issues",
+      "score": 5.901,
+      "countries": [
+        "IT"
+      ],
+      "signal_keys": [
+        "lda:611603a0-6bbf-4779-a122-a8391ae02549",
+        "lda:6892604e-a291-44e7-aee6-fef962057f3b",
+        "lda:57ec50b2-2d27-40c6-8bf1-fe96af624769",
+        "lda:417e6473-9981-47a1-808a-e19ee63cc2da",
+        "lda:3360df27-f8e0-45a3-aa8f-f5922d167dfb",
+        "lda:c593cdd1-0777-4992-a015-0aba248e31f4",
+        "lda:8726e67c-8a43-461e-bccb-b02d7ce89372"
+      ],
+      "why": "7 distinct lobbying firms on IT in 266d."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "12 firms lobbying on South Korea issues",
+      "score": 5.518,
+      "countries": [
+        "KR"
+      ],
+      "signal_keys": [
+        "lda:607bcf96-6915-481a-8281-3aa073a1960b",
+        "lda:35b5c741-ffe0-43cd-966f-d9399f24a670",
+        "lda:7c445862-8615-4b93-ba5c-4803cd0d1869",
+        "lda:b41b4a1b-872a-4551-8146-f2d8184fbb00",
+        "lda:f7f6bfed-6f4c-402c-8f4d-32105a4113d4",
+        "lda:af75dd70-c63e-435e-809a-b768165205e8",
+        "lda:bb7d1eb2-b768-4f63-9dcc-490bd0ff3f57",
+        "lda:6a4ffa30-4232-4b3f-ac93-a6ea5cd2e1aa",
+        "lda:a71e53ea-3105-4c01-bd76-7e4a930e2c9c",
+        "lda:56ca8275-8799-4ac1-a545-e77221043e00",
+        "lda:af328b55-4bfc-4072-8cda-73bc9129e6fd",
+        "lda:f7d82844-2167-4de1-9a7e-3ce2c75a8a56",
+        "lda:5ea129e2-6cc3-40f8-b988-bf93aa1cfe5d"
+      ],
+      "why": "12 distinct lobbying firms on KR in 340d."
+    },
+    {
+      "type": "actor_concentration",
+      "title": "7 firms lobbying on Singapore issues",
+      "score": 5.369,
+      "countries": [
+        "SG"
+      ],
+      "signal_keys": [
+        "lda:8190b9e1-a6f7-4fb3-90d2-4369347cdbdb",
+        "lda:775d3569-666b-48b3-8ad1-e31e64c26bd5",
+        "lda:1b82ba67-8a55-44a4-8c90-18109d78cc09",
+        "lda:d479a81a-901f-4786-9321-a0041c7077dd",
+        "lda:478d7431-55c8-4a20-8c68-e10237b96245",
+        "lda:f3260321-fd89-4302-b3f8-86171d74f439",
+        "lda:d2e5e8f2-ea00-4c4a-a538-edf644614412",
+        "lda:868ed7a8-cfe3-4b5f-8e3f-3bc930a6f32f"
+      ],
+      "why": "7 distinct lobbying firms on SG in 335d."
     }
   ]
 }

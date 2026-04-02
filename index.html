@@ -363,6 +363,59 @@
       white-space: nowrap;
       cursor: default;
     }
+
+    /* ── Narratives panel ── */
+    #narratives-section { margin-top: 16px; }
+
+    .theme-entry {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(58,58,60,0.4);
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.08s;
+    }
+    .theme-entry:hover  { background: rgba(255,255,255,0.02); }
+    .theme-entry.active { background: rgba(255,255,255,0.04); }
+
+    .th-header { display: flex; align-items: baseline; gap: 8px; }
+
+    .th-badge {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      padding: 1px 4px;
+      border: 1px solid currentColor;
+    }
+
+    .th-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .th-score {
+      font-size: 10px;
+      color: var(--muted);
+      flex-shrink: 0;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .th-why {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+    .theme-entry:hover .th-why,
+    .theme-entry.active .th-why { color: var(--text); }
   </style>
 </head>
 <body>
@@ -378,6 +431,7 @@
         <div id="clusters"></div>
       </div>
     </div>
+    <div id="narratives-section" style="display:none"></div>
     <div id="feed-section">
       <div id="feed-hdr" class="section-hdr" style="display:none">
         <span id="feed-label"></span>
@@ -409,6 +463,20 @@
     function layerColor(layer) {
       return LAYER_COLORS[layer] || '#a0a0b0';
     }
+
+    // Theme type palette — distinct from layer colors and map zone colors
+    const THEME_TYPE_COLORS = {
+      actor_concentration: '#c084fc',  // violet
+      velocity_anomaly:    '#f87171',  // rose-pink
+      layer_sequence:      '#2dd4bf',  // teal
+      cftc_overlap:        '#fbbf24',  // amber
+    };
+    const THEME_TYPE_LABELS = {
+      actor_concentration: 'ACTOR',
+      velocity_anomaly:    'VELOCITY',
+      layer_sequence:      'SEQUENCE',
+      cftc_overlap:        'CFTC',
+    };
 
     const SOURCE_LABELS = {
       dsca:           'Defense Security Cooperation Agency',
@@ -819,6 +887,8 @@
     // ── Render clusters ──────────────────────────────────────────────────────
 
     let activeFilter = null;
+    let themeFilter  = null;  // Set<string> of ISOs when a narrative theme is active
+    let activeTheme  = null;  // theme object currently selected
 
     // ── Feed filter state ────────────────────────────────────────────────────
     let showUnresolved  = false;
@@ -846,6 +916,8 @@
       // Helper: make an entry clickable for feed filtering
       function bindFilter(entry, iso) {
         entry.addEventListener('click', () => {
+          themeFilter = null; activeTheme = null;
+          document.querySelectorAll('.theme-entry.active').forEach(r => r.classList.remove('active'));
           if (activeFilter === iso) {
             activeFilter = null;
             entry.classList.remove('active');
@@ -931,6 +1003,8 @@
         entry.innerHTML = html;
         // Zone 2: filter by country AND scroll to + expand the specific signal row
         entry.addEventListener('click', () => {
+          themeFilter = null; activeTheme = null;
+          document.querySelectorAll('.theme-entry.active').forEach(r => r.classList.remove('active'));
           if (activeFilter === sig.iso) {
             activeFilter = null;
             entry.classList.remove('active');
@@ -961,6 +1035,7 @@
     function applyFeedFilters(sigs) {
       return sigs.filter(sig => {
         if (activeFilter && sig.iso !== activeFilter) return false;
+        if (themeFilter && themeFilter.size > 0 && !themeFilter.has(sig.iso)) return false;
         if (sig.iso === 'XX' && !showUnresolved) return false;
         if (sig.layer && !activeFeedLayers.has(sig.layer)) return false;
         if (!activeFeedSrcs.has(sig.source)) return false;
@@ -1085,14 +1160,22 @@
       const toggleBtn = document.getElementById('feed-toggle-btn');
       feedEl.innerHTML = '';
 
-      if (activeFilter) {
+      if (activeFilter || themeFilter) {
         feedHdr.style.display = '';
-        const p = isoProfile[activeFilter];
-        feedLabel.textContent = p ? p.name : activeFilter;
+        if (activeFilter) {
+          const p = isoProfile[activeFilter];
+          feedLabel.textContent = p ? p.name : activeFilter;
+        } else if (activeTheme) {
+          const t = activeTheme.title;
+          feedLabel.textContent = t.length > 60 ? t.slice(0, 57) + '\u2026' : t;
+        }
         toggleBtn.textContent = '[clear filter]';
         toggleBtn.onclick = () => {
           activeFilter = null;
+          themeFilter  = null;
+          activeTheme  = null;
           document.querySelectorAll('.cluster-entry.active').forEach(r => r.classList.remove('active'));
+          document.querySelectorAll('.theme-entry.active').forEach(r => r.classList.remove('active'));
           syncMapFilter(null);
           renderFeed(signals);
         };
@@ -1207,6 +1290,8 @@
       if (sig.iso && !isUnresolved) {
         el.querySelector('.item-country').addEventListener('click', e => {
           e.stopPropagation();
+          themeFilter = null; activeTheme = null;
+          document.querySelectorAll('.theme-entry.active').forEach(r => r.classList.remove('active'));
           activeFilter = activeFilter === sig.iso ? null : sig.iso;
           document.querySelectorAll('.cluster-entry.active').forEach(r => r.classList.remove('active'));
           if (activeFilter) {
@@ -1219,6 +1304,73 @@
       }
 
       return el;
+    }
+
+    // ── Render narratives ────────────────────────────────────────────────────
+
+    function renderNarratives(themes, signals) {
+      const section = document.getElementById('narratives-section');
+      if (!themes || !themes.length) return;
+
+      section.innerHTML = '';
+      section.style.display = '';
+
+      const hdr = document.createElement('div');
+      hdr.className = 'section-hdr';
+      hdr.textContent = 'NARRATIVES';
+      section.appendChild(hdr);
+
+      const maxScore = themes[0].score || 1;
+
+      for (const theme of themes) {
+        const entry = document.createElement('div');
+        entry.className = 'theme-entry';
+
+        const color = THEME_TYPE_COLORS[theme.type] || '#a0a0b0';
+        const label = THEME_TYPE_LABELS[theme.type] || theme.type.toUpperCase().slice(0, 8);
+
+        // 5-char score bar
+        const filled = Math.max(1, Math.round((theme.score / maxScore) * 5));
+        const bar    = '\u2588'.repeat(filled) + '\u2591'.repeat(5 - filled);
+
+        entry.innerHTML =
+          `<div class="th-header">` +
+            `<span class="th-badge" style="color:${esc(color)};border-color:${esc(color)}">${esc(label)}</span>` +
+            `<span class="th-title">${esc(theme.title)}</span>` +
+            `<span class="th-score">${esc(bar)} ${theme.score.toFixed(2)}</span>` +
+          `</div>` +
+          `<div class="th-why">${esc(theme.why)}</div>`;
+
+        entry.addEventListener('click', () => {
+          const wasActive = entry.classList.contains('active');
+          document.querySelectorAll('.theme-entry.active').forEach(r => r.classList.remove('active'));
+          document.querySelectorAll('.cluster-entry.active').forEach(r => r.classList.remove('active'));
+
+          if (wasActive) {
+            themeFilter = null;
+            activeTheme = null;
+            activeFilter = null;
+            syncMapFilter(null);
+          } else {
+            entry.classList.add('active');
+            const validIsos = (theme.countries || []).filter(iso => iso && iso !== 'XX' && iso !== 'US');
+            themeFilter  = validIsos.length ? new Set(validIsos) : null;
+            activeTheme  = theme;
+            activeFilter = null;
+            // Highlight single-country themes on map; multi-country resets to world view
+            syncMapFilter(validIsos.length === 1 ? validIsos[0] : null);
+          }
+
+          renderFeed(signals);
+
+          if (themeFilter) {
+            // Scroll to feed section so the filtered results are in view
+            document.getElementById('feed-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+
+        section.appendChild(entry);
+      }
     }
 
     // ── Main ─────────────────────────────────────────────────────────────────
@@ -1261,6 +1413,7 @@
       const clusters = computeClusters(signals);
       const notable  = computeNotableSignals(signals);
       renderClusters(clusters, notable, signals);
+      renderNarratives(data.themes || [], signals);
       initFilterBar(signals);
       renderFeed(signals);
       initMap(clusters, notable, signals);
@@ -1444,6 +1597,8 @@
 
           layer.on('click', () => {
             if (!iso) return;
+            themeFilter = null; activeTheme = null;
+            document.querySelectorAll('.theme-entry.active').forEach(r => r.classList.remove('active'));
             activeFilter = activeFilter === iso ? null : iso;
             document.querySelectorAll('.cluster-entry.active').forEach(r => r.classList.remove('active'));
             if (activeFilter) {
