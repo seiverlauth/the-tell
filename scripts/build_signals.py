@@ -24,6 +24,7 @@ import math
 import os
 import statistics
 import sys
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -219,26 +220,31 @@ def compute_themes(enriched: list) -> list:
         if n_prior < 3:
             continue
 
-        current_count = sum(1 for s in sigs if days_ago(s["signal_date"]) < 30)
+        current_sigs = [s for s in sigs if days_ago(s["signal_date"]) < 30]
+        current_count = len(current_sigs)
         if current_count < 3:
             continue
 
+        weighted_count = sum(s.get("quality", 0) for s in current_sigs)
+
         prior_counts = []
         for w in range(1, n_prior + 1):
-            c = sum(1 for s in sigs if w * 30 <= days_ago(s["signal_date"]) < (w + 1) * 30)
+            c = sum(s.get("quality", 0) for s in sigs if w * 30 <= days_ago(s["signal_date"]) < (w + 1) * 30)
             prior_counts.append(c)
 
         baseline_mean = statistics.mean(prior_counts)
         baseline_std = statistics.stdev(prior_counts) if len(prior_counts) >= 3 else 1.0
-        velocity_z = (current_count - baseline_mean) / max(baseline_std, 0.5)
+        velocity_z = (weighted_count - baseline_mean) / max(baseline_std, 0.5)
 
         if velocity_z < 2.0:
             continue
 
         ps = prof_score(sigs[0])
         country_name = profile_name(sigs[0])
-        score = velocity_z * math.log2(ps + 2) * current_count
-        current_sigs = [s for s in sigs if days_ago(s["signal_date"]) < 30]
+        score = velocity_z * math.log2(ps + 2) * weighted_count
+
+        src_counts = Counter(s.get("source", "?") for s in current_sigs)
+        source_breakdown = ", ".join(f"{src}×{n}" for src, n in sorted(src_counts.items()))
 
         themes.append({
             "type": "velocity_anomaly",
@@ -247,8 +253,8 @@ def compute_themes(enriched: list) -> list:
             "countries": [iso],
             "signal_keys": [_signal_key(s) for s in current_sigs],
             "why": (
-                f"{current_count} signals in 30 days vs {baseline_mean:.1f} avg "
-                f"({baseline_std:.1f}\u03c3 baseline, {len(prior_counts)} windows)"
+                f"{weighted_count:.1f} weighted signals in 30 days vs {baseline_mean:.1f} avg "
+                f"({velocity_z:+.1f}\u03c3). Sources: {source_breakdown}"
             ),
         })
 
@@ -468,7 +474,6 @@ def main():
         print(f"  {src}: {count}")
 
     # Theme summary
-    from collections import Counter
     type_counts = Counter(t["type"] for t in themes)
     print(
         f"\nThemes: {len(themes)} computed "
