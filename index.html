@@ -359,9 +359,9 @@
       margin-left: auto;
       font-size: 10px;
       color: var(--muted);
-      opacity: 0.45;
       letter-spacing: 0.03em;
       white-space: nowrap;
+      cursor: default;
     }
   </style>
 </head>
@@ -982,21 +982,6 @@
       const row1 = document.createElement('div');
       row1.className = 'filter-row';
 
-      // Unresolved toggle
-      const unresPill = document.createElement('span');
-      unresPill.className = 'filter-pill';
-      unresPill.title = 'Show records where country could not be determined';
-      unresPill.textContent = 'XX';
-      unresPill.addEventListener('click', () => {
-        showUnresolved = !showUnresolved;
-        unresPill.classList.toggle('active', showUnresolved);
-        renderFeed(signals);
-      });
-      row1.appendChild(unresPill);
-
-      const sep1 = document.createElement('span'); sep1.className = 'filter-vsep';
-      row1.appendChild(sep1);
-
       const layerLabel = document.createElement('span');
       layerLabel.className = 'filter-label';
       layerLabel.textContent = 'layer';
@@ -1050,6 +1035,11 @@
       const countEl = document.createElement('span');
       countEl.className = 'filter-count';
       countEl.id = 'filter-count';
+      countEl.title = 'show unresolved country records';
+      countEl.addEventListener('click', () => {
+        showUnresolved = !showUnresolved;
+        renderFeed(signals);
+      });
       row1.appendChild(countEl);
 
       bar.appendChild(row1);
@@ -1112,7 +1102,7 @@
 
       const visible = applyFeedFilters(signals);
       const countEl = document.getElementById('filter-count');
-      if (countEl) countEl.textContent = visible.length + '\u00a0signals';
+      if (countEl) countEl.textContent = visible.length + '\u00a0signals' + (showUnresolved ? '\u00a0\xb7XX' : '');
 
       if (!visible.length) {
         feedEl.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:16px 0">no signals</div>';
