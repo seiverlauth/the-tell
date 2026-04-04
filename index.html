@@ -1210,7 +1210,7 @@
       renderNarratives(data.themes || [], signals);
       initFilterBar(signals);
       renderFeed(signals);
-      initMap(notable, signals);
+      initMap(notable, signals, data.themes || []);
     }
 
     main();
@@ -1260,11 +1260,28 @@
     let leafletMap = null;
     let syncMapFilter = () => {};  // assigned after initMap; no-op until then
 
-    async function initMap(notable, signals) {
+    async function initMap(notable, signals, themes) {
       const mapEl = document.getElementById('map');
       mapEl.style.display = '';
 
-      // notableIsos no longer drives map color — map uses structural score instead.
+      // ── Map signal index ─────────────────────────────────────────────────
+      // themeScoreByIso: iso → highest theme score it appears in (drives red intensity)
+      // recentIsos: countries with signals in last 30 days but no theme (secondary lift)
+      const themeScoreByIso = new Map();
+      for (const theme of themes) {
+        for (const iso of (theme.countries || [])) {
+          if (!iso || iso === 'XX' || iso === 'US') continue;
+          if ((theme.score || 0) > (themeScoreByIso.get(iso) || 0))
+            themeScoreByIso.set(iso, theme.score);
+        }
+      }
+      const w30recent = isoOffset(30);
+      const recentIsos = new Set();
+      for (const sig of signals) {
+        if (!sig.iso || sig.iso === 'XX' || sig.iso === 'US') continue;
+        if ((sig.signal_date || '') >= w30recent && !themeScoreByIso.has(sig.iso))
+          recentIsos.add(sig.iso);
+      }
 
       // Lazy-load world topology
       let world;
@@ -1323,23 +1340,29 @@
         scrollWheelZoom: true,
       });
 
-      // Map colors based on structural interest score (country-level, not source-level).
-      // Score tiers match the profile rubric in CLAUDE.md: 7+ is rare / very high interest.
-      const BASE_COLOR        = '#484848';   // no profile or score 0-3
-      const MID_SCORE_COLOR   = '#5a4028';   // score 4-6: moderate structural interest
-      const HIGH_SCORE_COLOR  = '#7a2c18';   // score 7+: high / rare structural interest
-      const BASKET_COLOR      = '#806428';   // CFTC basket highlight: dull gold
-      const HOVER_COLOR       = '#b8b8b8';
-      const ACTIVE_COLOR      = '#c0783c';   // clicked country: bright amber
-      const BORDER_COLOR      = '#252525';
+      // ── Map colors: gray → dark red spectrum keyed on narrative presence ──
+      // Theme countries scale from dim red to full red by score.
+      // Recent-signal countries (not in themes) get a subtle warm-gray lift.
+      const BASE_COLOR       = '#3e3e3e';   // no recent activity
+      const RECENT_COLOR     = '#4e3e3e';   // signal in last 30d, not in any theme
+      const THEME_DIM_COLOR  = '#6b1a1a';   // in a theme, lower score
+      const THEME_MID_COLOR  = '#8c2020';   // in a theme, mid score
+      const THEME_HIGH_COLOR = '#b02828';   // in a theme, high score (≥20)
+      const BASKET_COLOR     = '#3e4a3e';   // CFTC basket: muted green-gray, distinct from red
+      const HOVER_COLOR      = '#b8b8b8';
+      const ACTIVE_COLOR     = '#d43030';   // clicked country: bright red
+      const BORDER_COLOR     = '#252525';
 
       const isoToLayer = new Map();
 
       function baseColorFor(iso) {
-        const profile = iso ? isoProfile[iso] : null;
-        const s = profile ? (profile.score || 0) : 0;
-        if (s >= 7) return HIGH_SCORE_COLOR;
-        if (s >= 4) return MID_SCORE_COLOR;
+        const ts = themeScoreByIso.get(iso);
+        if (ts != null) {
+          if (ts >= 20) return THEME_HIGH_COLOR;
+          if (ts >= 10) return THEME_MID_COLOR;
+          return THEME_DIM_COLOR;
+        }
+        if (recentIsos.has(iso)) return RECENT_COLOR;
         return BASE_COLOR;
       }
 
