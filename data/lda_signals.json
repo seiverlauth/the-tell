@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-04T22:40:22.629251+00:00",
+  "generated_at": "2026-04-06T22:49:16.635565+00:00",
   "sources": [
     "lda"
   ],
@@ -7767,6 +7767,77 @@
         "DEF"
       ],
       "url": "https://lda.gov/filings/public/filing/64c91ff4-290d-48c9-b191-8d3a3113febe/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "5fc7ce6a-dccb-49f3-8aca-83e9286f4b7c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-06",
+      "title": "Science/Technology, Finance \u2014 The Fintech Accord via Whitmer & Worrall, Llc",
+      "value_usd": null,
+      "description": "Issues related to the financial technology and digital asset industries.",
+      "lobbying_firm": "Whitmer & Worrall, Llc",
+      "issue_codes": [
+        "FIN",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/5fc7ce6a-dccb-49f3-8aca-83e9286f4b7c/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "1d54a128-5de1-44bd-93ac-5dc0aadf9eca",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-06",
+      "title": "Energy, Science/Technology, Environment \u2014 Quantum Hpc via Womble Bond Dickinson Us Llp",
+      "value_usd": null,
+      "description": "Increase awareness of solutions for powering advanced computing infrastructure while minimizing externalities for commun\u2026",
+      "lobbying_firm": "Womble Bond Dickinson Us Llp",
+      "issue_codes": [
+        "ENG",
+        "ENV",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/1d54a128-5de1-44bd-93ac-5dc0aadf9eca/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "2f7af727-4e1b-4998-9ace-01300cd40f74",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-06",
+      "title": "Energy \u2014 Treaty Oak Clean Energy, Llc via Cornerstone Government Affairs, Inc.",
+      "value_usd": null,
+      "description": "Monitoring and informing federal policies to permit and build solar projects in the Southeast.",
+      "lobbying_firm": "Cornerstone Government Affairs, Inc.",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/2f7af727-4e1b-4998-9ace-01300cd40f74/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "6af54a48-7238-4158-973b-07f7badc1179",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-06",
+      "title": "Energy, Agriculture, Budget \u2014 Fund For A Better Future, Inc. via Cornerstone Government Affairs, Inc.",
+      "value_usd": null,
+      "description": "Advocacy to advance shared wildfire policy interests such as resilience, land management practices, and technological in\u2026",
+      "lobbying_firm": "Cornerstone Government Affairs, Inc.",
+      "issue_codes": [
+        "AGR",
+        "BUD",
+        "ENG",
+        "ENV",
+        "NAT"
+      ],
+      "url": "https://lda.gov/filings/public/filing/6af54a48-7238-4158-973b-07f7badc1179/print/",
       "raw_score": null,
       "weight": 1.0
     }

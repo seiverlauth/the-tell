@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-04T22:40:15.942510+00:00",
+  "generated_at": "2026-04-06T22:49:15.526682+00:00",
   "sources": [
     "fara"
   ],
@@ -2485,6 +2485,21 @@
       "raw_score": 10.0,
       "weight": 1.0,
       "page_url": "https://efile.fara.gov/docs/7711-Registration-Statement-20260402-1.pdf"
+    },
+    {
+      "registration_number": 7712,
+      "iso": "EG",
+      "source": "fara",
+      "signal_date": "2026-04-06",
+      "title": "NexusOne Consulting registered to represent Emad El Said Youssef Saad El-Galada through Bolt Capital",
+      "value_usd": null,
+      "description": "Registered to represent Emad El Said Youssef Saad El-Galada through Bolt Capital, LP (EGYPT)",
+      "registrant": "NexusOne Consulting",
+      "principal": "Emad El Said Youssef Saad El-Galada through Bolt Capital, LP",
+      "target_groups": [],
+      "raw_score": 7.0,
+      "weight": 1.0,
+      "page_url": "https://efile.fara.gov/docs/7712-Registration-Statement-20260406-1.pdf"
     }
   ]
 }
