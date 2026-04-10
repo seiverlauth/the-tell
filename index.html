@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HARPY</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -12,7 +11,6 @@
       --bg:             #2a2a2d;
       --bg-surface:     #333336;
       --bg-header:      #232324;
-      --bg-inset:       #252528;
       --border:         #3e3e41;
 
       --text-primary:   #f0ede6;
@@ -22,7 +20,6 @@
       --brass:          #b08d57;
       --brass-hover:    rgba(176,141,87,0.15);
       --brass-subtle:   rgba(176,141,87,0.08);
-      --score-hot:      #c4622d;
 
       --cat-blue:       #3b82f6;
       --cat-emerald:    #10b981;
@@ -73,7 +70,7 @@
     .wordmark {
       font-family: var(--font-mono);
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 400;
       color: var(--text-primary);
       letter-spacing: 0.12em;
     }
@@ -87,7 +84,7 @@
 
     /* ── Outer container ── */
     .outer {
-      max-width: 1040px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 0 28px 80px;
     }
@@ -101,278 +98,132 @@
 
     /* ── Section label ── */
     .section-label {
+      font-family: var(--font-mono);
       font-size: 10px;
-      font-weight: 500;
+      font-weight: 400;
       color: var(--text-tertiary);
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      padding-top: 24px;
-      padding-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      padding-top: 32px;
+      padding-bottom: 10px;
     }
-    .section-label::after {
-      content: '';
-      display: block;
+
+    .section-rule {
       height: 1px;
-      background: var(--brass);
-      width: 48px;
-      opacity: 0.45;
+      background: var(--border);
+      margin-bottom: 0;
     }
 
-    /* ── Zone 1: Two-column above the fold ── */
-    .zone-above-fold {
-      display: flex;
-      gap: 28px;
-      align-items: flex-start;
-    }
-
-    /* ── Notable Signals ── */
-    .notable-col {
-      flex: 0 0 55%;
-      min-width: 0;
-    }
-
-    .notable-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-    }
-
-    .nt-entry {
-      border-left: 3px solid var(--layer-color, var(--border));
-      background: var(--bg-surface);
-      padding: 10px 12px 10px 14px;
-      cursor: pointer;
-      transition: background 80ms;
-      user-select: none;
-    }
-    .nt-entry:hover { background: var(--brass-hover); }
-    .nt-entry.active { background: var(--brass-subtle); border-left-color: var(--brass); }
-
-    .nt-top-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .nt-country {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-primary);
-      letter-spacing: 0.03em;
-    }
-
-    .nt-tier {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 9px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      margin-left: auto;
-    }
-    .nt-bars { display: inline-flex; gap: 2px; }
-    .nt-bar { width: 4px; height: 8px; background: currentColor; opacity: 0.2; }
-    .nt-bar.filled { opacity: 1; }
-
-    .nt-title-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 4px;
-    }
-
-    .nt-src-badge {
-      font-size: 10px;
-      color: var(--layer-color, var(--text-tertiary));
-      letter-spacing: 0.05em;
-      flex-shrink: 0;
-    }
-
-    .nt-title {
-      font-size: 11px;
-      color: var(--text-secondary);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      flex: 1;
-      min-width: 0;
-    }
-    .nt-entry:hover .nt-title { color: var(--text-primary); }
-
-    .nt-value {
-      font-size: 11px;
-      color: var(--text-secondary);
-      white-space: nowrap;
-      flex-shrink: 0;
-      margin-left: auto;
-    }
-
-    /* ── Map ── */
-    .map-col {
-      flex: 0 0 45%;
-      min-width: 0;
-    }
-
-    #map {
-      width: 100%;
-      height: 260px;
-      background: var(--bg);
-    }
-    .leaflet-container { background: var(--bg) !important; }
-    .leaflet-attribution-flag { display: none !important; }
-    .leaflet-overlay-pane svg { shape-rendering: crispEdges; }
-
-    /* ── Zone 2: Narratives ── */
+    /* ── Narratives ── */
     #narratives-section {
-      margin-top: 48px;
+      display: none;
     }
 
-    .narratives-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-    .narratives-grid.two-col {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .theme-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
-      border-top: 2px solid var(--brass);
-      border-radius: 3px;
-      padding: 18px 20px;
+    .narrative-block {
+      padding: 40px 0 40px 16px;
+      border-bottom: 1px solid var(--border);
       cursor: pointer;
-      transition: background 80ms;
       user-select: none;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .theme-card:hover { background: var(--brass-subtle); }
-    .theme-card.active { background: var(--brass-subtle); }
-
-    .tc-top-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      transition: border-left-color 80ms;
+      border-left: 2px solid transparent;
     }
 
-    .tc-badge {
-      font-size: 9px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 2px 5px;
-      border: 1px solid currentColor;
-      border-radius: 2px;
-      flex-shrink: 0;
+    .narrative-block:last-child {
+      border-bottom: none;
+    }
+
+    .narrative-block.active {
+      border-left: 2px solid var(--brass);
+      padding-left: 14px;
+    }
+
+    .narrative-block:not(.active) {
+      padding-left: 16px;
+    }
+
+    .narrative-fallback {
       font-family: var(--font-mono);
-    }
-
-    .tc-z-badge {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      padding: 1px 4px;
-      border: 1px solid currentColor;
-      border-radius: 2px;
-      white-space: nowrap;
-      flex-shrink: 0;
-      font-family: var(--font-mono);
-    }
-
-    .tc-score {
-      font-size: 10px;
+      font-size: 13px;
       color: var(--text-tertiary);
-      margin-left: auto;
-      letter-spacing: 0.03em;
-      white-space: nowrap;
-      font-family: var(--font-mono);
+      line-height: 1.6;
     }
 
-    .tc-headline {
+    .narrative-headline {
       font-family: var(--font-serif);
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 400;
       color: var(--text-primary);
-      line-height: 1.35;
+      line-height: 1.3;
     }
 
-    .tc-attribution {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      flex-wrap: wrap;
-    }
-
-    .tc-attr-text {
-      font-size: 11px;
-      color: var(--text-tertiary);
-      font-family: var(--font-mono);
-    }
-
-    .tc-iso-badge {
-      font-size: 10px;
-      font-weight: 500;
-      padding: 1px 5px;
-      border-radius: 2px;
-      font-family: var(--font-mono);
-    }
-
-    .tc-prose {
+    .narrative-body {
       font-family: var(--font-serif);
       font-size: 14px;
       color: var(--text-secondary);
-      line-height: 1.65;
+      line-height: 1.7;
+      margin-top: 10px;
     }
 
-    .tc-watch {
-      border-top: 1px solid var(--border);
-      padding-top: 10px;
+    .narrative-connections {
+      margin-top: 12px;
     }
 
-    .tc-watch-label {
+    .narrative-connection {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-tertiary);
+      line-height: 1.7;
+    }
+
+    .narrative-connection-dash {
+      color: var(--brass);
+    }
+
+    .narrative-dig {
+      margin-top: 12px;
+    }
+
+    .narrative-dig-label {
+      font-family: var(--font-mono);
       font-size: 10px;
       color: var(--text-tertiary);
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 5px;
-      font-family: var(--font-mono);
+      display: inline;
     }
 
-    .tc-watch-item {
-      font-size: 11px;
+    .narrative-dig-items {
+      display: inline;
+      margin-left: 6px;
+    }
+
+    .narrative-dig-item {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--brass);
+      cursor: pointer;
+      transition: color 80ms;
+    }
+
+    .narrative-dig-item:hover {
+      color: var(--text-primary);
+    }
+
+    .narrative-dig-item.copied {
+      color: var(--text-primary);
+    }
+
+    .narrative-dig-sep {
+      font-family: var(--font-mono);
+      font-size: 12px;
       color: var(--text-tertiary);
-      font-family: var(--font-mono);
-      line-height: 1.55;
-      padding-left: 14px;
-      position: relative;
-    }
-    .tc-watch-item::before {
-      content: '\2014';
-      position: absolute;
-      left: 0;
-      opacity: 0.4;
+      margin: 0 4px;
     }
 
-    /* ── Zone 3: Feed ── */
+    /* ── Feed section ── */
     #feed-section {
-      margin-top: 48px;
-    }
-
-    .feed-section-label {
-      font-size: 10px;
-      font-weight: 500;
-      color: var(--text-tertiary);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 24px 0 8px;
-      border-bottom: 1px solid var(--border);
+      margin-top: 64px;
     }
 
     /* ── Feed header (active filter) ── */
@@ -483,12 +334,11 @@
     /* ── Feed item ── */
     .item {
       border-bottom: 1px solid rgba(62,62,65,0.4);
-      border-left: 3px solid transparent;
+      border-left: 3px solid var(--layer-color, var(--border));
       transition: background 80ms, border-left-color 80ms;
     }
     .item:hover {
       background: var(--brass-subtle);
-      border-left-color: rgba(176,141,87,0.25);
     }
     .item.expanded {
       background: var(--bg-surface);
@@ -575,7 +425,7 @@
     #tooltip {
       position: fixed;
       display: none;
-      background: var(--bg-inset);
+      background: var(--bg-surface);
       border: 1px solid var(--border);
       color: var(--text-primary);
       font-size: 12px;
@@ -603,23 +453,17 @@
   <div class="outer">
     <div id="status">fetching signals…</div>
 
-    <!-- Zone 1: Notable Signals + Map -->
-    <div class="zone-above-fold">
-      <div class="notable-col">
-        <div class="section-label">notable signals</div>
-        <div id="notable-list" class="notable-list"></div>
-      </div>
-      <div class="map-col">
-        <div class="section-label">activity map</div>
-        <div id="map" style="display:none"></div>
-      </div>
+    <!-- Zone 1: Narratives -->
+    <div id="narratives-section">
+      <div class="section-label">narratives</div>
+      <div class="section-rule"></div>
+      <div id="narratives-list"></div>
     </div>
 
-    <!-- Zone 2: Narratives -->
-    <div id="narratives-section" style="display:none"></div>
-
-    <!-- Zone 3: Feed -->
+    <!-- Zone 2: Feed -->
     <div id="feed-section">
+      <div class="section-label">record</div>
+      <div class="section-rule"></div>
       <div id="feed-hdr" style="display:none">
         <span id="feed-label"></span>
         <span id="feed-toggle-btn"></span>
@@ -654,12 +498,6 @@
       velocity_anomaly:    '#f87171',
       layer_sequence:      '#2dd4bf',
       cftc_overlap:        '#fbbf24',
-    };
-    const THEME_TYPE_LABELS = {
-      actor_concentration: 'ACTOR',
-      velocity_anomaly:    'VELOCITY',
-      layer_sequence:      'SEQUENCE',
-      cftc_overlap:        'CFTC',
     };
 
     const SOURCE_LABELS = {
@@ -737,14 +575,10 @@
         .replace(/"/g, '&quot;');
     }
 
-    // ── ISO → profile map ────────────────────────────────────────────────────
-    let isoProfile = {};
-
     // ── Tooltip ──────────────────────────────────────────────────────────────
     const tooltipEl = document.getElementById('tooltip');
 
     document.addEventListener('mouseover', e => {
-      if (e.target.closest('#map')) return;
       const target = e.target.closest('[data-tooltip]');
       if (!target) { tooltipEl.style.display = 'none'; return; }
       const [line1, ...rest] = target.dataset.tooltip.split('\n');
@@ -755,7 +589,6 @@
     });
 
     document.addEventListener('mouseout', e => {
-      if (e.target.closest('#map')) return;
       if (e.target.closest('[data-tooltip]')) tooltipEl.style.display = 'none';
     });
 
@@ -765,69 +598,6 @@
       tooltipEl.style.left = Math.min(x, window.innerWidth  - tooltipEl.offsetWidth  - 8) + 'px';
       tooltipEl.style.top  = Math.min(y, window.innerHeight - tooltipEl.offsetHeight - 8) + 'px';
     });
-
-    // ── Signal tier ──────────────────────────────────────────────────────────
-    function signalTier(score) {
-      if (score >= 3.5) return { label: 'CRITICAL', level: 4, color: '#c4622d' };
-      if (score >= 2.0) return { label: 'HIGH',     level: 3, color: '#c4622d' };
-      if (score >= 1.0) return { label: 'MODERATE', level: 2, color: '#6b6966' };
-      return                    { label: 'WATCH',   level: 1, color: '#6b6966' };
-    }
-
-    // ── Recency decay ────────────────────────────────────────────────────────
-    function recencyDecay(signalDate) {
-      if (!signalDate) return 0;
-      const ageDays = Math.round((Date.now() - new Date(signalDate).getTime()) / 86400000);
-      if (ageDays <=  7) return 1.0;
-      if (ageDays <= 14) return 0.8;
-      if (ageDays <= 30) return 0.5;
-      return 0;
-    }
-
-    // ── computeNotableSignals ────────────────────────────────────────────────
-    function computeNotableSignals(signals) {
-      const w30 = isoOffset(30);
-      const scored = [];
-      for (const sig of signals) {
-        if (!sig.iso || sig.iso === 'XX') continue;
-        if ((sig.signal_date || '') < w30) continue;
-        const decay = recencyDecay(sig.signal_date);
-        if (!decay) continue;
-        const quality = sig.quality || 0;
-        if (quality < 0.7) continue;
-        const structScore = sig.profile ? (sig.profile.score || 1) : 1;
-        const score = quality * (sig.dollar_mod || 1) * Math.log2(structScore + 1) * decay;
-        scored.push({ sig, score: Math.round(score * 10000) / 10000, structScore });
-      }
-
-      const bestByIso = new Map();
-      for (const entry of scored) {
-        const iso = entry.sig.iso;
-        if (!bestByIso.has(iso) || entry.score > bestByIso.get(iso).score) {
-          bestByIso.set(iso, entry);
-        }
-      }
-
-      const top5 = [...bestByIso.values()]
-        .sort((a, b) => b.score - a.score)
-        .slice(0, 5);
-
-      console.log('=== NOTABLE SIGNALS ===');
-      console.table(top5.map((e, i) => ({
-        rank:        i + 1,
-        iso:         e.sig.iso,
-        score:       e.score,
-        source:      e.sig.source,
-        quality:     e.sig.quality,
-        dollar_mod:  Math.round((e.sig.dollar_mod || 1) * 1000) / 1000,
-        log2_struct: Math.round(Math.log2(e.structScore + 1) * 1000) / 1000,
-        decay:       recencyDecay(e.sig.signal_date),
-        date:        e.sig.signal_date,
-        title:       (e.sig.title || '').slice(0, 55),
-      })));
-
-      return top5;
-    }
 
     // ── sigKey ───────────────────────────────────────────────────────────────
     function sigKey(sig) {
@@ -852,76 +622,8 @@
     let activeFeedSrcs   = new Set(Object.values(LAYER_SRC_MAP).flat().map(([src]) => src));
     let minProfileScore  = 0;
 
-    // ── renderNotable ────────────────────────────────────────────────────────
-    function renderNotable(notable, signals) {
-      const container = document.getElementById('notable-list');
-      if (!notable.length) return;
-      container.innerHTML = '';
-
-      for (const { sig, structScore, score } of notable) {
-        const profile = sig.profile || null;
-        const name    = profile ? profile.name.toUpperCase() : sig.iso;
-        const color   = layerColor(sig.layer);
-        const badge   = sourceShort(sig.source);
-        const valStr  = sig.value_usd ? fmtValue(sig.value_usd) : '';
-        const tier    = signalTier(score);
-
-        const raw = sig.title || '';
-        const src = (sig.source || '').toLowerCase();
-        let title = (src === 'dsca' && raw.includes('\u2014'))
-          ? raw.split('\u2014').slice(1).join('\u2014').trim()
-          : raw;
-        if (title.length > 60) title = title.slice(0, 57) + '\u2026';
-
-        const bars = Array.from({length: 4}, (_, i) =>
-          `<span class="nt-bar${i < tier.level ? ' filled' : ''}"></span>`).join('');
-
-        const entry = document.createElement('div');
-        entry.className = 'nt-entry';
-        entry.dataset.iso = sig.iso;
-        entry.style.setProperty('--layer-color', color);
-
-        entry.innerHTML =
-          `<div class="nt-top-row">` +
-            `<span class="nt-country">${esc(name)}</span>` +
-            `<span class="nt-tier" style="color:${esc(tier.color)}">${esc(tier.label)}<span class="nt-bars">${bars}</span></span>` +
-          `</div>` +
-          `<div class="nt-title-row">` +
-            `<span class="nt-src-badge">${esc(badge)}</span>` +
-            `<span class="nt-title">${esc(title)}</span>` +
-            (valStr ? `<span class="nt-value">${esc(valStr)}</span>` : '') +
-          `</div>`;
-
-        entry.addEventListener('click', () => {
-          themeFilter = null; activeTheme = null;
-          document.querySelectorAll('.theme-card.active').forEach(r => r.classList.remove('active'));
-          if (activeFilter === sig.iso) {
-            activeFilter = null;
-            entry.classList.remove('active');
-          } else {
-            container.querySelectorAll('.nt-entry.active').forEach(r => r.classList.remove('active'));
-            activeFilter = sig.iso;
-            entry.classList.add('active');
-          }
-          syncMapFilter(activeFilter);
-          updateFilterBarBrass();
-          renderFeed(signals);
-          if (activeFilter === sig.iso) {
-            const key = sigKey(sig);
-            const allItems = document.querySelectorAll('.item[data-sig-key]');
-            for (const feedItem of allItems) {
-              if (feedItem.dataset.sigKey === key) {
-                feedItem.classList.add('expanded');
-                feedItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                break;
-              }
-            }
-          }
-        });
-
-        container.appendChild(entry);
-      }
-    }
+    // ── isoProfile map ───────────────────────────────────────────────────────
+    let isoProfile = {};
 
     // ── applyFeedFilters ─────────────────────────────────────────────────────
     function applyFeedFilters(sigs) {
@@ -1015,8 +717,7 @@
       themeIndicator.style.display = 'none';
       themeIndicator.addEventListener('click', () => {
         themeFilter = null; activeTheme = null; activeFilter = null;
-        document.querySelectorAll('.theme-card.active').forEach(r => r.classList.remove('active'));
-        syncMapFilter(null);
+        document.querySelectorAll('.narrative-block.active').forEach(r => r.classList.remove('active'));
         updateFilterBarBrass();
         renderFeed(signals);
       });
@@ -1086,9 +787,7 @@
           activeFilter = null;
           themeFilter  = null;
           activeTheme  = null;
-          document.querySelectorAll('.nt-entry.active').forEach(r => r.classList.remove('active'));
-          document.querySelectorAll('.theme-card.active').forEach(r => r.classList.remove('active'));
-          syncMapFilter(null);
+          document.querySelectorAll('.narrative-block.active').forEach(r => r.classList.remove('active'));
           updateFilterBarBrass();
           renderFeed(signals);
         };
@@ -1215,14 +914,8 @@
         el.querySelector('.item-country').addEventListener('click', e => {
           e.stopPropagation();
           themeFilter = null; activeTheme = null;
-          document.querySelectorAll('.theme-card.active').forEach(r => r.classList.remove('active'));
+          document.querySelectorAll('.narrative-block.active').forEach(r => r.classList.remove('active'));
           activeFilter = activeFilter === sig.iso ? null : sig.iso;
-          document.querySelectorAll('.nt-entry.active').forEach(r => r.classList.remove('active'));
-          if (activeFilter) {
-            const ntRow = document.querySelector(`.nt-entry[data-iso="${activeFilter}"]`);
-            if (ntRow) ntRow.classList.add('active');
-          }
-          syncMapFilter(activeFilter);
           updateFilterBarBrass();
           renderFeed(signals);
         });
@@ -1231,158 +924,125 @@
       return el;
     }
 
-    // ── watchForBullets ──────────────────────────────────────────────────────
-    function watchForBullets(theme) {
-      const countries = (theme.countries || []).filter(c => c && c !== 'XX' && c !== 'US');
-      const countryStr = countries.slice(0, 3).join(', ') || 'this country';
-
-      if (theme.type === 'velocity_anomaly') {
-        const sources = (theme.why || '').match(/([A-Z]+)\xd7\d+/g) || [];
-        const srcStr = sources.length ? sources.map(s => s.split('\xd7')[0]).join('/') : 'activity';
-        return [
-          `Further acceleration in ${srcStr} filings for ${countryStr}`,
-          `New registrations or contract awards outside typical cadence`,
-        ];
-      }
-      if (theme.type === 'actor_concentration') {
-        return [
-          `New registrations from additional firms representing ${countryStr}`,
-          `Expansion of issue scope or principal entities in active filings`,
-        ];
-      }
-      if (theme.type === 'layer_sequence') {
-        return [
-          `Procurement or contract awards following the influence layer activity`,
-          `Escalating dollar values or expanded scope in subsequent filings`,
-        ];
-      }
-      if (theme.type === 'cftc_overlap') {
-        return [
-          `Continued positioning changes in commodity markets tied to ${countryStr}`,
-          `Convergence of financial signals with regulatory or military actions`,
-        ];
-      }
-      return [
-        `Additional filings or actions related to ${countryStr}`,
-        `Cross-layer escalation from current signal baseline`,
-      ];
-    }
-
-    // ── hexToRgb ─────────────────────────────────────────────────────────────
-    function hexToRgb(hex) {
-      const r = parseInt(hex.slice(1,3),16);
-      const g = parseInt(hex.slice(3,5),16);
-      const b = parseInt(hex.slice(5,7),16);
-      return `${r},${g},${b}`;
-    }
-
     // ── renderNarratives ─────────────────────────────────────────────────────
     function renderNarratives(themes, signals) {
       const section = document.getElementById('narratives-section');
+      const list    = document.getElementById('narratives-list');
       if (!themes || !themes.length) return;
 
-      section.innerHTML = '';
+      // Filter to themes with non-null narrative, then take top 10
+      const withNarrative = themes.filter(t => t.narrative != null);
+      const toRender = withNarrative.slice(0, 10);
+
+      if (!toRender.length) return;
+
       section.style.display = '';
+      list.innerHTML = '';
 
-      const labelEl = document.createElement('div');
-      labelEl.className = 'section-label';
-      labelEl.textContent = 'narratives';
-      section.appendChild(labelEl);
+      for (const theme of toRender) {
+        const block = document.createElement('div');
+        block.className = 'narrative-block';
 
-      const grid = document.createElement('div');
-      grid.className = 'narratives-grid' + (themes.length >= 4 ? ' two-col' : '');
-      section.appendChild(grid);
+        const narrative = theme.narrative;
 
-      const maxScore = themes[0].score || 1;
+        if (!narrative || (!narrative.headline && !narrative.body)) {
+          // Fallback: just show title in mono
+          const fallback = document.createElement('div');
+          fallback.className = 'narrative-fallback';
+          fallback.textContent = theme.title || '';
+          block.appendChild(fallback);
+        } else {
+          // Headline
+          if (narrative.headline) {
+            const headline = document.createElement('div');
+            headline.className = 'narrative-headline';
+            headline.textContent = narrative.headline;
+            block.appendChild(headline);
+          }
 
-      for (const theme of themes) {
-        const card = document.createElement('div');
-        card.className = 'theme-card';
+          // Body
+          if (narrative.body) {
+            const body = document.createElement('div');
+            body.className = 'narrative-body';
+            body.textContent = narrative.body;
+            block.appendChild(body);
+          }
 
-        const color = THEME_TYPE_COLORS[theme.type] || '#a0a0b0';
-        const label = THEME_TYPE_LABELS[theme.type] || theme.type.toUpperCase().slice(0, 8);
+          // Connections
+          const connections = Array.isArray(narrative.connections) ? narrative.connections : [];
+          if (connections.length) {
+            const connDiv = document.createElement('div');
+            connDiv.className = 'narrative-connections';
+            for (const conn of connections) {
+              const line = document.createElement('span');
+              line.className = 'narrative-connection';
+              line.innerHTML = `<span class="narrative-connection-dash">— </span>${esc(conn)}`;
+              connDiv.appendChild(line);
+            }
+            block.appendChild(connDiv);
+          }
 
-        const filled = Math.max(1, Math.round((theme.score / maxScore) * 5));
-        const bar    = '\u2588'.repeat(filled) + '\u2591'.repeat(5 - filled);
+          // Dig into
+          const digInto = Array.isArray(narrative.dig_into) ? narrative.dig_into : [];
+          if (digInto.length) {
+            const digDiv = document.createElement('div');
+            digDiv.className = 'narrative-dig';
 
-        let titleText = theme.title;
-        let zBadgeHtml = '';
-        if (theme.type === 'velocity_anomaly') {
-          const zMatch = theme.title.match(/\(([+-]?\d+\.?\d*)\u03c3\)/);
-          if (zMatch) {
-            zBadgeHtml = `<span class="tc-z-badge" style="color:${esc(color)};border-color:${esc(color)}">${esc(zMatch[1])}\u03c3</span>`;
-            titleText = theme.title.replace(/\s*\([+-]?\d+\.?\d*\u03c3\)/, '').trim();
+            const label = document.createElement('span');
+            label.className = 'narrative-dig-label';
+            label.textContent = 'dig into —';
+            digDiv.appendChild(label);
+
+            const itemsSpan = document.createElement('span');
+            itemsSpan.className = 'narrative-dig-items';
+
+            digInto.forEach((item, idx) => {
+              if (idx > 0) {
+                const sep = document.createElement('span');
+                sep.className = 'narrative-dig-sep';
+                sep.textContent = ' · ';
+                itemsSpan.appendChild(sep);
+              }
+              const itemEl = document.createElement('span');
+              itemEl.className = 'narrative-dig-item';
+              itemEl.textContent = item;
+              itemEl.addEventListener('click', e => {
+                e.stopPropagation();
+                navigator.clipboard.writeText(item).then(() => {
+                  itemEl.classList.add('copied');
+                  setTimeout(() => itemEl.classList.remove('copied'), 1000);
+                }).catch(() => {});
+              });
+              itemsSpan.appendChild(itemEl);
+            });
+
+            digDiv.appendChild(itemsSpan);
+            block.appendChild(digDiv);
           }
         }
 
-        const validCountries = (theme.countries || []).filter(c => c && c !== 'XX' && c !== 'US');
-        const sourceNames = (theme.signal_keys || [])
-          .map(k => (k.split(':')[0] || '').toUpperCase())
-          .filter((v, i, a) => v && a.indexOf(v) === i)
-          .slice(0, 4);
-
-        const isoBadges = validCountries.slice(0, 5).map(iso =>
-          `<span class="tc-iso-badge" style="background:rgba(${hexToRgb(color)},0.15);color:${esc(color)}">${esc(iso)}</span>`
-        ).join('');
-
-        const attrParts = [];
-        if (validCountries.length > 5) attrParts.push(`+${validCountries.length - 5} more`);
-        if (sourceNames.length) attrParts.push(sourceNames.join(' \xb7 '));
-
-        const bullets = watchForBullets(theme);
-
-        card.innerHTML =
-          `<div class="tc-top-row">` +
-            `<span class="tc-badge" style="color:${esc(color)};border-color:${esc(color)}">${esc(label)}</span>` +
-            (zBadgeHtml || '') +
-            `<span class="tc-score">${esc(bar)} ${theme.score.toFixed(2)}</span>` +
-          `</div>` +
-          `<div class="tc-headline">${esc(titleText)}</div>` +
-          `<div class="tc-attribution">` +
-            isoBadges +
-            (attrParts.length ? `<span class="tc-attr-text">${esc(attrParts.join(' \xb7 '))}</span>` : '') +
-          `</div>` +
-          `<div class="tc-prose">${esc(theme.why)}</div>` +
-          `<div class="tc-watch">` +
-            `<div class="tc-watch-label">watch for</div>` +
-            bullets.map(b => `<div class="tc-watch-item">${esc(b)}</div>`).join('') +
-          `</div>`;
-
-        card.addEventListener('click', () => {
-          const wasActive = card.classList.contains('active');
-          document.querySelectorAll('.theme-card.active').forEach(r => r.classList.remove('active'));
-          document.querySelectorAll('.nt-entry.active').forEach(r => r.classList.remove('active'));
+        // Click handler: toggle theme filter
+        block.addEventListener('click', () => {
+          const wasActive = block.classList.contains('active');
+          document.querySelectorAll('.narrative-block.active').forEach(r => r.classList.remove('active'));
 
           if (wasActive) {
             themeFilter  = null;
             activeTheme  = null;
             activeFilter = null;
-            syncMapFilter(null);
           } else {
-            card.classList.add('active');
+            block.classList.add('active');
             const validIsos = (theme.countries || []).filter(iso => iso && iso !== 'XX' && iso !== 'US');
             activeTheme  = theme;
             activeFilter = null;
-
-            if (theme.type === 'cftc_overlap') {
-              themeFilter = validIsos.length ? new Set(validIsos) : null;
-              const commodity = (theme.signal_keys && theme.signal_keys[0] || '').replace(/^cftc:/, '');
-              const cftcSig   = signals.find(s => s.source === 'cftc' && s.commodity === commodity);
-              const fullBasket = new Set(
-                ((cftcSig && cftcSig.basket) || validIsos).filter(iso => iso && iso !== 'US')
-              );
-              syncMapFilter(null, fullBasket);
-            } else {
-              themeFilter = validIsos.length ? new Set(validIsos) : null;
-              syncMapFilter(validIsos.length === 1 ? validIsos[0] : null);
-            }
+            themeFilter  = validIsos.length ? new Set(validIsos) : null;
           }
 
           updateFilterBarBrass();
           renderFeed(signals);
         });
 
-        grid.appendChild(card);
+        list.appendChild(block);
       }
     }
 
@@ -1418,227 +1078,12 @@
         }
       }
 
-      const notable = computeNotableSignals(signals);
-      renderNotable(notable, signals);
       renderNarratives(data.themes || [], signals);
       initFilterBar(signals);
       renderFeed(signals);
-      initMap(notable, signals, data.themes || []);
     }
 
     main();
-  </script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/topojson-client@3/dist/topojson-client.min.js"></script>
-  <script>
-    // ── ISO 3166-1 numeric → alpha-2 ─────────────────────────────────────────
-    const ISO_NUM_TO_A2 = {
-      4:'AF',8:'AL',12:'DZ',16:'AS',20:'AD',24:'AO',28:'AG',32:'AR',
-      36:'AU',40:'AT',31:'AZ',44:'BS',48:'BH',50:'BD',52:'BB',112:'BY',
-      56:'BE',84:'BZ',204:'BJ',64:'BT',68:'BO',70:'BA',72:'BW',76:'BR',
-      96:'BN',100:'BG',854:'BF',108:'BI',132:'CV',116:'KH',120:'CM',
-      124:'CA',140:'CF',148:'TD',152:'CL',156:'CN',158:'TW',170:'CO',
-      174:'KM',180:'CD',178:'CG',188:'CR',191:'HR',192:'CU',196:'CY',
-      203:'CZ',208:'DK',262:'DJ',212:'DM',214:'DO',218:'EC',818:'EG',
-      222:'SV',226:'GQ',232:'ER',233:'EE',748:'SZ',231:'ET',242:'FJ',
-      246:'FI',250:'FR',266:'GA',270:'GM',268:'GE',276:'DE',288:'GH',
-      300:'GR',320:'GT',324:'GN',624:'GW',328:'GY',332:'HT',340:'HN',
-      344:'HK',348:'HU',352:'IS',356:'IN',360:'ID',364:'IR',368:'IQ',
-      372:'IE',376:'IL',380:'IT',388:'JM',392:'JP',400:'JO',398:'KZ',
-      404:'KE',296:'KI',408:'KP',410:'KR',414:'KW',417:'KG',418:'LA',
-      428:'LV',422:'LB',426:'LS',430:'LR',434:'LY',438:'LI',440:'LT',
-      442:'LU',446:'MO',450:'MG',454:'MW',458:'MY',462:'MV',466:'ML',
-      470:'MT',584:'MH',478:'MR',480:'MU',484:'MX',583:'FM',498:'MD',
-      492:'MC',496:'MN',499:'ME',504:'MA',508:'MZ',516:'NA',520:'NR',
-      524:'NP',528:'NL',540:'NC',554:'NZ',558:'NI',562:'NE',566:'NG',
-      807:'MK',578:'NO',512:'OM',586:'PK',585:'PW',275:'PS',591:'PA',
-      598:'PG',600:'PY',604:'PE',608:'PH',616:'PL',620:'PT',630:'PR',
-      634:'QA',642:'RO',643:'RU',646:'RW',659:'KN',662:'LC',670:'VC',
-      882:'WS',674:'SM',678:'ST',682:'SA',686:'SN',688:'RS',690:'SC',
-      694:'SL',702:'SG',703:'SK',705:'SI',90:'SB',706:'SO',710:'ZA',
-      728:'SS',724:'ES',144:'LK',729:'SD',740:'SR',752:'SE',756:'CH',
-      760:'SY',762:'TJ',834:'TZ',764:'TH',626:'TL',768:'TG',776:'TO',
-      780:'TT',788:'TN',792:'TR',795:'TM',798:'TV',800:'UG',804:'UA',
-      784:'AE',826:'GB',840:'US',858:'UY',860:'UZ',548:'VU',862:'VE',
-      704:'VN',887:'YE',894:'ZM',716:'ZW',51:'AM',535:'BQ',74:'BV',
-      86:'IO',136:'KY',162:'CX',166:'CC',184:'CK',238:'FK',234:'FO',
-      254:'GF',258:'PF',260:'TF',292:'GI',304:'GL',308:'GD',312:'GP',
-      316:'GU',336:'VA',334:'HM',833:'IM',832:'JE',831:'GG',175:'YT',
-      500:'MS',570:'NU',574:'NF',580:'MP',638:'RE',652:'BL',654:'SH',
-      663:'MF',531:'CW',534:'SX',10:'AQ',
-    };
-
-    // ── World map ─────────────────────────────────────────────────────────────
-    let leafletMap = null;
-    let syncMapFilter = () => {};
-
-    async function initMap(notable, signals, themes) {
-      const mapEl = document.getElementById('map');
-      mapEl.style.display = '';
-
-      const themeScoreByIso = new Map();
-      for (const theme of themes) {
-        for (const iso of (theme.countries || [])) {
-          if (!iso || iso === 'XX' || iso === 'US') continue;
-          if ((theme.score || 0) > (themeScoreByIso.get(iso) || 0))
-            themeScoreByIso.set(iso, theme.score);
-        }
-      }
-      const w30recent = isoOffset(30);
-      const recentIsos = new Set();
-      for (const sig of signals) {
-        if (!sig.iso || sig.iso === 'XX' || sig.iso === 'US') continue;
-        if ((sig.signal_date || '') >= w30recent && !themeScoreByIso.has(sig.iso))
-          recentIsos.add(sig.iso);
-      }
-
-      let world;
-      try {
-        const r = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
-        world = await r.json();
-      } catch (e) {
-        mapEl.style.display = 'none';
-        return;
-      }
-
-      const countries = topojson.feature(world, world.objects.countries);
-
-      function unwrapRing(ring) {
-        if (!ring.length) return ring;
-        const out = [[ring[0][0], ring[0][1]]];
-        for (let i = 1; i < ring.length; i++) {
-          let lng = ring[i][0], lat = ring[i][1];
-          const prev = out[i - 1][0];
-          while (lng - prev >  180) lng -= 360;
-          while (lng - prev < -180) lng += 360;
-          out.push([lng, lat]);
-        }
-        return out;
-      }
-      function unwrapGeometry(geom) {
-        if (!geom) return geom;
-        if (geom.type === 'Polygon')
-          return { ...geom, coordinates: geom.coordinates.map(unwrapRing) };
-        if (geom.type === 'MultiPolygon')
-          return { ...geom, coordinates: geom.coordinates.map(poly => poly.map(unwrapRing)) };
-        return geom;
-      }
-      const fixedCountries = {
-        ...countries,
-        features: countries.features.map(f => ({ ...f, geometry: unwrapGeometry(f.geometry) })),
-      };
-
-      if (leafletMap) { leafletMap.remove(); leafletMap = null; }
-
-      leafletMap = L.map('map', {
-        zoomControl: false, attributionControl: false,
-        scrollWheelZoom: true,
-      });
-
-      const BASE_COLOR       = '#3e3e3e';
-      const RECENT_COLOR     = '#4e3e3e';
-      const THEME_DIM_COLOR  = '#6b1a1a';
-      const THEME_MID_COLOR  = '#8c2020';
-      const THEME_HIGH_COLOR = '#b02828';
-      const BASKET_COLOR     = '#3e4a3e';
-      const HOVER_COLOR      = '#b8b8b8';
-      const ACTIVE_COLOR     = '#d43030';
-      const BORDER_COLOR     = '#252525';
-
-      const isoToLayer = new Map();
-
-      function baseColorFor(iso) {
-        const ts = themeScoreByIso.get(iso);
-        if (ts != null) {
-          if (ts >= 20) return THEME_HIGH_COLOR;
-          if (ts >= 10) return THEME_MID_COLOR;
-          return THEME_DIM_COLOR;
-        }
-        if (recentIsos.has(iso)) return RECENT_COLOR;
-        return BASE_COLOR;
-      }
-
-      L.geoJSON(fixedCountries, {
-        renderer: L.svg({ padding: 0.5 }),
-        style: f => ({
-          fillColor:   baseColorFor(ISO_NUM_TO_A2[+f.id]),
-          fillOpacity: 1,
-          color:       BORDER_COLOR,
-          weight:      1.5,
-        }),
-        onEachFeature: (f, layer) => {
-          const iso = ISO_NUM_TO_A2[+f.id];
-          if (iso) isoToLayer.set(iso, layer);
-
-          layer.on('mouseover', e => {
-            layer.setStyle({ fillColor: HOVER_COLOR });
-            const profile = iso ? (isoProfile[iso] || null) : null;
-            const name = profile ? (profile.name || iso) : iso;
-            let ttHtml = `<div class="tt-score">${esc(name)}</div>`;
-            if (profile) {
-              if (profile.score != null)
-                ttHtml += `<div class="tt-rationale">${esc('Structural interest: ' + profile.score + '/10')}</div>`;
-              if (profile.rationale)
-                ttHtml += `<div class="tt-rationale">${esc(profile.rationale)}</div>`;
-            }
-            tooltipEl.innerHTML = ttHtml;
-            tooltipEl.style.display = 'block';
-            const me = e.originalEvent;
-            tooltipEl.style.left = Math.min(me.clientX + 14, window.innerWidth  - tooltipEl.offsetWidth  - 8) + 'px';
-            tooltipEl.style.top  = Math.min(me.clientY + 14, window.innerHeight - tooltipEl.offsetHeight - 8) + 'px';
-          });
-
-          layer.on('mousemove', e => {
-            if (tooltipEl.style.display !== 'block') return;
-            const me = e.originalEvent;
-            tooltipEl.style.left = Math.min(me.clientX + 14, window.innerWidth  - tooltipEl.offsetWidth  - 8) + 'px';
-            tooltipEl.style.top  = Math.min(me.clientY + 14, window.innerHeight - tooltipEl.offsetHeight - 8) + 'px';
-          });
-
-          layer.on('mouseout', () => {
-            layer.setStyle({ fillColor: baseColorFor(iso) });
-            tooltipEl.style.display = 'none';
-          });
-
-          layer.on('click', () => {
-            if (!iso) return;
-            themeFilter = null; activeTheme = null;
-            document.querySelectorAll('.theme-card.active').forEach(r => r.classList.remove('active'));
-            activeFilter = activeFilter === iso ? null : iso;
-            document.querySelectorAll('.nt-entry.active').forEach(r => r.classList.remove('active'));
-            if (activeFilter) {
-              const ntRow = document.querySelector(`.nt-entry[data-iso="${activeFilter}"]`);
-              if (ntRow) ntRow.classList.add('active');
-            }
-            syncMapFilter(activeFilter);
-            updateFilterBarBrass();
-            renderFeed(signals);
-          });
-        },
-      }).addTo(leafletMap);
-
-      leafletMap.invalidateSize();
-      leafletMap.setView([25, 10], 1);
-
-      syncMapFilter = function(activeIso, basketHighlight) {
-        for (const [layerIso, lyr] of isoToLayer) {
-          const isActive = activeIso && layerIso === activeIso;
-          const inBasket = basketHighlight && basketHighlight.has(layerIso);
-          let color;
-          if (isActive)      color = ACTIVE_COLOR;
-          else if (inBasket) color = BASKET_COLOR;
-          else               color = baseColorFor(layerIso);
-          lyr.setStyle({ fillColor: color });
-        }
-        if (activeIso) {
-          const lyr = isoToLayer.get(activeIso);
-          if (lyr) leafletMap.fitBounds(lyr.getBounds(), { padding: [30, 30] });
-        } else {
-          leafletMap.invalidateSize();
-          leafletMap.setView([25, 10], 1);
-        }
-      };
-    }
   </script>
 </body>
 </html>
