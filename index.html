@@ -9,22 +9,49 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:      #363639;
-      --hdr:     #232324;
-      --sep:     #3a3a3c;
-      --text:    #f5f5f7;
-      --muted:   #98989f;
-      --accent:  #f5f5f7;
-      --mono:    ui-monospace, 'SF Mono', 'Consolas', 'Monaco', monospace;
+      --bg:             #2a2a2d;
+      --bg-surface:     #333336;
+      --bg-header:      #232324;
+      --bg-inset:       #252528;
+      --border:         #3e3e41;
+
+      --text-primary:   #f0ede6;
+      --text-secondary: #a8a5a0;
+      --text-tertiary:  #6b6966;
+
+      --brass:          #b08d57;
+      --brass-hover:    rgba(176,141,87,0.15);
+      --brass-subtle:   rgba(176,141,87,0.08);
+      --score-hot:      #c4622d;
+
+      --cat-blue:       #3b82f6;
+      --cat-emerald:    #10b981;
+      --cat-purple:     #a855f7;
+      --cat-cyan:       #06b6d4;
+      --cat-orange:     #f97316;
+
+      --font-mono:  'Berkeley Mono', 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+      --font-serif: 'Tiempos Text', 'Georgia', 'Times New Roman', serif;
     }
 
     html, body {
       background: var(--bg);
-      color: var(--text);
-      font-family: var(--mono);
+      color: var(--text-primary);
+      font-family: var(--font-mono);
       font-size: 13px;
       line-height: 1.6;
       min-height: 100vh;
+    }
+
+    /* Subtle paper-grain noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9998;
+      opacity: 0.02;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
     }
 
     a { color: inherit; text-decoration: none; }
@@ -32,279 +59,357 @@
 
     /* ── Header ── */
     header {
-      background: var(--hdr);
-      border-bottom: 1px solid var(--sep);
+      background: var(--bg-header);
+      border-bottom: 1px solid var(--border);
       display: flex;
-      align-items: baseline;
-      gap: 10px 14px;
-      flex-wrap: wrap;
-      padding: 14px 28px;
+      align-items: center;
+      padding: 0 28px;
+      height: 44px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    header h1 {
-      font-size: 18px;
-      font-weight: normal;
-      color: var(--accent);
-      letter-spacing: 0.02em;
-      flex-shrink: 0;
+    .wordmark {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+      letter-spacing: 0.12em;
     }
 
-    header #updated {
-      font-size: 12px;
-      color: var(--muted);
+    #updated {
+      font-size: 11px;
+      color: var(--text-tertiary);
       margin-left: auto;
       white-space: nowrap;
     }
 
-    /* ── Outer ── */
+    /* ── Outer container ── */
     .outer {
-      max-width: 960px;
+      max-width: 1040px;
       margin: 0 auto;
       padding: 0 28px 80px;
     }
 
     /* ── Status ── */
     #status {
-      color: var(--muted);
+      color: var(--text-secondary);
       font-size: 13px;
       padding: 24px 0;
     }
-    #status.error { color: var(--muted); }
 
-    /* ── Section header ── */
-    .section-hdr {
+    /* ── Section label ── */
+    .section-label {
       font-size: 10px;
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: 0.12em;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      padding: 20px 0 7px;
-      border-bottom: 1px solid var(--sep);
+      padding-top: 24px;
+      padding-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-label::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background: var(--brass);
+      width: 48px;
+      opacity: 0.45;
     }
 
-    /* ── Top row: map + clusters side by side ── */
-    .top-row {
+    /* ── Zone 1: Two-column above the fold ── */
+    .zone-above-fold {
       display: flex;
-      gap: 16px;
-      margin-top: 16px;
+      gap: 28px;
       align-items: flex-start;
     }
 
-    /* ── Map ── */
-    #map {
+    /* ── Notable Signals ── */
+    .notable-col {
       flex: 0 0 55%;
-      height: 100%;
-      min-height: 280px;
+      min-width: 0;
+    }
+
+    .notable-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .nt-entry {
+      border-left: 3px solid var(--layer-color, var(--border));
+      background: var(--bg-surface);
+      padding: 10px 12px 10px 14px;
+      cursor: pointer;
+      transition: background 80ms;
+      user-select: none;
+    }
+    .nt-entry:hover { background: var(--brass-hover); }
+    .nt-entry.active { background: var(--brass-subtle); border-left-color: var(--brass); }
+
+    .nt-top-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nt-country {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      letter-spacing: 0.03em;
+    }
+
+    .nt-tier {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin-left: auto;
+    }
+    .nt-bars { display: inline-flex; gap: 2px; }
+    .nt-bar { width: 4px; height: 8px; background: currentColor; opacity: 0.2; }
+    .nt-bar.filled { opacity: 1; }
+
+    .nt-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .nt-src-badge {
+      font-size: 10px;
+      color: var(--layer-color, var(--text-tertiary));
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+
+    .nt-title {
+      font-size: 11px;
+      color: var(--text-secondary);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1;
+      min-width: 0;
+    }
+    .nt-entry:hover .nt-title { color: var(--text-primary); }
+
+    .nt-value {
+      font-size: 11px;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+
+    /* ── Map ── */
+    .map-col {
+      flex: 0 0 45%;
+      min-width: 0;
+    }
+
+    #map {
+      width: 100%;
+      height: 260px;
       background: var(--bg);
     }
     .leaflet-container { background: var(--bg) !important; }
     .leaflet-attribution-flag { display: none !important; }
     .leaflet-overlay-pane svg { shape-rendering: crispEdges; }
 
-    /* ── Clusters ── */
-    #clusters-wrap {
-      flex: 1;
-      min-width: 0;
-      margin-bottom: 0;
+    /* ── Zone 2: Narratives ── */
+    #narratives-section {
+      margin-top: 48px;
     }
 
-    .cluster-entry {
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(58,58,60,0.5);
+    .narratives-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .narratives-grid.two-col {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .theme-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--brass);
+      border-radius: 3px;
+      padding: 18px 20px;
       cursor: pointer;
-      transition: background 0.08s;
+      transition: background 80ms;
       user-select: none;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
-    .cluster-entry:hover  { background: rgba(255,255,255,0.025); }
-    .cluster-entry.active { background: rgba(255,255,255,0.04); }
+    .theme-card:hover { background: var(--brass-subtle); }
+    .theme-card.active { background: var(--brass-subtle); }
 
-    .cl-header { display: flex; align-items: baseline; gap: 8px; }
-    .cl-name {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: 0.03em;
-    }
-    .cl-layers { margin-top: 4px; }
-    .cl-layer {
-      font-size: 11px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-    .cluster-entry:hover .cl-layer,
-    .cluster-entry.active .cl-layer { color: var(--text); }
-
-    .cl-factors {
-      margin-top: 3px;
-      font-size: 10px;
-      color: var(--muted);
-      opacity: 0.5;
-      letter-spacing: 0.02em;
-    }
-    .cluster-entry:hover .cl-factors,
-    .cluster-entry.active .cl-factors { opacity: 0.8; }
-
-    /* ── Zone labels ── */
-    .zone-label {
-      font-size: 10px;
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 0 0 5px;
-      border-bottom: 1px solid var(--sep);
-    }
-    .zone-label.zone-sep { padding-top: 20px; }
-    .zone-label { display: flex; align-items: center; gap: 5px; }
-    .zone-tip {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 13px; height: 13px; border-radius: 50%;
-      border: 1px solid var(--muted); color: var(--muted);
-      font-size: 9px; font-weight: 700; letter-spacing: 0;
-      text-transform: none; cursor: default; flex-shrink: 0;
-      position: relative;
-    }
-    .zone-tip:hover::after {
-      content: attr(data-tip);
-      position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
-      background: #1a1a2a; border: 1px solid var(--sep);
-      color: var(--text); font-size: 11px; font-weight: 400;
-      letter-spacing: 0; text-transform: none;
-      padding: 7px 10px; width: 220px; line-height: 1.5;
-      white-space: normal; z-index: 9999; pointer-events: none;
-    }
-    .zone-empty {
-      font-size: 11px;
-      color: var(--muted);
-      opacity: 0.4;
-      padding: 8px 0 10px;
-      border-bottom: 1px solid rgba(58,58,60,0.5);
-    }
-
-    /* ── Notable signal entries ── */
-    .nt-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.04em; }
-    .nt-value { margin-left: auto; font-size: 11px; color: var(--text); white-space: nowrap; }
-    .nt-title { font-size: 11px; color: var(--muted); line-height: 1.5; margin-top: 2px; }
-    .cluster-entry:hover .nt-title,
-    .cluster-entry.active .nt-title { color: var(--text); }
-
-    /* ── Month header ── */
-    .month-header {
-      font-size: 10px;
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 16px 0 5px;
-      border-bottom: 1px solid var(--sep);
-    }
-
-    /* ── Feed item — single Finder-style row ── */
-    .item {
-      border-bottom: 1px solid rgba(58,58,60,0.4);
-    }
-    .item:hover { background: rgba(255,255,255,0.02); }
-
-    .item-row {
+    .tc-top-row {
       display: flex;
       align-items: center;
-      padding: 4px 0;
-      gap: 0;
-      min-width: 0;
+      gap: 8px;
+    }
+
+    .tc-badge {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 5px;
+      border: 1px solid currentColor;
+      border-radius: 2px;
+      flex-shrink: 0;
+      font-family: var(--font-mono);
+    }
+
+    .tc-z-badge {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      padding: 1px 4px;
+      border: 1px solid currentColor;
+      border-radius: 2px;
       white-space: nowrap;
-      cursor: pointer;
-    }
-
-    .item-country {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--muted);
-      cursor: pointer;
       flex-shrink: 0;
+      font-family: var(--font-mono);
     }
-    .item-country:hover,
-    .item-country.active-filter { color: var(--text); }
 
-    .item-country-unresolved {
+    .tc-score {
+      font-size: 10px;
+      color: var(--text-tertiary);
+      margin-left: auto;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+      font-family: var(--font-mono);
+    }
+
+    .tc-headline {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-primary);
+      line-height: 1.35;
+    }
+
+    .tc-attribution {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .tc-attr-text {
       font-size: 11px;
-      color: var(--muted);
-      opacity: 0.45;
-      flex-shrink: 0;
-      cursor: default;
-      font-style: italic;
+      color: var(--text-tertiary);
+      font-family: var(--font-mono);
     }
 
-    .item-sep { color: var(--sep); user-select: none; padding: 0 5px; flex-shrink: 0; }
-
-    .item-title {
-      flex: 1;
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      color: var(--text);
-      font-size: 12px;
-      padding-right: 16px;
+    .tc-iso-badge {
+      font-size: 10px;
+      font-weight: 500;
+      padding: 1px 5px;
+      border-radius: 2px;
+      font-family: var(--font-mono);
     }
 
-    .item-src {
-      flex-shrink: 0;
-      color: var(--muted);
+    .tc-prose {
+      font-family: var(--font-serif);
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .tc-watch {
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+    }
+
+    .tc-watch-label {
+      font-size: 10px;
+      color: var(--text-tertiary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      font-family: var(--font-mono);
+    }
+
+    .tc-watch-item {
       font-size: 11px;
-      padding-right: 12px;
-      opacity: 0.65;
-    }
-
-    .item-date {
-      flex-shrink: 0;
-      color: var(--muted);
-      font-size: 11px;
-      padding-right: 10px;
-      min-width: 80px;
-      text-align: right;
-    }
-
-    .item-detail {
-      display: none;
-      padding: 2px 0 8px 0;
-      font-size: 11px;
-      color: var(--muted);
+      color: var(--text-tertiary);
+      font-family: var(--font-mono);
       line-height: 1.55;
-      white-space: normal;
+      padding-left: 14px;
+      position: relative;
     }
-    .item.expanded .item-detail { display: block; }
-    .item.expanded .item-src { color: var(--layer-color); opacity: 1; }
-    .item-detail a {
-      color: var(--accent);
-    }
-    .item-detail a:hover { text-decoration: underline; }
-
-    /* ── Tooltip ── */
-    #tooltip {
-      position: fixed;
-      display: none;
-      background: #1c1c1e;
-      border: 1px solid var(--sep);
-      color: var(--text);
-      font-size: 12px;
-      line-height: 1.55;
-      padding: 8px 12px;
-      max-width: 300px;
-      pointer-events: none;
-      z-index: 9999;
+    .tc-watch-item::before {
+      content: '\2014';
+      position: absolute;
+      left: 0;
+      opacity: 0.4;
     }
 
-    .tt-score     { font-weight: 600; color: var(--text); margin-bottom: 3px; }
-    .tt-rationale { color: var(--muted); }
+    /* ── Zone 3: Feed ── */
+    #feed-section {
+      margin-top: 48px;
+    }
 
-    #feed-toggle-btn:hover { opacity: 1 !important; }
+    .feed-section-label {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 24px 0 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Feed header (active filter) ── */
+    #feed-hdr {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 16px 0 7px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #feed-toggle-btn {
+      font-size: 10px;
+      color: var(--brass);
+      cursor: pointer;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-left: 8px;
+      opacity: 0.8;
+    }
+    #feed-toggle-btn:hover { opacity: 1; }
 
     /* ── Filter bar ── */
     #filter-bar {
       padding: 8px 0 6px;
-      border-bottom: 1px solid var(--sep);
+      border-bottom: 1px solid var(--border);
       display: flex;
       flex-direction: column;
       gap: 5px;
+    }
+    #filter-bar.has-active {
+      border-bottom-color: rgba(176,141,87,0.4);
     }
 
     .filter-row {
@@ -315,39 +420,39 @@
     }
 
     .filter-pill {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.07em;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      padding: 1px 6px;
-      border: 1px solid var(--sep);
-      color: var(--muted);
+      padding: 2px 7px;
+      border-radius: 2px;
+      border: 1px solid transparent;
+      color: var(--text-tertiary);
       cursor: pointer;
       user-select: none;
       background: transparent;
-      font-family: var(--mono);
+      font-family: var(--font-mono);
+      transition: color 80ms, background 80ms;
     }
-    .filter-pill:hover { color: var(--text); border-color: var(--muted); }
+    .filter-pill:hover { color: var(--text-primary); }
     .filter-pill.active {
-      color: var(--pill-color, var(--text));
-      border-color: var(--pill-color, var(--text));
+      color: var(--pill-color, var(--text-primary));
     }
     .filter-pill.active:hover {
-      color: var(--pill-color, var(--text));
-      border-color: var(--pill-color, var(--text));
+      color: var(--pill-color, var(--text-primary));
     }
 
     .filter-vsep {
       width: 1px;
       height: 12px;
-      background: var(--sep);
+      background: var(--border);
       flex-shrink: 0;
       margin: 0 3px;
     }
 
     .filter-label {
       font-size: 10px;
-      color: var(--muted);
+      color: var(--text-tertiary);
       letter-spacing: 0.08em;
       text-transform: uppercase;
       opacity: 0.5;
@@ -358,137 +463,197 @@
     .filter-count {
       margin-left: auto;
       font-size: 10px;
-      color: var(--muted);
+      color: var(--text-tertiary);
       letter-spacing: 0.03em;
       white-space: nowrap;
       cursor: default;
     }
 
-    /* ── Narratives panel ── */
-    #narratives-section { margin-top: 16px; }
-
-    .theme-entry {
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(58,58,60,0.4);
-      cursor: pointer;
-      user-select: none;
-      transition: background 0.08s;
-    }
-    .theme-entry:hover  { background: rgba(255,255,255,0.02); }
-    .theme-entry.active { background: rgba(255,255,255,0.04); }
-
-    .th-header { display: flex; align-items: baseline; gap: 8px; }
-
-    .th-badge {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
+    /* ── Month header ── */
+    .month-header {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      flex-shrink: 0;
-      padding: 1px 4px;
-      border: 1px solid currentColor;
+      padding: 16px 0 5px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .th-title {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--text);
+    /* ── Feed item ── */
+    .item {
+      border-bottom: 1px solid rgba(62,62,65,0.4);
+      border-left: 3px solid transparent;
+      transition: background 80ms, border-left-color 80ms;
+    }
+    .item:hover {
+      background: var(--brass-subtle);
+      border-left-color: rgba(176,141,87,0.25);
+    }
+    .item.expanded {
+      background: var(--bg-surface);
+      border-left-color: var(--brass);
+    }
+
+    .item-row {
+      display: flex;
+      align-items: center;
+      padding: 6px 0 6px 8px;
+      gap: 0;
+      min-width: 0;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .item-country {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: color 80ms;
+    }
+    .item-country:hover,
+    .item-country.active-filter { color: var(--text-primary); }
+
+    .item-country-unresolved {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      opacity: 0.45;
+      flex-shrink: 0;
+      cursor: default;
+      font-style: italic;
+    }
+
+    .item-sep { color: var(--border); user-select: none; padding: 0 6px; flex-shrink: 0; }
+
+    .item-title {
       flex: 1;
       min-width: 0;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
+      color: var(--text-primary);
+      font-size: 12px;
+      padding-right: 16px;
     }
 
-    .th-score {
-      font-size: 10px;
-      color: var(--muted);
+    .item-src {
       flex-shrink: 0;
-      letter-spacing: 0.03em;
-      white-space: nowrap;
-    }
-
-    .th-why {
+      color: var(--text-tertiary);
       font-size: 11px;
-      color: var(--muted);
-      margin-top: 2px;
-      line-height: 1.4;
+      padding-right: 12px;
+      opacity: 0.65;
+      transition: color 80ms, opacity 80ms;
     }
-    .theme-entry:hover .th-why,
-    .theme-entry.active .th-why { color: var(--text); }
+    .item.expanded .item-src {
+      color: var(--layer-color, var(--brass));
+      opacity: 1;
+    }
 
-    /* ── z-score badge (velocity_anomaly themes) ── */
-    .th-z-badge {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
+    .item-date {
       flex-shrink: 0;
-      padding: 0 4px;
-      border: 1px solid currentColor;
-      white-space: nowrap;
+      color: var(--text-tertiary);
+      font-size: 11px;
+      padding-right: 10px;
+      min-width: 80px;
+      text-align: right;
     }
 
-    /* ── Scrollable narratives list ── */
-    .theme-entries-scroll {
-      max-height: 280px;
-      overflow-y: auto;
+    .item-detail {
+      display: none;
+      padding: 4px 8px 10px 11px;
+      font-size: 11px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      white-space: normal;
     }
-    .theme-entries-scroll::-webkit-scrollbar { width: 4px; }
-    .theme-entries-scroll::-webkit-scrollbar-thumb { background: var(--sep); }
+    .item.expanded .item-detail { display: block; }
+    .item-detail a { color: var(--brass); }
+    .item-detail a:hover { text-decoration: underline; }
+
+    /* ── Tooltip ── */
+    #tooltip {
+      position: fixed;
+      display: none;
+      background: var(--bg-inset);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      font-size: 12px;
+      line-height: 1.55;
+      padding: 8px 12px;
+      max-width: 300px;
+      pointer-events: none;
+      z-index: 9999;
+      font-family: var(--font-mono);
+    }
+
+    .tt-score     { font-weight: 500; color: var(--text-primary); margin-bottom: 3px; }
+    .tt-rationale { color: var(--text-secondary); }
+
+    :focus { outline: 1px solid var(--brass); outline-offset: 1px; }
+    :focus:not(:focus-visible) { outline: none; }
   </style>
 </head>
 <body>
   <header>
-    <h1>HARPY</h1>
+    <span class="wordmark">HARPY</span>
     <span id="updated"></span>
   </header>
+
   <div class="outer">
     <div id="status">fetching signals…</div>
-    <div class="top-row">
-      <div id="map" style="display:none"></div>
-      <div id="clusters-wrap" style="display:none">
-        <div id="clusters"></div>
+
+    <!-- Zone 1: Notable Signals + Map -->
+    <div class="zone-above-fold">
+      <div class="notable-col">
+        <div class="section-label">notable signals</div>
+        <div id="notable-list" class="notable-list"></div>
+      </div>
+      <div class="map-col">
+        <div class="section-label">activity map</div>
+        <div id="map" style="display:none"></div>
       </div>
     </div>
+
+    <!-- Zone 2: Narratives -->
     <div id="narratives-section" style="display:none"></div>
+
+    <!-- Zone 3: Feed -->
     <div id="feed-section">
-      <div id="feed-hdr" class="section-hdr" style="display:none">
+      <div id="feed-hdr" style="display:none">
         <span id="feed-label"></span>
-        <span id="feed-toggle-btn" style="cursor:pointer;margin-left:8px;text-transform:none;font-size:10px;opacity:0.6"></span>
+        <span id="feed-toggle-btn"></span>
       </div>
       <div id="filter-bar" style="display:none"></div>
       <div id="feed"></div>
     </div>
   </div>
+
   <div id="tooltip"></div>
 
   <script>
     const SIGNALS_URL = 'data/signals.json';
 
-    // ── Source labels / short names ──────────────────────────────────────────
-
-    // Layer colors — used only when a country filter is active (feed badges go grey otherwise).
-    // Palette avoids red and yellow families: those belong to the map zone colors.
+    // ── Layer colors ─────────────────────────────────────────────────────────
     const LAYER_COLORS = {
-      military:    '#3b82f6',  // blue
-      influence:   '#10b981',  // emerald
-      regulatory:  '#a855f7',  // purple
-      procurement: '#06b6d4',  // cyan
-      financial:   '#f97316',  // orange
-      legislative: '#94a3b8',  // slate
-      adversarial: '#ec4899',  // rose  (red reserved for map convergence zone)
+      military:    '#3b82f6',
+      influence:   '#10b981',
+      regulatory:  '#a855f7',
+      procurement: '#06b6d4',
+      financial:   '#f97316',
+      legislative: '#94a3b8',
+      adversarial: '#ec4899',
     };
 
     function layerColor(layer) {
       return LAYER_COLORS[layer] || '#a0a0b0';
     }
 
-    // Theme type palette — distinct from layer colors and map zone colors
     const THEME_TYPE_COLORS = {
-      actor_concentration: '#c084fc',  // violet
-      velocity_anomaly:    '#f87171',  // rose-pink
-      layer_sequence:      '#2dd4bf',  // teal
-      cftc_overlap:        '#fbbf24',  // amber
+      actor_concentration: '#c084fc',
+      velocity_anomaly:    '#f87171',
+      layer_sequence:      '#2dd4bf',
+      cftc_overlap:        '#fbbf24',
     };
     const THEME_TYPE_LABELS = {
       actor_concentration: 'ACTOR',
@@ -505,6 +670,9 @@
       lda:            'Lobbying Disclosure Act',
       federalregister:'Federal Register',
       anchor_budget:  'Elbit Systems — SEC EDGAR 6-K',
+      bis:            'Bureau of Industry and Security',
+      imf:            'International Monetary Fund',
+      cftc:           'Commodity Futures Trading Commission',
     };
 
     const SOURCE_SHORT = {
@@ -514,7 +682,10 @@
       ofac:           'OFAC',
       lda:            'LDA',
       federalregister:'FR',
-      anchor_budget:  'Elbit/EDGAR',
+      anchor_budget:  'ELBIT',
+      bis:            'BIS',
+      imf:            'IMF',
+      cftc:           'CFTC',
     };
 
     function sourceLabel(s) {
@@ -526,8 +697,6 @@
     }
 
     // ── Date helpers ─────────────────────────────────────────────────────────
-
-    // Returns YYYY-MM-DD for N days ago (local time)
     function isoOffset(daysAgo) {
       const d = new Date();
       d.setDate(d.getDate() - daysAgo);
@@ -536,8 +705,7 @@
         String(d.getDate()).padStart(2, '0');
     }
 
-    // ── Formatters ──────────────────────────────────────────────────────────
-
+    // ── Formatters ───────────────────────────────────────────────────────────
     function fmtValue(v) {
       if (v == null) return '';
       if (v >= 1e9) { const n = v / 1e9; return '$' + (Number.isInteger(n) ? n : n.toFixed(1)) + 'B'; }
@@ -550,12 +718,6 @@
       if (!iso) return '';
       const [y, m, d] = iso.split('-').map(Number);
       return new Date(y, m - 1, d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    }
-
-    function fmtDateShort(iso) {
-      if (!iso) return '';
-      const [y, m, d] = iso.split('-').map(Number);
-      return new Date(y, m - 1, d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
     }
 
     function fmtUpdated(isoStr) {
@@ -575,16 +737,14 @@
         .replace(/"/g, '&quot;');
     }
 
-    // ── ISO → profile map (built from embedded signal profiles at load time) ──
-    // Keyed by ISO alpha-2. Populated in main() from sig.profile on each signal.
+    // ── ISO → profile map ────────────────────────────────────────────────────
     let isoProfile = {};
 
     // ── Tooltip ──────────────────────────────────────────────────────────────
-
     const tooltipEl = document.getElementById('tooltip');
 
     document.addEventListener('mouseover', e => {
-      if (e.target.closest('#map')) return;  // map manages its own tooltip
+      if (e.target.closest('#map')) return;
       const target = e.target.closest('[data-tooltip]');
       if (!target) { tooltipEl.style.display = 'none'; return; }
       const [line1, ...rest] = target.dataset.tooltip.split('\n');
@@ -595,7 +755,7 @@
     });
 
     document.addEventListener('mouseout', e => {
-      if (e.target.closest('#map')) return;  // map manages its own tooltip
+      if (e.target.closest('#map')) return;
       if (e.target.closest('[data-tooltip]')) tooltipEl.style.display = 'none';
     });
 
@@ -606,8 +766,15 @@
       tooltipEl.style.top  = Math.min(y, window.innerHeight - tooltipEl.offsetHeight - 8) + 'px';
     });
 
-    // ── Recency decay for notable signal scoring ────────────────────────────
-    // 0–7 days → 1.0, 8–14 days → 0.8, 15–30 days → 0.5, beyond → 0.
+    // ── Signal tier ──────────────────────────────────────────────────────────
+    function signalTier(score) {
+      if (score >= 3.5) return { label: 'CRITICAL', level: 4, color: '#c4622d' };
+      if (score >= 2.0) return { label: 'HIGH',     level: 3, color: '#c4622d' };
+      if (score >= 1.0) return { label: 'MODERATE', level: 2, color: '#6b6966' };
+      return                    { label: 'WATCH',   level: 1, color: '#6b6966' };
+    }
+
+    // ── Recency decay ────────────────────────────────────────────────────────
     function recencyDecay(signalDate) {
       if (!signalDate) return 0;
       const ageDays = Math.round((Date.now() - new Date(signalDate).getTime()) / 86400000);
@@ -617,17 +784,9 @@
       return 0;
     }
 
-
-    // ── Zone 2: Notable signal computation ───────────────────────────────────
-    // Scores each individual signal in the last 30 days:
-    //   score = quality × dollar_mod × log2(structuralScore + 1) × recencyDecay
-    // quality and dollar_mod are precomputed by build_signals.py.
-    // One entry per country (best signal per ISO). Top 5 returned.
-
+    // ── computeNotableSignals ────────────────────────────────────────────────
     function computeNotableSignals(signals) {
       const w30 = isoOffset(30);
-
-      // Score every signal in the 30-day window
       const scored = [];
       for (const sig of signals) {
         if (!sig.iso || sig.iso === 'XX') continue;
@@ -635,15 +794,12 @@
         const decay = recencyDecay(sig.signal_date);
         if (!decay) continue;
         const quality = sig.quality || 0;
-        if (quality < 0.7) continue;  // Zone 2 minimum: DSCA(1.0), FARA(0.9), FR-policy(0.8), SAM(0.7)
-        // LDA(0.5) excluded — standalone lobbying disclosure is not a standalone signal.
-        // Exception path (FARA-equivalent foreign govt LDA) not yet detectable from data.
+        if (quality < 0.7) continue;
         const structScore = sig.profile ? (sig.profile.score || 1) : 1;
         const score = quality * (sig.dollar_mod || 1) * Math.log2(structScore + 1) * decay;
         scored.push({ sig, score: Math.round(score * 10000) / 10000, structScore });
       }
 
-      // Best signal per ISO
       const bestByIso = new Map();
       for (const entry of scored) {
         const iso = entry.sig.iso;
@@ -656,7 +812,7 @@
         .sort((a, b) => b.score - a.score)
         .slice(0, 5);
 
-      console.log('=== ZONE 2 — NOTABLE SIGNALS ===');
+      console.log('=== NOTABLE SIGNALS ===');
       console.table(top5.map((e, i) => ({
         rank:        i + 1,
         iso:         e.sig.iso,
@@ -673,22 +829,19 @@
       return top5;
     }
 
-    // ── Signal identity key ──────────────────────────────────────────────────
-    // Stable, deterministic key for locating a specific signal's feed item.
+    // ── sigKey ───────────────────────────────────────────────────────────────
     function sigKey(sig) {
       return (sig.source || '') + '|' + (sig.signal_date || '') + '|' + (sig.title || '').slice(0, 60);
     }
 
-    // ── Render notable signals ───────────────────────────────────────────────
-
+    // ── State ────────────────────────────────────────────────────────────────
     let activeFilter = null;
-    let themeFilter  = null;  // Set<string> of ISOs when a narrative theme is active
-    let activeTheme  = null;  // theme object currently selected
+    let themeFilter  = null;
+    let activeTheme  = null;
 
-    // ── Feed filter state ────────────────────────────────────────────────────
     let showUnresolved  = false;
     const ALL_FEED_LAYERS = ['military','influence','regulatory','procurement','financial'];
-    const LAYER_SRC_MAP   = {
+    const LAYER_SRC_MAP = {
       military:    [['dsca','DSCA'],['anchor_budget','ELBIT']],
       influence:   [['fara','FARA'],['lda','LDA']],
       regulatory:  [['federalregister','FR'],['ofac','OFAC'],['bis','BIS']],
@@ -699,61 +852,59 @@
     let activeFeedSrcs   = new Set(Object.values(LAYER_SRC_MAP).flat().map(([src]) => src));
     let minProfileScore  = 0;
 
+    // ── renderNotable ────────────────────────────────────────────────────────
     function renderNotable(notable, signals) {
-      const wrap      = document.getElementById('clusters-wrap');
-      const container = document.getElementById('clusters');
-
+      const container = document.getElementById('notable-list');
       if (!notable.length) return;
-      wrap.style.display = '';
       container.innerHTML = '';
 
-      // ── Notable Signals ───────────────────────────────────────────────────
-      const z2Label = document.createElement('div');
-      z2Label.className = 'zone-label';
-      z2Label.innerHTML = 'NOTABLE SIGNALS <span class="zone-tip" data-tip="The highest-quality individual signals from the last 30 days, one per country.">?</span>';
-      container.appendChild(z2Label);
-
-      for (const { sig, structScore } of notable) {
+      for (const { sig, structScore, score } of notable) {
         const profile = sig.profile || null;
-        const name    = (profile ? profile.name : sig.iso).toUpperCase();
+        const name    = profile ? profile.name.toUpperCase() : sig.iso;
+        const color   = layerColor(sig.layer);
+        const badge   = sourceShort(sig.source);
+        const valStr  = sig.value_usd ? fmtValue(sig.value_usd) : '';
+        const tier    = signalTier(score);
 
-        // Clean title: strip leading "Country — " from DSCA records
         const raw = sig.title || '';
         const src = (sig.source || '').toLowerCase();
         let title = (src === 'dsca' && raw.includes('\u2014'))
           ? raw.split('\u2014').slice(1).join('\u2014').trim()
           : raw;
-        if (title.length > 55) title = title.slice(0, 52) + '\u2026';
+        if (title.length > 60) title = title.slice(0, 57) + '\u2026';
 
-        const color  = layerColor(sig.layer);
-        const badge  = sourceShort(sig.source);
-        const valStr = sig.value_usd ? fmtValue(sig.value_usd) : '';
+        const bars = Array.from({length: 4}, (_, i) =>
+          `<span class="nt-bar${i < tier.level ? ' filled' : ''}"></span>`).join('');
 
         const entry = document.createElement('div');
-        entry.className = 'cluster-entry';
+        entry.className = 'nt-entry';
         entry.dataset.iso = sig.iso;
+        entry.style.setProperty('--layer-color', color);
 
-        let html = `<div class="cl-header">`;
-        html += `<span class="cl-name">${esc(name)}</span>`;
-        html += `<span class="nt-badge" style="color:${color}">${esc(badge)}</span>`;
-        if (valStr) html += `<span class="nt-value">${esc(valStr)}</span>`;
-        html += `</div>`;
-        html += `<div class="nt-title">${esc(title)}</div>`;
+        entry.innerHTML =
+          `<div class="nt-top-row">` +
+            `<span class="nt-country">${esc(name)}</span>` +
+            `<span class="nt-tier" style="color:${esc(tier.color)}">${esc(tier.label)}<span class="nt-bars">${bars}</span></span>` +
+          `</div>` +
+          `<div class="nt-title-row">` +
+            `<span class="nt-src-badge">${esc(badge)}</span>` +
+            `<span class="nt-title">${esc(title)}</span>` +
+            (valStr ? `<span class="nt-value">${esc(valStr)}</span>` : '') +
+          `</div>`;
 
-        entry.innerHTML = html;
-        // Zone 2: filter by country AND scroll to + expand the specific signal row
         entry.addEventListener('click', () => {
           themeFilter = null; activeTheme = null;
-          document.querySelectorAll('.theme-entry.active').forEach(r => r.classList.remove('active'));
+          document.querySelectorAll('.theme-card.active').forEach(r => r.classList.remove('active'));
           if (activeFilter === sig.iso) {
             activeFilter = null;
             entry.classList.remove('active');
           } else {
-            container.querySelectorAll('.cluster-entry.active').forEach(r => r.classList.remove('active'));
+            container.querySelectorAll('.nt-entry.active').forEach(r => r.classList.remove('active'));
             activeFilter = sig.iso;
             entry.classList.add('active');
           }
           syncMapFilter(activeFilter);
+          updateFilterBarBrass();
           renderFeed(signals);
           if (activeFilter === sig.iso) {
             const key = sigKey(sig);
@@ -761,17 +912,18 @@
             for (const feedItem of allItems) {
               if (feedItem.dataset.sigKey === key) {
                 feedItem.classList.add('expanded');
+                feedItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 break;
               }
             }
           }
         });
+
         container.appendChild(entry);
       }
     }
 
-    // ── Feed filter application ──────────────────────────────────────────────
-
+    // ── applyFeedFilters ─────────────────────────────────────────────────────
     function applyFeedFilters(sigs) {
       return sigs.filter(sig => {
         if (activeFilter && sig.iso !== activeFilter) return false;
@@ -787,13 +939,22 @@
       });
     }
 
-    // ── Filter bar initialisation ────────────────────────────────────────────
+    // ── updateFilterBarBrass ─────────────────────────────────────────────────
+    function updateFilterBarBrass() {
+      const bar = document.getElementById('filter-bar');
+      if (!bar) return;
+      const totalSrcs = Object.values(LAYER_SRC_MAP).flat().length;
+      const anyActive = activeFilter || themeFilter || activeTheme || minProfileScore > 0
+        || activeFeedLayers.size < ALL_FEED_LAYERS.length
+        || activeFeedSrcs.size < totalSrcs;
+      bar.classList.toggle('has-active', !!anyActive);
+    }
 
+    // ── initFilterBar ────────────────────────────────────────────────────────
     function initFilterBar(signals) {
       const bar = document.getElementById('filter-bar');
       bar.style.display = '';
 
-      // ── Row 1: unresolved · layers · score ──────────────────────────────
       const row1 = document.createElement('div');
       row1.className = 'filter-row';
 
@@ -813,12 +974,12 @@
           const on = activeFeedLayers.has(layer);
           if (on) { activeFeedLayers.delete(layer); pill.classList.remove('active'); }
           else    { activeFeedLayers.add(layer);    pill.classList.add('active'); }
-          // Sync source pills for this layer
           bar.querySelectorAll(`.src-pill[data-layer="${layer}"]`).forEach(sp => {
             const src = sp.dataset.src;
             if (on) { activeFeedSrcs.delete(src); sp.classList.remove('active'); }
             else    { activeFeedSrcs.add(src);    sp.classList.add('active'); }
           });
+          updateFilterBarBrass();
           renderFeed(signals);
         });
         row1.appendChild(pill);
@@ -842,20 +1003,21 @@
           bar.querySelectorAll('.score-pill').forEach(sp =>
             sp.classList.toggle('active', +sp.dataset.score === val)
           );
+          updateFilterBarBrass();
           renderFeed(signals);
         });
         row1.appendChild(pill);
       }
 
-      // Theme filter indicator — shown when a narrative theme is active
       const themeIndicator = document.createElement('span');
       themeIndicator.id = 'theme-filter-indicator';
       themeIndicator.className = 'filter-pill';
       themeIndicator.style.display = 'none';
       themeIndicator.addEventListener('click', () => {
         themeFilter = null; activeTheme = null; activeFilter = null;
-        document.querySelectorAll('.theme-entry.active').forEach(r => r.classList.remove('active'));
+        document.querySelectorAll('.theme-card.active').forEach(r => r.classList.remove('active'));
         syncMapFilter(null);
+        updateFilterBarBrass();
         renderFeed(signals);
       });
       row1.appendChild(themeIndicator);
@@ -869,10 +1031,8 @@
         renderFeed(signals);
       });
       row1.appendChild(countEl);
-
       bar.appendChild(row1);
 
-      // ── Row 2: sources grouped by layer ─────────────────────────────────
       const row2 = document.createElement('div');
       row2.className = 'filter-row';
 
@@ -895,17 +1055,16 @@
             const on = activeFeedSrcs.has(src);
             if (on) { activeFeedSrcs.delete(src); pill.classList.remove('active'); }
             else    { activeFeedSrcs.add(src);    pill.classList.add('active'); }
+            updateFilterBarBrass();
             renderFeed(signals);
           });
           row2.appendChild(pill);
         }
       }
-
       bar.appendChild(row2);
     }
 
-    // ── Render feed ──────────────────────────────────────────────────────────
-
+    // ── renderFeed ───────────────────────────────────────────────────────────
     function renderFeed(signals) {
       const feedEl    = document.getElementById('feed');
       const feedHdr   = document.getElementById('feed-hdr');
@@ -927,16 +1086,16 @@
           activeFilter = null;
           themeFilter  = null;
           activeTheme  = null;
-          document.querySelectorAll('.cluster-entry.active').forEach(r => r.classList.remove('active'));
-          document.querySelectorAll('.theme-entry.active').forEach(r => r.classList.remove('active'));
+          document.querySelectorAll('.nt-entry.active').forEach(r => r.classList.remove('active'));
+          document.querySelectorAll('.theme-card.active').forEach(r => r.classList.remove('active'));
           syncMapFilter(null);
+          updateFilterBarBrass();
           renderFeed(signals);
         };
       } else {
         feedHdr.style.display = 'none';
       }
 
-      // Sync theme filter indicator in filter bar
       const themeIndicator = document.getElementById('theme-filter-indicator');
       if (themeIndicator) {
         if (activeTheme) {
@@ -951,12 +1110,14 @@
         }
       }
 
+      updateFilterBarBrass();
+
       const visible = applyFeedFilters(signals);
       const countEl = document.getElementById('filter-count');
       if (countEl) countEl.textContent = visible.length + '\u00a0signals' + (showUnresolved ? '\u00a0\xb7XX' : '');
 
       if (!visible.length) {
-        feedEl.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:16px 0">no signals</div>';
+        feedEl.innerHTML = '<div style="color:var(--text-tertiary);font-size:12px;padding:16px 0">no signals</div>';
         return;
       }
 
@@ -983,8 +1144,7 @@
       }
     }
 
-    // ── Render one item ──────────────────────────────────────────────────────
-
+    // ── renderItem ───────────────────────────────────────────────────────────
     function renderItem(sig, signals) {
       const isUnresolved = sig.iso === 'XX';
       const profile = sig.profile || null;
@@ -994,7 +1154,6 @@
       el.dataset.sigKey = sigKey(sig);
       el.style.setProperty('--layer-color', layerColor(sig.layer));
 
-      // Country tooltip with structural interest context
       let countryTooltip = '';
       if (isUnresolved) {
         countryTooltip = ` data-tooltip="Country not determined from filing — excluded from map and convergence scoring"`;
@@ -1008,10 +1167,8 @@
 
       const sourceUrl = sig.page_url || sig.url || null;
       const descRaw   = sig.description || '';
-      const srcFull   = sourceLabel(sig.source);
 
-      // Title: strip "Country — " prefix common in DSCA titles; append value if present
-      let titleStr = sig.title || sig.description || '—';
+      let titleStr = sig.title || sig.description || '\u2014';
       if (titleStr.includes(' \u2014 ')) {
         titleStr = titleStr.split(' \u2014 ').slice(1).join(' \u2014 ');
       }
@@ -1024,7 +1181,6 @@
         : 'item-country' + (isFiltered ? ' active-filter' : '');
       const countryText  = isUnresolved ? 'unresolved' : esc(country);
 
-      // Expanded detail: description + source link
       let detailInner = '';
       if (descRaw) {
         const trunc = descRaw.length > 800 ? descRaw.slice(0, 800) + '\u2026' : descRaw;
@@ -1059,14 +1215,15 @@
         el.querySelector('.item-country').addEventListener('click', e => {
           e.stopPropagation();
           themeFilter = null; activeTheme = null;
-          document.querySelectorAll('.theme-entry.active').forEach(r => r.classList.remove('active'));
+          document.querySelectorAll('.theme-card.active').forEach(r => r.classList.remove('active'));
           activeFilter = activeFilter === sig.iso ? null : sig.iso;
-          document.querySelectorAll('.cluster-entry.active').forEach(r => r.classList.remove('active'));
+          document.querySelectorAll('.nt-entry.active').forEach(r => r.classList.remove('active'));
           if (activeFilter) {
-            const clRow = document.querySelector(`.cluster-entry[data-iso="${activeFilter}"]`);
-            if (clRow) clRow.classList.add('active');
+            const ntRow = document.querySelector(`.nt-entry[data-iso="${activeFilter}"]`);
+            if (ntRow) ntRow.classList.add('active');
           }
           syncMapFilter(activeFilter);
+          updateFilterBarBrass();
           renderFeed(signals);
         });
       }
@@ -1074,8 +1231,52 @@
       return el;
     }
 
-    // ── Render narratives ────────────────────────────────────────────────────
+    // ── watchForBullets ──────────────────────────────────────────────────────
+    function watchForBullets(theme) {
+      const countries = (theme.countries || []).filter(c => c && c !== 'XX' && c !== 'US');
+      const countryStr = countries.slice(0, 3).join(', ') || 'this country';
 
+      if (theme.type === 'velocity_anomaly') {
+        const sources = (theme.why || '').match(/([A-Z]+)\xd7\d+/g) || [];
+        const srcStr = sources.length ? sources.map(s => s.split('\xd7')[0]).join('/') : 'activity';
+        return [
+          `Further acceleration in ${srcStr} filings for ${countryStr}`,
+          `New registrations or contract awards outside typical cadence`,
+        ];
+      }
+      if (theme.type === 'actor_concentration') {
+        return [
+          `New registrations from additional firms representing ${countryStr}`,
+          `Expansion of issue scope or principal entities in active filings`,
+        ];
+      }
+      if (theme.type === 'layer_sequence') {
+        return [
+          `Procurement or contract awards following the influence layer activity`,
+          `Escalating dollar values or expanded scope in subsequent filings`,
+        ];
+      }
+      if (theme.type === 'cftc_overlap') {
+        return [
+          `Continued positioning changes in commodity markets tied to ${countryStr}`,
+          `Convergence of financial signals with regulatory or military actions`,
+        ];
+      }
+      return [
+        `Additional filings or actions related to ${countryStr}`,
+        `Cross-layer escalation from current signal baseline`,
+      ];
+    }
+
+    // ── hexToRgb ─────────────────────────────────────────────────────────────
+    function hexToRgb(hex) {
+      const r = parseInt(hex.slice(1,3),16);
+      const g = parseInt(hex.slice(3,5),16);
+      const b = parseInt(hex.slice(5,7),16);
+      return `${r},${g},${b}`;
+    }
+
+    // ── renderNarratives ─────────────────────────────────────────────────────
     function renderNarratives(themes, signals) {
       const section = document.getElementById('narratives-section');
       if (!themes || !themes.length) return;
@@ -1083,71 +1284,88 @@
       section.innerHTML = '';
       section.style.display = '';
 
-      const hdr = document.createElement('div');
-      hdr.className = 'section-hdr';
-      hdr.textContent = 'NARRATIVES';
-      section.appendChild(hdr);
+      const labelEl = document.createElement('div');
+      labelEl.className = 'section-label';
+      labelEl.textContent = 'narratives';
+      section.appendChild(labelEl);
 
-      // Scrollable container for theme entries
-      const scrollWrap = document.createElement('div');
-      scrollWrap.className = 'theme-entries-scroll';
-      section.appendChild(scrollWrap);
+      const grid = document.createElement('div');
+      grid.className = 'narratives-grid' + (themes.length >= 4 ? ' two-col' : '');
+      section.appendChild(grid);
 
       const maxScore = themes[0].score || 1;
 
       for (const theme of themes) {
-        const entry = document.createElement('div');
-        entry.className = 'theme-entry';
+        const card = document.createElement('div');
+        card.className = 'theme-card';
 
         const color = THEME_TYPE_COLORS[theme.type] || '#a0a0b0';
         const label = THEME_TYPE_LABELS[theme.type] || theme.type.toUpperCase().slice(0, 8);
 
-        // 5-char score bar
         const filled = Math.max(1, Math.round((theme.score / maxScore) * 5));
         const bar    = '\u2588'.repeat(filled) + '\u2591'.repeat(5 - filled);
 
-        // For velocity_anomaly: extract z-score from title "(+4.0σ)" and render as badge
         let titleText = theme.title;
         let zBadgeHtml = '';
         if (theme.type === 'velocity_anomaly') {
           const zMatch = theme.title.match(/\(([+-]?\d+\.?\d*)\u03c3\)/);
           if (zMatch) {
-            zBadgeHtml = `<span class="th-z-badge" style="color:${esc(color)};border-color:${esc(color)}">${esc(zMatch[1])}\u03c3</span>`;
+            zBadgeHtml = `<span class="tc-z-badge" style="color:${esc(color)};border-color:${esc(color)}">${esc(zMatch[1])}\u03c3</span>`;
             titleText = theme.title.replace(/\s*\([+-]?\d+\.?\d*\u03c3\)/, '').trim();
           }
         }
 
-        entry.innerHTML =
-          `<div class="th-header">` +
-            `<span class="th-badge" style="color:${esc(color)};border-color:${esc(color)}">${esc(label)}</span>` +
-            (zBadgeHtml || '') +
-            `<span class="th-title">${esc(titleText)}</span>` +
-            `<span class="th-score">${esc(bar)} ${theme.score.toFixed(2)}</span>` +
-          `</div>` +
-          `<div class="th-why">${esc(theme.why)}</div>`;
+        const validCountries = (theme.countries || []).filter(c => c && c !== 'XX' && c !== 'US');
+        const sourceNames = (theme.signal_keys || [])
+          .map(k => (k.split(':')[0] || '').toUpperCase())
+          .filter((v, i, a) => v && a.indexOf(v) === i)
+          .slice(0, 4);
 
-        entry.addEventListener('click', () => {
-          const wasActive = entry.classList.contains('active');
-          document.querySelectorAll('.theme-entry.active').forEach(r => r.classList.remove('active'));
-          document.querySelectorAll('.cluster-entry.active').forEach(r => r.classList.remove('active'));
+        const isoBadges = validCountries.slice(0, 5).map(iso =>
+          `<span class="tc-iso-badge" style="background:rgba(${hexToRgb(color)},0.15);color:${esc(color)}">${esc(iso)}</span>`
+        ).join('');
+
+        const attrParts = [];
+        if (validCountries.length > 5) attrParts.push(`+${validCountries.length - 5} more`);
+        if (sourceNames.length) attrParts.push(sourceNames.join(' \xb7 '));
+
+        const bullets = watchForBullets(theme);
+
+        card.innerHTML =
+          `<div class="tc-top-row">` +
+            `<span class="tc-badge" style="color:${esc(color)};border-color:${esc(color)}">${esc(label)}</span>` +
+            (zBadgeHtml || '') +
+            `<span class="tc-score">${esc(bar)} ${theme.score.toFixed(2)}</span>` +
+          `</div>` +
+          `<div class="tc-headline">${esc(titleText)}</div>` +
+          `<div class="tc-attribution">` +
+            isoBadges +
+            (attrParts.length ? `<span class="tc-attr-text">${esc(attrParts.join(' \xb7 '))}</span>` : '') +
+          `</div>` +
+          `<div class="tc-prose">${esc(theme.why)}</div>` +
+          `<div class="tc-watch">` +
+            `<div class="tc-watch-label">watch for</div>` +
+            bullets.map(b => `<div class="tc-watch-item">${esc(b)}</div>`).join('') +
+          `</div>`;
+
+        card.addEventListener('click', () => {
+          const wasActive = card.classList.contains('active');
+          document.querySelectorAll('.theme-card.active').forEach(r => r.classList.remove('active'));
+          document.querySelectorAll('.nt-entry.active').forEach(r => r.classList.remove('active'));
 
           if (wasActive) {
-            themeFilter = null;
-            activeTheme = null;
+            themeFilter  = null;
+            activeTheme  = null;
             activeFilter = null;
             syncMapFilter(null);
           } else {
-            entry.classList.add('active');
+            card.classList.add('active');
             const validIsos = (theme.countries || []).filter(iso => iso && iso !== 'XX' && iso !== 'US');
             activeTheme  = theme;
             activeFilter = null;
 
             if (theme.type === 'cftc_overlap') {
-              // CFTC: theme.countries is already the overlap (basket ∩ active signals).
-              // Filter feed to overlap only; highlight FULL basket on map.
               themeFilter = validIsos.length ? new Set(validIsos) : null;
-
-              // Find the full basket from the CFTC signal for map highlighting
               const commodity = (theme.signal_keys && theme.signal_keys[0] || '').replace(/^cftc:/, '');
               const cftcSig   = signals.find(s => s.source === 'cftc' && s.commodity === commodity);
               const fullBasket = new Set(
@@ -1156,20 +1374,19 @@
               syncMapFilter(null, fullBasket);
             } else {
               themeFilter = validIsos.length ? new Set(validIsos) : null;
-              // Single-country: zoom map; multi-country: world view
               syncMapFilter(validIsos.length === 1 ? validIsos[0] : null);
             }
           }
 
+          updateFilterBarBrass();
           renderFeed(signals);
         });
 
-        scrollWrap.appendChild(entry);
+        grid.appendChild(card);
       }
     }
 
-    // ── Main ─────────────────────────────────────────────────────────────────
-
+    // ── main ─────────────────────────────────────────────────────────────────
     async function main() {
       const statusEl  = document.getElementById('status');
       const updatedEl = document.getElementById('updated');
@@ -1180,32 +1397,28 @@
         if (!r.ok) throw new Error('HTTP ' + r.status);
         data = await r.json();
       } catch (e) {
-        statusEl.textContent = 'error loading signals.json — ' + e.message;
-        statusEl.className = 'error';
+        statusEl.textContent = 'error loading signals.json \u2014 ' + e.message;
         return;
       }
 
       updatedEl.textContent = fmtUpdated(data.generated_at);
 
-      // signals.json is pre-filtered, deduped, and sorted by build_signals.py
       const signals = data.signals || [];
-
       statusEl.remove();
 
       if (!signals.length) {
         document.getElementById('feed').innerHTML =
-          '<div style="color:var(--muted);font-size:12px;padding:16px 0">no signals</div>';
+          '<div style="color:var(--text-tertiary);font-size:12px;padding:16px 0">no signals</div>';
         return;
       }
 
-      // Build iso→profile map from embedded profiles (no HTTP fetches needed)
       for (const sig of signals) {
         if (sig.iso && sig.profile && !isoProfile[sig.iso]) {
           isoProfile[sig.iso] = sig.profile;
         }
       }
 
-      const notable  = computeNotableSignals(signals);
+      const notable = computeNotableSignals(signals);
       renderNotable(notable, signals);
       renderNarratives(data.themes || [], signals);
       initFilterBar(signals);
@@ -1218,7 +1431,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/topojson-client@3/dist/topojson-client.min.js"></script>
   <script>
-    // ── ISO 3166-1 numeric → alpha-2 lookup ─────────────────────────────────
+    // ── ISO 3166-1 numeric → alpha-2 ─────────────────────────────────────────
     const ISO_NUM_TO_A2 = {
       4:'AF',8:'AL',12:'DZ',16:'AS',20:'AD',24:'AO',28:'AG',32:'AR',
       36:'AU',40:'AT',31:'AZ',44:'BS',48:'BH',50:'BD',52:'BB',112:'BY',
@@ -1255,18 +1468,14 @@
       663:'MF',531:'CW',534:'SX',10:'AQ',
     };
 
-    // ── World map ────────────────────────────────────────────────────────────
-
+    // ── World map ─────────────────────────────────────────────────────────────
     let leafletMap = null;
-    let syncMapFilter = () => {};  // assigned after initMap; no-op until then
+    let syncMapFilter = () => {};
 
     async function initMap(notable, signals, themes) {
       const mapEl = document.getElementById('map');
       mapEl.style.display = '';
 
-      // ── Map signal index ─────────────────────────────────────────────────
-      // themeScoreByIso: iso → highest theme score it appears in (drives red intensity)
-      // recentIsos: countries with signals in last 30 days but no theme (secondary lift)
       const themeScoreByIso = new Map();
       for (const theme of themes) {
         for (const iso of (theme.countries || [])) {
@@ -1283,7 +1492,6 @@
           recentIsos.add(sig.iso);
       }
 
-      // Lazy-load world topology
       let world;
       try {
         const r = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
@@ -1295,12 +1503,6 @@
 
       const countries = topojson.feature(world, world.objects.countries);
 
-      // ── Antimeridian fix ─────────────────────────────────────────────────
-      // Russia's polygon has vertices that jump from ~170° to ~-170°. The fix
-      // is NOT to clamp to ±180 (coordinates are already within range), but to
-      // "unwrap" each ring so consecutive vertices stay within 180° of each other.
-      // This lets Russia's coords legitimately exceed ±180°, so Leaflet draws a
-      // continuous polygon instead of a straight line across the whole map.
       function unwrapRing(ring) {
         if (!ring.length) return ring;
         const out = [[ring[0][0], ring[0][1]]];
@@ -1315,23 +1517,16 @@
       }
       function unwrapGeometry(geom) {
         if (!geom) return geom;
-        if (geom.type === 'Polygon') {
+        if (geom.type === 'Polygon')
           return { ...geom, coordinates: geom.coordinates.map(unwrapRing) };
-        }
-        if (geom.type === 'MultiPolygon') {
+        if (geom.type === 'MultiPolygon')
           return { ...geom, coordinates: geom.coordinates.map(poly => poly.map(unwrapRing)) };
-        }
         return geom;
       }
       const fixedCountries = {
         ...countries,
         features: countries.features.map(f => ({ ...f, geometry: unwrapGeometry(f.geometry) })),
       };
-
-      // ── Match map height to cluster panel height ──────────────────────────
-      const clustersWrap = document.getElementById('clusters-wrap');
-      const panelH = clustersWrap.offsetHeight;
-      if (panelH > 100) mapEl.style.height = panelH + 'px';
 
       if (leafletMap) { leafletMap.remove(); leafletMap = null; }
 
@@ -1340,17 +1535,14 @@
         scrollWheelZoom: true,
       });
 
-      // ── Map colors: gray → dark red spectrum keyed on narrative presence ──
-      // Theme countries scale from dim red to full red by score.
-      // Recent-signal countries (not in themes) get a subtle warm-gray lift.
-      const BASE_COLOR       = '#3e3e3e';   // no recent activity
-      const RECENT_COLOR     = '#4e3e3e';   // signal in last 30d, not in any theme
-      const THEME_DIM_COLOR  = '#6b1a1a';   // in a theme, lower score
-      const THEME_MID_COLOR  = '#8c2020';   // in a theme, mid score
-      const THEME_HIGH_COLOR = '#b02828';   // in a theme, high score (≥20)
-      const BASKET_COLOR     = '#3e4a3e';   // CFTC basket: muted green-gray, distinct from red
+      const BASE_COLOR       = '#3e3e3e';
+      const RECENT_COLOR     = '#4e3e3e';
+      const THEME_DIM_COLOR  = '#6b1a1a';
+      const THEME_MID_COLOR  = '#8c2020';
+      const THEME_HIGH_COLOR = '#b02828';
+      const BASKET_COLOR     = '#3e4a3e';
       const HOVER_COLOR      = '#b8b8b8';
-      const ACTIVE_COLOR     = '#d43030';   // clicked country: bright red
+      const ACTIVE_COLOR     = '#d43030';
       const BORDER_COLOR     = '#252525';
 
       const isoToLayer = new Map();
@@ -1366,8 +1558,6 @@
         return BASE_COLOR;
       }
 
-      let hoveredIso = null;
-
       L.geoJSON(fixedCountries, {
         renderer: L.svg({ padding: 0.5 }),
         style: f => ({
@@ -1381,7 +1571,6 @@
           if (iso) isoToLayer.set(iso, layer);
 
           layer.on('mouseover', e => {
-            hoveredIso = iso;
             layer.setStyle({ fillColor: HOVER_COLOR });
             const profile = iso ? (isoProfile[iso] || null) : null;
             const name = profile ? (profile.name || iso) : iso;
@@ -1407,7 +1596,6 @@
           });
 
           layer.on('mouseout', () => {
-            hoveredIso = null;
             layer.setStyle({ fillColor: baseColorFor(iso) });
             tooltipEl.style.display = 'none';
           });
@@ -1415,38 +1603,31 @@
           layer.on('click', () => {
             if (!iso) return;
             themeFilter = null; activeTheme = null;
-            document.querySelectorAll('.theme-entry.active').forEach(r => r.classList.remove('active'));
+            document.querySelectorAll('.theme-card.active').forEach(r => r.classList.remove('active'));
             activeFilter = activeFilter === iso ? null : iso;
-            document.querySelectorAll('.cluster-entry.active').forEach(r => r.classList.remove('active'));
+            document.querySelectorAll('.nt-entry.active').forEach(r => r.classList.remove('active'));
             if (activeFilter) {
-              const clRow = document.querySelector(`.cluster-entry[data-iso="${activeFilter}"]`);
-              if (clRow) clRow.classList.add('active');
+              const ntRow = document.querySelector(`.nt-entry[data-iso="${activeFilter}"]`);
+              if (ntRow) ntRow.classList.add('active');
             }
             syncMapFilter(activeFilter);
+            updateFilterBarBrass();
             renderFeed(signals);
           });
         },
       }).addTo(leafletMap);
 
-      // zoom 1: world tile = 512px wide. Map column ≈ 530px, so the full 360°
-      // of longitude fits with a small overhang — both eastern Russia (~170°E)
-      // and western Alaska (~170°W) are within frame. fitBounds on a lat range
-      // fights Mercator projection and always picks a zoom that shows Antarctica;
-      // setView with an explicit zoom avoids that entirely.
-      // Center [25, 10]: northern bias keeps Antarctica below the fold.
       leafletMap.invalidateSize();
       leafletMap.setView([25, 10], 1);
 
-      // Expose map highlight + zoom so cluster/feed/theme clicks can sync the map.
-      // basketHighlight (optional Set<ISO>) highlights CFTC basket countries without zooming.
       syncMapFilter = function(activeIso, basketHighlight) {
         for (const [layerIso, lyr] of isoToLayer) {
           const isActive = activeIso && layerIso === activeIso;
           const inBasket = basketHighlight && basketHighlight.has(layerIso);
           let color;
-          if (isActive)    color = ACTIVE_COLOR;
+          if (isActive)      color = ACTIVE_COLOR;
           else if (inBasket) color = BASKET_COLOR;
-          else             color = baseColorFor(layerIso);
+          else               color = baseColorFor(layerIso);
           lyr.setStyle({ fillColor: color });
         }
         if (activeIso) {
