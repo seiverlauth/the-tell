@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T07:20:19.346533+00:00",
+  "generated_at": "2026-04-13T07:28:05.393271+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -20681,11 +20681,11 @@
         "GB"
       ],
       "signal_keys": [
+        "lda:585860bc-af15-4e03-a51e-7b10e683c7cd",
         "dsca:Submarine Combat and Weapon Systems, Tec",
         "lda:5822c8aa-0ec7-4fcb-8649-dab9d8f07406",
-        "lda:29e67f85-e020-4714-8d85-9cf4e447eb0f",
         "lda:0530d8ed-e131-4ee6-88ca-bd6a18e0c2ab",
-        "lda:585860bc-af15-4e03-a51e-7b10e683c7cd"
+        "lda:29e67f85-e020-4714-8d85-9cf4e447eb0f"
       ],
       "why": "[velocity_anomaly] 3.0 weighted signals in 30 days vs 1.2 avg (+3.0\u03c3). Sources: dsca\u00d71, lda\u00d74 | [layer_sequence] lda on 2026-03-16 \u2192 dsca on 2026-03-20 (4d). Current window 0.85 weighted pairs vs 0.00 baseline (+8.5\u03c3).",
       "_components": [
@@ -20713,17 +20713,17 @@
             "GB"
           ],
           "signal_keys": [
+            "lda:0530d8ed-e131-4ee6-88ca-bd6a18e0c2ab",
             "dsca:Submarine Combat and Weapon Systems, Tec",
-            "lda:5822c8aa-0ec7-4fcb-8649-dab9d8f07406",
-            "lda:0530d8ed-e131-4ee6-88ca-bd6a18e0c2ab"
+            "lda:5822c8aa-0ec7-4fcb-8649-dab9d8f07406"
           ],
           "why": "lda on 2026-03-16 \u2192 dsca on 2026-03-20 (4d). Current window 0.85 weighted pairs vs 0.00 baseline (+8.5\u03c3)."
         }
       ],
       "narrative": {
-        "headline": "UK secures $1B AUKUS submarine tech as US lobbying cluster converges",
-        "body": "A $1B DSCA notification for AUKUS vertical launch tubes and weapon systems followed a tight cluster of UK-focused US lobbying filings spanning AI risk, defense appropriations, and patents. The sequencing suggests coordinated groundwork \u2014 likely congressional and regulatory \u2014 preceding a major defense procurement announcement.",
-        "prompt": "I just saw a pattern flagging unusual activity around the United Kingdom involving a $1 billion DSCA arms sale notification for AUKUS submarine vertical deployment tubes and common weapon launchers, combined with a cluster of US lobbying filings referencing the UK: Control AI Us Inc via Nathan Morrison (AI superintelligence risk), Formula One Group via R&R Partners (UK federal event security/visas), Ez Lynk SEZC via Checkmate Government Relations (UK patents), and Delta Three Oscar via Galvanize Partners (FY27 Defense Appropriations). Background UK-linked lobbying includes GlaxoSmithKline, Drax Biomass, Japan Tobacco International, and Urenco USA. Please explain who each of these entities is and what they actually do, describe the relationships between them and the broader AUKUS and US-UK policy context, assess whether this lobbying-then-arms-sale sequence is routine or anomalous, and help me decide: is this worth paying closer attention to, and why or why not?"
+        "headline": "AUKUS submarine deal anchors UK lobbying velocity spike",
+        "body": "A $1B DSCA notification for AUKUS vertical launch tube development followed four UK-tagged lobbying registrations within days, producing an 8.5\u03c3 layer-sequence anomaly. The influence-then-military pattern suggests coordinated groundwork for FY27 defense appropriations tied to AUKUS industrial commitments.",
+        "prompt": "I just saw a pattern alert flagging unusual lobbying and defense sales activity around the United Kingdom. A $1B DSCA notification for AUKUS submarine combat systems (vertical deployment tubes, common weapon launchers) was preceded by several UK-tagged lobbying filings: Delta Three Oscar via Galvanize Partners LLC on FY27 Defense Appropriations, Control AI US Inc. via Nathan Morrison on AI superintelligence risk, EZ Lynk SEZC via Checkmate Government Relations on UK patent issues, and Formula One Group via R&R Partners on federal event security and visas. Please: (1) explain who each of these entities is and what they actually do; (2) describe how they relate to each other and to AUKUS, UK-US defense industrial policy, and FY27 appropriations; (3) assess the DSCA notification and each lobbying filing independently \u2014 is the arms sale routine AUKUS progression or anomalous in scale? is the lobbying cluster coincidental or coordinated? treat these as separate questions first; (4) give a clear verdict on whether this is a macro-thematic signal worth monitoring, an orchestrated pattern, or noise, and tell me specifically what to watch for next."
       }
     },
     {
@@ -20740,9 +20740,9 @@
       ],
       "why": "Wheat z=+2.8\u03c3. Active basket: AU, CA, RU (3/6 exposed countries have recent signals).",
       "narrative": {
-        "headline": "Managed money piling short on wheat as AU/CA/RU lobby surges",
-        "body": "CFTC data shows managed money net short wheat at 2.8\u03c3 above baseline, while Australian and Canadian entities are lobbying hard on defense, trade, and agriculture simultaneously. Suggests institutional traders may be pricing in a supply glut or demand collapse that wheat-exposed sovereigns are quietly trying to counter.",
-        "prompt": "I just saw a pattern flagging a wheat positioning anomaly: CFTC managed money is net short wheat at +2.8\u03c3 (994 contracts, z-score 2.77), with the exposed country basket being RU, UA, US, AU, CA, IN. Simultaneously, Australian entities \u2014 Fivecast Pty Ltd (via Ark Strategy), Iluka Resources (via ML Strategies), DroneShield (via The Roosevelt Group), and Manildra Milling Corporation (via Covenant Government Affairs) \u2014 plus Canadian entities Enbridge U.S. Inc. (via Michael Best Strategies) and Snow Lake Energy Ltd. (via The Roosevelt Group) have all filed recent US lobbying disclosures covering defense, agriculture, trade, and energy. Please: (1) explain who each of these entities is and what they actually do, (2) describe the relationships between them and the broader geopolitical and commodity context, (3) assess whether this lobbying activity alongside a wheat short anomaly is routine or genuinely anomalous, and (4) help me decide if this is worth paying closer attention to. Is this worth paying attention to, and why or why not?"
+        "headline": "Managed money piling short on wheat as AU/CA/RU lobby intensifies",
+        "body": "CFTC data shows managed money net short wheat at 2.8\u03c3 above baseline, coinciding with Australian and Canadian entities lobbying on trade, agriculture, and defense. Suggests institutional traders are pricing in supply-side disruption or export competition shifts before they're publicly visible.",
+        "prompt": "I just saw a pattern flagging a wheat positioning anomaly: CFTC managed money net short on wheat is at +2.8\u03c3 (994 contracts net short, 52-week z-score), with Australia, Canada, and Russia identified as the exposed country basket. Simultaneously, Australian entities \u2014 Fivecast Pty Ltd, Iluka Resources, DroneShield, and Manildra Milling Corporation \u2014 plus Canadian entities Enbridge (U.S.) Inc. and Snow Lake Energy Ltd. are actively lobbying in Washington across defense, trade, agriculture, and energy. Please: (1) explain who each of these entities is and what they actually do; (2) describe how they relate to each other and to the AU/CA/RU wheat export context; (3) assess the CFTC short positioning and the lobbying activity independently \u2014 is the short anomalous or routine, and is this lobbying cluster meaningful or coincidental; (4) give a clear verdict on whether this is a macro-thematic signal, an orchestrated pattern, or noise, and what specifically I should watch for next."
       }
     },
     {
