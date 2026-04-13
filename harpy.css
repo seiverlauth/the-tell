@@ -156,62 +156,17 @@
       margin-top: 10px;
     }
 
-    .narrative-connections {
+    .narrative-prompt {
+      display: inline-block;
       margin-top: 12px;
-    }
-
-    .narrative-connection {
-      display: block;
       font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-tertiary);
-      line-height: 1.7;
-    }
-
-    .narrative-connection-dash {
-      color: var(--brass);
-    }
-
-    .narrative-dig {
-      margin-top: 12px;
-    }
-
-    .narrative-dig-label {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      color: var(--text-tertiary);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      display: inline;
-    }
-
-    .narrative-dig-items {
-      display: inline;
-      margin-left: 6px;
-    }
-
-    .narrative-dig-item {
-      font-family: var(--font-mono);
-      font-size: 12px;
+      font-size: 11px;
       color: var(--brass);
       cursor: pointer;
+      letter-spacing: 0.04em;
       transition: color 80ms;
     }
-
-    .narrative-dig-item:hover {
-      color: var(--text-primary);
-    }
-
-    .narrative-dig-item.copied {
-      color: var(--text-primary);
-    }
-
-    .narrative-dig-sep {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-tertiary);
-      margin: 0 4px;
-    }
+    .narrative-prompt:hover { color: var(--text-primary); }
 
     /* ── Feed section ── */
     #feed-section {

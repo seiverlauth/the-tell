@@ -429,15 +429,15 @@ def _prose_cache_key(theme: dict) -> str:
 _PROSE_SYSTEM = (
     "You are an intelligence analyst writing terse feed entries for a single expert reader. "
     "Your job is to say what you think is actually happening — not just what is documented. "
-    "Use the filing data as evidence. Make a call. If the pattern suggests something, say it plainly. "
-    "You can speculate if you label it as such (e.g. 'likely', 'suggests', 'probably'). "
-    "Do not hedge everything. One confident interpretation is more useful than five caveats. "
+    "Use the filing data as evidence. Make a call. Label speculation as such ('likely', 'suggests', 'probably'). "
+    "One confident interpretation beats five caveats. "
     "Return valid JSON only with exactly these fields:\n"
     "- headline: one sentence, max 12 words, states your interpretation — not just a description\n"
     "- body: 2 sentences max, ~40 words total. Sentence 1: what the data shows. Sentence 2: what it probably means.\n"
-    "- connections: 3–4 items max, each under 12 words, noun phrases — entities or threads worth watching\n"
-    "- dig_into: 3–5 short search terms or questions, each under 8 words\n"
-    "Less is more. No filler."
+    "- prompt: a ready-to-paste Claude prompt the reader can use to go deeper. "
+    "Include the key entities, dates, and dollar amounts from the signals. "
+    "End with a specific question. Max 80 words. Write it in second person as if briefing the reader.\n"
+    "No filler. No other fields."
 )
 
 
@@ -476,7 +476,7 @@ def generate_prose_for_themes(themes: list, enriched: list) -> list:
         with open(PROSE_CACHE_FILE) as f:
             raw_cache = json.load(f)
         for k, v in raw_cache.items():
-            if isinstance(v, dict) and "narrative" in v and "narrative_prose" not in v and "watch_for" not in v:
+            if isinstance(v, dict) and "narrative" in v and "narrative_prose" not in v and "watch_for" not in v and "prompt" in v.get("narrative", {}):
                 cache[k] = v
     except (FileNotFoundError, json.JSONDecodeError):
         pass
@@ -561,10 +561,9 @@ def generate_prose_for_themes(themes: list, enriched: list) -> list:
                 raw = raw.strip().rstrip("`").strip()
             parsed = json.loads(raw)
             narrative = {
-                "headline":    parsed.get("headline", ""),
-                "body":        parsed.get("body", ""),
-                "connections": parsed.get("connections", []),
-                "dig_into":    parsed.get("dig_into", []),
+                "headline": parsed.get("headline", ""),
+                "body":     parsed.get("body", ""),
+                "prompt":   parsed.get("prompt", ""),
             }
             theme["narrative"] = narrative
             cache[ck] = {"narrative": narrative}
