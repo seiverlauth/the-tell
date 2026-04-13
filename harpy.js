@@ -1,0 +1,609 @@
+    const SIGNALS_URL = 'data/signals.json';
+
+    // ── Layer colors ─────────────────────────────────────────────────────────
+    const LAYER_COLORS = {
+      military:    '#3b82f6',
+      influence:   '#10b981',
+      regulatory:  '#a855f7',
+      procurement: '#06b6d4',
+      financial:   '#f97316',
+      legislative: '#94a3b8',
+      adversarial: '#ec4899',
+    };
+
+    function layerColor(layer) {
+      return LAYER_COLORS[layer] || '#a0a0b0';
+    }
+
+    const THEME_TYPE_COLORS = {
+      actor_concentration: '#c084fc',
+      velocity_anomaly:    '#f87171',
+      layer_sequence:      '#2dd4bf',
+      cftc_overlap:        '#fbbf24',
+    };
+
+    const SOURCE_LABELS = {
+      dsca:           'Defense Security Cooperation Agency',
+      sam:            'System for Award Management',
+      fara:           'Foreign Agents Registration Act',
+      ofac:           'Office of Foreign Assets Control',
+      lda:            'Lobbying Disclosure Act',
+      federalregister:'Federal Register',
+      anchor_budget:  'Elbit Systems — SEC EDGAR 6-K',
+      bis:            'Bureau of Industry and Security',
+      imf:            'International Monetary Fund',
+      cftc:           'Commodity Futures Trading Commission',
+    };
+
+    const SOURCE_SHORT = {
+      dsca:           'DSCA',
+      sam:            'SAM',
+      fara:           'FARA',
+      ofac:           'OFAC',
+      lda:            'LDA',
+      federalregister:'FR',
+      anchor_budget:  'ELBIT',
+      bis:            'BIS',
+      imf:            'IMF',
+      cftc:           'CFTC',
+    };
+
+    function sourceLabel(s) {
+      return SOURCE_LABELS[s && s.toLowerCase()] || (s || '').toUpperCase();
+    }
+
+    function sourceShort(s) {
+      return SOURCE_SHORT[s && s.toLowerCase()] || (s || '').toUpperCase().slice(0, 5);
+    }
+
+    // ── Date helpers ─────────────────────────────────────────────────────────
+    function isoOffset(daysAgo) {
+      const d = new Date();
+      d.setDate(d.getDate() - daysAgo);
+      return d.getFullYear() + '-' +
+        String(d.getMonth() + 1).padStart(2, '0') + '-' +
+        String(d.getDate()).padStart(2, '0');
+    }
+
+    // ── Formatters ───────────────────────────────────────────────────────────
+    function fmtValue(v) {
+      if (v == null) return '';
+      if (v >= 1e9) { const n = v / 1e9; return '$' + (Number.isInteger(n) ? n : n.toFixed(1)) + 'B'; }
+      if (v >= 1e6) { const n = v / 1e6; return '$' + (Number.isInteger(n) ? n : n.toFixed(1)) + 'M'; }
+      if (v >= 1e3) { const n = v / 1e3; return '$' + (Number.isInteger(n) ? n : n.toFixed(1)) + 'K'; }
+      return '$' + v.toFixed(0);
+    }
+
+    function fmtDate(iso) {
+      if (!iso) return '';
+      const [y, m, d] = iso.split('-').map(Number);
+      return new Date(y, m - 1, d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    }
+
+    function fmtUpdated(isoStr) {
+      if (!isoStr) return '';
+      const dt = new Date(isoStr);
+      return 'updated ' + dt.toLocaleDateString('en-US', {
+        month: 'short', day: 'numeric', year: 'numeric',
+        hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+      });
+    }
+
+    function esc(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // ── Tooltip ──────────────────────────────────────────────────────────────
+    const tooltipEl = document.getElementById('tooltip');
+
+    document.addEventListener('mouseover', e => {
+      const target = e.target.closest('[data-tooltip]');
+      if (!target) { tooltipEl.style.display = 'none'; return; }
+      const [line1, ...rest] = target.dataset.tooltip.split('\n');
+      tooltipEl.innerHTML =
+        `<div class="tt-score">${esc(line1)}</div>` +
+        rest.map(l => `<div class="tt-rationale">${esc(l)}</div>`).join('');
+      tooltipEl.style.display = 'block';
+    });
+
+    document.addEventListener('mouseout', e => {
+      if (e.target.closest('[data-tooltip]')) tooltipEl.style.display = 'none';
+    });
+
+    document.addEventListener('mousemove', e => {
+      if (tooltipEl.style.display !== 'block') return;
+      const x = e.clientX + 14, y = e.clientY + 14;
+      tooltipEl.style.left = Math.min(x, window.innerWidth  - tooltipEl.offsetWidth  - 8) + 'px';
+      tooltipEl.style.top  = Math.min(y, window.innerHeight - tooltipEl.offsetHeight - 8) + 'px';
+    });
+
+    // ── sigKey ───────────────────────────────────────────────────────────────
+    function sigKey(sig) {
+      return (sig.source || '') + '|' + (sig.signal_date || '') + '|' + (sig.title || '').slice(0, 60);
+    }
+
+    // ── State ────────────────────────────────────────────────────────────────
+    let activeFilter = null;
+    let themeFilter  = null;
+    let activeTheme  = null;
+
+    let showUnresolved  = false;
+    const ALL_FEED_LAYERS = ['military','influence','regulatory','procurement','financial'];
+    const LAYER_SRC_MAP = {
+      military:    [['dsca','DSCA'],['anchor_budget','ELBIT']],
+      influence:   [['fara','FARA'],['lda','LDA']],
+      regulatory:  [['federalregister','FR'],['ofac','OFAC'],['bis','BIS']],
+      procurement: [['sam','SAM']],
+      financial:   [['imf','IMF'],['cftc','CFTC']],
+    };
+    let activeFeedLayers = new Set(ALL_FEED_LAYERS);
+    let activeFeedSrcs   = new Set(Object.values(LAYER_SRC_MAP).flat().map(([src]) => src));
+    let minProfileScore  = 0;
+
+    // ── isoProfile map ───────────────────────────────────────────────────────
+    let isoProfile = {};
+
+    // ── applyFeedFilters ─────────────────────────────────────────────────────
+    function applyFeedFilters(sigs) {
+      return sigs.filter(sig => {
+        if (activeFilter && sig.iso !== activeFilter) return false;
+        if (themeFilter && themeFilter.size > 0 && !themeFilter.has(sig.iso)) return false;
+        if (sig.iso === 'XX' && !showUnresolved) return false;
+        if (sig.layer && !activeFeedLayers.has(sig.layer)) return false;
+        if (!activeFeedSrcs.has(sig.source)) return false;
+        if (minProfileScore > 0) {
+          const score = sig.profile ? (sig.profile.score || 0) : 0;
+          if (score < minProfileScore) return false;
+        }
+        return true;
+      });
+    }
+
+    // ── updateFilterBarBrass ─────────────────────────────────────────────────
+    function updateFilterBarBrass() {
+      const bar = document.getElementById('filter-bar');
+      if (!bar) return;
+      const totalSrcs = Object.values(LAYER_SRC_MAP).flat().length;
+      const anyActive = activeFilter || themeFilter || activeTheme || minProfileScore > 0
+        || activeFeedLayers.size < ALL_FEED_LAYERS.length
+        || activeFeedSrcs.size < totalSrcs;
+      bar.classList.toggle('has-active', !!anyActive);
+    }
+
+    // ── initFilterBar ────────────────────────────────────────────────────────
+    function initFilterBar(signals) {
+      const bar = document.getElementById('filter-bar');
+      bar.style.display = '';
+
+      const row1 = document.createElement('div');
+      row1.className = 'filter-row';
+
+      const layerLabel = document.createElement('span');
+      layerLabel.className = 'filter-label';
+      layerLabel.textContent = 'layer';
+      row1.appendChild(layerLabel);
+
+      for (const layer of ALL_FEED_LAYERS) {
+        const color = layerColor(layer);
+        const pill = document.createElement('span');
+        pill.className = 'filter-pill active';
+        pill.dataset.layer = layer;
+        pill.style.setProperty('--pill-color', color);
+        pill.textContent = layer.toUpperCase();
+        pill.addEventListener('click', () => {
+          const on = activeFeedLayers.has(layer);
+          if (on) { activeFeedLayers.delete(layer); pill.classList.remove('active'); }
+          else    { activeFeedLayers.add(layer);    pill.classList.add('active'); }
+          bar.querySelectorAll(`.src-pill[data-layer="${layer}"]`).forEach(sp => {
+            const src = sp.dataset.src;
+            if (on) { activeFeedSrcs.delete(src); sp.classList.remove('active'); }
+            else    { activeFeedSrcs.add(src);    sp.classList.add('active'); }
+          });
+          updateFilterBarBrass();
+          renderFeed(signals);
+        });
+        row1.appendChild(pill);
+      }
+
+      const sep2 = document.createElement('span'); sep2.className = 'filter-vsep';
+      row1.appendChild(sep2);
+
+      const scoreLabel = document.createElement('span');
+      scoreLabel.className = 'filter-label';
+      scoreLabel.textContent = 'score';
+      row1.appendChild(scoreLabel);
+
+      for (const [label, val] of [['ALL',0],['4+',4],['6+',6],['8+',8]]) {
+        const pill = document.createElement('span');
+        pill.className = 'filter-pill score-pill' + (val === 0 ? ' active' : '');
+        pill.dataset.score = val;
+        pill.textContent = label;
+        pill.addEventListener('click', () => {
+          minProfileScore = val;
+          bar.querySelectorAll('.score-pill').forEach(sp =>
+            sp.classList.toggle('active', +sp.dataset.score === val)
+          );
+          updateFilterBarBrass();
+          renderFeed(signals);
+        });
+        row1.appendChild(pill);
+      }
+
+      const themeIndicator = document.createElement('span');
+      themeIndicator.id = 'theme-filter-indicator';
+      themeIndicator.className = 'filter-pill';
+      themeIndicator.style.display = 'none';
+      themeIndicator.addEventListener('click', () => {
+        themeFilter = null; activeTheme = null; activeFilter = null;
+        document.querySelectorAll('.narrative-block.active').forEach(r => r.classList.remove('active'));
+        updateFilterBarBrass();
+        renderFeed(signals);
+      });
+      row1.appendChild(themeIndicator);
+
+      const countEl = document.createElement('span');
+      countEl.className = 'filter-count';
+      countEl.id = 'filter-count';
+      countEl.title = 'show unresolved country records';
+      countEl.addEventListener('click', () => {
+        showUnresolved = !showUnresolved;
+        renderFeed(signals);
+      });
+      row1.appendChild(countEl);
+      bar.appendChild(row1);
+
+      const row2 = document.createElement('div');
+      row2.className = 'filter-row';
+
+      let first = true;
+      for (const [layer, srcs] of Object.entries(LAYER_SRC_MAP)) {
+        if (!first) {
+          const sep = document.createElement('span'); sep.className = 'filter-vsep';
+          row2.appendChild(sep);
+        }
+        first = false;
+        for (const [src, label] of srcs) {
+          const color = layerColor(layer);
+          const pill = document.createElement('span');
+          pill.className = 'filter-pill src-pill active';
+          pill.dataset.src = src;
+          pill.dataset.layer = layer;
+          pill.style.setProperty('--pill-color', color);
+          pill.textContent = label;
+          pill.addEventListener('click', () => {
+            const on = activeFeedSrcs.has(src);
+            if (on) { activeFeedSrcs.delete(src); pill.classList.remove('active'); }
+            else    { activeFeedSrcs.add(src);    pill.classList.add('active'); }
+            updateFilterBarBrass();
+            renderFeed(signals);
+          });
+          row2.appendChild(pill);
+        }
+      }
+      bar.appendChild(row2);
+    }
+
+    // ── renderFeed ───────────────────────────────────────────────────────────
+    function renderFeed(signals) {
+      const feedEl    = document.getElementById('feed');
+      const feedHdr   = document.getElementById('feed-hdr');
+      const feedLabel = document.getElementById('feed-label');
+      const toggleBtn = document.getElementById('feed-toggle-btn');
+      feedEl.innerHTML = '';
+
+      if (activeFilter || themeFilter) {
+        feedHdr.style.display = '';
+        if (activeFilter) {
+          const p = isoProfile[activeFilter];
+          feedLabel.textContent = p ? p.name : activeFilter;
+        } else if (activeTheme) {
+          const t = activeTheme.title;
+          feedLabel.textContent = t.length > 60 ? t.slice(0, 57) + '\u2026' : t;
+        }
+        toggleBtn.textContent = '[clear filter]';
+        toggleBtn.onclick = () => {
+          activeFilter = null;
+          themeFilter  = null;
+          activeTheme  = null;
+          document.querySelectorAll('.narrative-block.active').forEach(r => r.classList.remove('active'));
+          updateFilterBarBrass();
+          renderFeed(signals);
+        };
+      } else {
+        feedHdr.style.display = 'none';
+      }
+
+      const themeIndicator = document.getElementById('theme-filter-indicator');
+      if (themeIndicator) {
+        if (activeTheme) {
+          const label = activeTheme.title.length > 38 ? activeTheme.title.slice(0, 35) + '\u2026' : activeTheme.title;
+          themeIndicator.textContent = '\u00d7 ' + label;
+          themeIndicator.style.setProperty('--pill-color', THEME_TYPE_COLORS[activeTheme.type] || '#a0a0b0');
+          themeIndicator.classList.add('active');
+          themeIndicator.style.display = '';
+        } else {
+          themeIndicator.classList.remove('active');
+          themeIndicator.style.display = 'none';
+        }
+      }
+
+      updateFilterBarBrass();
+
+      const visible = applyFeedFilters(signals);
+      const countEl = document.getElementById('filter-count');
+      if (countEl) countEl.textContent = visible.length + '\u00a0signals' + (showUnresolved ? '\u00a0\xb7XX' : '');
+
+      if (!visible.length) {
+        feedEl.innerHTML = '<div style="color:var(--text-tertiary);font-size:12px;padding:16px 0">no signals</div>';
+        return;
+      }
+
+      const byMonth = new Map();
+      for (const sig of visible) {
+        const key = sig.signal_date ? sig.signal_date.slice(0, 7) : '';
+        if (!byMonth.has(key)) byMonth.set(key, []);
+        byMonth.get(key).push(sig);
+      }
+
+      for (const [monthKey, monthSigs] of byMonth) {
+        const hdr = document.createElement('div');
+        hdr.className = 'month-header';
+        if (monthKey) {
+          const [y, m] = monthKey.split('-').map(Number);
+          hdr.textContent = new Date(y, m - 1, 1)
+            .toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+            .toUpperCase();
+        }
+        feedEl.appendChild(hdr);
+        for (const sig of monthSigs) {
+          feedEl.appendChild(renderItem(sig, signals));
+        }
+      }
+    }
+
+    // ── renderItem ───────────────────────────────────────────────────────────
+    function renderItem(sig, signals) {
+      const isUnresolved = sig.iso === 'XX';
+      const profile = sig.profile || null;
+      const country = profile ? profile.name : sig.iso;
+      const el      = document.createElement('div');
+      el.className  = 'item';
+      el.dataset.sigKey = sigKey(sig);
+      el.style.setProperty('--layer-color', layerColor(sig.layer));
+
+      let countryTooltip = '';
+      if (isUnresolved) {
+        countryTooltip = ` data-tooltip="Country not determined from filing — excluded from map and convergence scoring"`;
+      } else if (profile) {
+        const ttParts = [];
+        const s = profile.score;
+        if (s != null) ttParts.push(`Structural interest: ${s}/10`);
+        if (profile.rationale) ttParts.push(profile.rationale);
+        if (ttParts.length) countryTooltip = ` data-tooltip="${esc(ttParts.join('\n'))}"`;
+      }
+
+      const sourceUrl = sig.page_url || sig.url || null;
+      const descRaw   = sig.description || '';
+
+      let titleStr = sig.title || sig.description || '\u2014';
+      if (titleStr.includes(' \u2014 ')) {
+        titleStr = titleStr.split(' \u2014 ').slice(1).join(' \u2014 ');
+      }
+      if (sig.value_usd != null) titleStr += '  ' + fmtValue(sig.value_usd);
+
+      const hasDetail = !!(descRaw || sourceUrl);
+      const isFiltered   = !isUnresolved && activeFilter === sig.iso;
+      const countryClass = isUnresolved
+        ? 'item-country-unresolved'
+        : 'item-country' + (isFiltered ? ' active-filter' : '');
+      const countryText  = isUnresolved ? 'unresolved' : esc(country);
+
+      let detailInner = '';
+      if (descRaw) {
+        const trunc = descRaw.length > 800 ? descRaw.slice(0, 800) + '\u2026' : descRaw;
+        detailInner += esc(trunc);
+      }
+      if (sourceUrl) {
+        detailInner += (detailInner ? '  ' : '') +
+          `<a href="${esc(sourceUrl)}" target="_blank" rel="noopener">source \u2197</a>`;
+      }
+
+      el.innerHTML =
+        `<div class="item-row">` +
+          `<span class="${countryClass}"${countryTooltip}>${countryText}</span>` +
+          `<span class="item-sep">\xb7</span>` +
+          `<span class="item-title">${esc(titleStr)}</span>` +
+          `<span class="item-src">${esc(sourceShort(sig.source))}</span>` +
+          `<span class="item-date">${esc(fmtDate(sig.signal_date))}</span>` +
+        `</div>` +
+        (hasDetail ? `<div class="item-detail">${detailInner}</div>` : '');
+
+      if (hasDetail) {
+        el.querySelector('.item-row').addEventListener('click', e => {
+          if (e.target.classList.contains('item-country')) return;
+          if (e.target.classList.contains('item-country-unresolved')) return;
+          const wasExpanded = el.classList.contains('expanded');
+          document.querySelectorAll('.item.expanded').forEach(i => i.classList.remove('expanded'));
+          if (!wasExpanded) el.classList.add('expanded');
+        });
+      }
+
+      if (sig.iso && !isUnresolved) {
+        el.querySelector('.item-country').addEventListener('click', e => {
+          e.stopPropagation();
+          themeFilter = null; activeTheme = null;
+          document.querySelectorAll('.narrative-block.active').forEach(r => r.classList.remove('active'));
+          activeFilter = activeFilter === sig.iso ? null : sig.iso;
+          updateFilterBarBrass();
+          renderFeed(signals);
+        });
+      }
+
+      return el;
+    }
+
+    // ── renderNarratives ─────────────────────────────────────────────────────
+    function renderNarratives(themes, signals) {
+      const section = document.getElementById('narratives-section');
+      const list    = document.getElementById('narratives-list');
+      if (!themes || !themes.length) return;
+
+      // Filter to themes with non-null narrative, then take top 10
+      const withNarrative = themes.filter(t => t.narrative != null);
+      const toRender = withNarrative.slice(0, 10);
+
+      if (!toRender.length) return;
+
+      section.style.display = '';
+      list.innerHTML = '';
+
+      for (const theme of toRender) {
+        const block = document.createElement('div');
+        block.className = 'narrative-block';
+
+        const narrative = theme.narrative;
+
+        if (!narrative || (!narrative.headline && !narrative.body)) {
+          // Fallback: just show title in mono
+          const fallback = document.createElement('div');
+          fallback.className = 'narrative-fallback';
+          fallback.textContent = theme.title || '';
+          block.appendChild(fallback);
+        } else {
+          // Headline
+          if (narrative.headline) {
+            const headline = document.createElement('div');
+            headline.className = 'narrative-headline';
+            headline.textContent = narrative.headline;
+            block.appendChild(headline);
+          }
+
+          // Body
+          if (narrative.body) {
+            const body = document.createElement('div');
+            body.className = 'narrative-body';
+            body.textContent = narrative.body;
+            block.appendChild(body);
+          }
+
+          // Connections
+          const connections = Array.isArray(narrative.connections) ? narrative.connections : [];
+          if (connections.length) {
+            const connDiv = document.createElement('div');
+            connDiv.className = 'narrative-connections';
+            for (const conn of connections) {
+              const line = document.createElement('span');
+              line.className = 'narrative-connection';
+              line.innerHTML = `<span class="narrative-connection-dash">— </span>${esc(conn)}`;
+              connDiv.appendChild(line);
+            }
+            block.appendChild(connDiv);
+          }
+
+          // Dig into
+          const digInto = Array.isArray(narrative.dig_into) ? narrative.dig_into : [];
+          if (digInto.length) {
+            const digDiv = document.createElement('div');
+            digDiv.className = 'narrative-dig';
+
+            const label = document.createElement('span');
+            label.className = 'narrative-dig-label';
+            label.textContent = 'dig into —';
+            digDiv.appendChild(label);
+
+            const itemsSpan = document.createElement('span');
+            itemsSpan.className = 'narrative-dig-items';
+
+            digInto.forEach((item, idx) => {
+              if (idx > 0) {
+                const sep = document.createElement('span');
+                sep.className = 'narrative-dig-sep';
+                sep.textContent = ' · ';
+                itemsSpan.appendChild(sep);
+              }
+              const itemEl = document.createElement('span');
+              itemEl.className = 'narrative-dig-item';
+              itemEl.textContent = item;
+              itemEl.addEventListener('click', e => {
+                e.stopPropagation();
+                navigator.clipboard.writeText(item).then(() => {
+                  itemEl.classList.add('copied');
+                  setTimeout(() => itemEl.classList.remove('copied'), 1000);
+                }).catch(() => {});
+              });
+              itemsSpan.appendChild(itemEl);
+            });
+
+            digDiv.appendChild(itemsSpan);
+            block.appendChild(digDiv);
+          }
+        }
+
+        // Click handler: toggle theme filter
+        block.addEventListener('click', () => {
+          const wasActive = block.classList.contains('active');
+          document.querySelectorAll('.narrative-block.active').forEach(r => r.classList.remove('active'));
+
+          if (wasActive) {
+            themeFilter  = null;
+            activeTheme  = null;
+            activeFilter = null;
+          } else {
+            block.classList.add('active');
+            const validIsos = (theme.countries || []).filter(iso => iso && iso !== 'XX' && iso !== 'US');
+            activeTheme  = theme;
+            activeFilter = null;
+            themeFilter  = validIsos.length ? new Set(validIsos) : null;
+          }
+
+          updateFilterBarBrass();
+          renderFeed(signals);
+        });
+
+        list.appendChild(block);
+      }
+    }
+
+    // ── main ─────────────────────────────────────────────────────────────────
+    async function main() {
+      const statusEl  = document.getElementById('status');
+      const updatedEl = document.getElementById('updated');
+
+      let data;
+      try {
+        const r = await fetch(SIGNALS_URL);
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        data = await r.json();
+      } catch (e) {
+        statusEl.textContent = 'error loading signals.json \u2014 ' + e.message;
+        return;
+      }
+
+      updatedEl.textContent = fmtUpdated(data.generated_at);
+
+      const signals = data.signals || [];
+      statusEl.remove();
+
+      if (!signals.length) {
+        document.getElementById('feed').innerHTML =
+          '<div style="color:var(--text-tertiary);font-size:12px;padding:16px 0">no signals</div>';
+        return;
+      }
+
+      for (const sig of signals) {
+        if (sig.iso && sig.profile && !isoProfile[sig.iso]) {
+          isoProfile[sig.iso] = sig.profile;
+        }
+      }
+
+      renderNarratives(data.themes || [], signals);
+      initFilterBar(signals);
+      renderFeed(signals);
+    }
+
+    main();
+  
