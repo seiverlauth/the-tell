@@ -112,7 +112,7 @@
     }
 
     .narrative-block {
-      padding: 40px 0 40px 16px;
+      padding: 24px 0 24px 16px;
       border-bottom: 1px solid var(--border);
       cursor: pointer;
       user-select: none;
@@ -170,7 +170,7 @@
 
     /* ── Feed section ── */
     #feed-section {
-      margin-top: 64px;
+      margin-top: 40px;
     }
 
     /* ── Feed header (active filter) ── */
