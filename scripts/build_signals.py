@@ -472,6 +472,61 @@ def compute_themes(enriched: list) -> list:
         })
 
     themes.sort(key=lambda t: t["score"], reverse=True)
+
+    # ── Convergence collapse ─────────────────────────────────────────────────
+    # If the same single country appears in 2+ themes above the prose floor,
+    # collapse them into one convergence theme. Two algorithms firing on the
+    # same country independently is a stronger signal than either alone.
+    PROSE_FLOOR_FOR_COLLAPSE = 15.0
+    from collections import defaultdict
+    single_country_above_floor = defaultdict(list)
+    for t in themes:
+        if t["score"] >= PROSE_FLOOR_FOR_COLLAPSE and len(t.get("countries", [])) == 1:
+            single_country_above_floor[t["countries"][0]].append(t)
+
+    collapsed_isos = set()
+    convergence_themes = []
+    for iso, matching in single_country_above_floor.items():
+        if len(matching) < 2:
+            continue
+        collapsed_isos.add(iso)
+        combined_score = sum(t["score"] for t in matching)
+        combined_keys = list({k for t in matching for k in t.get("signal_keys", [])})
+        type_labels = " + ".join(
+            t["type"].replace("velocity_anomaly", "velocity spike")
+                     .replace("layer_sequence", "layer sequence")
+                     .replace("actor_concentration", "actor concentration")
+                     .replace("cftc_overlap", "CFTC overlap")
+            for t in matching
+        )
+        country_name = profile_name(matching[0].get("countries", [iso]) and
+                                    next((s for s in enriched if s.get("iso") == iso), {}) or {})
+        # Fallback name from profile if available
+        for t in matching:
+            for sk in t.get("signal_keys", []):
+                pass  # just need country_name
+        # Get name from first theme title (before the em-dash)
+        country_name = matching[0]["title"].split(" \u2014")[0].split(" \u2192")[0]
+
+        why_parts = [f"[{t['type']}] {t['why']}" for t in matching]
+        convergence_themes.append({
+            "type": "convergence",
+            "title": f"{country_name} \u2014 {type_labels}",
+            "score": round(combined_score, 3),
+            "countries": [iso],
+            "signal_keys": combined_keys,
+            "why": " | ".join(why_parts),
+            "_components": matching,  # preserved for prose generation context
+        })
+
+    # Replace individual themes with convergence themes where applicable
+    if convergence_themes:
+        themes = [t for t in themes if not (
+            len(t.get("countries", [])) == 1 and t["countries"][0] in collapsed_isos
+        )]
+        themes.extend(convergence_themes)
+        themes.sort(key=lambda t: t["score"], reverse=True)
+
     return themes[:20]
 
 
@@ -560,7 +615,7 @@ def generate_prose_for_themes(themes: list, enriched: list) -> list:
 
     # Only generate prose for themes with score above floor — weak themes stay null
     # and are invisible in the narratives panel. Better 3 real narratives than 10 noisy ones.
-    PROSE_SCORE_FLOOR = 15.0
+    PROSE_SCORE_FLOOR = 18.0
 
     for theme in [t for t in themes[:10] if t.get("score", 0) >= PROSE_SCORE_FLOOR]:
         ck = _prose_cache_key(theme)
@@ -609,17 +664,34 @@ def generate_prose_for_themes(themes: list, enriched: list) -> list:
             if len(context_lines) >= 10:
                 break
 
-        user_msg = (
-            f"Pattern type: {theme['type']}\n"
-            f"Pattern title: {theme['title']}\n"
-            f"Score: {theme['score']}\n"
-            f"Countries involved: {', '.join(theme_countries)}\n"
-            f"Algorithm finding: {theme['why']}\n\n"
-            f"Contributing signals (primary):\n"
-            + ("\n".join(contrib_lines) if contrib_lines else "- (none resolved)")
-            + "\n\nOther signals from same countries (last 90 days):\n"
-            + ("\n".join(context_lines) if context_lines else "- (none)")
-        )
+        if theme["type"] == "convergence" and theme.get("_components"):
+            component_summaries = "\n".join(
+                f"- [{c['type']}] {c['title']}: {c['why']}"
+                for c in theme["_components"]
+            )
+            user_msg = (
+                f"Pattern type: convergence (multiple independent algorithms fired on same country)\n"
+                f"Pattern title: {theme['title']}\n"
+                f"Score: {theme['score']}\n"
+                f"Countries involved: {', '.join(theme_countries)}\n"
+                f"Component findings:\n{component_summaries}\n\n"
+                f"Contributing signals (primary):\n"
+                + ("\n".join(contrib_lines) if contrib_lines else "- (none resolved)")
+                + "\n\nOther signals from same countries (last 90 days):\n"
+                + ("\n".join(context_lines) if context_lines else "- (none)")
+            )
+        else:
+            user_msg = (
+                f"Pattern type: {theme['type']}\n"
+                f"Pattern title: {theme['title']}\n"
+                f"Score: {theme['score']}\n"
+                f"Countries involved: {', '.join(theme_countries)}\n"
+                f"Algorithm finding: {theme['why']}\n\n"
+                f"Contributing signals (primary):\n"
+                + ("\n".join(contrib_lines) if contrib_lines else "- (none resolved)")
+                + "\n\nOther signals from same countries (last 90 days):\n"
+                + ("\n".join(context_lines) if context_lines else "- (none)")
+            )
 
         try:
             resp = client.messages.create(
