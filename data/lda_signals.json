@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T22:54:12.684322+00:00",
+  "generated_at": "2026-04-13T22:55:09.382865+00:00",
   "sources": [
     "lda"
   ],
@@ -8438,6 +8438,280 @@
         "SCI"
       ],
       "url": "https://lda.gov/filings/public/filing/1d77f055-6814-4bfa-ab53-2a9efc454ddf/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "73c4f848-5879-4c58-a3f0-da356d8e8835",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-12",
+      "title": "Defense \u2014 Atx Defense via Revere Federal Strategies",
+      "value_usd": null,
+      "description": "FY27 National Defense Authorization Act FY27 Defense Appropriations Act",
+      "lobbying_firm": "Revere Federal Strategies",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/73c4f848-5879-4c58-a3f0-da356d8e8835/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "07509aff-bbf0-4bdb-b251-a6ab8e3a50dd",
+      "iso": "BE",
+      "source": "lda",
+      "signal_date": "2026-04-12",
+      "title": "Foreign Affairs, Science/Technology, Trade \u2014 Digitaleurope via Digitaleurope",
+      "value_usd": null,
+      "description": "Belgium; - EU-U.S. trade and digital trade matters - Transatlantic regulatory cooperation on digital, technology, and telecommuni\u2026",
+      "lobbying_firm": "Digitaleurope",
+      "issue_codes": [
+        "CPI",
+        "FOR",
+        "SCI",
+        "TAR",
+        "TEC",
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/07509aff-bbf0-4bdb-b251-a6ab8e3a50dd/print/",
+      "raw_score": 2.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "78829a51-c811-4aa3-99e6-52619ff67b10",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-12",
+      "title": "Defense \u2014 Bravo Ordnance via Frontera Group",
+      "value_usd": null,
+      "description": "National Defense Authorization Act",
+      "lobbying_firm": "Frontera Group",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/78829a51-c811-4aa3-99e6-52619ff67b10/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "f6770f20-a163-4387-ba4f-9dadeb444d87",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense \u2014 Clark Street Associates On Behalf Of Lightpath Technologies via Brandon Tinianov",
+      "value_usd": null,
+      "description": "Funding for production of defense related materials.",
+      "lobbying_firm": "Brandon Tinianov",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/f6770f20-a163-4387-ba4f-9dadeb444d87/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "3f3c7569-0458-44f0-ad7c-d60f54f83e3c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Trade \u2014 Quince via Sorini, Samet & Associates, Llc",
+      "value_usd": null,
+      "description": "Trade and tariffs on various consumer items",
+      "lobbying_firm": "Sorini, Samet & Associates, Llc",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/3f3c7569-0458-44f0-ad7c-d60f54f83e3c/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e1ad02e1-dfb3-4d39-91ef-0d8a74be227d",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Foreign Affairs, Budget \u2014 Givedirectly via Tiber Creek Group",
+      "value_usd": null,
+      "description": "Issues related to U.S. humanitarian assistance and global agriculture programs; Issues related to U.S. humanitarian assi\u2026",
+      "lobbying_firm": "Tiber Creek Group",
+      "issue_codes": [
+        "BUD",
+        "FOR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e1ad02e1-dfb3-4d39-91ef-0d8a74be227d/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "fa1b48bb-b98a-42e1-9ffc-db0606f0d27a",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Foreign Affairs \u2014 Campaign For America First International Assistance via Ballard Partners",
+      "value_usd": null,
+      "description": "Appropriations for international assistance for malnutrition.",
+      "lobbying_firm": "Ballard Partners",
+      "issue_codes": [
+        "FOR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/fa1b48bb-b98a-42e1-9ffc-db0606f0d27a/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "b0f0d5d4-302d-43e0-9de2-b0d5ed34402d",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Science/Technology, Transportation \u2014 Teradar via Beltway Guided Strategies",
+      "value_usd": null,
+      "description": "Automobile Safety Regulations, Semiconductor Manufacturing, Electromagnetic Spectrum",
+      "lobbying_firm": "Beltway Guided Strategies",
+      "issue_codes": [
+        "SCI",
+        "TRA"
+      ],
+      "url": "https://lda.gov/filings/public/filing/b0f0d5d4-302d-43e0-9de2-b0d5ed34402d/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "a79ec4d7-e6ed-40f2-b601-5dec70b62f6e",
+      "iso": "CA",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Energy, Transportation \u2014 Pembina Pipeline Corporation via Pembina Pipeline Corporation",
+      "value_usd": null,
+      "description": "Canada; Attending meetings with congresspeople as a member of the GPA Midstream Association. We also anticipate discussing the i\u2026",
+      "lobbying_firm": "Pembina Pipeline Corporation",
+      "issue_codes": [
+        "ENG",
+        "TRA"
+      ],
+      "url": "https://lda.gov/filings/public/filing/a79ec4d7-e6ed-40f2-b601-5dec70b62f6e/print/",
+      "raw_score": 5.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "b8527ee7-7250-4c63-bf0a-921866c6d8b7",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense, Homeland Security, Science/Technology \u2014 Ontic Technologies, Inc. via Squire Patton Boggs",
+      "value_usd": null,
+      "description": "Advocacy in support of federal awareness and adoption of connected intelligence software platforms for physical security\u2026",
+      "lobbying_firm": "Squire Patton Boggs",
+      "issue_codes": [
+        "BUD",
+        "DEF",
+        "GOV",
+        "HOM",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/b8527ee7-7250-4c63-bf0a-921866c6d8b7/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "40c30b44-e0c6-4bb2-a1c2-9d6ee11f0320",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense, Manufacturing \u2014 Kingsway Industries via Bramer Group Llc",
+      "value_usd": null,
+      "description": "FY27 NDAA",
+      "lobbying_firm": "Bramer Group Llc",
+      "issue_codes": [
+        "DEF",
+        "MAN"
+      ],
+      "url": "https://lda.gov/filings/public/filing/40c30b44-e0c6-4bb2-a1c2-9d6ee11f0320/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "c98aa5e2-7eb2-49e9-81b5-2ec4fc108f0a",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense, Manufacturing \u2014 Burke Aerospace via Bramer Group Llc",
+      "value_usd": null,
+      "description": "FY27 NDAA",
+      "lobbying_firm": "Bramer Group Llc",
+      "issue_codes": [
+        "DEF",
+        "MAN"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c98aa5e2-7eb2-49e9-81b5-2ec4fc108f0a/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "059f3c72-08fe-420f-a7ea-20d7cbd17c45",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense \u2014 Apeiron Labs via Innovative Federal Strategies, Llc",
+      "value_usd": null,
+      "description": "Issues related to ocean sensing capabilities.",
+      "lobbying_firm": "Innovative Federal Strategies, Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/059f3c72-08fe-420f-a7ea-20d7cbd17c45/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "97a7b0ea-d85c-4d0d-bb27-81da6721022c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense, Science/Technology, Economics \u2014 University Of Southern California via King & Spalding Llp",
+      "value_usd": null,
+      "description": "Higher education policy; student aid and workforce development; science, health, economic, and technology policies; publ\u2026",
+      "lobbying_firm": "King & Spalding Llp",
+      "issue_codes": [
+        "DEF",
+        "ECN",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/97a7b0ea-d85c-4d0d-bb27-81da6721022c/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "f2df0a5d-1bc9-44fd-a1e2-1d3afc0ced10",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense, Budget, Intelligence \u2014 Seerist via Cassidy & Associates, Inc.",
+      "value_usd": null,
+      "description": "FY27 Defense Appropriations, FY27 NDAA, FY27 Intelligence Authorization Act",
+      "lobbying_firm": "Cassidy & Associates, Inc.",
+      "issue_codes": [
+        "BUD",
+        "DEF",
+        "INT"
+      ],
+      "url": "https://lda.gov/filings/public/filing/f2df0a5d-1bc9-44fd-a1e2-1d3afc0ced10/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "c61937fe-cdfa-4495-aaab-9699e8325b02",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Trade \u2014 Pacific Coast Council Of Customs Brokers And Freight Forwarders Association Inc. via Accelerate Strategies",
+      "value_usd": null,
+      "description": "International Trade: import, export",
+      "lobbying_firm": "Accelerate Strategies",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c61937fe-cdfa-4495-aaab-9699e8325b02/print/",
       "raw_score": null,
       "weight": 1.0
     }

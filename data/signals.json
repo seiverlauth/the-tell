@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T07:28:05.393271+00:00",
+  "generated_at": "2026-04-13T22:55:13.306066+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -13,6 +13,325 @@
     "sam"
   ],
   "signals": [
+    {
+      "filing_uuid": "f6770f20-a163-4387-ba4f-9dadeb444d87",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense \u2014 Clark Street Associates On Behalf Of Lightpath Technologies via Brandon Tinianov",
+      "value_usd": null,
+      "description": "Funding for production of defense related materials.",
+      "lobbying_firm": "Brandon Tinianov",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/f6770f20-a163-4387-ba4f-9dadeb444d87/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "3f3c7569-0458-44f0-ad7c-d60f54f83e3c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Trade \u2014 Quince via Sorini, Samet & Associates, Llc",
+      "value_usd": null,
+      "description": "Trade and tariffs on various consumer items",
+      "lobbying_firm": "Sorini, Samet & Associates, Llc",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/3f3c7569-0458-44f0-ad7c-d60f54f83e3c/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "e1ad02e1-dfb3-4d39-91ef-0d8a74be227d",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Foreign Affairs, Budget \u2014 Givedirectly via Tiber Creek Group",
+      "value_usd": null,
+      "description": "Issues related to U.S. humanitarian assistance and global agriculture programs; Issues related to U.S. humanitarian assi\u2026",
+      "lobbying_firm": "Tiber Creek Group",
+      "issue_codes": [
+        "BUD",
+        "FOR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e1ad02e1-dfb3-4d39-91ef-0d8a74be227d/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "fa1b48bb-b98a-42e1-9ffc-db0606f0d27a",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Foreign Affairs \u2014 Campaign For America First International Assistance via Ballard Partners",
+      "value_usd": null,
+      "description": "Appropriations for international assistance for malnutrition.",
+      "lobbying_firm": "Ballard Partners",
+      "issue_codes": [
+        "FOR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/fa1b48bb-b98a-42e1-9ffc-db0606f0d27a/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "b0f0d5d4-302d-43e0-9de2-b0d5ed34402d",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Science/Technology, Transportation \u2014 Teradar via Beltway Guided Strategies",
+      "value_usd": null,
+      "description": "Automobile Safety Regulations, Semiconductor Manufacturing, Electromagnetic Spectrum",
+      "lobbying_firm": "Beltway Guided Strategies",
+      "issue_codes": [
+        "SCI",
+        "TRA"
+      ],
+      "url": "https://lda.gov/filings/public/filing/b0f0d5d4-302d-43e0-9de2-b0d5ed34402d/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "a79ec4d7-e6ed-40f2-b601-5dec70b62f6e",
+      "iso": "CA",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Energy, Transportation \u2014 Pembina Pipeline Corporation via Pembina Pipeline Corporation",
+      "value_usd": null,
+      "description": "Canada; Attending meetings with congresspeople as a member of the GPA Midstream Association. We also anticipate discussing the i\u2026",
+      "lobbying_firm": "Pembina Pipeline Corporation",
+      "issue_codes": [
+        "ENG",
+        "TRA"
+      ],
+      "url": "https://lda.gov/filings/public/filing/a79ec4d7-e6ed-40f2-b601-5dec70b62f6e/print/",
+      "profile": {
+        "name": "Canada",
+        "score": 5,
+        "factors": [
+          "hydrocarbons",
+          "strategic minerals",
+          "Western Hemisphere"
+        ],
+        "rationale": "Western Hemisphere presence (+1), major hydrocarbon producer (+2), strategic minerals including uranium and rare earths (+2)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "b8527ee7-7250-4c63-bf0a-921866c6d8b7",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense, Homeland Security, Science/Technology \u2014 Ontic Technologies, Inc. via Squire Patton Boggs",
+      "value_usd": null,
+      "description": "Advocacy in support of federal awareness and adoption of connected intelligence software platforms for physical security\u2026",
+      "lobbying_firm": "Squire Patton Boggs",
+      "issue_codes": [
+        "BUD",
+        "DEF",
+        "GOV",
+        "HOM",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/b8527ee7-7250-4c63-bf0a-921866c6d8b7/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "40c30b44-e0c6-4bb2-a1c2-9d6ee11f0320",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense, Manufacturing \u2014 Kingsway Industries via Bramer Group Llc",
+      "value_usd": null,
+      "description": "FY27 NDAA",
+      "lobbying_firm": "Bramer Group Llc",
+      "issue_codes": [
+        "DEF",
+        "MAN"
+      ],
+      "url": "https://lda.gov/filings/public/filing/40c30b44-e0c6-4bb2-a1c2-9d6ee11f0320/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "059f3c72-08fe-420f-a7ea-20d7cbd17c45",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense \u2014 Apeiron Labs via Innovative Federal Strategies, Llc",
+      "value_usd": null,
+      "description": "Issues related to ocean sensing capabilities.",
+      "lobbying_firm": "Innovative Federal Strategies, Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/059f3c72-08fe-420f-a7ea-20d7cbd17c45/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "97a7b0ea-d85c-4d0d-bb27-81da6721022c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense, Science/Technology, Economics \u2014 University Of Southern California via King & Spalding Llp",
+      "value_usd": null,
+      "description": "Higher education policy; student aid and workforce development; science, health, economic, and technology policies; publ\u2026",
+      "lobbying_firm": "King & Spalding Llp",
+      "issue_codes": [
+        "DEF",
+        "ECN",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/97a7b0ea-d85c-4d0d-bb27-81da6721022c/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "f2df0a5d-1bc9-44fd-a1e2-1d3afc0ced10",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Defense, Budget, Intelligence \u2014 Seerist via Cassidy & Associates, Inc.",
+      "value_usd": null,
+      "description": "FY27 Defense Appropriations, FY27 NDAA, FY27 Intelligence Authorization Act",
+      "lobbying_firm": "Cassidy & Associates, Inc.",
+      "issue_codes": [
+        "BUD",
+        "DEF",
+        "INT"
+      ],
+      "url": "https://lda.gov/filings/public/filing/f2df0a5d-1bc9-44fd-a1e2-1d3afc0ced10/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "c61937fe-cdfa-4495-aaab-9699e8325b02",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-13",
+      "title": "Trade \u2014 Pacific Coast Council Of Customs Brokers And Freight Forwarders Association Inc. via Accelerate Strategies",
+      "value_usd": null,
+      "description": "International Trade: import, export",
+      "lobbying_firm": "Accelerate Strategies",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c61937fe-cdfa-4495-aaab-9699e8325b02/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "73c4f848-5879-4c58-a3f0-da356d8e8835",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-12",
+      "title": "Defense \u2014 Atx Defense via Revere Federal Strategies",
+      "value_usd": null,
+      "description": "FY27 National Defense Authorization Act FY27 Defense Appropriations Act",
+      "lobbying_firm": "Revere Federal Strategies",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/73c4f848-5879-4c58-a3f0-da356d8e8835/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "07509aff-bbf0-4bdb-b251-a6ab8e3a50dd",
+      "iso": "BE",
+      "source": "lda",
+      "signal_date": "2026-04-12",
+      "title": "Foreign Affairs, Science/Technology, Trade \u2014 Digitaleurope via Digitaleurope",
+      "value_usd": null,
+      "description": "Belgium; - EU-U.S. trade and digital trade matters - Transatlantic regulatory cooperation on digital, technology, and telecommuni\u2026",
+      "lobbying_firm": "Digitaleurope",
+      "issue_codes": [
+        "CPI",
+        "FOR",
+        "SCI",
+        "TAR",
+        "TEC",
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/07509aff-bbf0-4bdb-b251-a6ab8e3a50dd/print/",
+      "profile": {
+        "name": "Belgium",
+        "score": 2,
+        "factors": [
+          "NATO HQ",
+          "nuclear hosting"
+        ],
+        "rationale": "NATO HQ and EU political center (+1), US tactical nuclear weapons hosted (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "78829a51-c811-4aa3-99e6-52619ff67b10",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-12",
+      "title": "Defense \u2014 Bravo Ordnance via Frontera Group",
+      "value_usd": null,
+      "description": "National Defense Authorization Act",
+      "lobbying_firm": "Frontera Group",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/78829a51-c811-4aa3-99e6-52619ff67b10/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
     {
       "filing_uuid": "1d77f055-6814-4bfa-ab53-2a9efc454ddf",
       "iso": "XX",
@@ -254,6 +573,77 @@
       },
       "layer": "influence",
       "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "iso": "RU",
+      "source": "cftc",
+      "signal_date": "2026-04-07",
+      "title": "Wheat \u2014 hedge funds covering shorts (+2.2\u03c3)",
+      "value_usd": null,
+      "description": "Institutional traders (managed money) are net short Wheat at 4,382 contracts \u2014 2.2\u03c3 above the 52-week norm. Exposed countries: Russia, Ukraine, Australia, Canada, India.",
+      "z_score": 2.212,
+      "basket": [
+        "RU",
+        "UA",
+        "US",
+        "AU",
+        "CA",
+        "IN"
+      ],
+      "commodity": "Wheat",
+      "net_position": -4382,
+      "profile": {
+        "name": "Russia",
+        "score": 10,
+        "factors": [
+          "nuclear program",
+          "hydrocarbons",
+          "active conflict",
+          "sanctions",
+          "regional power",
+          "Arctic",
+          "proxy hub"
+        ],
+        "rationale": "Active nuclear weapons \u2014 largest arsenal (+2), major hydrocarbon producer and pipeline network (+2), active conflict \u2014 Ukraine war (+2), comprehensive sanctions regime (+1), regional power and global proxy hub (+1), controls Arctic sea routes (+1), strategic minerals (+1)"
+      },
+      "layer": "financial",
+      "quality": 0.55,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "iso": "CN",
+      "source": "cftc",
+      "signal_date": "2026-04-07",
+      "title": "Corn \u2014 hedge funds adding longs (+2.1\u03c3)",
+      "value_usd": null,
+      "description": "Institutional traders (managed money) are net long Corn at 210,976 contracts \u2014 2.1\u03c3 above the 52-week norm. Exposed countries: Ukraine, Brazil, Argentina, China.",
+      "z_score": 2.094,
+      "basket": [
+        "US",
+        "UA",
+        "BR",
+        "AR",
+        "CN"
+      ],
+      "commodity": "Corn",
+      "net_position": 210976,
+      "profile": {
+        "name": "China",
+        "score": 10,
+        "factors": [
+          "South China Sea",
+          "nuclear program",
+          "rare earths",
+          "BRI",
+          "regional power"
+        ],
+        "rationale": "Contests control of South China Sea \u2014 primary Indo-Pacific chokepoint (+3), major hydrocarbon reserves and transit dependency (+2), active nuclear program \u2014 second-strike capable ICBM/SLBM (+2), dominant rare earth extraction and processing \u2014 ~60% of global supply (+2), regional power and primary proxy hub \u2014 BRI, Pacific islands, Africa, Belt and Road infrastructure leverage (+1)"
+      },
+      "layer": "financial",
+      "quality": 0.55,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -20681,11 +21071,11 @@
         "GB"
       ],
       "signal_keys": [
-        "lda:585860bc-af15-4e03-a51e-7b10e683c7cd",
-        "dsca:Submarine Combat and Weapon Systems, Tec",
-        "lda:5822c8aa-0ec7-4fcb-8649-dab9d8f07406",
+        "lda:29e67f85-e020-4714-8d85-9cf4e447eb0f",
         "lda:0530d8ed-e131-4ee6-88ca-bd6a18e0c2ab",
-        "lda:29e67f85-e020-4714-8d85-9cf4e447eb0f"
+        "dsca:Submarine Combat and Weapon Systems, Tec",
+        "lda:585860bc-af15-4e03-a51e-7b10e683c7cd",
+        "lda:5822c8aa-0ec7-4fcb-8649-dab9d8f07406"
       ],
       "why": "[velocity_anomaly] 3.0 weighted signals in 30 days vs 1.2 avg (+3.0\u03c3). Sources: dsca\u00d71, lda\u00d74 | [layer_sequence] lda on 2026-03-16 \u2192 dsca on 2026-03-20 (4d). Current window 0.85 weighted pairs vs 0.00 baseline (+8.5\u03c3).",
       "_components": [
@@ -20713,9 +21103,9 @@
             "GB"
           ],
           "signal_keys": [
-            "lda:0530d8ed-e131-4ee6-88ca-bd6a18e0c2ab",
+            "lda:5822c8aa-0ec7-4fcb-8649-dab9d8f07406",
             "dsca:Submarine Combat and Weapon Systems, Tec",
-            "lda:5822c8aa-0ec7-4fcb-8649-dab9d8f07406"
+            "lda:0530d8ed-e131-4ee6-88ca-bd6a18e0c2ab"
           ],
           "why": "lda on 2026-03-16 \u2192 dsca on 2026-03-20 (4d). Current window 0.85 weighted pairs vs 0.00 baseline (+8.5\u03c3)."
         }
@@ -20744,6 +21134,21 @@
         "body": "CFTC data shows managed money net short wheat at 2.8\u03c3 above baseline, coinciding with Australian and Canadian entities lobbying on trade, agriculture, and defense. Suggests institutional traders are pricing in supply-side disruption or export competition shifts before they're publicly visible.",
         "prompt": "I just saw a pattern flagging a wheat positioning anomaly: CFTC managed money net short on wheat is at +2.8\u03c3 (994 contracts net short, 52-week z-score), with Australia, Canada, and Russia identified as the exposed country basket. Simultaneously, Australian entities \u2014 Fivecast Pty Ltd, Iluka Resources, DroneShield, and Manildra Milling Corporation \u2014 plus Canadian entities Enbridge (U.S.) Inc. and Snow Lake Energy Ltd. are actively lobbying in Washington across defense, trade, agriculture, and energy. Please: (1) explain who each of these entities is and what they actually do; (2) describe how they relate to each other and to the AU/CA/RU wheat export context; (3) assess the CFTC short positioning and the lobbying activity independently \u2014 is the short anomalous or routine, and is this lobbying cluster meaningful or coincidental; (4) give a clear verdict on whether this is a macro-thematic signal, an orchestrated pattern, or noise, and what specifically I should watch for next."
       }
+    },
+    {
+      "type": "cftc_overlap",
+      "title": "Wheat positioning anomaly \u2014 3 exposed countries active",
+      "score": 14.747,
+      "countries": [
+        "AU",
+        "CA",
+        "RU"
+      ],
+      "signal_keys": [
+        "cftc:Wheat"
+      ],
+      "why": "Wheat z=+2.2\u03c3. Active basket: AU, CA, RU (3/6 exposed countries have recent signals).",
+      "narrative": null
     },
     {
       "type": "actor_concentration",
