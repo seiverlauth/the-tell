@@ -435,8 +435,11 @@ _PROSE_SYSTEM = (
     "- headline: one sentence, max 12 words, states your interpretation — not just a description\n"
     "- body: 2 sentences max, ~40 words total. Sentence 1: what the data shows. Sentence 2: what it probably means.\n"
     "- prompt: a ready-to-paste Claude prompt the reader can use to go deeper. "
-    "Include the key entities, dates, and dollar amounts from the signals. "
-    "End with a specific question. Max 80 words. Write it in second person as if briefing the reader.\n"
+    "Ground it in the specific contracts, filing types, offices, and dollar amounts from the signals. "
+    "Ask a procurement or policy question — about competitive dynamics, legislative jurisdiction, FMS process, "
+    "regulatory timing, or specific subcommittees. Do NOT frame legal disclosures as 'operations' or imply "
+    "coordination from shared national origin alone — that is not evidence of anything. "
+    "The question should be answerable with public data and produce useful analysis. Max 80 words.\n"
     "No filler. No other fields."
 )
 
