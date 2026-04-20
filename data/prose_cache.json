@@ -1,1 +1,23 @@
-{}
+{
+  "b14f73e33e630670": {
+    "narrative": {
+      "headline": "On 2026-04-17, OFAC simultaneously designated two Colombian labor-recruitment networks: one centered on FENIX HUMAN RESOURCES S.A.S.",
+      "body": "and its controller Quijano Torres, and a second centered on the Garcia Batte brothers operating through INTERNATIONAL SERVICES AGENCY S.A.S. and GLOBAL QOWA AL BASHERIA S.A.S. The mechanism is illicit labor recruitment/human trafficking facilitation, with the Arabic-language entity name suggesting Gulf-region placement pipelines. Further designations of associated brokers, shell entities, or foreign counterparts are likely imminent.",
+      "prompt": "I just saw OFAC designate five Colombian entities/individuals on the same date across two apparent labor-recruitment networks: FENIX HUMAN RESOURCES S.A.S. (controlled by Jose Libardo Quijano Torres) and a Garcia Batte family cluster \u2014 Jose Oscar Garcia Batte, Omar Fernando Garcia Batte \u2014 operating through INTERNATIONAL SERVICES AGENCY S.A.S. and GLOBAL QOWA AL BASHERIA S.A.S. Who are these entities, what sectors do they recruit for, and do they have known Gulf-region or Middle East counterparts? Is the Arabic name significant \u2014 does it point to a specific destination country? Are there prior Colombian regulatory or criminal actions against them? What should I watch for next in terms of related designations or asset freezes?"
+    }
+  },
+  "fbe18954225010cc": {
+    "narrative": {
+      "headline": "On 2026-04-17, OFAC simultaneously designated four Iraqi individuals each linked to a different Iran-backed Iraqi militia: Kata'ib Hizballah, Harakat al-Nujaba, Kata'ib Sayyid al-Shuhada, and Asa'ib Ahl al-Haq.",
+      "body": "The mechanism is a coordinated, multi-group sanctions action targeting the broader Iraqi Shia militia (PMF) ecosystem in a single sweep. This signals an escalating U.S. pressure campaign likely preceding further designations, asset freezes, or secondary sanctions targeting militia financiers and facilitators.",
+      "prompt": "I just saw four simultaneous OFAC designations on 2026-04-17 targeting individuals linked to four distinct Iran-backed Iraqi militias: Radhwan Yousif Hameed ALMOHAMMED (Kata'ib Hizballah), Husham Hashim JAYTHOOM (Harakat al-Nujaba), Khalid Jameel Abed ALBAKHATRA (Kata'ib Sayyid al-Shuhada), and Safaa Adnan Jabbar SUWAED (Asa'ib Ahl al-Haq). Who are these individuals \u2014 are they financiers, commanders, or facilitators? Is a coordinated multi-militia sweep like this routine or anomalous in OFAC's Iraq enforcement history? What shared activity or trigger event might have prompted simultaneous action across four groups? I want to watch for follow-on designations of connected entities, secondary sanctions on Iraqi financial institutions, and any U.S. policy statements on PMF pressure."
+    }
+  },
+  "b98e99a9feddf6b4": {
+    "narrative": {
+      "headline": "OFAC designated three linked entities on the same date: an individual tied to Cartel del Noreste, a commercial/leasing company linked to Casino Centenario, and Diamante Casino linked to that same company.",
+      "body": "The mechanism is a coordinated sanctions action targeting a CDN money-laundering network using casino and commercial fronts. Expect follow-on designations of additional casino operators, financial facilitators, or CDN leadership.",
+      "prompt": "I just saw three simultaneous OFAC designations in Mexico on 2026-04-14: individual Jesus Reymundo Ramos Vazquez linked to Cartel del Noreste, entity Comercializadora y Arrendadora de Mexico S.A. de C.V. linked to Casino Centenario, and Diamante Casino linked to that same commercial entity. Who are these entities, what are their known relationships to CDN's financial infrastructure, and is this part of a broader OFAC enforcement campaign against CDN money laundering through casinos? What additional casino operators, beneficial owners, or CDN figures should I watch for in follow-on designations?"
+    }
+  }
+}

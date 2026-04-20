@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T22:53:41.482575+00:00",
+  "generated_at": "2026-04-20T06:58:18.795813+00:00",
   "sources": [
     "sam"
   ],
@@ -12,6 +12,60 @@
       "value_usd": null,
       "description": "Presolicitation \u00b7 https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=ff3b3d3255f249bda11a54fffd54d9d0",
       "page_url": "https://sam.gov/workspace/contract/opp/ff3b3d3255f249bda11a54fffd54d9d0/view"
+    },
+    {
+      "iso": "TH",
+      "source": "sam",
+      "signal_date": "2026-04-20",
+      "title": "Office furniture installation",
+      "value_usd": null,
+      "description": "Solicitation \u00b7 https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f59ad084e3674c3395af21a236771d30",
+      "page_url": "https://sam.gov/workspace/contract/opp/f59ad084e3674c3395af21a236771d30/view"
+    },
+    {
+      "iso": "JP",
+      "source": "sam",
+      "signal_date": "2026-04-20",
+      "title": "Acquisition of One 6-Pax Executive Van",
+      "value_usd": null,
+      "description": "Solicitation \u00b7 https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=ef060a5f52e9435785a3a1218612b571",
+      "page_url": "https://sam.gov/workspace/contract/opp/ef060a5f52e9435785a3a1218612b571/view"
+    },
+    {
+      "iso": "SG",
+      "source": "sam",
+      "signal_date": "2026-04-20",
+      "title": "Event Planning Services for the Independence Day Celebration \u2013 U.S. Embassy Singapore",
+      "value_usd": null,
+      "description": "Solicitation \u00b7 https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=8f66a1ab4d524e8094c8c642131ffa6f",
+      "page_url": "https://sam.gov/workspace/contract/opp/8f66a1ab4d524e8094c8c642131ffa6f/view"
+    },
+    {
+      "iso": "PH",
+      "source": "sam",
+      "signal_date": "2026-04-20",
+      "title": "Supply and Delivery of Medical Supplies",
+      "value_usd": null,
+      "description": "Solicitation \u00b7 https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=89acd6408e7346ec925689e6b2ccdc08",
+      "page_url": "https://sam.gov/workspace/contract/opp/89acd6408e7346ec925689e6b2ccdc08/view"
+    },
+    {
+      "iso": "TH",
+      "source": "sam",
+      "signal_date": "2026-04-20",
+      "title": "American Fair: Freedom 250 In HAT YAI",
+      "value_usd": null,
+      "description": "Solicitation \u00b7 https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=6a940916e9bb4417b6342a19b9ca5e78",
+      "page_url": "https://sam.gov/workspace/contract/opp/6a940916e9bb4417b6342a19b9ca5e78/view"
+    },
+    {
+      "iso": "TH",
+      "source": "sam",
+      "signal_date": "2026-04-20",
+      "title": "Single Source Justification for Legal Service",
+      "value_usd": null,
+      "description": "Justification \u00b7 https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=5bb99a9ffe2c4a7a910ee0bd3305d35b",
+      "page_url": "https://sam.gov/workspace/contract/opp/5bb99a9ffe2c4a7a910ee0bd3305d35b/view"
     }
   ]
 }

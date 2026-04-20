@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T22:54:13.119288+00:00",
+  "generated_at": "2026-04-20T06:58:50.188087+00:00",
   "sources": [
     "federalregister"
   ],
@@ -5655,6 +5655,50 @@
       "description": "Notice of demonstration extension; correction. \u00b7 On Friday, April 10, 2026, the DoD published a notice titled Extension of the TRICARE Childbirth and Breastfeeding Support Demonstration. Subsequent to publication in the Federal Register, the DoD realized that the docket identifier was not included. This notice corrects the error.",
       "raw_score": null,
       "page_url": "https://www.federalregister.gov/documents/2026/04/17/2026-07481/extension-of-the-tricare-childbirth-and-breastfeeding-support-demonstration-correction"
+    },
+    {
+      "document_number": "2026-07682",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-20",
+      "title": "Enrolled Agent Special Enrollment Examination User Fee Update",
+      "value_usd": null,
+      "description": "Notice of proposed rulemaking. \u00b7 In the Rules and Regulations section of this issue of the Federal Register, the Department of the Treasury (Treasury Department) and the IRS are issuing interim final regulations that amend the current regulations to reduce the user fee for each part of the special enrollment examinations for enrolled agents (EA SEE) from $99 per part to $66 per part.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/20/2026-07682/enrolled-agent-special-enrollment-examination-user-fee-update"
+    },
+    {
+      "document_number": "2026-07681",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-20",
+      "title": "Enrolled Agent Special Enrollment Examination User Fee Update",
+      "value_usd": null,
+      "description": "Interim final rule. \u00b7 This document contains interim final regulations relating to the imposition of user fees for the special enrollment examination for enrolled agents (EA SEE). These regulations reduce the user fee for each part of the EA SEE from $99 per part to $66 per part. The Independent Offices Appropriation Act of 1952 authorizes the charging of user fees. The text of these interim final regulations also serves as the text of the proposed regulations set forth in the notice of proposed rulemaking on this subject in this issue in the Proposed Rules section of this edition of the Federal Register.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/20/2026-07681/enrolled-agent-special-enrollment-examination-user-fee-update"
+    },
+    {
+      "document_number": "2026-07670",
+      "iso": "US",
+      "source": "federalregister",
+      "signal_date": "2026-04-20",
+      "title": "United States Passports Moving to Single-Sized Passport Book",
+      "value_usd": null,
+      "description": "Notice. \u00b7 The U.S. Department of State currently issues two passport book sizes--a 26-page book and a 50-page book. A determination was made to shift the U.S. passport book to a single-sized, 38-page passport book, with the release of the next redesign.",
+      "raw_score": 10.0,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/20/2026-07670/united-states-passports-moving-to-single-sized-passport-book"
+    },
+    {
+      "document_number": "2026-07587",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-20",
+      "title": "Reestablishment of the Art Advisory Panel of the Commissioner of Internal Revenue",
+      "value_usd": null,
+      "description": "Notice of Reestablishment of the Art Advisory Panel of the Commissioner of Internal Revenue. \u00b7 The charter for the Art Advisory Panel will be re-established for a two-year period beginning no sooner than seven days following publication of this notice.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/20/2026-07587/reestablishment-of-the-art-advisory-panel-of-the-commissioner-of-internal-revenue"
     }
   ]
 }
