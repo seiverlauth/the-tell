@@ -658,7 +658,13 @@ def _load_anthropic_key() -> str:
 
 
 def _prose_cache_key(theme: dict) -> str:
-    raw = f"{theme['type']}|{','.join(sorted(theme['countries']))}|{theme['title']}"
+    # Include sorted signal_keys in the key so that prose regenerates when the
+    # underlying signal composition changes — e.g. after grouping logic fixes or
+    # new signals arriving for the country. Title alone is not sufficient.
+    keys_fingerprint = hashlib.md5(
+        "|".join(sorted(theme.get("signal_keys", []))).encode()
+    ).hexdigest()[:8]
+    raw = f"{theme['type']}|{','.join(sorted(theme['countries']))}|{theme['title']}|{keys_fingerprint}"
     return hashlib.sha256(raw.encode()).hexdigest()[:16]
 
 
