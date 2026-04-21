@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T22:53:52.646560+00:00",
+  "generated_at": "2026-04-21T22:48:12.270018+00:00",
   "sources": [
     "ofac"
   ],
@@ -620,6 +620,204 @@
         "SDGT"
       ],
       "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57431"
+    },
+    {
+      "uid": 57384,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Kamal Sabah BALKHKANLU (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: PISHGAM ELECTRONIC SAFEH COMPANY)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57384"
+    },
+    {
+      "uid": 57385,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Mohammad VAHIDI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: JANGHORBANI, Hamid Reza)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57385"
+    },
+    {
+      "uid": 57386,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Danial KHALILI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: JANGHORBANI, Hamid Reza)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57386"
+    },
+    {
+      "uid": 57387,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Hamidreza ROKNIFARD (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: ADAK PARGAS PARS TRADING COMPANY)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57387"
+    },
+    {
+      "uid": 57388,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Mostafa ROKNIFARD (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: ADAK PARGAS PARS TRADING COMPANY)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57388"
+    },
+    {
+      "uid": 57389,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: MAHAN AIR)",
+      "programs": [
+        "IFSR",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57389"
+    },
+    {
+      "uid": 57391,
+      "iso": "TR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "EMTI FIBER TEXTILE IMPORT EXPORT TRADE LIMITED COMPANY (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PARDISAN REZVAN SHARGH INTERNATIONAL PRIVATE JOINT STOCK COMPANY)",
+      "programs": [
+        "IFSR",
+        "NPWMD"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57391"
+    },
+    {
+      "uid": 57393,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "SAMAN AIR SERVICES COMPANY (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY)",
+      "programs": [
+        "SDGT",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57393"
+    },
+    {
+      "uid": 57394,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Gholam Abbas ATAEI AGHDAM (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY)",
+      "programs": [
+        "SDGT",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57394"
+    },
+    {
+      "uid": 57395,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Jamshid HOSSEINZADEH (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY)",
+      "programs": [
+        "IFSR",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57395"
+    },
+    {
+      "uid": 57396,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Mohammad Hossein MAHDIAN (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: MAHAN AIR)",
+      "programs": [
+        "SDGT",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57396"
+    },
+    {
+      "uid": 57407,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "EP-MTE (Aircraft)",
+      "value_usd": null,
+      "description": "(Linked To: MAHAN AIR)",
+      "programs": [
+        "IFSR",
+        "NPWMD",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57407"
+    },
+    {
+      "uid": 57408,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "EP-MTB (Aircraft)",
+      "value_usd": null,
+      "description": "(Linked To: MAHAN AIR)",
+      "programs": [
+        "IFSR",
+        "NPWMD",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57408"
+    },
+    {
+      "uid": 57409,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "CHABOK FZCO (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: MAHAN AIR)",
+      "programs": [
+        "IFSR",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57409"
     }
   ]
 }

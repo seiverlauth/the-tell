@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T22:56:41.826775+00:00",
+  "generated_at": "2026-04-21T22:49:15.015044+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -13,6 +13,418 @@
     "sam"
   ],
   "signals": [
+    {
+      "document_number": "2026-07676",
+      "iso": "HK",
+      "source": "federalregister",
+      "signal_date": "2026-04-21",
+      "title": "Annual Determination and Certification of Shrimp-Harvesting Nations",
+      "value_usd": null,
+      "description": "Notice of annual determination and certification. \u00b7 On April 10, 2026, the Department of State certified to Congress that wild-caught shrimp and products from that shrimp harvested in the following nations and Hong Kong are eligible to enter the United States: Argentina, the Bahamas, Belgium, Belize, Canada, Chile, Colombia, Costa Rica, the Kingdom of Denmark, the Dominican Republic, Ecuador, El Salvador, Estonia, Fiji, Gabon, Germany, Guatemala, Guyana, Honduras, Iceland, Ireland, Jamaica, Mexico, the Netherlands, New Zealand, Nicaragua, Nigeria, Norway, Oman, Panama, Russia, Sri Lanka, Suriname, Sweden, the United Kingdom, and Uruguay. The Department of State determined that wild-caught shrimp harvested in particular fisheries of certain nations and products from that shrimp are eligible to enter the United States: Australia (Northern Prawn Fishery, the Queensland East Coast Trawl Fishery, the Spencer Gulf, and the Torres Strait Prawn Fishery), France (French Guiana), Italy (giant red shrimp), Japan (shrimp baskets in Hokkaido), Republic of Korea (mosquito nets), and Spain (Mediterranean red shrimp). For nations, economies, and fisheries not listed above, only shrimp harvested from aquaculture and products from that shrimp are eligible to enter the United States. Shrimp and products from shrimp (products containing shrimp) imports into the United States must be accompanied by the DS- 2031 Shrimp Exporter's/Importer's Declaration.",
+      "page_url": "https://www.federalregister.gov/documents/2026/04/21/2026-07676/annual-determination-and-certification-of-shrimp-harvesting-nations",
+      "profile": {
+        "name": "Hong Kong",
+        "score": 4,
+        "factors": [
+          "PRC proxy",
+          "financial hub",
+          "US sanctions exposure",
+          "China friction"
+        ],
+        "rationale": "SAR under full PRC authority post-NSL \u2014 US-China friction flashpoint, active sanctions exposure (+1), major financial hub for PRC capital flows and offshore RMB (+1), regional proxy hub for PRC economic statecraft (+1), contested political status and ongoing civil liberties suppression (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.2,
+      "dollar_mod": 1.0,
+      "is_fr_policy": false
+    },
+    {
+      "filing_uuid": "629c4700-7970-42ed-bf8c-4d9695a8d45c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Energy \u2014 Mazama Energy via Boundary Stone Partners",
+      "value_usd": null,
+      "description": "Department of Energy funding priorities, Congressional permitting policy, Department of Interior/BLM permitting regulati\u2026",
+      "lobbying_firm": "Boundary Stone Partners",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/629c4700-7970-42ed-bf8c-4d9695a8d45c/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "6c17471f-0d0a-4b71-b9a0-b1f29a32d4eb",
+      "iso": "BE",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Trade \u2014 Clovia Bv via Corcoran & Associates, Inc. Dba Corcoran Partners",
+      "value_usd": null,
+      "description": "Belgium; Strategies and support relating to business opportunities",
+      "lobbying_firm": "Corcoran & Associates, Inc. Dba Corcoran Partners",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/6c17471f-0d0a-4b71-b9a0-b1f29a32d4eb/print/",
+      "profile": {
+        "name": "Belgium",
+        "score": 2,
+        "factors": [
+          "NATO HQ",
+          "nuclear hosting"
+        ],
+        "rationale": "NATO HQ and EU political center (+1), US tactical nuclear weapons hosted (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "e05aa140-5fe1-4316-8b36-472d835b6039",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Energy \u2014 Karman Industries via Boundary Stone Partners",
+      "value_usd": null,
+      "description": "Federal policies to increase the energy and water efficiency of AI and digital infrastructure; incentives for advanced l\u2026",
+      "lobbying_firm": "Boundary Stone Partners",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e05aa140-5fe1-4316-8b36-472d835b6039/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "91c2e73a-211e-40fd-8994-c4c9963d8baa",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Science/Technology, Telecom \u2014 American Innovators Network via S-3 Group",
+      "value_usd": null,
+      "description": "Legislation related to AI preemption",
+      "lobbying_firm": "S-3 Group",
+      "issue_codes": [
+        "SCI",
+        "TEC"
+      ],
+      "url": "https://lda.gov/filings/public/filing/91c2e73a-211e-40fd-8994-c4c9963d8baa/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "c50e4ec6-f028-43d2-b176-8932c11a9a58",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Defense, Budget \u2014 Reliable Partners, Llc via Elevate Government Affairs, Llc",
+      "value_usd": null,
+      "description": "Issues related to subterranean facilities.",
+      "lobbying_firm": "Elevate Government Affairs, Llc",
+      "issue_codes": [
+        "BUD",
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c50e4ec6-f028-43d2-b176-8932c11a9a58/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "1bce5eeb-5664-4b52-a027-4efd385c1662",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Defense, Budget \u2014 Tidal Flight, Inc. via Acg Advocacy",
+      "value_usd": null,
+      "description": "Issues related to aircraft research, development, testing, and evaluation. Defense Appropriations.",
+      "lobbying_firm": "Acg Advocacy",
+      "issue_codes": [
+        "BUD",
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/1bce5eeb-5664-4b52-a027-4efd385c1662/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "b6ef9c96-6fd3-43b9-8e40-466c15c4e370",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Defense \u2014 Sightline Intelligence via C2 Strategies",
+      "value_usd": null,
+      "description": "Defense Policy",
+      "lobbying_firm": "C2 Strategies",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/b6ef9c96-6fd3-43b9-8e40-466c15c4e370/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57384,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Kamal Sabah BALKHKANLU (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: PISHGAM ELECTRONIC SAFEH COMPANY)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57384",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57385,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Mohammad VAHIDI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: JANGHORBANI, Hamid Reza)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57385",
+      "profile": {
+        "name": "United Arab Emirates",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "US basing",
+          "proxy hub"
+        ],
+        "rationale": "Major hydrocarbon reserves (+2), US basing access \u2014 Al Dhafra Air Base (+1), regional proxy hub \u2014 Sudan, Libya, Horn of Africa (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57386,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Danial KHALILI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: JANGHORBANI, Hamid Reza)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57386",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57387,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Hamidreza ROKNIFARD (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: ADAK PARGAS PARS TRADING COMPANY)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57387",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57389,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: MAHAN AIR)",
+      "programs": [
+        "IFSR",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57389",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57391,
+      "iso": "TR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "EMTI FIBER TEXTILE IMPORT EXPORT TRADE LIMITED COMPANY (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PARDISAN REZVAN SHARGH INTERNATIONAL PRIVATE JOINT STOCK COMPANY)",
+      "programs": [
+        "IFSR",
+        "NPWMD"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57391",
+      "profile": {
+        "name": "Turkey",
+        "score": 8,
+        "factors": [
+          "maritime chokepoint",
+          "Turkish Straits",
+          "Bosphorus",
+          "nuclear hosting",
+          "US basing",
+          "regional power",
+          "proxy hub"
+        ],
+        "rationale": "Controls Turkish Straits \u2014 Bosphorus and Dardanelles, only Black Sea exit (+3), US nuclear weapons at Incirlik (+2), major US basing (+1), regional power \u2014 NATO member playing both sides (+1), proxy hub Syria/Libya/Azerbaijan/Ukraine (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57393,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "SAMAN AIR SERVICES COMPANY (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY)",
+      "programs": [
+        "SDGT",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57393",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57409,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "CHABOK FZCO (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: MAHAN AIR)",
+      "programs": [
+        "IFSR",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57409",
+      "profile": {
+        "name": "United Arab Emirates",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "US basing",
+          "proxy hub"
+        ],
+        "rationale": "Major hydrocarbon reserves (+2), US basing access \u2014 Al Dhafra Air Base (+1), regional proxy hub \u2014 Sudan, Libya, Horn of Africa (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
     {
       "filing_uuid": "93be83b3-eaef-42e2-a2f0-9d2c8615aee8",
       "iso": "XX",
@@ -859,6 +1271,195 @@
         "MAR"
       ],
       "url": "https://lda.gov/filings/public/filing/66bd1668-d8f2-4688-a771-fe190c852f81/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "e6d36e69-a8d0-44dc-bf07-20ef0caef2d3",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy, Natural Resources \u2014 Clearway Energy Group Llc via Cgcn Group, Llc",
+      "value_usd": null,
+      "description": "Issues related to renewable energy projects and transmission.",
+      "lobbying_firm": "Cgcn Group, Llc",
+      "issue_codes": [
+        "ENG",
+        "NAT"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e6d36e69-a8d0-44dc-bf07-20ef0caef2d3/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "6b5e3ef4-af99-4afb-987c-895e3b8b0b1e",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy \u2014 J.M. Huber Corp. via The Bernhardt Group Llc",
+      "value_usd": null,
+      "description": "Oil and Gas Decommissioning",
+      "lobbying_firm": "The Bernhardt Group Llc",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/6b5e3ef4-af99-4afb-987c-895e3b8b0b1e/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "e5cab101-fbba-49a6-8871-10350c35659b",
+      "iso": "KR",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Hanwha Defense Usa, Inc. via The Nickles Group, Llc",
+      "value_usd": null,
+      "description": "Defense procurement issues.",
+      "lobbying_firm": "The Nickles Group, Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e5cab101-fbba-49a6-8871-10350c35659b/print/",
+      "profile": {
+        "name": "South Korea",
+        "score": 4,
+        "factors": [
+          "US basing",
+          "nuclear program",
+          "regional power"
+        ],
+        "rationale": "Major US basing \u2014 28,000 troops, USFK (+1), latent nuclear capability \u2014 active discussion of indigenous program (+2), regional power and semiconductor/industrial hub (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "e19e7b04-ddbd-41dc-af20-a1a8dac9b96b",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy \u2014 Citgo Petroleum Corporation via Navigators Global Llc (Formerly Dc Navigators, Llc)",
+      "value_usd": null,
+      "description": "Issues as they relate to development and production of energy resources.",
+      "lobbying_firm": "Navigators Global Llc (Formerly Dc Navigators, Llc)",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e19e7b04-ddbd-41dc-af20-a1a8dac9b96b/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "b4fe4264-14c2-4a39-8041-370b0d9f8b78",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy, Science/Technology, Maritime \u2014 Windward Fund via Windward Fund",
+      "value_usd": null,
+      "description": "S. 3910/H.R. 7656 ResCUE Oceans Act - Authorization of marine carbon dioxide removal research and development program at\u2026",
+      "lobbying_firm": "Windward Fund",
+      "issue_codes": [
+        "ENG",
+        "MAR",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/b4fe4264-14c2-4a39-8041-370b0d9f8b78/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "c6187097-21ee-4f50-8d85-4f87b47b6f1d",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Budget, Natural Resources \u2014 University Of Arizona via Herrera Arellano Llp",
+      "value_usd": null,
+      "description": "Defense research, science research, natural resources, grant funding, space research, federal appropriations",
+      "lobbying_firm": "Herrera Arellano Llp",
+      "issue_codes": [
+        "BUD",
+        "DEF",
+        "NAT"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c6187097-21ee-4f50-8d85-4f87b47b6f1d/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "bd89845e-b85a-4a38-9818-ff9644972d76",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Trade, Labor \u2014 Mcdonalds Corporation via Michael Best Strategies Llc",
+      "value_usd": null,
+      "description": "Issues related to workforce, franchising, and supply chain",
+      "lobbying_firm": "Michael Best Strategies Llc",
+      "issue_codes": [
+        "LBR",
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/bd89845e-b85a-4a38-9818-ff9644972d76/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "d8b650a5-eabf-4934-a403-995604def154",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Manufacturing, Veterans \u2014 Neuros Medical, Inc. via Neuros Medical, Inc.",
+      "value_usd": null,
+      "description": "DEF - Issues related to medical device access MMM - Issues related to medical device reimbursement VET - Issues related \u2026",
+      "lobbying_firm": "Neuros Medical, Inc.",
+      "issue_codes": [
+        "DEF",
+        "MMM",
+        "VET"
+      ],
+      "url": "https://lda.gov/filings/public/filing/d8b650a5-eabf-4934-a403-995604def154/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "1991fc5d-0abd-4ceb-987c-e35eb59857a3",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy, Manufacturing \u2014 Sungas Renewables Inc via Bracewell Llp",
+      "value_usd": null,
+      "description": "Advance federal support for biofuels projects",
+      "lobbying_firm": "Bracewell Llp",
+      "issue_codes": [
+        "ENG",
+        "MAN"
+      ],
+      "url": "https://lda.gov/filings/public/filing/1991fc5d-0abd-4ceb-987c-e35eb59857a3/print/",
       "profile": null,
       "layer": "influence",
       "quality": 0.5,
@@ -24615,6 +25216,28 @@
   "themes": [
     {
       "type": "velocity_anomaly",
+      "title": "Iran \u2014 6 signals in 30 days (+10.2\u03c3)",
+      "score": 187.384,
+      "countries": [
+        "IR"
+      ],
+      "signal_keys": [
+        "ofac:Kamal Sabah BALKHKANLU (Individual)",
+        "ofac:Danial KHALILI (Individual)",
+        "ofac:Hamidreza ROKNIFARD (Individual)",
+        "ofac:SEPEHR KAVEH KISH INTERNATIONAL TRADING ",
+        "ofac:SAMAN AIR SERVICES COMPANY (Entity)",
+        "federalregister:2026-06688"
+      ],
+      "why": "5.3 weighted signals in 30 days vs 0.2 avg (+10.2\u03c3). Sources: federalregister\u00d71, ofac\u00d75",
+      "narrative": {
+        "headline": "OFAC Targets Mahan Air Procurement Network in Coordinated Iran Sanctions Burst",
+        "body": "Five OFAC designations on April 21 trace a single supply chain: front companies and individuals funneling resources to Mahan Air, Iran's sanctioned carrier linked to IRGC logistics. The cluster signals a coordinated U.S. enforcement action against Mahan Air's evasion infrastructure, likely preceding broader secondary sanctions pressure on its international partners.",
+        "prompt": "I just saw that OFAC issued five Iran sanctions designations on the same day, all tracing back to Mahan Air through a chain of front companies and individuals. Why does this matter? Mahan Air is already sanctioned for supporting the IRGC and Hezbollah \u2014 so who are these new entities and why are they being designated now? Specifically: what is SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY's role, how does SAMAN AIR SERVICES connect to it, and what does PISHGAM ELECTRONIC SAFEH COMPANY supply? Is this a routine enforcement update or does a coordinated same-day batch signal an escalating pressure campaign? What should I watch for next \u2014 specifically whether foreign airlines or airports that still service Mahan Air face secondary sanctions exposure as a result of this action?"
+      }
+    },
+    {
+      "type": "velocity_anomaly",
       "title": "Colombia \u2014 5 signals in 30 days (+7.3\u03c3)",
       "score": 99.18,
       "countries": [
@@ -24656,6 +25279,27 @@
     },
     {
       "type": "velocity_anomaly",
+      "title": "United Arab Emirates \u2014 5 signals in 30 days (+5.4\u03c3)",
+      "score": 62.475,
+      "countries": [
+        "AE"
+      ],
+      "signal_keys": [
+        "ofac:Mohammad VAHIDI (Individual)",
+        "ofac:CHABOK FZCO (Entity)",
+        "ofac:TAYLOR SHIPPING FZCO (Entity)",
+        "ofac:SHIPSTAR SHIPCHANDLING LLC (Entity)",
+        "ofac:ACS TRADING LLC (Entity)"
+      ],
+      "why": "4.5 weighted signals in 30 days vs 0.5 avg (+5.4\u03c3). Sources: ofac\u00d75",
+      "narrative": {
+        "headline": "UAE shell companies sanctioned as Iran evasion network dismantled",
+        "body": "OFAC designated five UAE-based entities and individuals in two waves (April 15 and 21) linked to Mahan Air, Iranian shipping networks, and IRGC-connected figures. The mechanism is a coordinated Iran sanctions evasion web using UAE free-zone companies as procurement and logistics fronts.",
+        "prompt": "I just saw that the US Treasury (OFAC) sanctioned five UAE-based companies and individuals in two separate actions in April 2026, all linked to Iranian sanctions evasion \u2014 including Mahan Air (a blacklisted Iranian airline), and figures connected to Iranian shipping and the IRGC. Why does this matter? UAE free zones have repeatedly been used to move money, goods, and logistics services to Iran in violation of US sanctions, and these designations suggest an active, coordinated network was operating. Who are the key entities? CHABOK FZCO (Mahan Air link), TAYLOR SHIPPING FZCO (linked to Mohammad Hossein Shamkhani), ACS TRADING LLC, SHIPSTAR SHIPCHANDLING LLC, and individual Mohammad Vahidi. Is this routine? The 5.4\u03c3 spike is not routine. Watch for: follow-on DOJ indictments, secondary sanctions on UAE banks that serviced these entities, and whether UAE regulators take enforcement action \u2014 that would signal whether this is a bilateral pressure campaign or unilateral US action."
+      }
+    },
+    {
+      "type": "velocity_anomaly",
       "title": "Mexico \u2014 3 signals in 30 days (+4.0\u03c3)",
       "score": 28.031,
       "countries": [
@@ -24691,21 +25335,6 @@
     },
     {
       "type": "velocity_anomaly",
-      "title": "United Arab Emirates \u2014 3 signals in 30 days (+3.0\u03c3)",
-      "score": 20.791,
-      "countries": [
-        "AE"
-      ],
-      "signal_keys": [
-        "ofac:TAYLOR SHIPPING FZCO (Entity)",
-        "ofac:SHIPSTAR SHIPCHANDLING LLC (Entity)",
-        "ofac:ACS TRADING LLC (Entity)"
-      ],
-      "why": "2.7 weighted signals in 30 days vs 0.5 avg (+3.0\u03c3). Sources: ofac\u00d73",
-      "narrative": null
-    },
-    {
-      "type": "velocity_anomaly",
       "title": "Thailand \u2014 3 signals in 30 days (+3.9\u03c3)",
       "score": 19.017,
       "countries": [
@@ -24737,9 +25366,25 @@
       "narrative": null
     },
     {
+      "type": "velocity_anomaly",
+      "title": "South Korea \u2014 4 signals in 30 days (+2.7\u03c3)",
+      "score": 14.078,
+      "countries": [
+        "KR"
+      ],
+      "signal_keys": [
+        "lda:5305c065-f8c0-4fd6-a02d-8f787dd35494",
+        "lda:e5cab101-fbba-49a6-8871-10350c35659b",
+        "lda:1d63e37e-1b07-49ec-978e-20ff5e61eb53",
+        "lda:fdcb3f4b-823a-4257-a18a-a398f1497e0b"
+      ],
+      "why": "2.0 weighted signals in 30 days vs 0.6 avg (+2.7\u03c3). Sources: lda\u00d74",
+      "narrative": null
+    },
+    {
       "type": "actor_concentration",
       "title": "Capitol Counsel Llc lobbying for 3 countries simultaneously",
-      "score": 13.333,
+      "score": 13.113,
       "countries": [
         "CN",
         "JP",
@@ -24756,7 +25401,7 @@
     {
       "type": "actor_concentration",
       "title": "Strategic Marketing Innovations lobbying for 4 countries simultaneously",
-      "score": 12.19,
+      "score": 11.989,
       "countries": [
         "CA",
         "DE",
@@ -24775,7 +25420,7 @@
     {
       "type": "actor_concentration",
       "title": "Ark Strategy lobbying for 3 countries simultaneously",
-      "score": 11.462,
+      "score": 11.273,
       "countries": [
         "AU",
         "GB",
@@ -24792,7 +25437,7 @@
     {
       "type": "actor_concentration",
       "title": "Cassidy & Associates, Inc. lobbying for 3 countries simultaneously",
-      "score": 11.461,
+      "score": 11.272,
       "countries": [
         "AU",
         "CA",
@@ -24810,7 +25455,7 @@
     {
       "type": "actor_concentration",
       "title": "Ml Strategies, Llc lobbying for 3 countries simultaneously",
-      "score": 9.941,
+      "score": 9.777,
       "countries": [
         "AU",
         "CA",
@@ -24827,7 +25472,7 @@
     {
       "type": "actor_concentration",
       "title": "The Vogel Group lobbying for 4 countries simultaneously",
-      "score": 9.566,
+      "score": 9.408,
       "countries": [
         "AE",
         "AT",
@@ -24846,7 +25491,7 @@
     {
       "type": "actor_concentration",
       "title": "Miller Strategies, Llc lobbying for 6 countries simultaneously",
-      "score": 9.562,
+      "score": 9.404,
       "countries": [
         "BE",
         "CA",
@@ -24869,7 +25514,7 @@
     {
       "type": "actor_concentration",
       "title": "Valcour Llc lobbying for 4 countries simultaneously",
-      "score": 8.854,
+      "score": 8.708,
       "countries": [
         "GB",
         "IQ",
@@ -24888,7 +25533,7 @@
     {
       "type": "actor_concentration",
       "title": "Checkmate Government Relations lobbying for 4 countries simultaneously",
-      "score": 8.746,
+      "score": 8.602,
       "countries": [
         "CH",
         "CN",
@@ -24907,7 +25552,7 @@
     {
       "type": "actor_concentration",
       "title": "Bgr Government Affairs lobbying for 6 countries simultaneously",
-      "score": 7.482,
+      "score": 7.358,
       "countries": [
         "CN",
         "DK",
@@ -24942,42 +25587,6 @@
         "lda:61d543a0-f4ee-4fa7-a743-33e15396a7c8"
       ],
       "why": "1.5 weighted signals in 30 days vs 0.3 avg (+2.4\u03c3). Sources: lda\u00d73",
-      "narrative": null
-    },
-    {
-      "type": "actor_concentration",
-      "title": "Marshall & Popp, Llc lobbying for 3 countries simultaneously",
-      "score": 6.29,
-      "countries": [
-        "AU",
-        "GB",
-        "JP"
-      ],
-      "signal_keys": [
-        "lda:fb7fed96-f152-4700-bb3d-6cd848a19cac",
-        "lda:0dde4e28-b044-496a-89f0-bb48708af48c",
-        "lda:5c1abbc2-8016-41f7-8fe2-3599654c3c35"
-      ],
-      "why": "Marshall & Popp, Llc filed LDA disclosures for Australia, United Kingdom, Japan in the same period.",
-      "narrative": null
-    },
-    {
-      "type": "actor_concentration",
-      "title": "Dga Group Government Relations Llc lobbying for 4 countries simultaneously",
-      "score": 5.701,
-      "countries": [
-        "BR",
-        "CN",
-        "FR",
-        "JP"
-      ],
-      "signal_keys": [
-        "lda:b8376ef7-3b7a-4305-8f20-7d8aec6883ad",
-        "lda:8b4a87d4-b173-48be-b641-a5013b4fc06e",
-        "lda:483e74eb-7163-4279-952f-7bbda09ab401",
-        "lda:7078e1ea-c5eb-4e7f-8bcc-93a4a5c2c4be"
-      ],
-      "why": "Dga Group Government Relations Llc filed LDA disclosures for Brazil, China, France, Japan in the same period.",
       "narrative": null
     }
   ]

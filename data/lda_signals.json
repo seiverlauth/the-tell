@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T22:56:21.300154+00:00",
+  "generated_at": "2026-04-21T22:48:49.325189+00:00",
   "sources": [
     "lda"
   ],
@@ -10986,6 +10986,274 @@
         "MAR"
       ],
       "url": "https://lda.gov/filings/public/filing/66bd1668-d8f2-4688-a771-fe190c852f81/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e6d36e69-a8d0-44dc-bf07-20ef0caef2d3",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy, Natural Resources \u2014 Clearway Energy Group Llc via Cgcn Group, Llc",
+      "value_usd": null,
+      "description": "Issues related to renewable energy projects and transmission.",
+      "lobbying_firm": "Cgcn Group, Llc",
+      "issue_codes": [
+        "ENG",
+        "NAT"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e6d36e69-a8d0-44dc-bf07-20ef0caef2d3/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "6b5e3ef4-af99-4afb-987c-895e3b8b0b1e",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy \u2014 J.M. Huber Corp. via The Bernhardt Group Llc",
+      "value_usd": null,
+      "description": "Oil and Gas Decommissioning",
+      "lobbying_firm": "The Bernhardt Group Llc",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/6b5e3ef4-af99-4afb-987c-895e3b8b0b1e/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e5cab101-fbba-49a6-8871-10350c35659b",
+      "iso": "KR",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Hanwha Defense Usa, Inc. via The Nickles Group, Llc",
+      "value_usd": null,
+      "description": "Defense procurement issues.",
+      "lobbying_firm": "The Nickles Group, Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e5cab101-fbba-49a6-8871-10350c35659b/print/",
+      "raw_score": 4.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e19e7b04-ddbd-41dc-af20-a1a8dac9b96b",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy \u2014 Citgo Petroleum Corporation via Navigators Global Llc (Formerly Dc Navigators, Llc)",
+      "value_usd": null,
+      "description": "Issues as they relate to development and production of energy resources.",
+      "lobbying_firm": "Navigators Global Llc (Formerly Dc Navigators, Llc)",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e19e7b04-ddbd-41dc-af20-a1a8dac9b96b/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "b4fe4264-14c2-4a39-8041-370b0d9f8b78",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy, Science/Technology, Maritime \u2014 Windward Fund via Windward Fund",
+      "value_usd": null,
+      "description": "S. 3910/H.R. 7656 ResCUE Oceans Act - Authorization of marine carbon dioxide removal research and development program at\u2026",
+      "lobbying_firm": "Windward Fund",
+      "issue_codes": [
+        "ENG",
+        "MAR",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/b4fe4264-14c2-4a39-8041-370b0d9f8b78/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "c6187097-21ee-4f50-8d85-4f87b47b6f1d",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Budget, Natural Resources \u2014 University Of Arizona via Herrera Arellano Llp",
+      "value_usd": null,
+      "description": "Defense research, science research, natural resources, grant funding, space research, federal appropriations",
+      "lobbying_firm": "Herrera Arellano Llp",
+      "issue_codes": [
+        "BUD",
+        "DEF",
+        "NAT"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c6187097-21ee-4f50-8d85-4f87b47b6f1d/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "bd89845e-b85a-4a38-9818-ff9644972d76",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Trade, Labor \u2014 Mcdonalds Corporation via Michael Best Strategies Llc",
+      "value_usd": null,
+      "description": "Issues related to workforce, franchising, and supply chain",
+      "lobbying_firm": "Michael Best Strategies Llc",
+      "issue_codes": [
+        "LBR",
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/bd89845e-b85a-4a38-9818-ff9644972d76/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "d8b650a5-eabf-4934-a403-995604def154",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Manufacturing, Veterans \u2014 Neuros Medical, Inc. via Neuros Medical, Inc.",
+      "value_usd": null,
+      "description": "DEF - Issues related to medical device access MMM - Issues related to medical device reimbursement VET - Issues related \u2026",
+      "lobbying_firm": "Neuros Medical, Inc.",
+      "issue_codes": [
+        "DEF",
+        "MMM",
+        "VET"
+      ],
+      "url": "https://lda.gov/filings/public/filing/d8b650a5-eabf-4934-a403-995604def154/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "1991fc5d-0abd-4ceb-987c-e35eb59857a3",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy, Manufacturing \u2014 Sungas Renewables Inc via Bracewell Llp",
+      "value_usd": null,
+      "description": "Advance federal support for biofuels projects",
+      "lobbying_firm": "Bracewell Llp",
+      "issue_codes": [
+        "ENG",
+        "MAN"
+      ],
+      "url": "https://lda.gov/filings/public/filing/1991fc5d-0abd-4ceb-987c-e35eb59857a3/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "629c4700-7970-42ed-bf8c-4d9695a8d45c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Energy \u2014 Mazama Energy via Boundary Stone Partners",
+      "value_usd": null,
+      "description": "Department of Energy funding priorities, Congressional permitting policy, Department of Interior/BLM permitting regulati\u2026",
+      "lobbying_firm": "Boundary Stone Partners",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/629c4700-7970-42ed-bf8c-4d9695a8d45c/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "6c17471f-0d0a-4b71-b9a0-b1f29a32d4eb",
+      "iso": "BE",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Trade \u2014 Clovia Bv via Corcoran & Associates, Inc. Dba Corcoran Partners",
+      "value_usd": null,
+      "description": "Belgium; Strategies and support relating to business opportunities",
+      "lobbying_firm": "Corcoran & Associates, Inc. Dba Corcoran Partners",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/6c17471f-0d0a-4b71-b9a0-b1f29a32d4eb/print/",
+      "raw_score": 2.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e05aa140-5fe1-4316-8b36-472d835b6039",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Energy \u2014 Karman Industries via Boundary Stone Partners",
+      "value_usd": null,
+      "description": "Federal policies to increase the energy and water efficiency of AI and digital infrastructure; incentives for advanced l\u2026",
+      "lobbying_firm": "Boundary Stone Partners",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e05aa140-5fe1-4316-8b36-472d835b6039/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "91c2e73a-211e-40fd-8994-c4c9963d8baa",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Science/Technology, Telecom \u2014 American Innovators Network via S-3 Group",
+      "value_usd": null,
+      "description": "Legislation related to AI preemption",
+      "lobbying_firm": "S-3 Group",
+      "issue_codes": [
+        "SCI",
+        "TEC"
+      ],
+      "url": "https://lda.gov/filings/public/filing/91c2e73a-211e-40fd-8994-c4c9963d8baa/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "c50e4ec6-f028-43d2-b176-8932c11a9a58",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Defense, Budget \u2014 Reliable Partners, Llc via Elevate Government Affairs, Llc",
+      "value_usd": null,
+      "description": "Issues related to subterranean facilities.",
+      "lobbying_firm": "Elevate Government Affairs, Llc",
+      "issue_codes": [
+        "BUD",
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c50e4ec6-f028-43d2-b176-8932c11a9a58/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "1bce5eeb-5664-4b52-a027-4efd385c1662",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Defense, Budget \u2014 Tidal Flight, Inc. via Acg Advocacy",
+      "value_usd": null,
+      "description": "Issues related to aircraft research, development, testing, and evaluation. Defense Appropriations.",
+      "lobbying_firm": "Acg Advocacy",
+      "issue_codes": [
+        "BUD",
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/1bce5eeb-5664-4b52-a027-4efd385c1662/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "b6ef9c96-6fd3-43b9-8e40-466c15c4e370",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Defense \u2014 Sightline Intelligence via C2 Strategies",
+      "value_usd": null,
+      "description": "Defense Policy",
+      "lobbying_firm": "C2 Strategies",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/b6ef9c96-6fd3-43b9-8e40-466c15c4e370/print/",
       "raw_score": null,
       "weight": 1.0
     }

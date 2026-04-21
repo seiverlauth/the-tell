@@ -19,5 +19,19 @@
       "body": "The mechanism is a coordinated sanctions action targeting a CDN money-laundering network using casino and commercial fronts. Expect follow-on designations of additional casino operators, financial facilitators, or CDN leadership.",
       "prompt": "I just saw three simultaneous OFAC designations in Mexico on 2026-04-14: individual Jesus Reymundo Ramos Vazquez linked to Cartel del Noreste, entity Comercializadora y Arrendadora de Mexico S.A. de C.V. linked to Casino Centenario, and Diamante Casino linked to that same commercial entity. Who are these entities, what are their known relationships to CDN's financial infrastructure, and is this part of a broader OFAC enforcement campaign against CDN money laundering through casinos? What additional casino operators, beneficial owners, or CDN figures should I watch for in follow-on designations?"
     }
+  },
+  "8d2d832c745dfa59": {
+    "narrative": {
+      "headline": "OFAC Targets Mahan Air Procurement Network in Coordinated Iran Sanctions Burst",
+      "body": "Five OFAC designations on April 21 trace a single supply chain: front companies and individuals funneling resources to Mahan Air, Iran's sanctioned carrier linked to IRGC logistics. The cluster signals a coordinated U.S. enforcement action against Mahan Air's evasion infrastructure, likely preceding broader secondary sanctions pressure on its international partners.",
+      "prompt": "I just saw that OFAC issued five Iran sanctions designations on the same day, all tracing back to Mahan Air through a chain of front companies and individuals. Why does this matter? Mahan Air is already sanctioned for supporting the IRGC and Hezbollah \u2014 so who are these new entities and why are they being designated now? Specifically: what is SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY's role, how does SAMAN AIR SERVICES connect to it, and what does PISHGAM ELECTRONIC SAFEH COMPANY supply? Is this a routine enforcement update or does a coordinated same-day batch signal an escalating pressure campaign? What should I watch for next \u2014 specifically whether foreign airlines or airports that still service Mahan Air face secondary sanctions exposure as a result of this action?"
+    }
+  },
+  "77b35f36cd8fa5af": {
+    "narrative": {
+      "headline": "UAE shell companies sanctioned as Iran evasion network dismantled",
+      "body": "OFAC designated five UAE-based entities and individuals in two waves (April 15 and 21) linked to Mahan Air, Iranian shipping networks, and IRGC-connected figures. The mechanism is a coordinated Iran sanctions evasion web using UAE free-zone companies as procurement and logistics fronts.",
+      "prompt": "I just saw that the US Treasury (OFAC) sanctioned five UAE-based companies and individuals in two separate actions in April 2026, all linked to Iranian sanctions evasion \u2014 including Mahan Air (a blacklisted Iranian airline), and figures connected to Iranian shipping and the IRGC. Why does this matter? UAE free zones have repeatedly been used to move money, goods, and logistics services to Iran in violation of US sanctions, and these designations suggest an active, coordinated network was operating. Who are the key entities? CHABOK FZCO (Mahan Air link), TAYLOR SHIPPING FZCO (linked to Mohammad Hossein Shamkhani), ACS TRADING LLC, SHIPSTAR SHIPCHANDLING LLC, and individual Mohammad Vahidi. Is this routine? The 5.4\u03c3 spike is not routine. Watch for: follow-on DOJ indictments, secondary sanctions on UAE banks that serviced these entities, and whether UAE regulators take enforcement action \u2014 that would signal whether this is a bilateral pressure campaign or unilateral US action."
+    }
   }
 }
