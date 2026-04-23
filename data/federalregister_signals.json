@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T07:12:03.913963+00:00",
+  "generated_at": "2026-04-23T22:58:08.358205+00:00",
   "sources": [
     "federalregister"
   ],
@@ -5699,6 +5699,83 @@
       "description": "Notice of Reestablishment of the Art Advisory Panel of the Commissioner of Internal Revenue. \u00b7 The charter for the Art Advisory Panel will be re-established for a two-year period beginning no sooner than seven days following publication of this notice.",
       "raw_score": null,
       "page_url": "https://www.federalregister.gov/documents/2026/04/20/2026-07587/reestablishment-of-the-art-advisory-panel-of-the-commissioner-of-internal-revenue"
+    },
+    {
+      "document_number": "2026-07699",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-21",
+      "title": "Notice of OFAC Sanctions Action",
+      "value_usd": null,
+      "description": "Notice. \u00b7 The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing the names of one or more persons that have been placed on OFAC's Specially Designated Nationals and Blocked Persons List (SDN List) based on OFAC's determination that one or more applicable legal criteria were satisfied. All property and interests in property subject to U.S. jurisdiction of these persons are blocked, and U.S. persons are generally prohibited from engaging in transactions with them.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/21/2026-07699/notice-of-ofac-sanctions-action"
+    },
+    {
+      "document_number": "2026-07695",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-21",
+      "title": "Science and Technology Reinvention Laboratory (STRL) Personnel Demonstration Project Program",
+      "value_usd": null,
+      "description": "Notice of amendment; STRL Personnel Demonstration Project probationary and trial period waivers. \u00b7 This notice amends STRL Personnel Demonstration Project Federal Register Notices (FRNs) by changing the waiver citations for probationary periods.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/21/2026-07695/science-and-technology-reinvention-laboratory-strl-personnel-demonstration-project-program"
+    },
+    {
+      "document_number": "2026-07685",
+      "iso": "US",
+      "source": "federalregister",
+      "signal_date": "2026-04-21",
+      "title": "U.S. Court of Appeals for the Armed Forces Proposed Rules Changes",
+      "value_usd": null,
+      "description": "Notice of proposed changes to the Rules of Practice and Procedure of the United States Court of Appeals for the Armed Forces. \u00b7 This notice announces proposed redrafting of the Rules of Practice and Procedure, United States Court of Appeals for the Armed Forces. Although these rules of practice and procedure fall within the Administrative Procedure Act's exemptions for notice and comment, the Department, as a matter of policy, has decided to make these changes available for public review and comment before they are implemented.",
+      "raw_score": 10.0,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/21/2026-07685/us-court-of-appeals-for-the-armed-forces-proposed-rules-changes"
+    },
+    {
+      "document_number": "2026-07676",
+      "iso": "HK",
+      "source": "federalregister",
+      "signal_date": "2026-04-21",
+      "title": "Annual Determination and Certification of Shrimp-Harvesting Nations",
+      "value_usd": null,
+      "description": "Notice of annual determination and certification. \u00b7 On April 10, 2026, the Department of State certified to Congress that wild-caught shrimp and products from that shrimp harvested in the following nations and Hong Kong are eligible to enter the United States: Argentina, the Bahamas, Belgium, Belize, Canada, Chile, Colombia, Costa Rica, the Kingdom of Denmark, the Dominican Republic, Ecuador, El Salvador, Estonia, Fiji, Gabon, Germany, Guatemala, Guyana, Honduras, Iceland, Ireland, Jamaica, Mexico, the Netherlands, New Zealand, Nicaragua, Nigeria, Norway, Oman, Panama, Russia, Sri Lanka, Suriname, Sweden, the United Kingdom, and Uruguay. The Department of State determined that wild-caught shrimp harvested in particular fisheries of certain nations and products from that shrimp are eligible to enter the United States: Australia (Northern Prawn Fishery, the Queensland East Coast Trawl Fishery, the Spencer Gulf, and the Torres Strait Prawn Fishery), France (French Guiana), Italy (giant red shrimp), Japan (shrimp baskets in Hokkaido), Republic of Korea (mosquito nets), and Spain (Mediterranean red shrimp). For nations, economies, and fisheries not listed above, only shrimp harvested from aquaculture and products from that shrimp are eligible to enter the United States. Shrimp and products from shrimp (products containing shrimp) imports into the United States must be accompanied by the DS- 2031 Shrimp Exporter's/Importer's Declaration.",
+      "raw_score": 4.0,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/21/2026-07676/annual-determination-and-certification-of-shrimp-harvesting-nations"
+    },
+    {
+      "document_number": "2026-07839",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-22",
+      "title": "Quarterly Publication of Individuals, Who Have Chosen To Expatriate",
+      "value_usd": null,
+      "description": "Notice.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/22/2026-07839/quarterly-publication-of-individuals-who-have-chosen-to-expatriate"
+    },
+    {
+      "document_number": "2026-07897",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-23",
+      "title": "Notice of OFAC Sanctions Actions",
+      "value_usd": null,
+      "description": "Notice. \u00b7 The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing the names of one or more persons that have been placed on OFAC's Specially Designated Nationals and Blocked Persons List (SDN List) based on OFAC's determination that one or more applicable legal criteria were satisfied. All property and interests in property subject to U.S. jurisdiction of these persons are blocked, and U.S. persons are generally prohibited from engaging in transactions with them.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/23/2026-07897/notice-of-ofac-sanctions-actions"
+    },
+    {
+      "document_number": "2026-07873",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-23",
+      "title": "Application and Renewal Fees Imposed on Surety Companies and Reinsuring Companies; Increase in Fees Imposed",
+      "value_usd": null,
+      "description": "Notice of fees imposed on surety companies and reinsuring companies. \u00b7 The Department of the Treasury, Bureau of the Fiscal Service, is increasing the fees it imposes on and collects from surety companies and reinsuring companies, effective January 1, 2026.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/23/2026-07873/application-and-renewal-fees-imposed-on-surety-companies-and-reinsuring-companies-increase-in-fees"
     }
   ]
 }

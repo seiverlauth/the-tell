@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T22:53:52.646560+00:00",
+  "generated_at": "2026-04-23T17:49:55.211849+00:00",
   "sources": [
     "ofac"
   ],
@@ -620,6 +620,467 @@
         "SDGT"
       ],
       "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57431"
+    },
+    {
+      "uid": 57384,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Kamal Sabah BALKHKANLU (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: PISHGAM ELECTRONIC SAFEH COMPANY)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57384"
+    },
+    {
+      "uid": 57385,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Mohammad VAHIDI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: JANGHORBANI, Hamid Reza)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57385"
+    },
+    {
+      "uid": 57386,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Danial KHALILI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: JANGHORBANI, Hamid Reza)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57386"
+    },
+    {
+      "uid": 57387,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Hamidreza ROKNIFARD (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: ADAK PARGAS PARS TRADING COMPANY)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57387"
+    },
+    {
+      "uid": 57388,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Mostafa ROKNIFARD (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: ADAK PARGAS PARS TRADING COMPANY)",
+      "programs": [
+        "NPWMD",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57388"
+    },
+    {
+      "uid": 57389,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: MAHAN AIR)",
+      "programs": [
+        "IFSR",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57389"
+    },
+    {
+      "uid": 57391,
+      "iso": "TR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "EMTI FIBER TEXTILE IMPORT EXPORT TRADE LIMITED COMPANY (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PARDISAN REZVAN SHARGH INTERNATIONAL PRIVATE JOINT STOCK COMPANY)",
+      "programs": [
+        "IFSR",
+        "NPWMD"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57391"
+    },
+    {
+      "uid": 57393,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "SAMAN AIR SERVICES COMPANY (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY)",
+      "programs": [
+        "SDGT",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57393"
+    },
+    {
+      "uid": 57394,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Gholam Abbas ATAEI AGHDAM (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY)",
+      "programs": [
+        "SDGT",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57394"
+    },
+    {
+      "uid": 57395,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Jamshid HOSSEINZADEH (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY)",
+      "programs": [
+        "IFSR",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57395"
+    },
+    {
+      "uid": 57396,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "Mohammad Hossein MAHDIAN (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: MAHAN AIR)",
+      "programs": [
+        "SDGT",
+        "IFSR"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57396"
+    },
+    {
+      "uid": 57407,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "EP-MTE (Aircraft)",
+      "value_usd": null,
+      "description": "(Linked To: MAHAN AIR)",
+      "programs": [
+        "IFSR",
+        "NPWMD",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57407"
+    },
+    {
+      "uid": 57408,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "EP-MTB (Aircraft)",
+      "value_usd": null,
+      "description": "(Linked To: MAHAN AIR)",
+      "programs": [
+        "IFSR",
+        "NPWMD",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57408"
+    },
+    {
+      "uid": 57409,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-04-21",
+      "title": "CHABOK FZCO (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: MAHAN AIR)",
+      "programs": [
+        "IFSR",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57409"
+    },
+    {
+      "uid": 57232,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "Jose de Jesus RAMIREZ TORRES (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57232"
+    },
+    {
+      "uid": 57233,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "ADUAEASY S. DE R.L. DE C.V. (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57233"
+    },
+    {
+      "uid": 57234,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "CORPORATIVO Y ENLACE RAM S.A. DE C.V. (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: RAMIREZ TORRES, Jose de Jesus)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57234"
+    },
+    {
+      "uid": 57235,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "ENLACE FORWARDING MEXICO, S. DE R.L. DE C.V. (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: RAMIREZ TORRES, Jose de Jesus)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57235"
+    },
+    {
+      "uid": 57236,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "CARGO GLOBAL 3PS, S. DE R.L. DE C.V. (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: RAMIREZ TORRES, Jose de Jesus)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57236"
+    },
+    {
+      "uid": 57237,
+      "iso": "US",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "E-RAM GROUP LLC (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: RAMIREZ TORRES, Jose de Jesus)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57237"
+    },
+    {
+      "uid": 57238,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "REYMA GLOBAL TRADING SA DE CV (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57238"
+    },
+    {
+      "uid": 57345,
+      "iso": "IN",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "Satishkumar Hareshbhai SUTARIA (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57345"
+    },
+    {
+      "uid": 57346,
+      "iso": "IN",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "Yuktakumari Ashishkumar MODI (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57346"
+    },
+    {
+      "uid": 57347,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "Maria Viridiana RUGERIO ARRIAGA (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57347"
+    },
+    {
+      "uid": 57349,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "Karina Guadalupe CARRILLO TORRES (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57349"
+    },
+    {
+      "uid": 57350,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "Regulo ACOSTA HERNANDEZ (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57350"
+    },
+    {
+      "uid": 57353,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "Ramiro Baltazar FELIX HERAS (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: SINALOA CARTEL)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57353"
+    },
+    {
+      "uid": 57354,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "Alejandro REYNOSO JIMENEZ (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: SINALOA CARTEL)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57354"
+    },
+    {
+      "uid": 57355,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "BOTANICA 2000 (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: REYNOSO JIMENEZ, Alejandro)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57355"
+    },
+    {
+      "uid": 57356,
+      "iso": "IN",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "SR CHEMICALS AND PHARMACEUTICALS (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57356"
+    },
+    {
+      "uid": 57357,
+      "iso": "IN",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "AGRAT CHEMICALS AND PHARMACEUTICALS (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57357"
+    },
+    {
+      "uid": 57359,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "DESARROLLOS CARTOK S.A. DE C.V. (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: CARRILLO TORRES, Karina Guadalupe)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57359"
+    },
+    {
+      "uid": 57360,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "COMERCIALIZADORA GRUPO CARHERN S.A. DE C.V. (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: CARRILLO TORRES, Karina Guadalupe)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57360"
+    },
+    {
+      "uid": 57361,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "QUIMICA SOLUCIONES Y LOGISTICA INTEGRAL BAJIO, S.A. DE C.V. (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: RUGERIO ARRIAGA, Maria Viridiana)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57361"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T07:10:00.955283+00:00",
+  "generated_at": "2026-04-23T22:56:13.957694+00:00",
   "sources": [
     "dsca"
   ],
@@ -14284,6 +14284,18 @@
       "cn_number": null,
       "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/04/germany-integrated-combat-system-supporting-equipment-and-support/",
       "wp_id": 678205
+    },
+    {
+      "iso": "LT",
+      "source": "dsca",
+      "signal_date": "2026-04-22",
+      "title": "AIM-9X Sidewinder Block II Missiles",
+      "value_usd": 214000000.0,
+      "description": "The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of Lithuania for AIM-9X Sidewinder Block II Missiles and related equipment.",
+      "raw_score": 2.0,
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/04/lithuania-aim-9x-sidewinder-block-ii-missiles/",
+      "wp_id": 679144
     }
   ]
 }

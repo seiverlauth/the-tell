@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T07:12:02.605733+00:00",
+  "generated_at": "2026-04-23T22:58:06.939986+00:00",
   "sources": [
     "lda"
   ],
@@ -10233,6 +10233,1159 @@
       ],
       "url": "https://lda.gov/filings/public/filing/7c182547-8da2-48f5-ab17-e623d5a692a5/print/",
       "raw_score": 5.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "1cfe0467-42c2-4366-8b44-14d8c8d86906",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-19",
+      "title": "Defense, Budget, Health \u2014 The Livingston Group On Behalf Of Safetraces via Oculus Strategies, Llc",
+      "value_usd": null,
+      "description": "FY27 National Defense Authorization Act FY27 Defense Appropriations Act",
+      "lobbying_firm": "Oculus Strategies, Llc",
+      "issue_codes": [
+        "BUD",
+        "DEF",
+        "HCR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/1cfe0467-42c2-4366-8b44-14d8c8d86906/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "7c8db633-3cfd-460e-ba9e-bed7159d3f63",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-19",
+      "title": "Science/Technology \u2014 American Weather Enterprise Association (Awea) via American Weather Enterprise Association (Awea)",
+      "value_usd": null,
+      "description": "weather reauthorization act, national weather safety board, radar next, Weather, Water & Climate Enterprise, drought, fi\u2026",
+      "lobbying_firm": "American Weather Enterprise Association (Awea)",
+      "issue_codes": [
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/7c8db633-3cfd-460e-ba9e-bed7159d3f63/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "ffc1f52d-4c70-42b5-ac64-9433991e2b0b",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-19",
+      "title": "Defense \u2014 Corrigan & Ussery On Behalf Of Copt Defense Properties, Lp via Mike Williams Capitol Strategies Llc (F/K/A Mw Capitol Strategies Llc)",
+      "value_usd": null,
+      "description": "Land conveyances.",
+      "lobbying_firm": "Mike Williams Capitol Strategies Llc (F/K/A Mw Capitol Strategies Llc)",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/ffc1f52d-4c70-42b5-ac64-9433991e2b0b/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "d7d397d0-cd27-4ae6-8039-b7e5500b6039",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-19",
+      "title": "Defense \u2014 Corrigan & Ussery Llc On Behalf Of Standardaero via Mike Williams Capitol Strategies Llc (F/K/A Mw Capitol Strategies Llc)",
+      "value_usd": null,
+      "description": "Federal policy and legislation regarding maintenance, repair and overhaul operations of military aircraft engines.",
+      "lobbying_firm": "Mike Williams Capitol Strategies Llc (F/K/A Mw Capitol Strategies Llc)",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/d7d397d0-cd27-4ae6-8039-b7e5500b6039/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "93be83b3-eaef-42e2-a2f0-9d2c8615aee8",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Science/Technology, Consumer Issues \u2014 Reflection Ai, Inc. via Reflection Ai, Inc.",
+      "value_usd": null,
+      "description": "Artificial Intelligence",
+      "lobbying_firm": "Reflection Ai, Inc.",
+      "issue_codes": [
+        "CPI",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/93be83b3-eaef-42e2-a2f0-9d2c8615aee8/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "b0f1297a-06f2-4463-98fc-47ca8d802f35",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Ms. Elizabeth Lavach On Behalf Of Hybron via Duddington Global Strategies Llc",
+      "value_usd": null,
+      "description": "Defense Appropriations and Authorizations",
+      "lobbying_firm": "Duddington Global Strategies Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/b0f1297a-06f2-4463-98fc-47ca8d802f35/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "77103609-2797-4732-b466-60e813475f34",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Trade \u2014 Alliance Consumer Group via Fti Government Affairs",
+      "value_usd": null,
+      "description": "International trade and tariffs on southeast Asia.",
+      "lobbying_firm": "Fti Government Affairs",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/77103609-2797-4732-b466-60e813475f34/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "f9b3f809-b5fd-4e77-9a0a-f8050e5e7d2d",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Science/Technology, Education \u2014 Stem City Usa via Gray Global Advisors, Llc",
+      "value_usd": null,
+      "description": "Federal appropriations and policy support for STEM education, science and technology initiatives, and workforce developm\u2026",
+      "lobbying_firm": "Gray Global Advisors, Llc",
+      "issue_codes": [
+        "EDU",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/f9b3f809-b5fd-4e77-9a0a-f8050e5e7d2d/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "68df30cd-67c1-430b-a56c-01f00eff7822",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Budget, Media \u2014 Sound Pharmaceuticals, Inc. via Holland & Knight Llp",
+      "value_usd": null,
+      "description": "Issues related to hearing loss and treatment.",
+      "lobbying_firm": "Holland & Knight Llp",
+      "issue_codes": [
+        "BUD",
+        "DEF",
+        "MED",
+        "VET"
+      ],
+      "url": "https://lda.gov/filings/public/filing/68df30cd-67c1-430b-a56c-01f00eff7822/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "a52118e3-5148-4849-a3d1-0bab2c16e1a5",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Ocean State Innovations via Rising Tide Associates",
+      "value_usd": null,
+      "description": "Support for defense industrial base",
+      "lobbying_firm": "Rising Tide Associates",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/a52118e3-5148-4849-a3d1-0bab2c16e1a5/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "f724c524-87c4-4234-b758-48ff01b9ddc2",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Parish Restoration via The Bennett Consulting Group",
+      "value_usd": null,
+      "description": "Environmental Remediation",
+      "lobbying_firm": "The Bennett Consulting Group",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/f724c524-87c4-4234-b758-48ff01b9ddc2/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "d3fe80e1-5384-4f73-8df3-8414de018660",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Reveal Technology via Reveal Technology",
+      "value_usd": null,
+      "description": "Issues related to Fiscal Year 2027 defense appropriations and authorizing legislation.",
+      "lobbying_firm": "Reveal Technology",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/d3fe80e1-5384-4f73-8df3-8414de018660/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "ddc2a8cb-e3ca-4ab2-a944-cb0d5470730c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy, Budget, Environment \u2014 Skyven Technologies via Whitmer & Worrall, Llc",
+      "value_usd": null,
+      "description": "Grants related to industrial steam-generating heat pumps.",
+      "lobbying_firm": "Whitmer & Worrall, Llc",
+      "issue_codes": [
+        "BUD",
+        "ENG",
+        "ENV"
+      ],
+      "url": "https://lda.gov/filings/public/filing/ddc2a8cb-e3ca-4ab2-a944-cb0d5470730c/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e0274b6d-0a3d-4568-b90f-cb6812860878",
+      "iso": "FR",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Trade, Tariffs \u2014 Eramet Marietta Inc. via Guidepoststrategies, Llc",
+      "value_usd": null,
+      "description": "Critical minerals and general tariff issues.",
+      "lobbying_firm": "Guidepoststrategies, Llc",
+      "issue_codes": [
+        "TAR",
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e0274b6d-0a3d-4568-b90f-cb6812860878/print/",
+      "raw_score": 5.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "eba3b4b7-f837-4387-9eb2-78421cc698d1",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy \u2014 Robbins Energy, Llc via Foley & Lardner Llp",
+      "value_usd": null,
+      "description": "Issue related to energy development and royalty relief.",
+      "lobbying_firm": "Foley & Lardner Llp",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/eba3b4b7-f837-4387-9eb2-78421cc698d1/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "c9c2a56c-9170-40d1-9da6-df2d583a3b15",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Trade, Budget \u2014 California Association Of Winegrape Growers via Torrey Advisory Group (Formerly Michael Torrey Associates, Llc)",
+      "value_usd": null,
+      "description": "TRD - Issues related to duty drawback. BUD - Appropriations for glassy-winged sharpshooter; Appropriations for smoke tai\u2026",
+      "lobbying_firm": "Torrey Advisory Group (Formerly Michael Torrey Associates, Llc)",
+      "issue_codes": [
+        "BUD",
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c9c2a56c-9170-40d1-9da6-df2d583a3b15/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "c0e74603-fe69-497e-8725-5a916c8f3a0b",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Fulmer Instruments via Potomac International Partners, Inc.",
+      "value_usd": null,
+      "description": "Federal policy related to medical device/technology",
+      "lobbying_firm": "Potomac International Partners, Inc.",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c0e74603-fe69-497e-8725-5a916c8f3a0b/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "5305c065-f8c0-4fd6-a02d-8f787dd35494",
+      "iso": "KR",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Trade, Manufacturing \u2014 Hanwha Azdel via Potomac International Partners, Inc.",
+      "value_usd": null,
+      "description": "Federal policy relating to trade and manufacturing",
+      "lobbying_firm": "Potomac International Partners, Inc.",
+      "issue_codes": [
+        "MAN",
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/5305c065-f8c0-4fd6-a02d-8f787dd35494/print/",
+      "raw_score": 4.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "4036bbe7-c3dc-4cca-8127-f42d0e428db0",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy, Transportation \u2014 Hrp Group, Llc via Bgr Government Affairs",
+      "value_usd": null,
+      "description": "Provide strategic counsel and advocate on issues related to energy, transportation and economic development.",
+      "lobbying_firm": "Bgr Government Affairs",
+      "issue_codes": [
+        "ENG",
+        "TRA"
+      ],
+      "url": "https://lda.gov/filings/public/filing/4036bbe7-c3dc-4cca-8127-f42d0e428db0/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "88d0ee82-17b8-4f07-bb41-496842262d76",
+      "iso": "SE",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 North American Hoganas Co. via Strategic Marketing Innovations",
+      "value_usd": null,
+      "description": "Defense appropriations",
+      "lobbying_firm": "Strategic Marketing Innovations",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/88d0ee82-17b8-4f07-bb41-496842262d76/print/",
+      "raw_score": 2.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "899a3e24-388e-453e-a367-01862a7114bd",
+      "iso": "DE",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Budget \u2014 Siemens Government Technologies via Strategic Marketing Innovations",
+      "value_usd": null,
+      "description": "Digital and automation process solutions for defense applications",
+      "lobbying_firm": "Strategic Marketing Innovations",
+      "issue_codes": [
+        "BUD",
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/899a3e24-388e-453e-a367-01862a7114bd/print/",
+      "raw_score": 4.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "12782920-8dd4-4987-9225-94759a806957",
+      "iso": "FR",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Veolia Environnement S.A. via Actum I, Llc",
+      "value_usd": null,
+      "description": "France; PFAS/hazardous waste remediation policy and funding.",
+      "lobbying_firm": "Actum I, Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/12782920-8dd4-4987-9225-94759a806957/print/",
+      "raw_score": 5.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e10f881b-ba1d-4a10-bcc9-3af17304b52a",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Convergenze Technology Company via Echelon Government Affairs",
+      "value_usd": null,
+      "description": "Funding support for development and fielding of AI-based intelligence surveillance and reconnaissance analysis for the D\u2026",
+      "lobbying_firm": "Echelon Government Affairs",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e10f881b-ba1d-4a10-bcc9-3af17304b52a/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "637ac0c4-6b2d-4b66-9d16-82107499e2ee",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Trade \u2014 Amkor Technology, Inc. via Akin Gump Strauss Hauer & Feld",
+      "value_usd": null,
+      "description": "Issues related to semiconductor Section 232 tariffs.",
+      "lobbying_firm": "Akin Gump Strauss Hauer & Feld",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/637ac0c4-6b2d-4b66-9d16-82107499e2ee/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "66acb036-71b4-4f0f-bc9f-6fe96a9feb7b",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 S2G Investments, Llc via American Defense International",
+      "value_usd": null,
+      "description": "Issues relating to maritime technology adpotion.",
+      "lobbying_firm": "American Defense International",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/66acb036-71b4-4f0f-bc9f-6fe96a9feb7b/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "1c4e2723-9bdb-43ed-aa19-c02b3250af24",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Health, Manufacturing \u2014 Mannkind Corporation via Jeffrey J. Kimbell & Associates, Inc.",
+      "value_usd": null,
+      "description": "Issues related to Diabetes care; Issues related to Medicare/Medicaid reimbursement; Issues related to the Tricare Progra\u2026",
+      "lobbying_firm": "Jeffrey J. Kimbell & Associates, Inc.",
+      "issue_codes": [
+        "DEF",
+        "HCR",
+        "MMM"
+      ],
+      "url": "https://lda.gov/filings/public/filing/1c4e2723-9bdb-43ed-aa19-c02b3250af24/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "59f30db2-b76b-4fa2-a6a6-c15b983f9f44",
+      "iso": "KY",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Finance, Taxation \u2014 Okx Inc. via Capitol Counsel Llc",
+      "value_usd": null,
+      "description": "Representation before the Executive Branch, regulatory agencies, and Congress with regard to digital-asset technology by\u2026",
+      "lobbying_firm": "Capitol Counsel Llc",
+      "issue_codes": [
+        "FIN",
+        "TAX"
+      ],
+      "url": "https://lda.gov/filings/public/filing/59f30db2-b76b-4fa2-a6a6-c15b983f9f44/print/",
+      "raw_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "6b5354c9-b52f-4315-8538-bcd1094c08fa",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Government, Health \u2014 Polo Custom Products via Insura Strategies Llc",
+      "value_usd": null,
+      "description": "Lobbying related to federal funding, procurement, and policy matters concerning protective medical equipment, emergency \u2026",
+      "lobbying_firm": "Insura Strategies Llc",
+      "issue_codes": [
+        "DEF",
+        "GOV",
+        "HCR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/6b5354c9-b52f-4315-8538-bcd1094c08fa/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "0cf75b78-60d9-4f5d-b8c0-7dec45281c0b",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Science/Technology, Manufacturing \u2014 Polo Custom Products via Insura Strategies Llc",
+      "value_usd": null,
+      "description": "Government relations and strategic advisory services related to federal policy, appropriations, and potential agency eng\u2026",
+      "lobbying_firm": "Insura Strategies Llc",
+      "issue_codes": [
+        "DEF",
+        "MAN",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/0cf75b78-60d9-4f5d-b8c0-7dec45281c0b/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "7d5943be-48e1-4645-b0b3-e1bb4e2d315e",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy \u2014 Crux Climate, Inc. via Pioneer Public Affairs",
+      "value_usd": null,
+      "description": "Advocating on issues related to clean energy tax and transferability and the clean energy market, including reintroducti\u2026",
+      "lobbying_firm": "Pioneer Public Affairs",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/7d5943be-48e1-4645-b0b3-e1bb4e2d315e/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "c350ea66-266c-4bd9-a48d-2057ca4be43c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Tivic Health Systems via American Defense International",
+      "value_usd": null,
+      "description": "Issues relating to immunotherapeutics.",
+      "lobbying_firm": "American Defense International",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c350ea66-266c-4bd9-a48d-2057ca4be43c/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "4a2e8c8d-fcf7-4844-8626-d134a3f7b215",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Havn Wear via American Defense International",
+      "value_usd": null,
+      "description": "Issues related to RF/EMF Protective Clothing",
+      "lobbying_firm": "American Defense International",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/4a2e8c8d-fcf7-4844-8626-d134a3f7b215/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "94e9fb3b-2263-4e3d-a71a-b6ecc0874dee",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Science/Technology, Consumer Issues \u2014 Agility Robotics, Inc. via Sio Advocacy Llc",
+      "value_usd": null,
+      "description": "Advanced technology, robotics, artificial intelligence, automation, logistics, workforce",
+      "lobbying_firm": "Sio Advocacy Llc",
+      "issue_codes": [
+        "CPI",
+        "DEF",
+        "LBR",
+        "MAN",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/94e9fb3b-2263-4e3d-a71a-b6ecc0874dee/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "8b20e048-79d4-4a64-aa5a-618158fdc4f4",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Enigma Aerospace via American Defense International",
+      "value_usd": null,
+      "description": "Issues related to autonomous aerial system mission planning and aerial logistics in contested airspace.",
+      "lobbying_firm": "American Defense International",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/8b20e048-79d4-4a64-aa5a-618158fdc4f4/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "606c5bdd-91b2-4b94-ba97-b5210d7649ef",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Arco Db Companies, Inc. via American Defense International",
+      "value_usd": null,
+      "description": "Issues related to military construction and infrastructure projects",
+      "lobbying_firm": "American Defense International",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/606c5bdd-91b2-4b94-ba97-b5210d7649ef/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "11f5e5fc-c449-48fd-b1f1-c6b0d478bd80",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Foreign Affairs \u2014 Iranian American Alliance For A Free Iran via Hb Strategies (Fka Husch Blackwell Strategies)",
+      "value_usd": null,
+      "description": "Representing client's views of US policy regarding Iran.",
+      "lobbying_firm": "Hb Strategies (Fka Husch Blackwell Strategies)",
+      "issue_codes": [
+        "FOR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/11f5e5fc-c449-48fd-b1f1-c6b0d478bd80/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "2888a438-c63a-4597-be0d-0faae861a6ad",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Budget \u2014 Winning Strategies Washington (On Behalf Of Synderys) via The Reserve Component",
+      "value_usd": null,
+      "description": "Research and development of tools for hardware security analysis",
+      "lobbying_firm": "The Reserve Component",
+      "issue_codes": [
+        "BUD",
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/2888a438-c63a-4597-be0d-0faae861a6ad/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e3e3ba04-c405-4857-b49e-042eee3f9264",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy, Debt/Deficit, Fuel/Oil \u2014 Six One Commodities, Llc via Meridian 535 Strategies",
+      "value_usd": null,
+      "description": "Energy and natural resources use, transport, infrastructure, and policy",
+      "lobbying_firm": "Meridian 535 Strategies",
+      "issue_codes": [
+        "CDT",
+        "ENG",
+        "FUE",
+        "NAT",
+        "UTI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e3e3ba04-c405-4857-b49e-042eee3f9264/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "7daaffb9-a6b6-478a-ac95-469a07abc9f5",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Natural Resources \u2014 Atlantic Alumina Company, Llc via Meridian 535 Strategies",
+      "value_usd": null,
+      "description": "Critical Minerals domestic sourcing policy, refining, stockpiling, price support, and War Department industrial base fun\u2026",
+      "lobbying_firm": "Meridian 535 Strategies",
+      "issue_codes": [
+        "DEF",
+        "NAT"
+      ],
+      "url": "https://lda.gov/filings/public/filing/7daaffb9-a6b6-478a-ac95-469a07abc9f5/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e406d372-f989-4949-8f4d-f539f8cb0a87",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Foreign Affairs \u2014 Hb Strategies O/B/O The Iranian American Alliance For A Free Iran via Ridge Path Strategies",
+      "value_usd": null,
+      "description": "Representing client's views of US policy regarding Iran.",
+      "lobbying_firm": "Ridge Path Strategies",
+      "issue_codes": [
+        "FOR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e406d372-f989-4949-8f4d-f539f8cb0a87/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "7abb3a1e-8737-484f-80be-05674a95f07d",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Site 525 via Signal Ridge Strategies",
+      "value_usd": null,
+      "description": "Authorization and funding for military cyber training environments and synthetic training infrastructure, including FY26\u2026",
+      "lobbying_firm": "Signal Ridge Strategies",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/7abb3a1e-8737-484f-80be-05674a95f07d/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "eb5a8b59-5496-4e52-8c6a-76afa02f19d2",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 American Energetics Group via Bockorny Group, Inc.",
+      "value_usd": null,
+      "description": "Issues related to military applications of nitrocellulose production.",
+      "lobbying_firm": "Bockorny Group, Inc.",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/eb5a8b59-5496-4e52-8c6a-76afa02f19d2/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "b8fc0fd0-566b-4127-b1df-1fd8e4fa8d0d",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Foreign Affairs, Health \u2014 Us Pharmacopeia via Kyle House Group",
+      "value_usd": null,
+      "description": "Education and advocacy in support of global health, global medical supply chains, and quality assurance programs.",
+      "lobbying_firm": "Kyle House Group",
+      "issue_codes": [
+        "FOR",
+        "HCR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/b8fc0fd0-566b-4127-b1df-1fd8e4fa8d0d/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "6b2d200f-9f9c-4aec-96b1-55c2829eb66b",
+      "iso": "CR",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Foreign Affairs, Government \u2014 Datasys Group S.A. via Tsg Advocates Dc, Llc",
+      "value_usd": null,
+      "description": "Costa Rica; Government relations assistance and relationship building",
+      "lobbying_firm": "Tsg Advocates Dc, Llc",
+      "issue_codes": [
+        "FOR",
+        "GOV"
+      ],
+      "url": "https://lda.gov/filings/public/filing/6b2d200f-9f9c-4aec-96b1-55c2829eb66b/print/",
+      "raw_score": 1.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "66bd1668-d8f2-4688-a771-fe190c852f81",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Maritime \u2014 Saronic via Saronic",
+      "value_usd": null,
+      "description": "Maritime autonomous surface vessels.",
+      "lobbying_firm": "Saronic",
+      "issue_codes": [
+        "DEF",
+        "MAR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/66bd1668-d8f2-4688-a771-fe190c852f81/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e6d36e69-a8d0-44dc-bf07-20ef0caef2d3",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy, Natural Resources \u2014 Clearway Energy Group Llc via Cgcn Group, Llc",
+      "value_usd": null,
+      "description": "Issues related to renewable energy projects and transmission.",
+      "lobbying_firm": "Cgcn Group, Llc",
+      "issue_codes": [
+        "ENG",
+        "NAT"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e6d36e69-a8d0-44dc-bf07-20ef0caef2d3/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "6b5e3ef4-af99-4afb-987c-895e3b8b0b1e",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy \u2014 J.M. Huber Corp. via The Bernhardt Group Llc",
+      "value_usd": null,
+      "description": "Oil and Gas Decommissioning",
+      "lobbying_firm": "The Bernhardt Group Llc",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/6b5e3ef4-af99-4afb-987c-895e3b8b0b1e/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e5cab101-fbba-49a6-8871-10350c35659b",
+      "iso": "KR",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense \u2014 Hanwha Defense Usa, Inc. via The Nickles Group, Llc",
+      "value_usd": null,
+      "description": "Defense procurement issues.",
+      "lobbying_firm": "The Nickles Group, Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e5cab101-fbba-49a6-8871-10350c35659b/print/",
+      "raw_score": 4.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e19e7b04-ddbd-41dc-af20-a1a8dac9b96b",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy \u2014 Citgo Petroleum Corporation via Navigators Global Llc (Formerly Dc Navigators, Llc)",
+      "value_usd": null,
+      "description": "Issues as they relate to development and production of energy resources.",
+      "lobbying_firm": "Navigators Global Llc (Formerly Dc Navigators, Llc)",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e19e7b04-ddbd-41dc-af20-a1a8dac9b96b/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "b4fe4264-14c2-4a39-8041-370b0d9f8b78",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy, Science/Technology, Maritime \u2014 Windward Fund via Windward Fund",
+      "value_usd": null,
+      "description": "S. 3910/H.R. 7656 ResCUE Oceans Act - Authorization of marine carbon dioxide removal research and development program at\u2026",
+      "lobbying_firm": "Windward Fund",
+      "issue_codes": [
+        "ENG",
+        "MAR",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/b4fe4264-14c2-4a39-8041-370b0d9f8b78/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "c6187097-21ee-4f50-8d85-4f87b47b6f1d",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Budget, Natural Resources \u2014 University Of Arizona via Herrera Arellano Llp",
+      "value_usd": null,
+      "description": "Defense research, science research, natural resources, grant funding, space research, federal appropriations",
+      "lobbying_firm": "Herrera Arellano Llp",
+      "issue_codes": [
+        "BUD",
+        "DEF",
+        "NAT"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c6187097-21ee-4f50-8d85-4f87b47b6f1d/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "bd89845e-b85a-4a38-9818-ff9644972d76",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Trade, Labor \u2014 Mcdonalds Corporation via Michael Best Strategies Llc",
+      "value_usd": null,
+      "description": "Issues related to workforce, franchising, and supply chain",
+      "lobbying_firm": "Michael Best Strategies Llc",
+      "issue_codes": [
+        "LBR",
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/bd89845e-b85a-4a38-9818-ff9644972d76/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "d8b650a5-eabf-4934-a403-995604def154",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Defense, Manufacturing, Veterans \u2014 Neuros Medical, Inc. via Neuros Medical, Inc.",
+      "value_usd": null,
+      "description": "DEF - Issues related to medical device access MMM - Issues related to medical device reimbursement VET - Issues related \u2026",
+      "lobbying_firm": "Neuros Medical, Inc.",
+      "issue_codes": [
+        "DEF",
+        "MMM",
+        "VET"
+      ],
+      "url": "https://lda.gov/filings/public/filing/d8b650a5-eabf-4934-a403-995604def154/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "1991fc5d-0abd-4ceb-987c-e35eb59857a3",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-20",
+      "title": "Energy, Manufacturing \u2014 Sungas Renewables Inc via Bracewell Llp",
+      "value_usd": null,
+      "description": "Advance federal support for biofuels projects",
+      "lobbying_firm": "Bracewell Llp",
+      "issue_codes": [
+        "ENG",
+        "MAN"
+      ],
+      "url": "https://lda.gov/filings/public/filing/1991fc5d-0abd-4ceb-987c-e35eb59857a3/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "629c4700-7970-42ed-bf8c-4d9695a8d45c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Energy \u2014 Mazama Energy via Boundary Stone Partners",
+      "value_usd": null,
+      "description": "Department of Energy funding priorities, Congressional permitting policy, Department of Interior/BLM permitting regulati\u2026",
+      "lobbying_firm": "Boundary Stone Partners",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/629c4700-7970-42ed-bf8c-4d9695a8d45c/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "6c17471f-0d0a-4b71-b9a0-b1f29a32d4eb",
+      "iso": "BE",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Trade \u2014 Clovia Bv via Corcoran & Associates, Inc. Dba Corcoran Partners",
+      "value_usd": null,
+      "description": "Belgium; Strategies and support relating to business opportunities",
+      "lobbying_firm": "Corcoran & Associates, Inc. Dba Corcoran Partners",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/6c17471f-0d0a-4b71-b9a0-b1f29a32d4eb/print/",
+      "raw_score": 2.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e05aa140-5fe1-4316-8b36-472d835b6039",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Energy \u2014 Karman Industries via Boundary Stone Partners",
+      "value_usd": null,
+      "description": "Federal policies to increase the energy and water efficiency of AI and digital infrastructure; incentives for advanced l\u2026",
+      "lobbying_firm": "Boundary Stone Partners",
+      "issue_codes": [
+        "ENG"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e05aa140-5fe1-4316-8b36-472d835b6039/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "91c2e73a-211e-40fd-8994-c4c9963d8baa",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Science/Technology, Telecom \u2014 American Innovators Network via S-3 Group",
+      "value_usd": null,
+      "description": "Legislation related to AI preemption",
+      "lobbying_firm": "S-3 Group",
+      "issue_codes": [
+        "SCI",
+        "TEC"
+      ],
+      "url": "https://lda.gov/filings/public/filing/91c2e73a-211e-40fd-8994-c4c9963d8baa/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "c50e4ec6-f028-43d2-b176-8932c11a9a58",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Defense, Budget \u2014 Reliable Partners, Llc via Elevate Government Affairs, Llc",
+      "value_usd": null,
+      "description": "Issues related to subterranean facilities.",
+      "lobbying_firm": "Elevate Government Affairs, Llc",
+      "issue_codes": [
+        "BUD",
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/c50e4ec6-f028-43d2-b176-8932c11a9a58/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "1bce5eeb-5664-4b52-a027-4efd385c1662",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Defense, Budget \u2014 Tidal Flight, Inc. via Acg Advocacy",
+      "value_usd": null,
+      "description": "Issues related to aircraft research, development, testing, and evaluation. Defense Appropriations.",
+      "lobbying_firm": "Acg Advocacy",
+      "issue_codes": [
+        "BUD",
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/1bce5eeb-5664-4b52-a027-4efd385c1662/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "b6ef9c96-6fd3-43b9-8e40-466c15c4e370",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-21",
+      "title": "Defense \u2014 Sightline Intelligence via C2 Strategies",
+      "value_usd": null,
+      "description": "Defense Policy",
+      "lobbying_firm": "C2 Strategies",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/b6ef9c96-6fd3-43b9-8e40-466c15c4e370/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "73be5566-9f24-49fe-96d4-0928e6b31539",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 Career Start via Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "value_usd": null,
+      "description": "Defense funding for recruiting software",
+      "lobbying_firm": "Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/73be5566-9f24-49fe-96d4-0928e6b31539/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e34fa596-f59a-4189-8e8e-1a8d097e9d38",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 Greycliff Industries Inc via Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "value_usd": null,
+      "description": "Defense funding for autonomous watercraft",
+      "lobbying_firm": "Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e34fa596-f59a-4189-8e8e-1a8d097e9d38/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "a1d5634d-8570-40d6-a0a7-72c4de9f086f",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 Amalgent Therapeutics via Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "value_usd": null,
+      "description": "Defense medical testing funding",
+      "lobbying_firm": "Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/a1d5634d-8570-40d6-a0a7-72c4de9f086f/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "1c25f332-c3b1-4abf-b6d6-1996bfc455bd",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 Cresilon, Inc via Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "value_usd": null,
+      "description": "Defense funding",
+      "lobbying_firm": "Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/1c25f332-c3b1-4abf-b6d6-1996bfc455bd/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "dd2b562a-879b-4040-80d4-946566d5c572",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 D-Wave Government, Inc via The Mckeon Group, Inc.",
+      "value_usd": null,
+      "description": "NDAA FY 2027",
+      "lobbying_firm": "The Mckeon Group, Inc.",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/dd2b562a-879b-4040-80d4-946566d5c572/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "76aebe8a-5f09-47a0-9eaa-1e4919a03c25",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Homeland Security, Science/Technology, Aviation \u2014 Liberty Defense Holdings, Ltd. via Mercury Strategies, Llc",
+      "value_usd": null,
+      "description": "No lobbying issues on current or immediately anticipated legislation. Appropriations issues regarding perimeter security\u2026",
+      "lobbying_firm": "Mercury Strategies, Llc",
+      "issue_codes": [
+        "AVI",
+        "HOM",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/76aebe8a-5f09-47a0-9eaa-1e4919a03c25/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "4d058205-810e-4b70-bb39-8344290a92c2",
+      "iso": "CA",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 The Mckeon Group Inc. (On Behalf Of D-Wave Government Inc.) via Plurus Strategies, Llc",
+      "value_usd": null,
+      "description": "General issues related to quantum annealing applications for the Department of Defense (DoD)",
+      "lobbying_firm": "Plurus Strategies, Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/4d058205-810e-4b70-bb39-8344290a92c2/print/",
+      "raw_score": 5.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "04ed815d-3559-4dd3-b6d4-aa67b3e17ab4",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-23",
+      "title": "Energy, Foreign Affairs \u2014 Tbvenergy Llc via Vision Americas Llc",
+      "value_usd": null,
+      "description": "Seeking U.S. government attention to recovery and operation of electricity power plants in Venezuela",
+      "lobbying_firm": "Vision Americas Llc",
+      "issue_codes": [
+        "ENG",
+        "FOR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/04ed815d-3559-4dd3-b6d4-aa67b3e17ab4/print/",
+      "raw_score": null,
       "weight": 1.0
     }
   ]
