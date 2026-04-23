@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T07:12:22.863265+00:00",
+  "generated_at": "2026-04-23T23:16:39.504166+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -23684,132 +23684,9 @@
   ],
   "themes": [
     {
-      "type": "velocity_anomaly",
-      "title": "Colombia \u2014 5 signals in 30 days (+7.3\u03c3)",
-      "score": 99.18,
-      "countries": [
-        "CO"
-      ],
-      "signal_keys": [
-        "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)",
-        "ofac:Jose Libardo QUIJANO TORRES (Individual)",
-        "ofac:Jose Oscar GARCIA BATTE (Individual)",
-        "ofac:GLOBAL QOWA AL BASHERIA S.A.S. (Entity)",
-        "ofac:Omar Fernando GARCIA BATTE (Individual)"
-      ],
-      "why": "4.5 weighted signals in 30 days vs 0.3 avg (+7.3\u03c3). Sources: ofac\u00d75",
-      "narrative": {
-        "headline": "On 2026-04-17, OFAC simultaneously designated two Colombian labor-recruitment networks: one centered on FENIX HUMAN RESOURCES S.A.S.",
-        "body": "and its controller Quijano Torres, and a second centered on the Garcia Batte brothers operating through INTERNATIONAL SERVICES AGENCY S.A.S. and GLOBAL QOWA AL BASHERIA S.A.S. The mechanism is illicit labor recruitment/human trafficking facilitation, with the Arabic-language entity name suggesting Gulf-region placement pipelines. Further designations of associated brokers, shell entities, or foreign counterparts are likely imminent.",
-        "prompt": "I just saw OFAC designate five Colombian entities/individuals on the same date across two apparent labor-recruitment networks: FENIX HUMAN RESOURCES S.A.S. (controlled by Jose Libardo Quijano Torres) and a Garcia Batte family cluster \u2014 Jose Oscar Garcia Batte, Omar Fernando Garcia Batte \u2014 operating through INTERNATIONAL SERVICES AGENCY S.A.S. and GLOBAL QOWA AL BASHERIA S.A.S. Who are these entities, what sectors do they recruit for, and do they have known Gulf-region or Middle East counterparts? Is the Arabic name significant \u2014 does it point to a specific destination country? Are there prior Colombian regulatory or criminal actions against them? What should I watch for next in terms of related designations or asset freezes?"
-      }
-    },
-    {
-      "type": "velocity_anomaly",
-      "title": "Iraq \u2014 4 signals in 30 days (+5.8\u03c3)",
-      "score": 66.505,
-      "countries": [
-        "IQ"
-      ],
-      "signal_keys": [
-        "ofac:Radhwan Yousif Hameed ALMOHAMMED (Indivi",
-        "ofac:Husham Hashim JAYTHOOM (Individual)",
-        "ofac:Khalid Jameel Abed ALBAKHATRA (Individua",
-        "ofac:Safaa Adnan Jabbar SUWAED (Individual)"
-      ],
-      "why": "3.6 weighted signals in 30 days vs 0.5 avg (+5.8\u03c3). Sources: ofac\u00d74",
-      "narrative": {
-        "headline": "On 2026-04-17, OFAC simultaneously designated four Iraqi individuals each linked to a different Iran-backed Iraqi militia: Kata'ib Hizballah, Harakat al-Nujaba, Kata'ib Sayyid al-Shuhada, and Asa'ib Ahl al-Haq.",
-        "body": "The mechanism is a coordinated, multi-group sanctions action targeting the broader Iraqi Shia militia (PMF) ecosystem in a single sweep. This signals an escalating U.S. pressure campaign likely preceding further designations, asset freezes, or secondary sanctions targeting militia financiers and facilitators.",
-        "prompt": "I just saw four simultaneous OFAC designations on 2026-04-17 targeting individuals linked to four distinct Iran-backed Iraqi militias: Radhwan Yousif Hameed ALMOHAMMED (Kata'ib Hizballah), Husham Hashim JAYTHOOM (Harakat al-Nujaba), Khalid Jameel Abed ALBAKHATRA (Kata'ib Sayyid al-Shuhada), and Safaa Adnan Jabbar SUWAED (Asa'ib Ahl al-Haq). Who are these individuals \u2014 are they financiers, commanders, or facilitators? Is a coordinated multi-militia sweep like this routine or anomalous in OFAC's Iraq enforcement history? What shared activity or trigger event might have prompted simultaneous action across four groups? I want to watch for follow-on designations of connected entities, secondary sanctions on Iraqi financial institutions, and any U.S. policy statements on PMF pressure."
-      }
-    },
-    {
-      "type": "velocity_anomaly",
-      "title": "Mexico \u2014 3 signals in 30 days (+4.0\u03c3)",
-      "score": 28.031,
-      "countries": [
-        "MX"
-      ],
-      "signal_keys": [
-        "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual",
-        "ofac:COMERCIALIZADORA Y ARRENDADORA DE MEXICO",
-        "ofac:DIAMANTE CASINO (Entity)"
-      ],
-      "why": "2.7 weighted signals in 30 days vs 0.6 avg (+4.0\u03c3). Sources: ofac\u00d73",
-      "narrative": {
-        "headline": "OFAC designated three linked entities on the same date: an individual tied to Cartel del Noreste, a commercial/leasing company linked to Casino Centenario, and Diamante Casino linked to that same company.",
-        "body": "The mechanism is a coordinated sanctions action targeting a CDN money-laundering network using casino and commercial fronts. Expect follow-on designations of additional casino operators, financial facilitators, or CDN leadership.",
-        "prompt": "I just saw three simultaneous OFAC designations in Mexico on 2026-04-14: individual Jesus Reymundo Ramos Vazquez linked to Cartel del Noreste, entity Comercializadora y Arrendadora de Mexico S.A. de C.V. linked to Casino Centenario, and Diamante Casino linked to that same commercial entity. Who are these entities, what are their known relationships to CDN's financial infrastructure, and is this part of a broader OFAC enforcement campaign against CDN money laundering through casinos? What additional casino operators, beneficial owners, or CDN figures should I watch for in follow-on designations?"
-      }
-    },
-    {
-      "type": "velocity_anomaly",
-      "title": "China \u2014 4 signals in 30 days (+2.7\u03c3)",
-      "score": 24.728,
-      "countries": [
-        "CN"
-      ],
-      "signal_keys": [
-        "ofac:Feiwu BIAN (Individual)",
-        "cftc:Corn",
-        "cftc:Corn",
-        "cftc:Corn"
-      ],
-      "why": "2.5 weighted signals in 30 days vs 0.8 avg (+2.7\u03c3). Sources: cftc\u00d73, ofac\u00d71",
-      "narrative": null
-    },
-    {
-      "type": "velocity_anomaly",
-      "title": "United Arab Emirates \u2014 3 signals in 30 days (+3.0\u03c3)",
-      "score": 20.791,
-      "countries": [
-        "AE"
-      ],
-      "signal_keys": [
-        "ofac:TAYLOR SHIPPING FZCO (Entity)",
-        "ofac:SHIPSTAR SHIPCHANDLING LLC (Entity)",
-        "ofac:ACS TRADING LLC (Entity)"
-      ],
-      "why": "2.7 weighted signals in 30 days vs 0.5 avg (+3.0\u03c3). Sources: ofac\u00d73",
-      "narrative": null
-    },
-    {
-      "type": "velocity_anomaly",
-      "title": "Thailand \u2014 3 signals in 30 days (+3.9\u03c3)",
-      "score": 19.017,
-      "countries": [
-        "TH"
-      ],
-      "signal_keys": [
-        "sam:Office furniture installation",
-        "sam:American Fair: Freedom 250 In HAT YAI",
-        "sam:Single Source Justification for Legal Se"
-      ],
-      "why": "2.1 weighted signals in 30 days vs 0.1 avg (+3.9\u03c3). Sources: sam\u00d73",
-      "narrative": null
-    },
-    {
-      "type": "velocity_anomaly",
-      "title": "United Kingdom \u2014 5 signals in 30 days (+2.1\u03c3)",
-      "score": 16.711,
-      "countries": [
-        "GB"
-      ],
-      "signal_keys": [
-        "lda:7c182547-8da2-48f5-ab17-e623d5a692a5",
-        "lda:dcac5c1c-c647-4baf-ae01-7782fa0579d1",
-        "ofac:Seyed Naiemaei Badroddin MOOSAVI (Indivi",
-        "lda:29e67f85-e020-4714-8d85-9cf4e447eb0f",
-        "lda:585860bc-af15-4e03-a51e-7b10e683c7cd"
-      ],
-      "why": "2.9 weighted signals in 30 days vs 1.4 avg (+2.1\u03c3). Sources: lda\u00d74, ofac\u00d71",
-      "narrative": null
-    },
-    {
       "type": "actor_concentration",
       "title": "Ark Strategy lobbying for 3 countries simultaneously",
-      "score": 11.462,
+      "score": 10.903,
       "countries": [
         "AU",
         "GB",
@@ -23826,7 +23703,7 @@
     {
       "type": "actor_concentration",
       "title": "Cassidy & Associates, Inc. lobbying for 3 countries simultaneously",
-      "score": 11.461,
+      "score": 10.902,
       "countries": [
         "AU",
         "CA",
@@ -23844,7 +23721,7 @@
     {
       "type": "actor_concentration",
       "title": "Ml Strategies, Llc lobbying for 3 countries simultaneously",
-      "score": 9.941,
+      "score": 9.456,
       "countries": [
         "AU",
         "CA",
@@ -23861,7 +23738,7 @@
     {
       "type": "actor_concentration",
       "title": "The Vogel Group lobbying for 4 countries simultaneously",
-      "score": 9.566,
+      "score": 9.1,
       "countries": [
         "AE",
         "AT",
@@ -23880,7 +23757,7 @@
     {
       "type": "actor_concentration",
       "title": "Miller Strategies, Llc lobbying for 6 countries simultaneously",
-      "score": 9.562,
+      "score": 9.095,
       "countries": [
         "BE",
         "CA",
@@ -23903,7 +23780,7 @@
     {
       "type": "actor_concentration",
       "title": "Valcour Llc lobbying for 4 countries simultaneously",
-      "score": 8.854,
+      "score": 8.422,
       "countries": [
         "GB",
         "IQ",
@@ -23922,7 +23799,7 @@
     {
       "type": "actor_concentration",
       "title": "Checkmate Government Relations lobbying for 4 countries simultaneously",
-      "score": 8.746,
+      "score": 8.32,
       "countries": [
         "CH",
         "CN",
@@ -23941,7 +23818,7 @@
     {
       "type": "actor_concentration",
       "title": "Bgr Government Affairs lobbying for 6 countries simultaneously",
-      "score": 7.482,
+      "score": 7.117,
       "countries": [
         "CN",
         "DK",
@@ -23966,7 +23843,7 @@
     {
       "type": "actor_concentration",
       "title": "Marshall & Popp, Llc lobbying for 3 countries simultaneously",
-      "score": 6.29,
+      "score": 5.983,
       "countries": [
         "AU",
         "GB",
@@ -23983,7 +23860,7 @@
     {
       "type": "actor_concentration",
       "title": "Dga Group Government Relations Llc lobbying for 4 countries simultaneously",
-      "score": 5.701,
+      "score": 5.423,
       "countries": [
         "BR",
         "CN",
@@ -24002,7 +23879,7 @@
     {
       "type": "actor_concentration",
       "title": "Mayer Brown Llp lobbying for 5 countries simultaneously",
-      "score": 3.461,
+      "score": 3.292,
       "countries": [
         "BE",
         "CN",
@@ -24023,7 +23900,7 @@
     {
       "type": "actor_concentration",
       "title": "Covenant Government Affairs, Llc lobbying for 3 countries simultaneously",
-      "score": 2.633,
+      "score": 2.505,
       "countries": [
         "AU",
         "CA",
@@ -24041,7 +23918,7 @@
     {
       "type": "actor_concentration",
       "title": "Invariant Llc lobbying for 4 countries simultaneously",
-      "score": 2.556,
+      "score": 2.431,
       "countries": [
         "AU",
         "DE",
@@ -24055,6 +23932,73 @@
         "lda:7bd791f6-d51a-4726-b877-cc759a253e03"
       ],
       "why": "Invariant Llc filed LDA disclosures for Australia, Germany, Turkey, Taiwan in the same period.",
+      "narrative": null
+    },
+    {
+      "type": "actor_concentration",
+      "title": "King & Spalding Llp lobbying for 3 countries simultaneously",
+      "score": 2.122,
+      "countries": [
+        "AT",
+        "BR",
+        "CA"
+      ],
+      "signal_keys": [
+        "lda:7966fa9c-08f9-4c18-9500-f8d72be58655",
+        "lda:b50587f3-c842-45a9-8d92-65aa0d275bf7",
+        "lda:b88780ee-54dd-4925-a02b-53232aad058e"
+      ],
+      "why": "King & Spalding Llp filed LDA disclosures for Austria, Brazil, Canada in the same period.",
+      "narrative": null
+    },
+    {
+      "type": "cftc_overlap",
+      "title": "Brent Crude positioning anomaly \u2014 1 exposed countries active",
+      "score": 1.715,
+      "countries": [
+        "SA"
+      ],
+      "signal_keys": [
+        "cftc:Brent Crude"
+      ],
+      "why": "Brent Crude z=+2.0\u03c3. Active basket: SA (1/7 exposed countries have recent signals).",
+      "narrative": null
+    },
+    {
+      "type": "actor_concentration",
+      "title": "Capital Park Partners Llc lobbying for 3 countries simultaneously",
+      "score": 1.631,
+      "countries": [
+        "GB",
+        "IL",
+        "JP"
+      ],
+      "signal_keys": [
+        "lda:9b25dd5d-c34a-434d-af7a-b14b37284403",
+        "lda:a5ad2bf3-635d-413d-9f54-b6f983e4d72c",
+        "lda:02b247dd-5ef5-4daf-8026-9aa9990c11ab",
+        "lda:b4b95c34-7ceb-4309-a6e2-4c7aa317f67a"
+      ],
+      "why": "Capital Park Partners Llc filed LDA disclosures for United Kingdom, Israel, Japan in the same period.",
+      "narrative": null
+    },
+    {
+      "type": "actor_concentration",
+      "title": "Arentfox Schiff Llp lobbying for 4 countries simultaneously",
+      "score": 1.218,
+      "countries": [
+        "CH",
+        "DE",
+        "GB",
+        "IQ"
+      ],
+      "signal_keys": [
+        "lda:6f7d0b0d-168d-4799-998a-3179c04395c7",
+        "lda:6d5640d5-2508-4763-ba47-e7671af466e3",
+        "lda:2abfd98d-27af-4e12-9a20-6b52c9e31639",
+        "lda:1d389c4c-5632-41a6-8c57-7c676c628c6a"
+      ],
+      "why": "Arentfox Schiff Llp filed LDA disclosures for Switzerland, Germany, United Kingdom, Iraq in the same period.",
       "narrative": null
     }
   ]

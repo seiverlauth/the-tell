@@ -18,6 +18,7 @@ Reads all data/*_signals.json source files, then:
 Fields stripped from source records: raw_score, weight (both unused downstream).
 """
 
+import itertools
 import json
 import glob
 import hashlib
@@ -353,12 +354,53 @@ def compute_themes(enriched: list) -> list:
         if current_count < 3:
             continue
 
-        weighted_count = sum(s.get("quality", 0) for s in current_sigs)
+        # Require at least 2 distinct sources — single-source batches (e.g. OFAC
+        # dumping 4 designations on the same day) are enforcement batches, not spikes.
+        distinct_sources = len(set(s.get("source") for s in current_sigs))
+        if distinct_sources < 2:
+            continue
+
+        # For batch sources (ofac, bis), count one event per (source, date) pair rather
+        # than per record — prevents a single designation batch from inflating the weight.
+        BATCH_SOURCES = {"ofac", "bis"}
+        def _event_weight(s: dict) -> float:
+            if s.get("source") in BATCH_SOURCES:
+                return 0.0  # placeholder; real weight assigned per batch below
+            return s.get("quality", 0)
+
+        batch_weight = sum(
+            s.get("quality", 0)
+            for s in current_sigs
+            if s.get("source") not in BATCH_SOURCES
+        )
+        for (src, dt), group in itertools.groupby(
+            sorted(
+                [s for s in current_sigs if s.get("source") in BATCH_SOURCES],
+                key=lambda x: (x.get("source", ""), x.get("signal_date", "")),
+            ),
+            key=lambda x: (x.get("source", ""), x.get("signal_date", "")),
+        ):
+            batch_weight += max(s.get("quality", 0) for s in group)
+
+        weighted_count = batch_weight
+
+        def _prior_weighted(sigs_window: list) -> float:
+            non_batch = sum(s.get("quality", 0) for s in sigs_window if s.get("source") not in BATCH_SOURCES)
+            b = 0.0
+            for (src, dt), group in itertools.groupby(
+                sorted(
+                    [s for s in sigs_window if s.get("source") in BATCH_SOURCES],
+                    key=lambda x: (x.get("source", ""), x.get("signal_date", "")),
+                ),
+                key=lambda x: (x.get("source", ""), x.get("signal_date", "")),
+            ):
+                b += max(s.get("quality", 0) for s in group)
+            return non_batch + b
 
         prior_counts = []
         for w in range(1, n_prior + 1):
-            c = sum(s.get("quality", 0) for s in sigs if w * 30 <= days_ago(s["signal_date"]) < (w + 1) * 30)
-            prior_counts.append(c)
+            window_sigs = [s for s in sigs if w * 30 <= days_ago(s["signal_date"]) < (w + 1) * 30]
+            prior_counts.append(_prior_weighted(window_sigs))
 
         baseline_mean = statistics.mean(prior_counts)
         baseline_std = statistics.stdev(prior_counts) if len(prior_counts) >= 3 else 1.0
