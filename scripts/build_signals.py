@@ -18,16 +18,14 @@ Reads all data/*_signals.json source files, then:
 Fields stripped from source records: raw_score, weight (both unused downstream).
 """
 
-import itertools
 import json
 import glob
 import hashlib
 import math
 import os
 import re
-import statistics
 import sys
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -105,61 +103,7 @@ def _signal_key(sig: dict) -> str:
     return f"{src}:{unique}"
 
 
-# ── Fix 1: Thematic coherence for layer_sequence ────────────────────────────
-# Domain keyword sets per layer. A signal "clears the bar" for its layer if
-# its title or description contains at least one keyword from its set.
-# thematic_pair_ok returns False only when NEITHER signal clears its bar —
-# i.e., pure country co-occurrence with no domain relevance on either side.
-
-_LAYER_DOMAIN_KW: dict = {
-    "military": {
-        "defense", "arms", "weapon", "weapons", "military", "security",
-        "contractor", "procurement", "nato", "pentagon", "munition", "munitions",
-        "missile", "missiles", "aircraft", "vessel", "submarine", "artillery",
-        "radar", "satellite", "ammunition", "combat", "surveillance", "warship",
-        "armament", "fighter", "bomber", "frigate", "destroyer",
-    },
-    "influence": {
-        "defense", "arms", "weapon", "weapons", "military",
-        "contractor", "procurement", "nato", "pentagon",
-        "sanction", "sanctions", "export", "trade", "energy", "oil", "gas",
-        "nuclear", "finance", "financial", "regulation", "tariff",
-        "intelligence", "embargo", "compliance", "strategic",
-    },
-    "financial": {
-        "sanction", "sanctions", "currency", "debt", "fund", "loan", "credit",
-        "reserve", "oil", "gas", "energy", "commodity", "trade", "tariff",
-        "monetary", "arms", "defense", "weapon", "imf", "disbursement",
-        "program", "fiscal",
-    },
-    "regulatory": {
-        "sanction", "sanctions", "export", "control", "designation", "license",
-        "rule", "regulation", "compliance", "arms", "weapon", "defense",
-        "security", "trade", "embargo", "restriction", "proliferation",
-    },
-}
-
-
-def _sig_domain_words(sig: dict) -> set:
-    """Tokenize title + description into lowercase alpha words."""
-    text = f"{sig.get('title', '')} {sig.get('description', '')}".lower()
-    return set(re.findall(r'\b[a-z]+\b', text))
-
-
-def thematic_pair_ok(sig_a: dict, sig_b: dict, layer_a: str, layer_b: str) -> bool:
-    """
-    Return True if at least one signal clears the domain keyword bar for its
-    layer role. Prevents pure country co-occurrence from creating layer_sequence
-    pairs — e.g., AI lobbying + submarine DSCA share a country but not a domain.
-    """
-    words_a = _sig_domain_words(sig_a)
-    words_b = _sig_domain_words(sig_b)
-    kw_a = _LAYER_DOMAIN_KW.get(layer_a, set())
-    kw_b = _LAYER_DOMAIN_KW.get(layer_b, set())
-    return bool(words_a & kw_a) or bool(words_b & kw_b)
-
-
-# ── Fix 2: Commodity→sector mapping for CFTC basket overlap ─────────────────
+# ── Commodity→sector mapping for CFTC basket overlap ────────────────────────
 # A country ISO only counts toward cftc_overlap if at least one of its
 # non-CFTC signals in the window has a title containing a commodity-sector
 # keyword. Wheat positioning does not pull in pipeline lobbying.
@@ -190,9 +134,7 @@ COMMODITY_SECTORS: dict = {
                      "forex", "cnh", "monetary"},
 }
 
-# ── Fix 3: Stopwords for context signal keyword filter ───────────────────────
-# Used in generate_prose_for_themes to strip non-domain words from
-# contributing signal titles before building the intersection filter.
+# Stopwords for context signal keyword filter used in generate_prose_for_themes.
 
 _CONTEXT_STOPWORDS: set = {
     "with", "that", "this", "from", "have", "will", "been", "they", "their",
@@ -209,13 +151,14 @@ _CONTEXT_STOPWORDS: set = {
 
 def compute_themes(enriched: list) -> list:
     """
-    Compute algorithmic narrative themes from enriched signals.
+    Compute narrative themes from enriched signals.
 
-    Four algorithms:
-      1. actor_concentration — FARA multi-firm principals / LDA multi-firm lobbying per iso
-      2. velocity_anomaly    — current-30d signal count vs rolling baseline per country
-      3. layer_sequence      — meaningful cross-layer ordered pairs within 90 days
-      4. cftc_overlap        — CFTC basket vs active non-CFTC signals in same window
+    Three algorithms, all based on surprise relative to baseline:
+      1. first_appearance        — country appears in a source after ≥180 days of silence
+      2. influence_before_action — FARA/LDA precedes DSCA/OFAC/SAM/BIS within 90 days,
+                                   and this sequence didn't exist in the prior 180 days
+      3. cftc_overlap            — CFTC positioning anomaly precedes country signals
+                                   within 30 days (CFTC is the leading indicator)
     """
     today = datetime.now(timezone.utc).date()
 
@@ -228,11 +171,18 @@ def compute_themes(enriched: list) -> list:
         except ValueError:
             return 99999
 
+    def sig_date(s: dict):
+        ds = s.get("signal_date", "")
+        if not ds:
+            return None
+        try:
+            return datetime.strptime(ds[:10], "%Y-%m-%d").date()
+        except ValueError:
+            return None
+
     def prof_score(sig: dict) -> int:
         p = sig.get("profile")
-        if not p:
-            return 0
-        return p.get("score") or 0
+        return (p.get("score") or 0) if p else 0
 
     def profile_name(sig: dict) -> str:
         p = sig.get("profile")
@@ -242,329 +192,151 @@ def compute_themes(enriched: list) -> list:
 
     themes: list = []
 
-    # ── Algorithm 1: Actor Concentration ────────────────────────────────────
+    active = [s for s in enriched
+              if s.get("iso") and s.get("iso") not in ("XX", "US")
+              and s.get("signal_date")]
 
-    # FARA: group by principal
-    fara_sigs = [s for s in enriched if s.get("source") == "fara"]
-    by_principal: dict = {}
-    for s in fara_sigs:
-        p = s.get("principal")
-        if p:
-            by_principal.setdefault(p, []).append(s)
+    # ── Algorithm 1: First Appearance ────────────────────────────────────────
+    #
+    # Country X receives a signal from source S, and has not appeared in source S
+    # in the prior 180 days. The apparatus starts doing paperwork it wasn't doing.
+    # Saudi Arabia never fires (always in DSCA). Morocco firing after 14 months is news.
 
-    for principal, sigs in by_principal.items():
-        registrants = {s.get("registrant") for s in sigs if s.get("registrant")}
-        if len(registrants) < 3:
+    SILENCE_WINDOW = 180
+    CURRENT_WINDOW = 30
+
+    by_iso_src: dict = {}
+    for s in active:
+        by_iso_src.setdefault((s["iso"], s.get("source", "")), []).append(s)
+
+    for (iso, src), sigs in by_iso_src.items():
+        current = [s for s in sigs if days_ago(s["signal_date"]) < CURRENT_WINDOW]
+        if not current:
             continue
-        isos = [s.get("iso") for s in sigs if s.get("iso") and s.get("iso") not in ("XX", "US")]
-        iso = isos[0] if isos else "XX"
-        ps = prof_score(sigs[0])
-        most_recent_days = min((days_ago(s.get("signal_date")) for s in sigs), default=9999)
-        recency_w = math.exp(-most_recent_days / 60)
-        firm_count = len(registrants)
-        score = math.log2(firm_count + 1) * (ps + 1) * recency_w
-        if score <= 1.0:
+        # Appeared within the silence window → not actually silent
+        if any(CURRENT_WINDOW <= days_ago(s["signal_date"]) < CURRENT_WINDOW + SILENCE_WINDOW
+               for s in sigs):
             continue
-        dates = sorted([s.get("signal_date", "") for s in sigs if s.get("signal_date")])
-        try:
-            window_days = (
-                datetime.strptime(dates[-1][:10], "%Y-%m-%d").date() -
-                datetime.strptime(dates[0][:10], "%Y-%m-%d").date()
-            ).days if len(dates) >= 2 else 0
-        except ValueError:
-            window_days = 0
+
+        best = max(current, key=lambda s: s.get("quality", 0))
+        ps = prof_score(best)
+        if ps < 2:
+            continue
+
+        all_prior = [s for s in sigs if days_ago(s["signal_date"]) >= CURRENT_WINDOW]
+        if all_prior:
+            last_days = min(days_ago(s["signal_date"]) for s in all_prior)
+            silence_label = f"{last_days}d"
+        else:
+            last_days = 999
+            silence_label = "first recorded"
+
+        # "First recorded" is only meaningful for high-quality sources with enough
+        # history to trust the absence. SAM/IMF/LDA data is thin — skip.
+        if last_days == 999 and best.get("quality", 0) < 0.85:
+            continue
+
+        recency_w = math.exp(-min(days_ago(best["signal_date"]), 30) / 15)
+        score = ps * best.get("quality", 0.5) * recency_w * math.log2(last_days / 30 + 2)
+
+        country_name = profile_name(best)
         themes.append({
-            "type": "actor_concentration",
-            "title": f"{firm_count} firms registered to represent {principal}",
-            "score": round(score, 3),
-            "countries": [iso] if iso and iso != "XX" else [],
-            "signal_keys": [_signal_key(s) for s in sigs],
-            "why": f"{firm_count} distinct registrants for {principal} in {window_days}d. Baseline: 1–2 per principal.",
-        })
-
-    # LDA: group by lobbying_firm — flag a single firm representing multiple foreign-country clients
-    # "Multiple firms on one country" is meaningless (that's just an active lobbying ecosystem).
-    # "One firm with multiple foreign-country clients simultaneously" is actual concentration.
-    lda_sigs = [s for s in enriched if s.get("source") == "lda"
-                and s.get("iso") not in (None, "XX", "US")
-                and s.get("lobbying_firm")]
-    by_firm: dict = {}
-    for s in lda_sigs:
-        by_firm.setdefault(s["lobbying_firm"], []).append(s)
-
-    for firm, sigs in by_firm.items():
-        # Count distinct foreign ISOs this firm is representing
-        isos_represented = {s["iso"] for s in sigs}
-        # Established multi-country lobbying shops (Akin Gump, Holland & Knight, etc.)
-        # always represent many countries — that's their business model, not a signal.
-        # Only flag firms whose total foreign-country footprint in our data is ≤ 6.
-        if len(isos_represented) > 6:
-            continue
-        if len(isos_represented) < 3:
-            continue
-        # Require at least 2 represented countries to have structural score ≥ 5
-        # "Firm lobbies for Australia, Canada, New Zealand" is not a signal
-        high_interest = sum(
-            1 for iso in isos_represented
-            for s in [next((x for x in sigs if x.get("iso") == iso), None)]
-            if s and (s.get("profile") or {}).get("score", 0) >= 5
-        )
-        if high_interest < 2:
-            continue
-        most_recent_days = min((days_ago(s.get("signal_date")) for s in sigs), default=9999)
-        recency_w = math.exp(-most_recent_days / 60)
-        # Weight by sum of profile scores of represented countries
-        ps_sum = sum(
-            max((s.get("profile") or {}).get("score") or 0 for s in sigs if s.get("iso") == iso)
-            for iso in isos_represented
-        )
-        iso_count = len(isos_represented)
-        score = math.log2(iso_count + 1) * (ps_sum / iso_count + 1) * recency_w
-        if score <= 1.0:
-            continue
-        country_names = []
-        for iso in sorted(isos_represented):
-            iso_sigs = [s for s in sigs if s.get("iso") == iso]
-            country_names.append(profile_name(iso_sigs[0]) if iso_sigs else iso)
-        themes.append({
-            "type": "actor_concentration",
-            "title": f"{firm} lobbying for {iso_count} countries simultaneously",
-            "score": round(score, 3),
-            "countries": sorted(isos_represented),
-            "signal_keys": [_signal_key(s) for s in sigs],
-            "why": f"{firm} filed LDA disclosures for {', '.join(country_names[:5])}{'...' if iso_count > 5 else ''} in the same period.",
-        })
-
-    # ── Algorithm 2: Velocity Anomaly ────────────────────────────────────────
-
-    dated = [s for s in enriched if s.get("iso") and s.get("iso") not in ("XX", "US")
-             and s.get("signal_date")]
-    by_iso_vel: dict = {}
-    for s in dated:
-        by_iso_vel.setdefault(s["iso"], []).append(s)
-
-    for iso, sigs in by_iso_vel.items():
-        oldest_days = max(days_ago(s["signal_date"]) for s in sigs)
-        n_prior = oldest_days // 30
-        if n_prior < 3:
-            continue
-
-        current_sigs = [s for s in sigs if days_ago(s["signal_date"]) < 30]
-        current_count = len(current_sigs)
-        if current_count < 3:
-            continue
-
-        # Require at least 2 distinct sources — single-source batches (e.g. OFAC
-        # dumping 4 designations on the same day) are enforcement batches, not spikes.
-        distinct_sources = len(set(s.get("source") for s in current_sigs))
-        if distinct_sources < 2:
-            continue
-
-        # For batch sources (ofac, bis), count one event per (source, date) pair rather
-        # than per record — prevents a single designation batch from inflating the weight.
-        BATCH_SOURCES = {"ofac", "bis"}
-        def _event_weight(s: dict) -> float:
-            if s.get("source") in BATCH_SOURCES:
-                return 0.0  # placeholder; real weight assigned per batch below
-            return s.get("quality", 0)
-
-        batch_weight = sum(
-            s.get("quality", 0)
-            for s in current_sigs
-            if s.get("source") not in BATCH_SOURCES
-        )
-        for (src, dt), group in itertools.groupby(
-            sorted(
-                [s for s in current_sigs if s.get("source") in BATCH_SOURCES],
-                key=lambda x: (x.get("source", ""), x.get("signal_date", "")),
-            ),
-            key=lambda x: (x.get("source", ""), x.get("signal_date", "")),
-        ):
-            batch_weight += max(s.get("quality", 0) for s in group)
-
-        weighted_count = batch_weight
-
-        def _prior_weighted(sigs_window: list) -> float:
-            non_batch = sum(s.get("quality", 0) for s in sigs_window if s.get("source") not in BATCH_SOURCES)
-            b = 0.0
-            for (src, dt), group in itertools.groupby(
-                sorted(
-                    [s for s in sigs_window if s.get("source") in BATCH_SOURCES],
-                    key=lambda x: (x.get("source", ""), x.get("signal_date", "")),
-                ),
-                key=lambda x: (x.get("source", ""), x.get("signal_date", "")),
-            ):
-                b += max(s.get("quality", 0) for s in group)
-            return non_batch + b
-
-        prior_counts = []
-        for w in range(1, n_prior + 1):
-            window_sigs = [s for s in sigs if w * 30 <= days_ago(s["signal_date"]) < (w + 1) * 30]
-            prior_counts.append(_prior_weighted(window_sigs))
-
-        baseline_mean = statistics.mean(prior_counts)
-        baseline_std = statistics.stdev(prior_counts) if len(prior_counts) >= 3 else 1.0
-        velocity_z = (weighted_count - baseline_mean) / max(baseline_std, 0.5)
-
-        if velocity_z < 2.0:
-            continue
-
-        ps = prof_score(sigs[0])
-        country_name = profile_name(sigs[0])
-        score = velocity_z * math.log2(ps + 2) * weighted_count
-
-        src_counts = Counter(s.get("source", "?") for s in current_sigs)
-        source_breakdown = ", ".join(f"{src}×{n}" for src, n in sorted(src_counts.items()))
-
-        themes.append({
-            "type": "velocity_anomaly",
-            "title": f"{country_name} — {current_count} signals in 30 days ({velocity_z:+.1f}\u03c3)",
+            "type": "first_appearance",
+            "title": f"{country_name} — {src} after {silence_label} silence",
             "score": round(score, 3),
             "countries": [iso],
-            "signal_keys": [_signal_key(s) for s in current_sigs],
+            "signal_keys": [_signal_key(s) for s in current],
             "why": (
-                f"{weighted_count:.1f} weighted signals in 30 days vs {baseline_mean:.1f} avg "
-                f"({velocity_z:+.1f}\u03c3). Sources: {source_breakdown}"
+                f"{src} filed for {country_name} after {silence_label} of silence "
+                f"(profile score: {ps}). Signal: {best.get('title', '')[:80]}"
             ),
         })
 
-    # ── Algorithm 3: Layer Sequence Detection ────────────────────────────────
+    # ── Algorithm 2: Influence Before Action ─────────────────────────────────
     #
-    # Approach: for each country, count quality-weighted cross-layer pairs in each
-    # historical 30-day window. Flag only when the current window is anomalously
-    # high vs. the country's own baseline. This prevents countries that are simply
-    # active (many signals → many chance pairs) from dominating.
-    #
-    # Window tightened from 90d to 30d: a FARA filing and DSCA award 3 months apart
-    # is not a meaningful sequence. 30 days is tight enough to suggest temporal coupling.
+    # FARA or LDA for country X, followed within 90 days by DSCA/OFAC/SAM/BIS.
+    # Influence must come first. Only fires if this pattern wasn't present in the
+    # prior 180 days — standing relationships (Saudi Arabia, Israel) are excluded.
 
-    MEANINGFUL_SEQ = {
-        ("influence", "military"),
-        ("influence", "regulatory"),
-        ("financial", "regulatory"),
-        ("financial", "military"),
-        ("regulatory", "military"),
-    }
+    INFLUENCE_SOURCES = {"fara", "lda"}
+    ACTION_SOURCES    = {"dsca", "ofac", "sam", "bis"}
+    IBA_WINDOW        = 90   # max days between influence and action
+    IBA_LOOKBACK      = 180  # prior history window for standing-relationship check
 
-    seq_sigs = [s for s in enriched if s.get("iso") and s.get("iso") not in ("XX", "US")
-                and s.get("signal_date") and s.get("layer")]
-    by_iso_seq: dict = {}
-    for s in seq_sigs:
-        by_iso_seq.setdefault(s["iso"], []).append(s)
+    by_iso: dict = {}
+    for s in active:
+        by_iso.setdefault(s["iso"], []).append(s)
 
-    def count_pairs_in_window(sigs_sorted: list, window_start_days: int, window_end_days: int) -> float:
-        """Quality-weighted pair count for signals whose signal_date falls in [window_start_days, window_end_days) ago."""
-        window_sigs = [s for s in sigs_sorted
-                       if window_end_days > days_ago(s["signal_date"]) >= window_start_days]
-        total = 0.0
-        for i, sig_a in enumerate(window_sigs):
-            try:
-                da = datetime.strptime(sig_a["signal_date"][:10], "%Y-%m-%d").date()
-            except ValueError:
-                continue
-            for sig_b in window_sigs[i + 1:]:
-                try:
-                    db = datetime.strptime(sig_b["signal_date"][:10], "%Y-%m-%d").date()
-                except ValueError:
-                    continue
-                if db <= da:
-                    continue
-                gap = (db - da).days
-                if gap > 30:
-                    break
-                layer_a, layer_b = sig_a.get("layer"), sig_b.get("layer")
-                if not layer_a or not layer_b or layer_a == layer_b:
-                    continue
-                if (layer_a, layer_b) not in MEANINGFUL_SEQ:
-                    continue
-                if not thematic_pair_ok(sig_a, sig_b, layer_a, layer_b):
-                    continue
-                total += sig_a.get("quality", 0) * sig_b.get("quality", 0) * math.exp(-gap / 15)
-        return total
+    for iso, sigs in by_iso.items():
+        current = [s for s in sigs if days_ago(s.get("signal_date", "")) < IBA_WINDOW]
+        inf_sigs = [s for s in current if s.get("source") in INFLUENCE_SOURCES]
+        act_sigs = [s for s in current if s.get("source") in ACTION_SOURCES]
 
-    for iso, sigs in by_iso_seq.items():
-        sigs_sorted = sorted(sigs, key=lambda s: s["signal_date"])
-
-        oldest_days = max(days_ago(s["signal_date"]) for s in sigs)
-        n_prior = oldest_days // 30
-        if n_prior < 3:
-            continue  # not enough history for a baseline
-
-        current_pairs = count_pairs_in_window(sigs_sorted, 0, 30)
-        if current_pairs <= 0:
+        if not inf_sigs or not act_sigs:
             continue
 
-        prior_counts = [count_pairs_in_window(sigs_sorted, w * 30, (w + 1) * 30)
-                        for w in range(1, n_prior + 1)]
-        baseline_mean = statistics.mean(prior_counts)
-        baseline_std = statistics.stdev(prior_counts) if len(prior_counts) >= 3 else 1.0
-        seq_z = (current_pairs - baseline_mean) / max(baseline_std, 0.1)
-
-        if seq_z < 1.5:
-            continue  # not anomalous vs this country's own history
-
-        # Find the best pair in the current window for the title/why
-        current_sigs = [s for s in sigs_sorted if days_ago(s["signal_date"]) < 30]
-        valid_pairs = []
-        for i, sig_a in enumerate(current_sigs):
-            try:
-                da = datetime.strptime(sig_a["signal_date"][:10], "%Y-%m-%d").date()
-            except ValueError:
+        best_pair = None
+        best_score = 0.0
+        for inf in inf_sigs:
+            d_inf = sig_date(inf)
+            if not d_inf:
                 continue
-            for sig_b in current_sigs[i + 1:]:
-                try:
-                    db = datetime.strptime(sig_b["signal_date"][:10], "%Y-%m-%d").date()
-                except ValueError:
+            for act in act_sigs:
+                d_act = sig_date(act)
+                if not d_act:
                     continue
-                if db <= da:
+                gap = (d_act - d_inf).days
+                if gap < 7 or gap > IBA_WINDOW:
                     continue
-                gap = (db - da).days
-                if gap > 30:
-                    break
-                layer_a, layer_b = sig_a.get("layer"), sig_b.get("layer")
-                if not layer_a or not layer_b or layer_a == layer_b:
-                    continue
-                if (layer_a, layer_b) not in MEANINGFUL_SEQ:
-                    continue
-                if not thematic_pair_ok(sig_a, sig_b, layer_a, layer_b):
-                    continue
-                p = sig_a.get("profile") or sig_b.get("profile")
-                ps = (p.get("score") if p else None) or 0
-                w_score = sig_a.get("quality", 0) * sig_b.get("quality", 0) * math.log2(ps + 2)
-                valid_pairs.append({
-                    "sig_a": sig_a, "sig_b": sig_b,
-                    "gap": gap, "w_score": w_score,
-                    "layer_a": layer_a, "layer_b": layer_b,
-                })
+                ps = prof_score(inf) or prof_score(act)
+                pair_score = (
+                    ps *
+                    math.log2(ps + 2) *
+                    math.exp(-gap / 45) *
+                    (inf.get("quality", 0) + act.get("quality", 0))
+                )
+                if pair_score > best_score:
+                    best_score = pair_score
+                    best_pair = (inf, act, gap)
 
-        if not valid_pairs:
+        if not best_pair:
             continue
 
-        best = max(valid_pairs, key=lambda p: p["w_score"])
-        p = sigs_sorted[0].get("profile")
-        ps = (p.get("score") if p else None) or 0
-        country_name = profile_name(sigs_sorted[0])
-        score = seq_z * math.log2(ps + 2) * current_pairs
+        inf_sig, act_sig, gap = best_pair
+        ps = prof_score(inf_sig) or prof_score(act_sig)
+        if ps < 3:
+            continue
 
-        involved = list({_signal_key(p["sig_a"]) for p in valid_pairs} |
-                        {_signal_key(p["sig_b"]) for p in valid_pairs})
+        # Standing-relationship check: both layers present in the prior window too
+        prior = [s for s in sigs
+                 if IBA_WINDOW <= days_ago(s.get("signal_date", "")) < IBA_WINDOW + IBA_LOOKBACK]
+        if (any(s.get("source") in INFLUENCE_SOURCES for s in prior) and
+                any(s.get("source") in ACTION_SOURCES for s in prior)):
+            continue
+
+        country_name = profile_name(inf_sig)
         themes.append({
-            "type": "layer_sequence",
-            "title": f"{country_name} \u2014 {best['layer_a']} \u2192 {best['layer_b']} sequence ({best['gap']}d gap)",
-            "score": round(score, 3),
+            "type": "influence_before_action",
+            "title": (
+                f"{country_name} — {inf_sig.get('source')} → "
+                f"{act_sig.get('source')} ({gap}d)"
+            ),
+            "score": round(best_score, 3),
             "countries": [iso],
-            "signal_keys": involved,
+            "signal_keys": list({_signal_key(inf_sig), _signal_key(act_sig)}),
             "why": (
-                f"{best['sig_a'].get('source')} on {best['sig_a']['signal_date']} "
-                f"→ {best['sig_b'].get('source')} on {best['sig_b']['signal_date']} "
-                f"({best['gap']}d). Current window {current_pairs:.2f} weighted pairs "
-                f"vs {baseline_mean:.2f} baseline ({seq_z:+.1f}\u03c3)."
+                f"{inf_sig.get('source')} on {inf_sig.get('signal_date')} "
+                f"→ {act_sig.get('source')} on {act_sig.get('signal_date')} "
+                f"({gap}d gap). No prior {inf_sig.get('source')}+action sequence "
+                f"in preceding {IBA_LOOKBACK}d."
             ),
         })
 
-    # ── Algorithm 4: CFTC Basket Overlap ────────────────────────────────────
+    # ── Algorithm 3: CFTC Basket Overlap ─────────────────────────────────────
+    #
+    # CFTC positioning anomaly fires first; country signals follow within 30 days.
+    # CFTC is the leading indicator — country action must come after, not before.
 
-    # Build iso→profile_score map once
     iso_ps: dict = {}
     for s in enriched:
         i = s.get("iso")
@@ -598,13 +370,14 @@ def compute_themes(enriched: list) -> list:
                 sd = datetime.strptime(s["signal_date"][:10], "%Y-%m-%d").date()
             except ValueError:
                 continue
-            if 0 <= (cftc_date - sd).days <= 30:
-                # Require thematic relevance to commodity sector (Fix 2)
-                if sector_kw:
-                    title_lower = (s.get("title") or "").lower()
-                    if not any(kw in title_lower for kw in sector_kw):
-                        continue
-                active_isos.add(s["iso"])
+            # Country signal must come AFTER the CFTC anomaly (CFTC is the leading indicator)
+            gap_days = (sd - cftc_date).days
+            if not (0 <= gap_days <= 30):
+                continue
+            if sector_kw:
+                if not any(kw in (s.get("title") or "").lower() for kw in sector_kw):
+                    continue
+            active_isos.add(s["iso"])
 
         overlap = basket & active_isos
         if not overlap:
@@ -615,24 +388,23 @@ def compute_themes(enriched: list) -> list:
         score = abs(z) * math.log2(len(overlap) + 1) * overlap_score / len(basket)
         themes.append({
             "type": "cftc_overlap",
-            "title": f"{commodity} positioning anomaly \u2014 {len(overlap)} exposed countries active",
+            "title": f"{commodity} positioning anomaly — {len(overlap)} exposed countries active",
             "score": round(score, 3),
             "countries": sorted(overlap),
             "signal_keys": [_signal_key(cftc_sig)],
             "why": (
-                f"{commodity} z={z:+.1f}\u03c3. Active basket: {', '.join(sorted(overlap))} "
-                f"({len(overlap)}/{len(basket)} exposed countries have recent signals)."
+                f"{commodity} z={z:+.1f}σ on {cftc_date_str}. "
+                f"Countries with subsequent signals: {', '.join(sorted(overlap))} "
+                f"({len(overlap)}/{len(basket)} basket exposed)."
             ),
         })
 
     themes.sort(key=lambda t: t["score"], reverse=True)
 
     # ── Convergence collapse ─────────────────────────────────────────────────
-    # If the same single country appears in 2+ themes above the prose floor,
-    # collapse them into one convergence theme. Two algorithms firing on the
-    # same country independently is a stronger signal than either alone.
-    PROSE_FLOOR_FOR_COLLAPSE = 15.0
-    from collections import defaultdict
+    # Two independent algorithms firing on the same country is a stronger signal
+    # than either alone. Collapse into a single convergence theme.
+    PROSE_FLOOR_FOR_COLLAPSE = 5.0
     single_country_above_floor = defaultdict(list)
     for t in themes:
         if t["score"] >= PROSE_FLOOR_FOR_COLLAPSE and len(t.get("countries", [])) == 1:
@@ -647,33 +419,24 @@ def compute_themes(enriched: list) -> list:
         combined_score = sum(t["score"] for t in matching)
         combined_keys = list({k for t in matching for k in t.get("signal_keys", [])})
         type_labels = " + ".join(
-            t["type"].replace("velocity_anomaly", "velocity spike")
-                     .replace("layer_sequence", "layer sequence")
-                     .replace("actor_concentration", "actor concentration")
+            t["type"].replace("first_appearance", "first appearance")
+                     .replace("influence_before_action", "influence → action")
                      .replace("cftc_overlap", "CFTC overlap")
             for t in matching
         )
-        country_name = profile_name(matching[0].get("countries", [iso]) and
-                                    next((s for s in enriched if s.get("iso") == iso), {}) or {})
-        # Fallback name from profile if available
-        for t in matching:
-            for sk in t.get("signal_keys", []):
-                pass  # just need country_name
-        # Get name from first theme title (before the em-dash)
-        country_name = matching[0]["title"].split(" \u2014")[0].split(" \u2192")[0]
+        country_name = matching[0]["title"].split(" —")[0]
 
         why_parts = [f"[{t['type']}] {t['why']}" for t in matching]
         convergence_themes.append({
             "type": "convergence",
-            "title": f"{country_name} \u2014 {type_labels}",
+            "title": f"{country_name} — {type_labels}",
             "score": round(combined_score, 3),
             "countries": [iso],
             "signal_keys": combined_keys,
             "why": " | ".join(why_parts),
-            "_components": matching,  # preserved for prose generation context
+            "_components": matching,
         })
 
-    # Replace individual themes with convergence themes where applicable
     if convergence_themes:
         themes = [t for t in themes if not (
             len(t.get("countries", [])) == 1 and t["countries"][0] in collapsed_isos
@@ -793,7 +556,7 @@ def generate_prose_for_themes(themes: list, enriched: list) -> list:
 
     # Only generate prose for themes with score above floor — weak themes stay null
     # and are invisible in the narratives panel. Better 3 real narratives than 10 noisy ones.
-    PROSE_SCORE_FLOOR = 8.0
+    PROSE_SCORE_FLOOR = 3.0
 
     for theme in [t for t in themes[:10] if t.get("score", 0) >= PROSE_SCORE_FLOOR]:
         ck = _prose_cache_key(theme)
@@ -817,7 +580,7 @@ def generate_prose_for_themes(themes: list, enriched: list) -> list:
                 parts.append(f"description={sig['description'][:200]}")
             contrib_lines.append("- " + " | ".join(parts))
 
-        # Extract domain keywords from contributing signals for context filtering (Fix 3)
+        # Extract domain keywords from contributing signals for context filtering
         contrib_kw: set = set()
         for sk in theme.get("signal_keys", []):
             csig = sig_lookup.get(sk)
@@ -842,7 +605,6 @@ def generate_prose_for_themes(themes: list, enriched: list) -> list:
                         continue
                 except (ValueError, TypeError):
                     continue
-                # Require keyword overlap with contributing signals (Fix 3)
                 if contrib_kw:
                     ctx_words = set(re.findall(r'\b[a-z]{4,}\b', (s.get("title") or "").lower()))
                     if not (ctx_words & contrib_kw):
@@ -1006,10 +768,10 @@ def main():
     type_counts = Counter(t["type"] for t in themes)
     print(
         f"\nThemes: {len(themes)} computed "
-        f"(actor_concentration: {type_counts.get('actor_concentration', 0)}, "
-        f"velocity: {type_counts.get('velocity_anomaly', 0)}, "
-        f"sequence: {type_counts.get('layer_sequence', 0)}, "
-        f"cftc: {type_counts.get('cftc_overlap', 0)})"
+        f"(first_appearance: {type_counts.get('first_appearance', 0)}, "
+        f"influence_before_action: {type_counts.get('influence_before_action', 0)}, "
+        f"cftc: {type_counts.get('cftc_overlap', 0)}, "
+        f"convergence: {type_counts.get('convergence', 0)})"
     )
 
     print("\nFirst 3 records:")

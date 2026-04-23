@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T23:39:51.827984+00:00",
+  "generated_at": "2026-04-23T23:54:35.156203+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -25596,9 +25596,50 @@
   ],
   "themes": [
     {
-      "type": "velocity_anomaly",
-      "title": "Iran \u2014 6 signals in 30 days (+3.1\u03c3)",
-      "score": 17.964,
+      "type": "convergence",
+      "title": "China \u2014 first appearance + influence \u2192 action",
+      "score": 42.849,
+      "countries": [
+        "CN"
+      ],
+      "signal_keys": [
+        "ofac:Feiwu BIAN (Individual)",
+        "lda:b607d4b4-b2a3-471c-8470-71fb5718c3a8"
+      ],
+      "why": "[first_appearance] ofac filed for China after first recorded of silence (profile score: 10). Signal: Feiwu BIAN (Individual) | [influence_before_action] lda on 2026-02-17 \u2192 ofac on 2026-04-16 (58d gap). No prior lda+action sequence in preceding 180d.",
+      "_components": [
+        {
+          "type": "first_appearance",
+          "title": "China \u2014 ofac after first recorded silence",
+          "score": 29.018,
+          "countries": [
+            "CN"
+          ],
+          "signal_keys": [
+            "ofac:Feiwu BIAN (Individual)"
+          ],
+          "why": "ofac filed for China after first recorded of silence (profile score: 10). Signal: Feiwu BIAN (Individual)"
+        },
+        {
+          "type": "influence_before_action",
+          "title": "China \u2014 lda \u2192 ofac (58d)",
+          "score": 13.831,
+          "countries": [
+            "CN"
+          ],
+          "signal_keys": [
+            "ofac:Feiwu BIAN (Individual)",
+            "lda:b607d4b4-b2a3-471c-8470-71fb5718c3a8"
+          ],
+          "why": "lda on 2026-02-17 \u2192 ofac on 2026-04-16 (58d gap). No prior lda+action sequence in preceding 180d."
+        }
+      ],
+      "narrative": null
+    },
+    {
+      "type": "first_appearance",
+      "title": "Iran \u2014 ofac after first recorded silence",
+      "score": 36.448,
       "countries": [
         "IR"
       ],
@@ -25607,375 +25648,244 @@
         "ofac:Danial KHALILI (Individual)",
         "ofac:Hamidreza ROKNIFARD (Individual)",
         "ofac:SEPEHR KAVEH KISH INTERNATIONAL TRADING ",
-        "ofac:SAMAN AIR SERVICES COMPANY (Entity)",
-        "federalregister:2026-06688"
+        "ofac:SAMAN AIR SERVICES COMPANY (Entity)"
       ],
-      "why": "1.7 weighted signals in 30 days vs 0.2 avg (+3.1\u03c3). Sources: federalregister\u00d71, ofac\u00d75",
+      "why": "ofac filed for Iran after first recorded of silence (profile score: 9). Signal: Kamal Sabah BALKHKANLU (Individual)",
       "narrative": {
-        "headline": "OFAC Targets Mahan Air Network With Coordinated Sanctions Sweep",
-        "body": "Five OFAC designations on the same date link individuals and shell companies to Mahan Air, Iran's U.S.-sanctioned carrier used for IRGC logistics. The cluster signals a coordinated enforcement action dismantling a procurement and financial facilitation network built around Mahan Air.",
-        "prompt": "I just saw that OFAC issued five sanctions designations on the same day \u2014 April 21, 2026 \u2014 all tracing back to Mahan Air, an Iranian airline already sanctioned for supporting the IRGC. Why does this matter? Mahan Air is a known logistics arm for Iranian military and proxy operations, so cutting off its financial and procurement networks could disrupt arms or materiel flows. Who are the key entities? SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY and SAMAN AIR SERVICES COMPANY appear to be shell intermediaries; individuals like BALKHKANLU and ROKNIFARD are linked to front companies. Is this pattern routine or anomalous? Five coordinated designations in one day targeting a single airline's network is a focused enforcement sweep, not routine. What should I watch for next: additional designations targeting Mahan Air's fuel suppliers or foreign airport handlers, and whether any of these entities had European or Gulf-based counterparties now exposed to secondary sanctions risk."
+        "headline": "OFAC targets Mahan Air procurement network via new front companies",
+        "body": "OFAC designated five entities and individuals on 2026-04-21 linked to Mahan Air's supply chain, including a trading company and air services firm. The mechanism is layered front-company procurement: Mahan Air uses intermediaries to evade existing sanctions on aircraft parts and logistics.",
+        "prompt": "I just saw that OFAC sanctioned five Iranian individuals and companies on April 21, 2026, all linked in a chain back to Mahan Air \u2014 an already-sanctioned Iranian airline. Why does this matter? Mahan Air has been sanctioned for years for supporting the IRGC and Hezbollah, yet it keeps flying by sourcing parts through front companies. New designations mean U.S. persons and banks must freeze any dealings, and foreign firms risk secondary sanctions. Key entities: Mahan Air (the hub), SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY, and SAMAN AIR SERVICES COMPANY. Is this a routine top-up of the Mahan Air sanctions list, or does it signal a broader enforcement push ahead of nuclear talks? Watch for: follow-on EU or UK designations mirroring this list, and whether Mahan Air flight operations are visibly disrupted in the next 30 days."
       }
     },
     {
-      "type": "actor_concentration",
-      "title": "Capitol Counsel Llc lobbying for 3 countries simultaneously",
-      "score": 12.683,
-      "countries": [
-        "CN",
-        "JP",
-        "KY"
-      ],
-      "signal_keys": [
-        "lda:59f30db2-b76b-4fa2-a6a6-c15b983f9f44",
-        "lda:68ce0b13-49cb-48d3-b36d-ad55cbf41d6e",
-        "lda:48098416-eae4-4d70-ac5c-6de6eb1b0527"
-      ],
-      "why": "Capitol Counsel Llc filed LDA disclosures for China, Japan, Cayman Islands in the same period.",
-      "narrative": null
-    },
-    {
-      "type": "actor_concentration",
-      "title": "Strategic Marketing Innovations lobbying for 4 countries simultaneously",
-      "score": 11.596,
-      "countries": [
-        "CA",
-        "DE",
-        "JP",
-        "SE"
-      ],
-      "signal_keys": [
-        "lda:88d0ee82-17b8-4f07-bb41-496842262d76",
-        "lda:899a3e24-388e-453e-a367-01862a7114bd",
-        "lda:5ab73508-fdeb-4acb-9c9a-dc752f4015bc",
-        "lda:8b38e59b-93e1-474c-ab64-ea64757c06e1"
-      ],
-      "why": "Strategic Marketing Innovations filed LDA disclosures for Canada, Germany, Japan, Sweden in the same period.",
-      "narrative": null
-    },
-    {
-      "type": "actor_concentration",
-      "title": "Ark Strategy lobbying for 3 countries simultaneously",
-      "score": 10.903,
-      "countries": [
-        "AU",
-        "GB",
-        "UA"
-      ],
-      "signal_keys": [
-        "lda:041666d7-3b95-4d6f-93c2-000381defbf4",
-        "lda:d35f8b9f-28c8-45da-9a64-6aae1430b1da",
-        "lda:06dba7cc-ca2d-444d-9cb5-127db6484c46"
-      ],
-      "why": "Ark Strategy filed LDA disclosures for Australia, United Kingdom, Ukraine in the same period.",
-      "narrative": {
-        "headline": "Ark Strategy lobbies Congress for AU, UK, UA defense tech clients simultaneously",
-        "body": "Ark Strategy filed LDA disclosures representing an Australian surveillance-data firm, a UK lab-automation company, and a US drone/missile manufacturer targeting the same Defense and appropriations committees. The mechanism is a single lobbying shop bundling allied-nation defense tech clients to pursue overlapping FY appropriations and Pentagon program increases.",
-        "prompt": "I just saw that a lobbying firm called Ark Strategy filed disclosures representing three defense-tech clients tied to Australia, the UK, and Ukraine/US drone programs \u2014 all targeting Defense and budget appropriations at the same time. Why does this matter? Defense appropriations are zero-sum: firms competing for the same budget lines through the same lobbyist could signal coordination or conflict of interest. Who are the players? Ark Strategy (lobbyist), Fivecast Pty Ltd (Australian surveillance/intelligence data), Automata Technologies (UK lab automation pitched to Defense/bio), and Terminal Autonomy Inc. (US attritable drones and missiles). Is this routine? A single shop bundling allied-nation clients into the same appropriations cycle is unusual and worth scrutiny. What to watch: whether these three clients appear in the same Defense subcommittee markups, whether Ark Strategy discloses any conflicts, and whether Terminal Autonomy wins a program increase in the FY defense bill."
-      }
-    },
-    {
-      "type": "actor_concentration",
-      "title": "Cassidy & Associates, Inc. lobbying for 3 countries simultaneously",
-      "score": 10.902,
-      "countries": [
-        "AU",
-        "CA",
-        "JP"
-      ],
-      "signal_keys": [
-        "lda:ad3cfaaa-05ad-4339-a339-826f7e88d9c0",
-        "lda:f605f735-22d9-47dc-927e-09ae1b900729",
-        "lda:8020cfc0-263b-4453-baa3-5e28eb88d2b7",
-        "lda:819c7516-26f2-4d48-aee6-801acd4fd6fd"
-      ],
-      "why": "Cassidy & Associates, Inc. filed LDA disclosures for Australia, Canada, Japan in the same period.",
-      "narrative": {
-        "headline": "Cassidy & Associates Bundles Critical Minerals and Defense Lobbying Across Three Allies",
-        "body": "Cassidy & Associates is simultaneously lobbying for Australian lithium mining permits, Japanese mineral processing equipment, and Canadian defense/gold mining interests \u2014 all touching U.S. critical minerals supply chain and defense authorization legislation. The mechanism is a single firm aggregating allied-nation resource and defense clients to shape the same congressional vehicles (NDAA, appropriations) from multiple angles.",
-        "prompt": "I just saw that Cassidy & Associates is lobbying for clients from Australia, Canada, and Japan simultaneously \u2014 covering lithium mining, mineral processing equipment, gold mining, and defense authorizations. Why does this matter? The U.S. is actively trying to build a critical minerals supply chain outside China, and lobbyists who bundle allied-nation resource and defense clients can shape NDAA and appropriations language to favor specific companies or countries. Who are the key players: Jindalee Lithium (Australian lithium), Ulvac Inc. (Japanese mineral processing), Centerra Gold (Canadian gold/defense). Is it routine for one firm to represent competing allied-nation resource interests in the same legislative cycle? What specific NDAA or appropriations provisions should I watch for that would benefit critical minerals sourcing from these three countries, and which congressional committees are the chokepoints?"
-      }
-    },
-    {
-      "type": "actor_concentration",
-      "title": "Ml Strategies, Llc lobbying for 3 countries simultaneously",
-      "score": 9.456,
-      "countries": [
-        "AU",
-        "CA",
-        "CN"
-      ],
-      "signal_keys": [
-        "lda:0aba115d-62b5-4226-aacd-e4b353d0852a",
-        "lda:28721173-15d2-4863-af01-145babb131e0",
-        "lda:8572eb93-0306-47b0-bd26-18f88b0a96f7"
-      ],
-      "why": "Ml Strategies, Llc filed LDA disclosures for Australia, Canada, China in the same period.",
-      "narrative": null
-    },
-    {
-      "type": "actor_concentration",
-      "title": "The Vogel Group lobbying for 4 countries simultaneously",
-      "score": 9.1,
-      "countries": [
-        "AE",
-        "AT",
-        "JP",
-        "TW"
-      ],
-      "signal_keys": [
-        "lda:c5b48f7a-e0bf-4024-a6cd-64fe8818ce79",
-        "lda:39a79e04-8f2f-4e59-8c88-fcc0857d269d",
-        "lda:b19a3624-d187-47e3-b043-35bdcb237327",
-        "lda:3193f805-bdeb-46e7-a952-b6fa1092ec6e"
-      ],
-      "why": "The Vogel Group filed LDA disclosures for United Arab Emirates, Austria, Japan, Taiwan in the same period.",
-      "narrative": null
-    },
-    {
-      "type": "actor_concentration",
-      "title": "Miller Strategies, Llc lobbying for 6 countries simultaneously",
-      "score": 9.095,
-      "countries": [
-        "BE",
-        "CA",
-        "DE",
-        "GB",
-        "NL",
-        "NO"
-      ],
-      "signal_keys": [
-        "lda:a3aea893-0332-41c8-b112-7512f2ba2649",
-        "lda:cda4808a-58a4-4cc6-983a-662ff3f00332",
-        "lda:aee7fc83-a7eb-4254-8f2f-9be7f81a4fc2",
-        "lda:dc9c619e-c53e-46db-972e-8e280e436dca",
-        "lda:90686b78-ffc3-4f99-a5ca-6683607ebde6",
-        "lda:e5d44148-8dcc-4cd5-addf-711c8645b105"
-      ],
-      "why": "Miller Strategies, Llc filed LDA disclosures for Belgium, Canada, Germany, United Kingdom, Netherlands... in the same period.",
-      "narrative": null
-    },
-    {
-      "type": "actor_concentration",
-      "title": "Valcour Llc lobbying for 4 countries simultaneously",
-      "score": 8.422,
-      "countries": [
-        "GB",
-        "IQ",
-        "LB",
-        "SA"
-      ],
-      "signal_keys": [
-        "lda:ea1fd866-a723-4ffc-9086-9c10df9ff4a3",
-        "lda:979a1e0e-6804-4034-ba6f-b36cca1de372",
-        "lda:cf9876c7-bdf7-415a-a52a-442af9fd448a",
-        "lda:42390480-4932-4cda-aed0-4cbabc0c7c4c"
-      ],
-      "why": "Valcour Llc filed LDA disclosures for United Kingdom, Iraq, Lebanon, Saudi Arabia in the same period.",
-      "narrative": {
-        "headline": "Valcour LLC lobbies US government for four Middle East energy and finance clients simultaneously",
-        "body": "Valcour LLC filed LDA disclosures representing Saudi energy firm Midad, Iraqi payments network Qi Card, Lebanese banking interests, and UK-linked power provider Aggreko across a single period. The mechanism is a boutique firm positioning itself as the go-to DC access point for Middle East energy, banking, and infrastructure clients seeking US regulatory or procurement favor.",
-        "prompt": "I just saw that a single small lobbying firm, Valcour LLC, is simultaneously registered to lobby the US government for clients tied to Saudi Arabia (energy), Iraq (banking/payments), Lebanon (foreign relations and banking), and a UK-based temporary power company. Why does this matter? A boutique firm holding this many Middle East mandates at once could signal coordinated influence efforts or that these clients share overlapping US policy goals \u2014 sanctions relief, energy contracts, or financial access. Who are the key entities: Midad Energy (Saudi), Qi Card (Iraqi payments), Salim Khalil (Lebanese banking), Aggreko (power infrastructure). Is this routine? Multi-country concentration in one small firm is anomalous. Watch for: whether any of these clients appear in US procurement awards, Treasury OFAC actions, or congressional hearings on Middle East banking \u2014 and whether Valcour adds more regional clients in the next two quarters."
-      }
-    },
-    {
-      "type": "actor_concentration",
-      "title": "Checkmate Government Relations lobbying for 4 countries simultaneously",
-      "score": 8.32,
-      "countries": [
-        "CH",
-        "CN",
-        "GB",
-        "PK"
-      ],
-      "signal_keys": [
-        "lda:0530d8ed-e131-4ee6-88ca-bd6a18e0c2ab",
-        "lda:903827ee-49d7-4adb-8784-7c2896ec570e",
-        "lda:3570c195-924c-4462-9dad-a2ec7bca9f6b",
-        "lda:cfe8af57-94bf-46b6-953b-89bd96fa21f6"
-      ],
-      "why": "Checkmate Government Relations filed LDA disclosures for Switzerland, China, United Kingdom, Pakistan in the same period.",
-      "narrative": null
-    },
-    {
-      "type": "actor_concentration",
-      "title": "Bgr Government Affairs lobbying for 6 countries simultaneously",
-      "score": 7.117,
-      "countries": [
-        "CN",
-        "DK",
-        "FR",
-        "GB",
-        "KY",
-        "NL"
-      ],
-      "signal_keys": [
-        "lda:92fb004b-7621-485b-af8d-d60c7568c3d3",
-        "lda:e59da1f1-7c68-4596-a70a-a7bea6d541bb",
-        "lda:40d075e7-22ac-44db-a4a1-358d44b04a03",
-        "lda:4d827843-6fa8-479b-900e-57522e69bd22",
-        "lda:5d0c08a7-b16c-4848-8b9c-d62104e6996a",
-        "lda:0cbebfcc-8cfe-42eb-b8ed-6929892edb7d",
-        "lda:cbbb646b-6553-4f75-a1a0-f7cb61059cfb",
-        "lda:dc771a4e-9320-4e19-8db4-a62818d72f7c"
-      ],
-      "why": "Bgr Government Affairs filed LDA disclosures for China, Denmark, France, United Kingdom, Cayman Islands... in the same period.",
-      "narrative": null
-    },
-    {
-      "type": "actor_concentration",
-      "title": "Marshall & Popp, Llc lobbying for 3 countries simultaneously",
-      "score": 5.983,
-      "countries": [
-        "AU",
-        "GB",
-        "JP"
-      ],
-      "signal_keys": [
-        "lda:fb7fed96-f152-4700-bb3d-6cd848a19cac",
-        "lda:0dde4e28-b044-496a-89f0-bb48708af48c",
-        "lda:5c1abbc2-8016-41f7-8fe2-3599654c3c35"
-      ],
-      "why": "Marshall & Popp, Llc filed LDA disclosures for Australia, United Kingdom, Japan in the same period.",
-      "narrative": null
-    },
-    {
-      "type": "actor_concentration",
-      "title": "Dga Group Government Relations Llc lobbying for 4 countries simultaneously",
-      "score": 5.423,
-      "countries": [
-        "BR",
-        "CN",
-        "FR",
-        "JP"
-      ],
-      "signal_keys": [
-        "lda:b8376ef7-3b7a-4305-8f20-7d8aec6883ad",
-        "lda:8b4a87d4-b173-48be-b641-a5013b4fc06e",
-        "lda:483e74eb-7163-4279-952f-7bbda09ab401",
-        "lda:7078e1ea-c5eb-4e7f-8bcc-93a4a5c2c4be"
-      ],
-      "why": "Dga Group Government Relations Llc filed LDA disclosures for Brazil, China, France, Japan in the same period.",
-      "narrative": null
-    },
-    {
-      "type": "layer_sequence",
-      "title": "Turkey \u2014 influence \u2192 regulatory sequence (5d gap)",
-      "score": 3.454,
+      "type": "first_appearance",
+      "title": "Turkey \u2014 ofac after first recorded silence",
+      "score": 32.398,
       "countries": [
         "TR"
       ],
       "signal_keys": [
-        "ofac:EMTI FIBER TEXTILE IMPORT EXPORT TRADE L",
-        "lda:7448d301-97bf-4b61-bcc2-9ad3c2298d70"
+        "ofac:EMTI FIBER TEXTILE IMPORT EXPORT TRADE L"
       ],
-      "why": "lda on 2026-04-16 \u2192 ofac on 2026-04-21 (5d). Current window 0.32 weighted pairs vs 0.00 baseline (+3.2\u03c3).",
+      "why": "ofac filed for Turkey after first recorded of silence (profile score: 8). Signal: EMTI FIBER TEXTILE IMPORT EXPORT TRADE LIMITED COMPANY (Entity)",
       "narrative": null
     },
     {
-      "type": "actor_concentration",
-      "title": "Mayer Brown Llp lobbying for 5 countries simultaneously",
-      "score": 3.292,
+      "type": "first_appearance",
+      "title": "India \u2014 ofac after first recorded silence",
+      "score": 32.392,
       "countries": [
-        "BE",
-        "CN",
-        "FI",
-        "FR",
-        "JP"
+        "IN"
       ],
       "signal_keys": [
-        "lda:39409af6-5b6d-48c6-b0d4-67272a5cc7cd",
-        "lda:8bfb90a1-836c-4f5d-9bc1-94d7543a758c",
-        "lda:5ae3bcfc-37a9-43cd-a6a6-4e4b4617a683",
-        "lda:75f43883-e9cc-41b1-9b25-6915840ed0a1",
-        "lda:6939f1ab-4fc6-415d-b082-7141bbee0923"
+        "ofac:Satishkumar Hareshbhai SUTARIA (Individu",
+        "ofac:FLEET TANQO PRIVATE LIMITED (Entity)",
+        "ofac:HOUSE OF SHIPPING PRIVATE LIMITED (Entit"
       ],
-      "why": "Mayer Brown Llp filed LDA disclosures for Belgium, China, Finland, France, Japan in the same period.",
+      "why": "ofac filed for India after first recorded of silence (profile score: 7). Signal: Satishkumar Hareshbhai SUTARIA (Individual)",
+      "narrative": {
+        "headline": "India-based shipping firms sanctioned for Iran oil network links",
+        "body": "OFAC sanctioned two Indian entities and one individual within days, all linked to Iranian oil smuggling infrastructure via Mohammad Hossein Shamkhani. The mechanism is a coordinated enforcement action targeting India-registered nodes in a UAE-anchored Iranian sanctions evasion network.",
+        "prompt": "I just saw that the US Treasury (OFAC) sanctioned two Indian companies \u2014 Fleet Tanqo Private Limited and House of Shipping Private Limited \u2014 plus an individual named Satishkumar Hareshbhai Sutaria, all within about a week in April 2026. Fleet Tanqo is linked to Mohammad Hossein Shamkhani, and House of Shipping connects to a UAE entity called House of Shipping Investment FZCO. Why does this matter? Indian-registered companies are being used as nodes in Iranian oil sanctions evasion, and the US is now naming them publicly. Who benefits: Iran's oil export revenue. Who loses: these Indian firms, and potentially Indian banks or partners exposed to secondary sanctions risk. Is this routine? No \u2014 this is the first OFAC action recorded for India in this dataset. What to watch next: whether Sutaria is directly linked to Fleet Tanqo or House of Shipping, whether Indian regulators respond, and whether more Indian entities in the same shipping network get designated."
+      }
+    },
+    {
+      "type": "convergence",
+      "title": "Colombia \u2014 first appearance + influence \u2192 action",
+      "score": 26.425,
+      "countries": [
+        "CO"
+      ],
+      "signal_keys": [
+        "ofac:GLOBAL QOWA AL BASHERIA S.A.S. (Entity)",
+        "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)",
+        "ofac:Jose Oscar GARCIA BATTE (Individual)",
+        "ofac:Jose Libardo QUIJANO TORRES (Individual)",
+        "ofac:Omar Fernando GARCIA BATTE (Individual)",
+        "fara:7692"
+      ],
+      "why": "[first_appearance] ofac filed for Colombia after first recorded of silence (profile score: 6). Signal: FENIX HUMAN RESOURCES S.A.S. (Entity) | [influence_before_action] fara on 2026-02-12 \u2192 ofac on 2026-04-17 (64d gap). No prior fara+action sequence in preceding 180d.",
+      "_components": [
+        {
+          "type": "first_appearance",
+          "title": "Colombia \u2014 ofac after first recorded silence",
+          "score": 18.611,
+          "countries": [
+            "CO"
+          ],
+          "signal_keys": [
+            "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)",
+            "ofac:Jose Libardo QUIJANO TORRES (Individual)",
+            "ofac:Jose Oscar GARCIA BATTE (Individual)",
+            "ofac:GLOBAL QOWA AL BASHERIA S.A.S. (Entity)",
+            "ofac:Omar Fernando GARCIA BATTE (Individual)"
+          ],
+          "why": "ofac filed for Colombia after first recorded of silence (profile score: 6). Signal: FENIX HUMAN RESOURCES S.A.S. (Entity)"
+        },
+        {
+          "type": "influence_before_action",
+          "title": "Colombia \u2014 fara \u2192 ofac (64d)",
+          "score": 7.814,
+          "countries": [
+            "CO"
+          ],
+          "signal_keys": [
+            "fara:7692",
+            "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)"
+          ],
+          "why": "fara on 2026-02-12 \u2192 ofac on 2026-04-17 (64d gap). No prior fara+action sequence in preceding 180d."
+        }
+      ],
+      "narrative": {
+        "headline": "FARA Filing Preceded OFAC Sanctions on Colombian Labor Network by 64 Days",
+        "body": "OFAC sanctioned a cluster of Colombian entities and individuals\u2014FENIX HUMAN RESOURCES S.A.S., GLOBAL QOWA AL BASHERIA S.A.S., and the Garcia Batte brothers\u2014on April 17, 2026, 64 days after a FARA filing flagged the same network. The FARA registration surfaced foreign influence activity that U.S. investigators then traced to sanctionable conduct, suggesting the filing was an upstream investigative trigger.",
+        "prompt": "I just saw that a FARA filing in February 2026 preceded OFAC sanctions by 64 days against a Colombian labor and services network\u2014FENIX HUMAN RESOURCES S.A.S., GLOBAL QOWA AL BASHERIA S.A.S., Jose Oscar Garcia Batte, Omar Fernando Garcia Batte, and Jose Libardo Quijano Torres. Why does this matter? FARA filings expose foreign influence operations, and when they precede sanctions, it suggests U.S. authorities used the foreign-agent disclosure as an investigative lead. Who benefits or loses: anyone doing business with these entities faces exposure; competitors or counterparties may have unknowing liability. Is this routine? No\u2014a 64-day FARA-to-OFAC sequence with no prior pattern in 180 days is anomalous. What to watch next: Are there additional entities linked to INTERNATIONAL SERVICES AGENCY S.A.S. not yet sanctioned? Has the FARA registrant been identified, and what foreign principal did they represent? Further OFAC tranches targeting the same network would confirm this is an active, expanding enforcement action."
+      }
+    },
+    {
+      "type": "convergence",
+      "title": "Mexico \u2014 first appearance + influence \u2192 action",
+      "score": 26.109,
+      "countries": [
+        "MX"
+      ],
+      "signal_keys": [
+        "ofac:COMERCIALIZADORA Y ARRENDADORA DE MEXICO",
+        "lda:2546e933-cf40-44b7-8a69-91c428ae13e8",
+        "ofac:QUIMICA SOLUCIONES Y LOGISTICA INTEGRAL ",
+        "ofac:DESARROLLOS CARTOK S.A. DE C.V. (Entity)",
+        "ofac:Jose de Jesus RAMIREZ TORRES (Individual",
+        "ofac:DIAMANTE CASINO (Entity)",
+        "ofac:CORPORATIVO Y ENLACE RAM S.A. DE C.V. (E",
+        "ofac:BOTANICA 2000 (Entity)",
+        "ofac:Ramiro Baltazar FELIX HERAS (Individual)",
+        "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual"
+      ],
+      "why": "[first_appearance] ofac filed for Mexico after first recorded of silence (profile score: 4). Signal: Jose de Jesus RAMIREZ TORRES (Individual) | [influence_before_action] lda on 2026-03-16 \u2192 ofac on 2026-04-14 (29d gap). No prior lda+action sequence in preceding 180d.",
+      "_components": [
+        {
+          "type": "first_appearance",
+          "title": "Mexico \u2014 ofac after first recorded silence",
+          "score": 18.51,
+          "countries": [
+            "MX"
+          ],
+          "signal_keys": [
+            "ofac:Jose de Jesus RAMIREZ TORRES (Individual",
+            "ofac:CORPORATIVO Y ENLACE RAM S.A. DE C.V. (E",
+            "ofac:Ramiro Baltazar FELIX HERAS (Individual)",
+            "ofac:BOTANICA 2000 (Entity)",
+            "ofac:DESARROLLOS CARTOK S.A. DE C.V. (Entity)",
+            "ofac:QUIMICA SOLUCIONES Y LOGISTICA INTEGRAL ",
+            "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual",
+            "ofac:COMERCIALIZADORA Y ARRENDADORA DE MEXICO",
+            "ofac:DIAMANTE CASINO (Entity)"
+          ],
+          "why": "ofac filed for Mexico after first recorded of silence (profile score: 4). Signal: Jose de Jesus RAMIREZ TORRES (Individual)"
+        },
+        {
+          "type": "influence_before_action",
+          "title": "Mexico \u2014 lda \u2192 ofac (29d)",
+          "score": 7.599,
+          "countries": [
+            "MX"
+          ],
+          "signal_keys": [
+            "lda:2546e933-cf40-44b7-8a69-91c428ae13e8",
+            "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual"
+          ],
+          "why": "lda on 2026-03-16 \u2192 ofac on 2026-04-14 (29d gap). No prior lda+action sequence in preceding 180d."
+        }
+      ],
       "narrative": null
     },
     {
-      "type": "actor_concentration",
-      "title": "Covenant Government Affairs, Llc lobbying for 3 countries simultaneously",
-      "score": 2.505,
+      "type": "first_appearance",
+      "title": "Iraq \u2014 ofac after first recorded silence",
+      "score": 21.713,
       "countries": [
-        "AU",
-        "CA",
-        "SG"
+        "IQ"
       ],
       "signal_keys": [
-        "lda:06f041a9-2003-4e3c-8e5c-fcbed26fa750",
-        "lda:ebaafdc1-22c3-42de-ab5c-841d5984c131",
-        "lda:775d3569-666b-48b3-8ad1-e31e64c26bd5",
-        "lda:4b59ed80-25c5-41fd-b853-f006b6cbd657"
+        "ofac:Radhwan Yousif Hameed ALMOHAMMED (Indivi",
+        "ofac:Husham Hashim JAYTHOOM (Individual)",
+        "ofac:Khalid Jameel Abed ALBAKHATRA (Individua",
+        "ofac:Safaa Adnan Jabbar SUWAED (Individual)"
       ],
-      "why": "Covenant Government Affairs, Llc filed LDA disclosures for Australia, Canada, Singapore in the same period.",
+      "why": "ofac filed for Iraq after first recorded of silence (profile score: 7). Signal: Radhwan Yousif Hameed ALMOHAMMED (Individual)",
       "narrative": null
     },
     {
-      "type": "actor_concentration",
-      "title": "Invariant Llc lobbying for 4 countries simultaneously",
-      "score": 2.431,
+      "type": "first_appearance",
+      "title": "United Arab Emirates \u2014 ofac after first recorded silence",
+      "score": 16.199,
       "countries": [
-        "AU",
-        "DE",
-        "TR",
-        "TW"
+        "AE"
       ],
       "signal_keys": [
-        "lda:95ef728b-bf54-4df7-a22b-175bbc0a40c1",
-        "lda:55260929-56a0-41ad-ac70-996b41468f28",
-        "lda:cf192ac6-8d01-4f07-ad69-45504b0217df",
-        "lda:7bd791f6-d51a-4726-b877-cc759a253e03"
+        "ofac:Mohammad VAHIDI (Individual)",
+        "ofac:CHABOK FZCO (Entity)",
+        "ofac:TAYLOR SHIPPING FZCO (Entity)",
+        "ofac:SHIPSTAR SHIPCHANDLING LLC (Entity)",
+        "ofac:ACS TRADING LLC (Entity)"
       ],
-      "why": "Invariant Llc filed LDA disclosures for Australia, Germany, Turkey, Taiwan in the same period.",
+      "why": "ofac filed for United Arab Emirates after first recorded of silence (profile score: 4). Signal: Mohammad VAHIDI (Individual)",
+      "narrative": {
+        "headline": "UAE-based shell network hit by OFAC in coordinated Iran sanctions sweep",
+        "body": "OFAC designated five UAE-registered entities and individuals in one week, all linked to sanctioned Iranian networks including Mahan Air and IRGC-connected figures. The mechanism is UAE free-zone companies being used as procurement and shipping fronts for Iranian sanctions evasion.",
+        "prompt": "I just saw that OFAC sanctioned five UAE-based companies and individuals in a single week \u2014 CHABOK FZCO, TAYLOR SHIPPING FZCO, SHIPSTAR SHIPCHANDLING LLC, ACS TRADING LLC, and Mohammad VAHIDI \u2014 all linked to Iranian sanctioned networks including Mahan Air and figures tied to the IRGC. Why does this matter? UAE free zones are a known chokepoint for Iranian sanctions evasion, and coordinated multi-entity designations usually signal a larger enforcement action or intelligence operation. Who are the key nodes here \u2014 what is HOUSE OF SHIPPING INVESTMENT FZCO, and how does SHAMKHANI connect to Taylor Shipping? Is this cluster of designations routine or part of a named operation? What should I watch for next: follow-on designations of UAE banks or brokers that serviced these entities, and whether UAE regulators respond with their own enforcement."
+      }
+    },
+    {
+      "type": "first_appearance",
+      "title": "United Kingdom \u2014 ofac after first recorded silence",
+      "score": 13.573,
+      "countries": [
+        "GB"
+      ],
+      "signal_keys": [
+        "ofac:Seyed Naiemaei Badroddin MOOSAVI (Indivi"
+      ],
+      "why": "ofac filed for United Kingdom after first recorded of silence (profile score: 5). Signal: Seyed Naiemaei Badroddin MOOSAVI (Individual)",
       "narrative": null
     },
     {
-      "type": "actor_concentration",
-      "title": "King & Spalding Llp lobbying for 3 countries simultaneously",
-      "score": 2.122,
+      "type": "first_appearance",
+      "title": "Russia \u2014 fara after first recorded silence",
+      "score": 11.411,
       "countries": [
-        "AT",
-        "BR",
-        "CA"
+        "RU"
       ],
       "signal_keys": [
-        "lda:7966fa9c-08f9-4c18-9500-f8d72be58655",
-        "lda:b50587f3-c842-45a9-8d92-65aa0d275bf7",
-        "lda:b88780ee-54dd-4925-a02b-53232aad058e"
+        "fara:7711"
       ],
-      "why": "King & Spalding Llp filed LDA disclosures for Austria, Brazil, Canada in the same period.",
+      "why": "fara filed for Russia after first recorded of silence (profile score: 10). Signal: Sher Tremonte LLP registered to represent Alexey Kuzovkin",
       "narrative": null
     },
     {
-      "type": "cftc_overlap",
-      "title": "Brent Crude positioning anomaly \u2014 1 exposed countries active",
-      "score": 1.715,
+      "type": "first_appearance",
+      "title": "Egypt \u2014 fara after first recorded silence",
+      "score": 10.429,
       "countries": [
-        "SA"
+        "EG"
       ],
       "signal_keys": [
-        "cftc:Brent Crude"
+        "fara:7712"
       ],
-      "why": "Brent Crude z=+2.0\u03c3. Active basket: SA (1/7 exposed countries have recent signals).",
+      "why": "fara filed for Egypt after first recorded of silence (profile score: 7). Signal: NexusOne Consulting registered to represent Emad El Said Youssef Saad El-Galada ",
       "narrative": null
     },
     {
-      "type": "actor_concentration",
-      "title": "Capital Park Partners Llc lobbying for 3 countries simultaneously",
-      "score": 1.631,
+      "type": "first_appearance",
+      "title": "Lithuania \u2014 dsca after first recorded silence",
+      "score": 9.62,
       "countries": [
-        "GB",
-        "IL",
-        "JP"
+        "LT"
       ],
       "signal_keys": [
-        "lda:9b25dd5d-c34a-434d-af7a-b14b37284403",
-        "lda:a5ad2bf3-635d-413d-9f54-b6f983e4d72c",
-        "lda:02b247dd-5ef5-4daf-8026-9aa9990c11ab",
-        "lda:b4b95c34-7ceb-4309-a6e2-4c7aa317f67a"
+        "dsca:AIM-9X Sidewinder Block II Missiles"
       ],
-      "why": "Capital Park Partners Llc filed LDA disclosures for United Kingdom, Israel, Japan in the same period.",
+      "why": "dsca filed for Lithuania after first recorded of silence (profile score: 2). Signal: AIM-9X Sidewinder Block II Missiles",
       "narrative": null
     }
   ]

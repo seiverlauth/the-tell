@@ -15,10 +15,10 @@
     }
 
     const THEME_TYPE_COLORS = {
-      actor_concentration: '#c084fc',
-      velocity_anomaly:    '#f87171',
-      layer_sequence:      '#2dd4bf',
-      cftc_overlap:        '#fbbf24',
+      first_appearance:        '#c084fc',
+      influence_before_action: '#f87171',
+      cftc_overlap:            '#fbbf24',
+      convergence:             '#2dd4bf',
     };
 
     const SOURCE_LABELS = {
