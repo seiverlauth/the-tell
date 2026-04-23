@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T22:48:49.325189+00:00",
+  "generated_at": "2026-04-23T17:50:05.179304+00:00",
   "sources": [
     "lda"
   ],
@@ -11254,6 +11254,137 @@
         "DEF"
       ],
       "url": "https://lda.gov/filings/public/filing/b6ef9c96-6fd3-43b9-8e40-466c15c4e370/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "73be5566-9f24-49fe-96d4-0928e6b31539",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 Career Start via Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "value_usd": null,
+      "description": "Defense funding for recruiting software",
+      "lobbying_firm": "Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/73be5566-9f24-49fe-96d4-0928e6b31539/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "e34fa596-f59a-4189-8e8e-1a8d097e9d38",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 Greycliff Industries Inc via Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "value_usd": null,
+      "description": "Defense funding for autonomous watercraft",
+      "lobbying_firm": "Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e34fa596-f59a-4189-8e8e-1a8d097e9d38/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "a1d5634d-8570-40d6-a0a7-72c4de9f086f",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 Amalgent Therapeutics via Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "value_usd": null,
+      "description": "Defense medical testing funding",
+      "lobbying_firm": "Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/a1d5634d-8570-40d6-a0a7-72c4de9f086f/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "1c25f332-c3b1-4abf-b6d6-1996bfc455bd",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 Cresilon, Inc via Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "value_usd": null,
+      "description": "Defense funding",
+      "lobbying_firm": "Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/1c25f332-c3b1-4abf-b6d6-1996bfc455bd/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "dd2b562a-879b-4040-80d4-946566d5c572",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 D-Wave Government, Inc via The Mckeon Group, Inc.",
+      "value_usd": null,
+      "description": "NDAA FY 2027",
+      "lobbying_firm": "The Mckeon Group, Inc.",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/dd2b562a-879b-4040-80d4-946566d5c572/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "76aebe8a-5f09-47a0-9eaa-1e4919a03c25",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Homeland Security, Science/Technology, Aviation \u2014 Liberty Defense Holdings, Ltd. via Mercury Strategies, Llc",
+      "value_usd": null,
+      "description": "No lobbying issues on current or immediately anticipated legislation. Appropriations issues regarding perimeter security\u2026",
+      "lobbying_firm": "Mercury Strategies, Llc",
+      "issue_codes": [
+        "AVI",
+        "HOM",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/76aebe8a-5f09-47a0-9eaa-1e4919a03c25/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "4d058205-810e-4b70-bb39-8344290a92c2",
+      "iso": "CA",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 The Mckeon Group Inc. (On Behalf Of D-Wave Government Inc.) via Plurus Strategies, Llc",
+      "value_usd": null,
+      "description": "General issues related to quantum annealing applications for the Department of Defense (DoD)",
+      "lobbying_firm": "Plurus Strategies, Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/4d058205-810e-4b70-bb39-8344290a92c2/print/",
+      "raw_score": 5.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "04ed815d-3559-4dd3-b6d4-aa67b3e17ab4",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-23",
+      "title": "Energy, Foreign Affairs \u2014 Tbvenergy Llc via Vision Americas Llc",
+      "value_usd": null,
+      "description": "Seeking U.S. government attention to recovery and operation of electricity power plants in Venezuela",
+      "lobbying_firm": "Vision Americas Llc",
+      "issue_codes": [
+        "ENG",
+        "FOR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/04ed815d-3559-4dd3-b6d4-aa67b3e17ab4/print/",
       "raw_score": null,
       "weight": 1.0
     }

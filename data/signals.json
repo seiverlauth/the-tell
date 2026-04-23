@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T22:49:15.015044+00:00",
+  "generated_at": "2026-04-23T17:50:45.616624+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -13,6 +13,387 @@
     "sam"
   ],
   "signals": [
+    {
+      "filing_uuid": "04ed815d-3559-4dd3-b6d4-aa67b3e17ab4",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-23",
+      "title": "Energy, Foreign Affairs \u2014 Tbvenergy Llc via Vision Americas Llc",
+      "value_usd": null,
+      "description": "Seeking U.S. government attention to recovery and operation of electricity power plants in Venezuela",
+      "lobbying_firm": "Vision Americas Llc",
+      "issue_codes": [
+        "ENG",
+        "FOR"
+      ],
+      "url": "https://lda.gov/filings/public/filing/04ed815d-3559-4dd3-b6d4-aa67b3e17ab4/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57232,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "Jose de Jesus RAMIREZ TORRES (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57232",
+      "profile": {
+        "name": "Mexico",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "regional power",
+          "Western Hemisphere"
+        ],
+        "rationale": "Western Hemisphere presence (+1), major hydrocarbon producer (+2), regional power (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57234,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "CORPORATIVO Y ENLACE RAM S.A. DE C.V. (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: RAMIREZ TORRES, Jose de Jesus)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57234",
+      "profile": {
+        "name": "Mexico",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "regional power",
+          "Western Hemisphere"
+        ],
+        "rationale": "Western Hemisphere presence (+1), major hydrocarbon producer (+2), regional power (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57345,
+      "iso": "IN",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "Satishkumar Hareshbhai SUTARIA (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57345",
+      "profile": {
+        "name": "India",
+        "score": 7,
+        "factors": [
+          "nuclear program",
+          "regional power",
+          "strategic minerals",
+          "Indian Ocean",
+          "US partner"
+        ],
+        "rationale": "Nuclear weapons program (+2), regional power (+1), strategic minerals including rare earths (+2), Indian Ocean chokepoint adjacency \u2014 controls Andaman sea lanes (+1), major US security partner and arms customer (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57353,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "Ramiro Baltazar FELIX HERAS (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: SINALOA CARTEL)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57353",
+      "profile": {
+        "name": "Mexico",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "regional power",
+          "Western Hemisphere"
+        ],
+        "rationale": "Western Hemisphere presence (+1), major hydrocarbon producer (+2), regional power (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57355,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "BOTANICA 2000 (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: REYNOSO JIMENEZ, Alejandro)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059",
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57355",
+      "profile": {
+        "name": "Mexico",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "regional power",
+          "Western Hemisphere"
+        ],
+        "rationale": "Western Hemisphere presence (+1), major hydrocarbon producer (+2), regional power (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57359,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "DESARROLLOS CARTOK S.A. DE C.V. (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: CARRILLO TORRES, Karina Guadalupe)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57359",
+      "profile": {
+        "name": "Mexico",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "regional power",
+          "Western Hemisphere"
+        ],
+        "rationale": "Western Hemisphere presence (+1), major hydrocarbon producer (+2), regional power (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57361,
+      "iso": "MX",
+      "source": "ofac",
+      "signal_date": "2026-04-23",
+      "title": "QUIMICA SOLUCIONES Y LOGISTICA INTEGRAL BAJIO, S.A. DE C.V. (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: RUGERIO ARRIAGA, Maria Viridiana)",
+      "programs": [
+        "ILLICIT-DRUGS-EO14059"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57361",
+      "profile": {
+        "name": "Mexico",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "regional power",
+          "Western Hemisphere"
+        ],
+        "rationale": "Western Hemisphere presence (+1), major hydrocarbon producer (+2), regional power (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "iso": "LT",
+      "source": "dsca",
+      "signal_date": "2026-04-22",
+      "title": "AIM-9X Sidewinder Block II Missiles",
+      "value_usd": 214000000.0,
+      "description": "The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of Lithuania for AIM-9X Sidewinder Block II Missiles and related equipment.",
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/04/lithuania-aim-9x-sidewinder-block-ii-missiles/",
+      "wp_id": 679144,
+      "profile": {
+        "name": "Lithuania",
+        "score": 2,
+        "factors": [
+          "NATO flank",
+          "Suwalki Gap"
+        ],
+        "rationale": "NATO eastern flank (+1), Suwalki Gap \u2014 land corridor between Belarus and Kaliningrad, highest-density NATO chokepoint on land (+1)"
+      },
+      "layer": "military",
+      "quality": 1.0,
+      "dollar_mod": 1.1747810330011894,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "73be5566-9f24-49fe-96d4-0928e6b31539",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 Career Start via Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "value_usd": null,
+      "description": "Defense funding for recruiting software",
+      "lobbying_firm": "Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/73be5566-9f24-49fe-96d4-0928e6b31539/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "e34fa596-f59a-4189-8e8e-1a8d097e9d38",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 Greycliff Industries Inc via Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "value_usd": null,
+      "description": "Defense funding for autonomous watercraft",
+      "lobbying_firm": "Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/e34fa596-f59a-4189-8e8e-1a8d097e9d38/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "a1d5634d-8570-40d6-a0a7-72c4de9f086f",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 Amalgent Therapeutics via Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "value_usd": null,
+      "description": "Defense medical testing funding",
+      "lobbying_firm": "Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/a1d5634d-8570-40d6-a0a7-72c4de9f086f/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "1c25f332-c3b1-4abf-b6d6-1996bfc455bd",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 Cresilon, Inc via Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "value_usd": null,
+      "description": "Defense funding",
+      "lobbying_firm": "Prospering Solutions, Llc Fka John C. Snyder Iii",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/1c25f332-c3b1-4abf-b6d6-1996bfc455bd/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "dd2b562a-879b-4040-80d4-946566d5c572",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 D-Wave Government, Inc via The Mckeon Group, Inc.",
+      "value_usd": null,
+      "description": "NDAA FY 2027",
+      "lobbying_firm": "The Mckeon Group, Inc.",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/dd2b562a-879b-4040-80d4-946566d5c572/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "76aebe8a-5f09-47a0-9eaa-1e4919a03c25",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Homeland Security, Science/Technology, Aviation \u2014 Liberty Defense Holdings, Ltd. via Mercury Strategies, Llc",
+      "value_usd": null,
+      "description": "No lobbying issues on current or immediately anticipated legislation. Appropriations issues regarding perimeter security\u2026",
+      "lobbying_firm": "Mercury Strategies, Llc",
+      "issue_codes": [
+        "AVI",
+        "HOM",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/76aebe8a-5f09-47a0-9eaa-1e4919a03c25/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "4d058205-810e-4b70-bb39-8344290a92c2",
+      "iso": "CA",
+      "source": "lda",
+      "signal_date": "2026-04-22",
+      "title": "Defense \u2014 The Mckeon Group Inc. (On Behalf Of D-Wave Government Inc.) via Plurus Strategies, Llc",
+      "value_usd": null,
+      "description": "General issues related to quantum annealing applications for the Department of Defense (DoD)",
+      "lobbying_firm": "Plurus Strategies, Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/4d058205-810e-4b70-bb39-8344290a92c2/print/",
+      "profile": {
+        "name": "Canada",
+        "score": 5,
+        "factors": [
+          "hydrocarbons",
+          "strategic minerals",
+          "Western Hemisphere"
+        ],
+        "rationale": "Western Hemisphere presence (+1), major hydrocarbon producer (+2), strategic minerals including uranium and rare earths (+2)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
     {
       "document_number": "2026-07676",
       "iso": "HK",
@@ -25216,8 +25597,33 @@
   "themes": [
     {
       "type": "velocity_anomaly",
-      "title": "Iran \u2014 6 signals in 30 days (+10.2\u03c3)",
-      "score": 187.384,
+      "title": "Mexico \u2014 9 signals in 30 days (+14.9\u03c3)",
+      "score": 312.328,
+      "countries": [
+        "MX"
+      ],
+      "signal_keys": [
+        "ofac:Jose de Jesus RAMIREZ TORRES (Individual",
+        "ofac:CORPORATIVO Y ENLACE RAM S.A. DE C.V. (E",
+        "ofac:Ramiro Baltazar FELIX HERAS (Individual)",
+        "ofac:BOTANICA 2000 (Entity)",
+        "ofac:DESARROLLOS CARTOK S.A. DE C.V. (Entity)",
+        "ofac:QUIMICA SOLUCIONES Y LOGISTICA INTEGRAL ",
+        "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual",
+        "ofac:COMERCIALIZADORA Y ARRENDADORA DE MEXICO",
+        "ofac:DIAMANTE CASINO (Entity)"
+      ],
+      "why": "8.1 weighted signals in 30 days vs 0.6 avg (+14.9\u03c3). Sources: ofac\u00d79",
+      "narrative": {
+        "headline": "OFAC designates 9 Mexico-linked cartel figures and fronts in single day",
+        "body": "On April 23, 2026, OFAC simultaneously designated 9 individuals and entities tied to the Sinaloa Cartel and associated financial networks in Mexico. The mechanism is coordinated U.S. Treasury action targeting cartel money-laundering infrastructure \u2014 shell companies and front businesses used to move illicit proceeds.",
+        "prompt": "I just saw that the U.S. Treasury (OFAC) sanctioned 9 Mexico-linked individuals and entities on the same day \u2014 including people tied to the Sinaloa Cartel and front companies like CORPORATIVO Y ENLACE RAM and BOTANICA 2000. Why does this matter? Coordinated same-day OFAC designations usually signal a larger law enforcement operation \u2014 possibly indictments, asset seizures, or extradition requests running in parallel. Who are Jose de Jesus Ramirez Torres, Ramiro Baltazar Felix Heras, and Karina Guadalupe Carrillo Torres, and what roles do they play in Sinaloa Cartel finances? Are the named shell companies linked to specific money-laundering corridors? Is this connected to recent U.S.-Mexico law enforcement cooperation or pressure campaigns? Watch for: related DOJ indictments, Mexican government asset freezes, or additional OFAC rounds targeting the same network in the next 30 days."
+      }
+    },
+    {
+      "type": "velocity_anomaly",
+      "title": "Iran \u2014 6 signals in 30 days (+10.3\u03c3)",
+      "score": 188.017,
       "countries": [
         "IR"
       ],
@@ -25229,17 +25635,17 @@
         "ofac:SAMAN AIR SERVICES COMPANY (Entity)",
         "federalregister:2026-06688"
       ],
-      "why": "5.3 weighted signals in 30 days vs 0.2 avg (+10.2\u03c3). Sources: federalregister\u00d71, ofac\u00d75",
+      "why": "5.3 weighted signals in 30 days vs 0.2 avg (+10.3\u03c3). Sources: federalregister\u00d71, ofac\u00d75",
       "narrative": {
         "headline": "OFAC Targets Mahan Air Procurement Network in Coordinated Iran Sanctions Burst",
-        "body": "Five OFAC designations on April 21 trace a single supply chain: front companies and individuals funneling resources to Mahan Air, Iran's sanctioned carrier linked to IRGC logistics. The cluster signals a coordinated U.S. enforcement action against Mahan Air's evasion infrastructure, likely preceding broader secondary sanctions pressure on its international partners.",
-        "prompt": "I just saw that OFAC issued five Iran sanctions designations on the same day, all tracing back to Mahan Air through a chain of front companies and individuals. Why does this matter? Mahan Air is already sanctioned for supporting the IRGC and Hezbollah \u2014 so who are these new entities and why are they being designated now? Specifically: what is SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY's role, how does SAMAN AIR SERVICES connect to it, and what does PISHGAM ELECTRONIC SAFEH COMPANY supply? Is this a routine enforcement update or does a coordinated same-day batch signal an escalating pressure campaign? What should I watch for next \u2014 specifically whether foreign airlines or airports that still service Mahan Air face secondary sanctions exposure as a result of this action?"
+        "body": "Five OFAC designations on the same date link individuals and shell companies to Mahan Air and associated Iranian trading entities, signaling a coordinated enforcement action against a sanctions-evasion supply chain. Mahan Air, already blacklisted, is the hub; the new designations cut off its procurement intermediaries before they establish alternative channels.",
+        "prompt": "I just saw that OFAC issued 5 Iran-related designations on the same day (April 21, 2026), all tracing back to Mahan Air through a chain of shell companies and individuals. Why does this matter? Mahan Air is Iran's main carrier for IRGC logistics and has been sanctioned for years \u2014 but it keeps operating by cycling through front companies. Who are the key entities? Mahan Air is the hub; Sepehr Kaveh Kish and Saman Air Services are intermediaries; Balkhkanlu, Khalili, and Roknifard are individual facilitators. Is this routine? Coordinated same-day designation of a full network is unusual and suggests OFAC had built a complete case. What should I watch for next: will the EU or UK mirror these designations, are there associated vessel or cargo seizures, and has Mahan Air's flight activity changed since April 21?"
       }
     },
     {
       "type": "velocity_anomaly",
-      "title": "Colombia \u2014 5 signals in 30 days (+7.3\u03c3)",
-      "score": 99.18,
+      "title": "Colombia \u2014 5 signals in 30 days (+8.3\u03c3)",
+      "score": 112.05,
       "countries": [
         "CO"
       ],
@@ -25250,11 +25656,11 @@
         "ofac:GLOBAL QOWA AL BASHERIA S.A.S. (Entity)",
         "ofac:Omar Fernando GARCIA BATTE (Individual)"
       ],
-      "why": "4.5 weighted signals in 30 days vs 0.3 avg (+7.3\u03c3). Sources: ofac\u00d75",
+      "why": "4.5 weighted signals in 30 days vs 0.3 avg (+8.3\u03c3). Sources: ofac\u00d75",
       "narrative": {
-        "headline": "On 2026-04-17, OFAC simultaneously designated two Colombian labor-recruitment networks: one centered on FENIX HUMAN RESOURCES S.A.S.",
-        "body": "and its controller Quijano Torres, and a second centered on the Garcia Batte brothers operating through INTERNATIONAL SERVICES AGENCY S.A.S. and GLOBAL QOWA AL BASHERIA S.A.S. The mechanism is illicit labor recruitment/human trafficking facilitation, with the Arabic-language entity name suggesting Gulf-region placement pipelines. Further designations of associated brokers, shell entities, or foreign counterparts are likely imminent.",
-        "prompt": "I just saw OFAC designate five Colombian entities/individuals on the same date across two apparent labor-recruitment networks: FENIX HUMAN RESOURCES S.A.S. (controlled by Jose Libardo Quijano Torres) and a Garcia Batte family cluster \u2014 Jose Oscar Garcia Batte, Omar Fernando Garcia Batte \u2014 operating through INTERNATIONAL SERVICES AGENCY S.A.S. and GLOBAL QOWA AL BASHERIA S.A.S. Who are these entities, what sectors do they recruit for, and do they have known Gulf-region or Middle East counterparts? Is the Arabic name significant \u2014 does it point to a specific destination country? Are there prior Colombian regulatory or criminal actions against them? What should I watch for next in terms of related designations or asset freezes?"
+        "headline": "OFAC Sanctions Two Colombian Labor-Trafficking Networks in Single Action",
+        "body": "OFAC simultaneously designated two linked Colombian entity clusters\u2014Fenix Human Resources/Quijano Torres and International Services Agency/Garcia Batte brothers/Global Qowa Al Basheria\u2014on the same date, signaling a coordinated enforcement action against labor trafficking or forced-labor recruitment networks. The shared designation date and cross-entity linkages indicate a single investigation surfacing multiple fronts of the same illicit labor supply operation.",
+        "prompt": "I just saw that OFAC sanctioned five Colombian entities and individuals on the same day\u2014two separate but apparently related networks: Fenix Human Resources S.A.S. linked to Jose Libardo Quijano Torres, and International Services Agency S.A.S. linked to brothers Jose Oscar and Omar Fernando Garcia Batte, plus their entity Global Qowa Al Basheria S.A.S. Why does this matter? Labor trafficking sanctions can freeze assets, cut off U.S. financial access, and expose any business dealing with these entities to secondary risk. Who are these networks, what sector do they operate in (labor recruitment, staffing, overseas worker placement?), and is 'Qowa Al Basheria' an Arabic-language name suggesting Middle East labor corridors? Is this pattern routine for Colombia or anomalous? What should I watch for next\u2014additional designations, DOJ indictments, or Colombian government action against these entities?"
       }
     },
     {
@@ -25300,38 +25706,22 @@
     },
     {
       "type": "velocity_anomaly",
-      "title": "Mexico \u2014 3 signals in 30 days (+4.0\u03c3)",
-      "score": 28.031,
+      "title": "India \u2014 3 signals in 30 days (+3.6\u03c3)",
+      "score": 31.067,
       "countries": [
-        "MX"
+        "IN"
       ],
       "signal_keys": [
-        "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual",
-        "ofac:COMERCIALIZADORA Y ARRENDADORA DE MEXICO",
-        "ofac:DIAMANTE CASINO (Entity)"
+        "ofac:Satishkumar Hareshbhai SUTARIA (Individu",
+        "ofac:FLEET TANQO PRIVATE LIMITED (Entity)",
+        "ofac:HOUSE OF SHIPPING PRIVATE LIMITED (Entit"
       ],
-      "why": "2.7 weighted signals in 30 days vs 0.6 avg (+4.0\u03c3). Sources: ofac\u00d73",
+      "why": "2.7 weighted signals in 30 days vs 0.5 avg (+3.6\u03c3). Sources: ofac\u00d73",
       "narrative": {
-        "headline": "OFAC designated three linked entities on the same date: an individual tied to Cartel del Noreste, a commercial/leasing company linked to Casino Centenario, and Diamante Casino linked to that same company.",
-        "body": "The mechanism is a coordinated sanctions action targeting a CDN money-laundering network using casino and commercial fronts. Expect follow-on designations of additional casino operators, financial facilitators, or CDN leadership.",
-        "prompt": "I just saw three simultaneous OFAC designations in Mexico on 2026-04-14: individual Jesus Reymundo Ramos Vazquez linked to Cartel del Noreste, entity Comercializadora y Arrendadora de Mexico S.A. de C.V. linked to Casino Centenario, and Diamante Casino linked to that same commercial entity. Who are these entities, what are their known relationships to CDN's financial infrastructure, and is this part of a broader OFAC enforcement campaign against CDN money laundering through casinos? What additional casino operators, beneficial owners, or CDN figures should I watch for in follow-on designations?"
+        "headline": "Three India-based entities sanctioned in 10 days for Iran oil network links",
+        "body": "OFAC sanctioned two Indian companies and one individual within 10 days, with Fleet Tanqo explicitly linked to Iranian official Mohammad Hossein Shamkhani and House of Shipping tied to its UAE parent. This cluster indicates a coordinated US enforcement action targeting an India-UAE-Iran shadow shipping and logistics network.",
+        "prompt": "I just saw that the US Treasury (OFAC) sanctioned three India-based entities in 10 days \u2014 Fleet Tanqo Private Limited, House of Shipping Private Limited, and individual Satishkumar Hareshbhai Sutaria. Fleet Tanqo is explicitly linked to Mohammad Hossein Shamkhani, an Iranian official. Why does this matter? The US is targeting an India-UAE-Iran network apparently moving sanctioned Iranian oil or goods. Who loses: Indian firms doing business with these entities face secondary sanctions risk; UAE parent House of Shipping Investment FZCO is also implicated. Is this routine? No \u2014 three India sanctions in 10 days is a sharp spike. What to watch next: whether OFAC designates additional Indian shipping or trading firms connected to the same network, and whether India's government responds diplomatically or commercially."
       }
-    },
-    {
-      "type": "velocity_anomaly",
-      "title": "China \u2014 4 signals in 30 days (+2.7\u03c3)",
-      "score": 24.728,
-      "countries": [
-        "CN"
-      ],
-      "signal_keys": [
-        "ofac:Feiwu BIAN (Individual)",
-        "cftc:Corn",
-        "cftc:Corn",
-        "cftc:Corn"
-      ],
-      "why": "2.5 weighted signals in 30 days vs 0.8 avg (+2.7\u03c3). Sources: cftc\u00d73, ofac\u00d71",
-      "narrative": null
     },
     {
       "type": "velocity_anomaly",
@@ -25346,23 +25736,6 @@
         "sam:Single Source Justification for Legal Se"
       ],
       "why": "2.1 weighted signals in 30 days vs 0.1 avg (+3.9\u03c3). Sources: sam\u00d73",
-      "narrative": null
-    },
-    {
-      "type": "velocity_anomaly",
-      "title": "United Kingdom \u2014 5 signals in 30 days (+2.1\u03c3)",
-      "score": 16.711,
-      "countries": [
-        "GB"
-      ],
-      "signal_keys": [
-        "lda:7c182547-8da2-48f5-ab17-e623d5a692a5",
-        "lda:dcac5c1c-c647-4baf-ae01-7782fa0579d1",
-        "ofac:Seyed Naiemaei Badroddin MOOSAVI (Indivi",
-        "lda:29e67f85-e020-4714-8d85-9cf4e447eb0f",
-        "lda:585860bc-af15-4e03-a51e-7b10e683c7cd"
-      ],
-      "why": "2.9 weighted signals in 30 days vs 1.4 avg (+2.1\u03c3). Sources: lda\u00d74, ofac\u00d71",
       "narrative": null
     },
     {
@@ -25384,7 +25757,7 @@
     {
       "type": "actor_concentration",
       "title": "Capitol Counsel Llc lobbying for 3 countries simultaneously",
-      "score": 13.113,
+      "score": 12.683,
       "countries": [
         "CN",
         "JP",
@@ -25401,7 +25774,7 @@
     {
       "type": "actor_concentration",
       "title": "Strategic Marketing Innovations lobbying for 4 countries simultaneously",
-      "score": 11.989,
+      "score": 11.596,
       "countries": [
         "CA",
         "DE",
@@ -25420,7 +25793,7 @@
     {
       "type": "actor_concentration",
       "title": "Ark Strategy lobbying for 3 countries simultaneously",
-      "score": 11.273,
+      "score": 10.903,
       "countries": [
         "AU",
         "GB",
@@ -25437,7 +25810,7 @@
     {
       "type": "actor_concentration",
       "title": "Cassidy & Associates, Inc. lobbying for 3 countries simultaneously",
-      "score": 11.272,
+      "score": 10.902,
       "countries": [
         "AU",
         "CA",
@@ -25455,7 +25828,7 @@
     {
       "type": "actor_concentration",
       "title": "Ml Strategies, Llc lobbying for 3 countries simultaneously",
-      "score": 9.777,
+      "score": 9.456,
       "countries": [
         "AU",
         "CA",
@@ -25472,7 +25845,7 @@
     {
       "type": "actor_concentration",
       "title": "The Vogel Group lobbying for 4 countries simultaneously",
-      "score": 9.408,
+      "score": 9.1,
       "countries": [
         "AE",
         "AT",
@@ -25491,7 +25864,7 @@
     {
       "type": "actor_concentration",
       "title": "Miller Strategies, Llc lobbying for 6 countries simultaneously",
-      "score": 9.404,
+      "score": 9.095,
       "countries": [
         "BE",
         "CA",
@@ -25514,7 +25887,7 @@
     {
       "type": "actor_concentration",
       "title": "Valcour Llc lobbying for 4 countries simultaneously",
-      "score": 8.708,
+      "score": 8.422,
       "countries": [
         "GB",
         "IQ",
@@ -25533,7 +25906,7 @@
     {
       "type": "actor_concentration",
       "title": "Checkmate Government Relations lobbying for 4 countries simultaneously",
-      "score": 8.602,
+      "score": 8.32,
       "countries": [
         "CH",
         "CN",
@@ -25550,9 +25923,24 @@
       "narrative": null
     },
     {
+      "type": "velocity_anomaly",
+      "title": "Sweden \u2014 3 signals in 30 days (+2.4\u03c3)",
+      "score": 7.25,
+      "countries": [
+        "SE"
+      ],
+      "signal_keys": [
+        "lda:88d0ee82-17b8-4f07-bb41-496842262d76",
+        "lda:fd9eb0fd-5c11-4204-877e-d20eda1cf938",
+        "lda:61d543a0-f4ee-4fa7-a743-33e15396a7c8"
+      ],
+      "why": "1.5 weighted signals in 30 days vs 0.3 avg (+2.4\u03c3). Sources: lda\u00d73",
+      "narrative": null
+    },
+    {
       "type": "actor_concentration",
       "title": "Bgr Government Affairs lobbying for 6 countries simultaneously",
-      "score": 7.358,
+      "score": 7.117,
       "countries": [
         "CN",
         "DK",
@@ -25575,18 +25963,20 @@
       "narrative": null
     },
     {
-      "type": "velocity_anomaly",
-      "title": "Sweden \u2014 3 signals in 30 days (+2.4\u03c3)",
-      "score": 7.25,
+      "type": "actor_concentration",
+      "title": "Marshall & Popp, Llc lobbying for 3 countries simultaneously",
+      "score": 5.983,
       "countries": [
-        "SE"
+        "AU",
+        "GB",
+        "JP"
       ],
       "signal_keys": [
-        "lda:88d0ee82-17b8-4f07-bb41-496842262d76",
-        "lda:fd9eb0fd-5c11-4204-877e-d20eda1cf938",
-        "lda:61d543a0-f4ee-4fa7-a743-33e15396a7c8"
+        "lda:fb7fed96-f152-4700-bb3d-6cd848a19cac",
+        "lda:0dde4e28-b044-496a-89f0-bb48708af48c",
+        "lda:5c1abbc2-8016-41f7-8fe2-3599654c3c35"
       ],
-      "why": "1.5 weighted signals in 30 days vs 0.3 avg (+2.4\u03c3). Sources: lda\u00d73",
+      "why": "Marshall & Popp, Llc filed LDA disclosures for Australia, United Kingdom, Japan in the same period.",
       "narrative": null
     }
   ]
