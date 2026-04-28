@@ -516,19 +516,6 @@
             block.appendChild(body);
           }
 
-          if (narrative.prompt) {
-            const copyBtn = document.createElement('span');
-            copyBtn.className = 'narrative-prompt';
-            copyBtn.textContent = 'copy prompt';
-            copyBtn.addEventListener('click', e => {
-              e.stopPropagation();
-              navigator.clipboard.writeText(narrative.prompt).then(() => {
-                copyBtn.textContent = 'copied';
-                setTimeout(() => { copyBtn.textContent = 'copy prompt'; }, 1200);
-              }).catch(() => {});
-            });
-            block.appendChild(copyBtn);
-          }
         }
 
         // Click block = expand/collapse. One open at a time.

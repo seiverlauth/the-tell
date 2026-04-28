@@ -119,8 +119,12 @@
       border-bottom: 1px solid var(--border);
       cursor: pointer;
       user-select: none;
-      transition: border-left-color 80ms;
+      transition: border-left-color 80ms, background 80ms;
       border-left: 2px solid transparent;
+    }
+    .narrative-block:not(.body-open):hover {
+      background: var(--brass-subtle);
+      border-left-color: rgba(176,141,87,0.4);
     }
 
     .narrative-block:last-child {
@@ -184,19 +188,6 @@
     }
     .narrative-block.body-open .narrative-body { display: block; }
 
-    .narrative-prompt {
-      display: none;
-      margin-top: 12px;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--brass);
-      cursor: pointer;
-      letter-spacing: 0.04em;
-      opacity: 0.7;
-      transition: color 80ms, opacity 80ms;
-    }
-    .narrative-block.body-open .narrative-prompt { display: inline-block; }
-    .narrative-prompt:hover { color: var(--text-primary); opacity: 1; }
 
     /* ── Feed section ── */
     #feed-section {
