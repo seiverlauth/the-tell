@@ -1,84 +1,28 @@
 {
+  "generated_at": "2026-04-29T21:30:17.284283+00:00",
+  "sources": [
+    "anchor_budget"
+  ],
   "signals": [
     {
       "iso": "IL",
       "source": "anchor_budget",
-      "signal_date": "2026-02-18",
-      "title": "IL — Elbit Systems Awarded $277 Million Contracts for 30mm Turrets and Munitions by an International Customer",
-      "value_usd": 277000000.0,
-      "description": "(NASDAQ: ESLT) (TASE: ESLT) (“Elbit Systems” or the “Company”) announced today that it has been awarded contracts in an aggregate value of approximately $277 million by an international customer for supply of 30 mm turrets and munitions. | EDGAR: 0001178913-26-000537",
+      "signal_date": "2025-07-28",
+      "title": "IL \u2014 Elbit Systems Awarded $260 Million Contract to Supply DIRCM Self-Protection Systems for Germany's A400M Aircraft Fleet",
+      "value_usd": 260000000.0,
+      "description": "The contract, to be executed over a 6-year period, follows a procurement decision by the Federal Office for Equipment, Information Technology and Operations of the Bundeswehr (BAAINBw). | EDGAR: 0001178913-25-002470",
       "raw_score": 7.0,
       "weight": 1.0,
-      "accession": "0001178913-26-000537",
-      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891326000537/"
-    },
-    {
-      "iso": "IL",
-      "source": "anchor_budget",
-      "signal_date": "2026-02-17",
-      "title": "IL — Elbit Systems Awarded Contracts Valued at Approximately $435 Million for Advanced Defense Systems",
-      "value_usd": 435000000.0,
-      "description": "(NASDAQ: ESLT) (TASE: ESLT) (“Elbit Systems” or the “Company”) announced today that it was awarded several contracts with a total value of approximately $435 million from an international customer. | EDGAR: 0001178913-26-000482",
-      "raw_score": 7.0,
-      "weight": 1.0,
-      "accession": "0001178913-26-000482",
-      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891326000482/"
-    },
-    {
-      "iso": "IL",
-      "source": "anchor_budget",
-      "signal_date": "2026-01-26",
-      "title": "IL — Elbit Systems Awarded $228 Million Follow-on Contract to Provide Iron Fist APS for U.S. Army Bradley IFV Upgrades",
-      "value_usd": 228000000.0,
-      "description": "Army Bradley IFV Upgrades Haifa, Israel, January 26, 2026 – Elbit Systems Ltd . | EDGAR: 0001178913-26-000214",
-      "raw_score": 7.0,
-      "weight": 1.0,
-      "accession": "0001178913-26-000214",
-      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891326000214/"
-    },
-    {
-      "iso": "IL",
-      "source": "anchor_budget",
-      "signal_date": "2025-11-19",
-      "title": "IL — Elbit Systems Awarded Contracts in an Aggregate Amount of $210 Million from Israel Ministry of Defense for Tank Upgrades",
-      "value_usd": 210000000.0,
-      "description": "(NASDAQ: ESLT) (TASE: ESLT) (“Elbit Systems” or the “Company”) announced today that it has been awarded contracts from the Israel Ministry of Defense in an aggregate amount of approximately $210 million for the upgrade of Merkava Main Battle Tanks (MBTs). | EDGAR: 0001178913-25-003892",
-      "raw_score": 7.0,
-      "weight": 1.0,
-      "accession": "0001178913-25-003892",
-      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891325003892/"
-    },
-    {
-      "iso": "IL",
-      "source": "anchor_budget",
-      "signal_date": "2025-11-17",
-      "title": "IL — Elbit Systems Signs a $2.3 Billion International Contract",
-      "value_usd": 2300000000.0,
-      "description": "(NASDAQ: ESLT) (TASE: ESLT) (“Elbit Systems” or the “Company”) announced today that it has signed an international contract for a strategic solution in an amount of approximately $2.3 billion. | EDGAR: 0001178913-25-003866",
-      "raw_score": 7.0,
-      "weight": 1.0,
-      "accession": "0001178913-25-003866",
-      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891325003866/"
-    },
-    {
-      "iso": "IL",
-      "source": "anchor_budget",
-      "signal_date": "2025-08-13",
-      "title": "IL — Elbit Systems Awarded $1.635 Billion Contract to Deliver a Range of Defense Solutions to a European Country",
-      "value_usd": 1635000000.0,
-      "description": "(NASDAQ: ESLT) (TASE: ESLT) (“Elbit Systems” or the “Company”) announced today that is has been awarded $1.635 Billion contract to deliver a range of defense solutions to a European country. | EDGAR: 0001178913-25-002820",
-      "raw_score": 7.0,
-      "weight": 1.0,
-      "accession": "0001178913-25-002820",
-      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891325002820/"
+      "accession": "0001178913-25-002470",
+      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891325002470/"
     },
     {
       "iso": "IL",
       "source": "anchor_budget",
       "signal_date": "2025-08-11",
-      "title": "IL — Elbit Systems Awarded Two Contracts in an Aggregate Amount of Approximately $260 Million for the Supply of Advanced Airborne Munitions to the Israel M",
+      "title": "IL \u2014 Elbit Systems Awarded Two Contracts in an Aggregate Amount of Approximately $260 Million for the Supply of Advanced Airborne Munitions to the Israel M",
       "value_usd": 260000000.0,
-      "description": "(NASDAQ: ESLT) (TASE: ESLT) (“Elbit Systems” or the “Company”) announced today, that it was awarded two contracts in an aggregate amount of approximately $260 million for the supply of advanced airborne munitions to the Israel Ministry of Defense (IMOD). | EDGAR: 0001178913-25-002709",
+      "description": "(NASDAQ: ESLT) (TASE: ESLT) (\u201cElbit Systems\u201d or the \u201cCompany\u201d) announced today, that it was awarded two contracts in an aggregate amount of approximately $260 million for the supply of advanced airborne munitions to the Israel Ministry of Defense (IMOD). | EDGAR: 0001178913-25-002709",
       "raw_score": 7.0,
       "weight": 1.0,
       "accession": "0001178913-25-002709",
@@ -87,14 +31,98 @@
     {
       "iso": "IL",
       "source": "anchor_budget",
-      "signal_date": "2025-07-28",
-      "title": "IL — Elbit Systems Awarded $260 Million Contract to Supply DIRCM Self-Protection Systems for Germany's A400M Aircraft Fleet",
-      "value_usd": 260000000.0,
-      "description": "The contract, to be executed over a 6-year period, follows a procurement decision by the Federal Office for Equipment, Information Technology and Operations of the Bundeswehr (BAAINBw). | EDGAR: 0001178913-25-002470",
+      "signal_date": "2025-08-13",
+      "title": "IL \u2014 Elbit Systems Awarded $1.635 Billion Contract to Deliver a Range of Defense Solutions to a European Country",
+      "value_usd": 1635000000.0,
+      "description": "(NASDAQ: ESLT) (TASE: ESLT) (\u201cElbit Systems\u201d or the \u201cCompany\u201d) announced today that is has been awarded $1.635 Billion contract to deliver a range of defense solutions to a European country. | EDGAR: 0001178913-25-002820",
       "raw_score": 7.0,
       "weight": 1.0,
-      "accession": "0001178913-25-002470",
-      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891325002470/"
+      "accession": "0001178913-25-002820",
+      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891325002820/"
+    },
+    {
+      "iso": "IL",
+      "source": "anchor_budget",
+      "signal_date": "2025-11-17",
+      "title": "IL \u2014 Elbit Systems Signs a $2.3 Billion International Contract",
+      "value_usd": 2300000000.0,
+      "description": "(NASDAQ: ESLT) (TASE: ESLT) (\u201cElbit Systems\u201d or the \u201cCompany\u201d) announced today that it has signed an international contract for a strategic solution in an amount of approximately $2.3 billion. | EDGAR: 0001178913-25-003866",
+      "raw_score": 7.0,
+      "weight": 1.0,
+      "accession": "0001178913-25-003866",
+      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891325003866/"
+    },
+    {
+      "iso": "IL",
+      "source": "anchor_budget",
+      "signal_date": "2025-11-19",
+      "title": "IL \u2014 Elbit Systems Awarded Contracts in an Aggregate Amount of $210 Million from Israel Ministry of Defense for Tank Upgrades",
+      "value_usd": 210000000.0,
+      "description": "(NASDAQ: ESLT) (TASE: ESLT) (\u201cElbit Systems\u201d or the \u201cCompany\u201d) announced today that it has been awarded contracts from the Israel Ministry of Defense in an aggregate amount of approximately $210 million for the upgrade of Merkava Main Battle Tanks (MBTs). | EDGAR: 0001178913-25-003892",
+      "raw_score": 7.0,
+      "weight": 1.0,
+      "accession": "0001178913-25-003892",
+      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891325003892/"
+    },
+    {
+      "iso": "IL",
+      "source": "anchor_budget",
+      "signal_date": "2026-01-26",
+      "title": "IL \u2014 Elbit Systems Awarded $228 Million Follow-on Contract to Provide Iron Fist APS for U.S. Army Bradley IFV Upgrades",
+      "value_usd": 228000000.0,
+      "description": "Army Bradley IFV Upgrades Haifa, Israel, January 26, 2026 \u2013 Elbit Systems Ltd . | EDGAR: 0001178913-26-000214",
+      "raw_score": 7.0,
+      "weight": 1.0,
+      "accession": "0001178913-26-000214",
+      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891326000214/"
+    },
+    {
+      "iso": "IL",
+      "source": "anchor_budget",
+      "signal_date": "2026-02-17",
+      "title": "IL \u2014 Elbit Systems Awarded Contracts Valued at Approximately $435 Million for Advanced Defense Systems",
+      "value_usd": 435000000.0,
+      "description": "(NASDAQ: ESLT) (TASE: ESLT) (\u201cElbit Systems\u201d or the \u201cCompany\u201d) announced today that it was awarded several contracts with a total value of approximately $435 million from an international customer. | EDGAR: 0001178913-26-000482",
+      "raw_score": 7.0,
+      "weight": 1.0,
+      "accession": "0001178913-26-000482",
+      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891326000482/"
+    },
+    {
+      "iso": "IL",
+      "source": "anchor_budget",
+      "signal_date": "2026-02-18",
+      "title": "IL \u2014 Elbit Systems Awarded $277 Million Contracts for 30mm Turrets and Munitions by an International Customer",
+      "value_usd": 277000000.0,
+      "description": "(NASDAQ: ESLT) (TASE: ESLT) (\u201cElbit Systems\u201d or the \u201cCompany\u201d) announced today that it has been awarded contracts in an aggregate value of approximately $277 million by an international customer for supply of 30 mm turrets and munitions. | EDGAR: 0001178913-26-000537",
+      "raw_score": 7.0,
+      "weight": 1.0,
+      "accession": "0001178913-26-000537",
+      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891326000537/"
+    },
+    {
+      "iso": "IL",
+      "source": "anchor_budget",
+      "signal_date": "2026-04-06",
+      "title": "IL \u2014 Elbit Systems Awarded $750 Million to Supply PULS\u2122 Rocket Artillery Systems to the Hellenic Armed Forces",
+      "value_usd": 750000000.0,
+      "description": "announced today, further to its announcement from December 16, 2025, that as part of an agreement between the Israeli Ministry of Defense and the Hellenic Ministry of National Defense, it was awarded a contract worth approximately $750 million (\u20ac650 million) to supply Precise & Universal Launching S | EDGAR: 0001178913-26-002010",
+      "raw_score": 7.0,
+      "weight": 1.0,
+      "accession": "0001178913-26-002010",
+      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891326002010/exhibit_1.htm"
+    },
+    {
+      "iso": "IL",
+      "source": "anchor_budget",
+      "signal_date": "2026-04-22",
+      "title": "IL \u2014 Elbit Systems Awarded Contracts in an Aggregate Amount of Approximately $200 Million for the Supply of Advanced Airborne Munitions to the Israel Minis",
+      "value_usd": 200000000.0,
+      "description": "announced today, that during Operation \u201cRoaring Lion\u201d, the Company was awarded several contracts in an aggregate amount of approximately $200 million for the supply of advanced airborne munitions to the Israel Ministry of Defense (IMOD). | EDGAR: 0001178913-26-002179",
+      "raw_score": 7.0,
+      "weight": 1.0,
+      "accession": "0001178913-26-002179",
+      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891326002179/exhibit_1.htm"
     }
   ]
 }

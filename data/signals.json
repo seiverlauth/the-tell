@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T23:54:35.156203+00:00",
+  "generated_at": "2026-04-29T21:30:20.328569+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -13,6 +13,478 @@
     "sam"
   ],
   "signals": [
+    {
+      "filing_uuid": "49b78c11-ed17-4bfa-a8a2-931ff7422111",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-28",
+      "title": "Trade, Transportation \u2014 Europort, Inc. via Mo Strategies, Inc.",
+      "value_usd": null,
+      "description": "Facilitating discussions regarding Polish port projects.",
+      "lobbying_firm": "Mo Strategies, Inc.",
+      "issue_codes": [
+        "TRA",
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/49b78c11-ed17-4bfa-a8a2-931ff7422111/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "2d9f5efb-638f-44d5-8d64-06de41382563",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-28",
+      "title": "Homeland Security, Budget, Transportation \u2014 Florida Ports Council via Lsn Partners, Llc",
+      "value_usd": null,
+      "description": "Port related issues and initiatives.",
+      "lobbying_firm": "Lsn Partners, Llc",
+      "issue_codes": [
+        "BUD",
+        "HOM",
+        "TRA"
+      ],
+      "url": "https://lda.gov/filings/public/filing/2d9f5efb-638f-44d5-8d64-06de41382563/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57129,
+      "iso": "GB",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "SHUQUN LTD (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57129",
+      "profile": {
+        "name": "United Kingdom",
+        "score": 5,
+        "factors": [
+          "nuclear program",
+          "regional power",
+          "US partner",
+          "maritime chokepoint"
+        ],
+        "rationale": "Active nuclear weapons program \u2014 Trident (+2), regional power and global basing network (+1), major US interoperability partner \u2014 Five Eyes, AUKUS (+1), controls Gibraltar and Diego Garcia chokepoints (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57134,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "COSTIN SHIPPING LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57134",
+      "profile": {
+        "name": "China",
+        "score": 10,
+        "factors": [
+          "South China Sea",
+          "nuclear program",
+          "rare earths",
+          "BRI",
+          "regional power"
+        ],
+        "rationale": "Contests control of South China Sea \u2014 primary Indo-Pacific chokepoint (+3), major hydrocarbon reserves and transit dependency (+2), active nuclear program \u2014 second-strike capable ICBM/SLBM (+2), dominant rare earth extraction and processing \u2014 ~60% of global supply (+2), regional power and primary proxy hub \u2014 BRI, Pacific islands, Africa, Belt and Road infrastructure leverage (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57137,
+      "iso": "PA",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "NAXOS MARITIME AND TRADING S.A. (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57137",
+      "profile": {
+        "name": "Panama",
+        "score": 5,
+        "factors": [
+          "maritime chokepoint",
+          "Panama Canal",
+          "Western Hemisphere",
+          "BRI exposure"
+        ],
+        "rationale": "Panama Canal \u2014 Western Hemisphere chokepoint connecting Atlantic and Pacific (+3), Western Hemisphere presence (+1), Chinese BRI/port operator influence (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57140,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Morteza Ali BAKHSHI (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57140",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57145,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Masoud KAVOUSI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: KARMANIYA TEJARAT ASAR KISH COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57145",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57149,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Ehsan MOSLEHI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: KHAVAR TEJARAT ARKA KISH COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57149",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57151,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Mahmud TADAYYON (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: NAGHSH SIMORGH SAHAND LLC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57151",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57156,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Alireza KAHKOUI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: RAHBAR TEJARI SETAREH TABAN KISH COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57156",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57159,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Fahim MALEKI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: TEJARAT SARIR AFROOZ KISH COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57159",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57175,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Janelyn Eusebio EMPERADOR (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57175",
+      "profile": {
+        "name": "United Arab Emirates",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "US basing",
+          "proxy hub"
+        ],
+        "rationale": "Major hydrocarbon reserves (+2), US basing access \u2014 Al Dhafra Air Base (+1), regional proxy hub \u2014 Sudan, Libya, Horn of Africa (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57176,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "TAI LUNG TRADING LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: SEYYED MOHAMMAD MOSANNA'I NAJIBI AND PARTNERS COMPANY)",
+      "programs": [
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57176",
+      "profile": {
+        "name": "China",
+        "score": 10,
+        "factors": [
+          "South China Sea",
+          "nuclear program",
+          "rare earths",
+          "BRI",
+          "regional power"
+        ],
+        "rationale": "Contests control of South China Sea \u2014 primary Indo-Pacific chokepoint (+3), major hydrocarbon reserves and transit dependency (+2), active nuclear program \u2014 second-strike capable ICBM/SLBM (+2), dominant rare earth extraction and processing \u2014 ~60% of global supply (+2), regional power and primary proxy hub \u2014 BRI, Pacific islands, Africa, Belt and Road infrastructure leverage (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57177,
+      "iso": "GB",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "SANOVO LTD (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: EMPERADOR, Janelyn Eusebio)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57177",
+      "profile": {
+        "name": "United Kingdom",
+        "score": 5,
+        "factors": [
+          "nuclear program",
+          "regional power",
+          "US partner",
+          "maritime chokepoint"
+        ],
+        "rationale": "Active nuclear weapons program \u2014 Trident (+2), regional power and global basing network (+1), major US interoperability partner \u2014 Five Eyes, AUKUS (+1), controls Gibraltar and Diego Garcia chokepoints (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57178,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Sorayya Mehri HAJIBABA (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: FARAB SOROUSH AFAGH QESHM COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57178",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57403,
+      "iso": "VN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "THIEN AN HOA BINH COMPANY LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57403",
+      "profile": {
+        "name": "Vietnam",
+        "score": 4,
+        "factors": [
+          "South China Sea",
+          "strategic minerals",
+          "rare earths",
+          "US partner"
+        ],
+        "rationale": "South China Sea territorial disputes \u2014 Paracel and Spratly Islands (+1), world's second-largest rare earth reserves (+2), US defense relationship expanding post-normalization (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "iso": "TN",
+      "source": "dsca",
+      "signal_date": "2026-04-27",
+      "title": "Border Security Project Phase III",
+      "value_usd": 95000000.0,
+      "description": "Home Bureau of Political-Military Affairs Remarks & Releases \u2026 Tunisia \u2013 Border Security Project Phase III hide Tunisia \u2013 Border Security Project Phase III Foreign Military Sales: Congressional Notification Bureau of Political-Military Affairs April 27, 2026 The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of Tunisia to buy equipment in support of its Border Security Project Phase III.",
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/04/tunisia-border-security-project-phase-iii/",
+      "wp_id": 679764,
+      "profile": {
+        "name": "Tunisia",
+        "score": 2,
+        "factors": [
+          "maritime corridor",
+          "Sahel spillover"
+        ],
+        "rationale": "Sicily Channel \u2014 sits at Mediterranean narrowing (+1), Sahel/Libya instability spillover and migration corridor (+1)"
+      },
+      "layer": "military",
+      "quality": 1.0,
+      "dollar_mod": 1.1483292703966637,
+      "is_fr_policy": null
+    },
     {
       "filing_uuid": "04ed815d-3559-4dd3-b6d4-aa67b3e17ab4",
       "iso": "XX",
@@ -223,6 +695,32 @@
       },
       "layer": "regulatory",
       "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "iso": "IL",
+      "source": "anchor_budget",
+      "signal_date": "2026-04-22",
+      "title": "IL \u2014 Elbit Systems Awarded Contracts in an Aggregate Amount of Approximately $200 Million for the Supply of Advanced Airborne Munitions to the Israel Minis",
+      "value_usd": 200000000.0,
+      "description": "announced today, that during Operation \u201cRoaring Lion\u201d, the Company was awarded several contracts in an aggregate amount of approximately $200 million for the supply of advanced airborne munitions to the Israel Ministry of Defense (IMOD). | EDGAR: 0001178913-26-002179",
+      "accession": "0001178913-26-002179",
+      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891326002179/exhibit_1.htm",
+      "profile": {
+        "name": "Israel",
+        "score": 7,
+        "factors": [
+          "nuclear program",
+          "active conflict",
+          "US basing",
+          "regional power",
+          "sanctions"
+        ],
+        "rationale": "Undeclared nuclear weapons program (+2), active conflict \u2014 Gaza war, Lebanon, regional escalation (+2), major US security guarantor and basing access (+1), regional power (+1), active sanctions against counterparties (+1)"
+      },
+      "layer": "military",
+      "quality": 0.75,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -5531,6 +6029,32 @@
       "profile": null,
       "layer": "influence",
       "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "iso": "IL",
+      "source": "anchor_budget",
+      "signal_date": "2026-04-06",
+      "title": "IL \u2014 Elbit Systems Awarded $750 Million to Supply PULS\u2122 Rocket Artillery Systems to the Hellenic Armed Forces",
+      "value_usd": 750000000.0,
+      "description": "announced today, further to its announcement from December 16, 2025, that as part of an agreement between the Israeli Ministry of Defense and the Hellenic Ministry of National Defense, it was awarded a contract worth approximately $750 million (\u20ac650 million) to supply Precise & Universal Launching S | EDGAR: 0001178913-26-002010",
+      "accession": "0001178913-26-002010",
+      "page_url": "https://www.sec.gov/Archives/edgar/data/1027664/000117891326002010/exhibit_1.htm",
+      "profile": {
+        "name": "Israel",
+        "score": 7,
+        "factors": [
+          "nuclear program",
+          "active conflict",
+          "US basing",
+          "regional power",
+          "sanctions"
+        ],
+        "rationale": "Undeclared nuclear weapons program (+2), active conflict \u2014 Gaza war, Lebanon, regional escalation (+2), major US security guarantor and basing access (+1), regional power (+1), active sanctions against counterparties (+1)"
+      },
+      "layer": "military",
+      "quality": 0.75,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -25598,27 +26122,31 @@
     {
       "type": "convergence",
       "title": "China \u2014 first appearance + influence \u2192 action",
-      "score": 42.849,
+      "score": 57.121,
       "countries": [
         "CN"
       ],
       "signal_keys": [
+        "ofac:TAI LUNG TRADING LIMITED (Entity)",
         "ofac:Feiwu BIAN (Individual)",
-        "lda:b607d4b4-b2a3-471c-8470-71fb5718c3a8"
+        "lda:b607d4b4-b2a3-471c-8470-71fb5718c3a8",
+        "ofac:COSTIN SHIPPING LIMITED (Entity)"
       ],
-      "why": "[first_appearance] ofac filed for China after first recorded of silence (profile score: 10). Signal: Feiwu BIAN (Individual) | [influence_before_action] lda on 2026-02-17 \u2192 ofac on 2026-04-16 (58d gap). No prior lda+action sequence in preceding 180d.",
+      "why": "[first_appearance] ofac filed for China after first recorded of silence (profile score: 10). Signal: COSTIN SHIPPING LIMITED (Entity) | [influence_before_action] lda on 2026-02-17 \u2192 ofac on 2026-04-16 (58d gap). No prior lda+action sequence in preceding 180d.",
       "_components": [
         {
           "type": "first_appearance",
           "title": "China \u2014 ofac after first recorded silence",
-          "score": 29.018,
+          "score": 43.29,
           "countries": [
             "CN"
           ],
           "signal_keys": [
+            "ofac:COSTIN SHIPPING LIMITED (Entity)",
+            "ofac:TAI LUNG TRADING LIMITED (Entity)",
             "ofac:Feiwu BIAN (Individual)"
           ],
-          "why": "ofac filed for China after first recorded of silence (profile score: 10). Signal: Feiwu BIAN (Individual)"
+          "why": "ofac filed for China after first recorded of silence (profile score: 10). Signal: COSTIN SHIPPING LIMITED (Entity)"
         },
         {
           "type": "influence_before_action",
@@ -25639,28 +26167,31 @@
     {
       "type": "first_appearance",
       "title": "Iran \u2014 ofac after first recorded silence",
-      "score": 36.448,
+      "score": 38.961,
       "countries": [
         "IR"
       ],
       "signal_keys": [
+        "ofac:Morteza Ali BAKHSHI (Individual)",
+        "ofac:Masoud KAVOUSI (Individual)",
+        "ofac:Ehsan MOSLEHI (Individual)",
+        "ofac:Mahmud TADAYYON (Individual)",
+        "ofac:Alireza KAHKOUI (Individual)",
+        "ofac:Fahim MALEKI (Individual)",
+        "ofac:Sorayya Mehri HAJIBABA (Individual)",
         "ofac:Kamal Sabah BALKHKANLU (Individual)",
         "ofac:Danial KHALILI (Individual)",
         "ofac:Hamidreza ROKNIFARD (Individual)",
         "ofac:SEPEHR KAVEH KISH INTERNATIONAL TRADING ",
         "ofac:SAMAN AIR SERVICES COMPANY (Entity)"
       ],
-      "why": "ofac filed for Iran after first recorded of silence (profile score: 9). Signal: Kamal Sabah BALKHKANLU (Individual)",
-      "narrative": {
-        "headline": "OFAC targets Mahan Air procurement network via new front companies",
-        "body": "OFAC designated five entities and individuals on 2026-04-21 linked to Mahan Air's supply chain, including a trading company and air services firm. The mechanism is layered front-company procurement: Mahan Air uses intermediaries to evade existing sanctions on aircraft parts and logistics.",
-        "prompt": "I just saw that OFAC sanctioned five Iranian individuals and companies on April 21, 2026, all linked in a chain back to Mahan Air \u2014 an already-sanctioned Iranian airline. Why does this matter? Mahan Air has been sanctioned for years for supporting the IRGC and Hezbollah, yet it keeps flying by sourcing parts through front companies. New designations mean U.S. persons and banks must freeze any dealings, and foreign firms risk secondary sanctions. Key entities: Mahan Air (the hub), SEPEHR KAVEH KISH INTERNATIONAL TRADING COMPANY, and SAMAN AIR SERVICES COMPANY. Is this a routine top-up of the Mahan Air sanctions list, or does it signal a broader enforcement push ahead of nuclear talks? Watch for: follow-on EU or UK designations mirroring this list, and whether Mahan Air flight operations are visibly disrupted in the next 30 days."
-      }
+      "why": "ofac filed for Iran after first recorded of silence (profile score: 9). Signal: Morteza Ali BAKHSHI (Individual)",
+      "narrative": null
     },
     {
       "type": "first_appearance",
       "title": "Turkey \u2014 ofac after first recorded silence",
-      "score": 32.398,
+      "score": 21.717,
       "countries": [
         "TR"
       ],
@@ -25673,7 +26204,7 @@
     {
       "type": "first_appearance",
       "title": "India \u2014 ofac after first recorded silence",
-      "score": 32.392,
+      "score": 21.713,
       "countries": [
         "IN"
       ],
@@ -25683,33 +26214,57 @@
         "ofac:HOUSE OF SHIPPING PRIVATE LIMITED (Entit"
       ],
       "why": "ofac filed for India after first recorded of silence (profile score: 7). Signal: Satishkumar Hareshbhai SUTARIA (Individual)",
-      "narrative": {
-        "headline": "India-based shipping firms sanctioned for Iran oil network links",
-        "body": "OFAC sanctioned two Indian entities and one individual within days, all linked to Iranian oil smuggling infrastructure via Mohammad Hossein Shamkhani. The mechanism is a coordinated enforcement action targeting India-registered nodes in a UAE-anchored Iranian sanctions evasion network.",
-        "prompt": "I just saw that the US Treasury (OFAC) sanctioned two Indian companies \u2014 Fleet Tanqo Private Limited and House of Shipping Private Limited \u2014 plus an individual named Satishkumar Hareshbhai Sutaria, all within about a week in April 2026. Fleet Tanqo is linked to Mohammad Hossein Shamkhani, and House of Shipping connects to a UAE entity called House of Shipping Investment FZCO. Why does this matter? Indian-registered companies are being used as nodes in Iranian oil sanctions evasion, and the US is now naming them publicly. Who benefits: Iran's oil export revenue. Who loses: these Indian firms, and potentially Indian banks or partners exposed to secondary sanctions risk. Is this routine? No \u2014 this is the first OFAC action recorded for India in this dataset. What to watch next: whether Sutaria is directly linked to Fleet Tanqo or House of Shipping, whether Indian regulators respond, and whether more Indian entities in the same shipping network get designated."
-      }
+      "narrative": null
+    },
+    {
+      "type": "first_appearance",
+      "title": "United Kingdom \u2014 ofac after first recorded silence",
+      "score": 21.645,
+      "countries": [
+        "GB"
+      ],
+      "signal_keys": [
+        "ofac:SHUQUN LTD (Entity)",
+        "ofac:SANOVO LTD (Entity)",
+        "ofac:Seyed Naiemaei Badroddin MOOSAVI (Indivi"
+      ],
+      "why": "ofac filed for United Kingdom after first recorded of silence (profile score: 5). Signal: SHUQUN LTD (Entity)",
+      "narrative": null
+    },
+    {
+      "type": "first_appearance",
+      "title": "Panama \u2014 ofac after first recorded silence",
+      "score": 21.645,
+      "countries": [
+        "PA"
+      ],
+      "signal_keys": [
+        "ofac:NAXOS MARITIME AND TRADING S.A. (Entity)"
+      ],
+      "why": "ofac filed for Panama after first recorded of silence (profile score: 5). Signal: NAXOS MARITIME AND TRADING S.A. (Entity)",
+      "narrative": null
     },
     {
       "type": "convergence",
       "title": "Colombia \u2014 first appearance + influence \u2192 action",
-      "score": 26.425,
+      "score": 20.289,
       "countries": [
         "CO"
       ],
       "signal_keys": [
         "ofac:GLOBAL QOWA AL BASHERIA S.A.S. (Entity)",
-        "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)",
-        "ofac:Jose Oscar GARCIA BATTE (Individual)",
-        "ofac:Jose Libardo QUIJANO TORRES (Individual)",
+        "fara:7692",
         "ofac:Omar Fernando GARCIA BATTE (Individual)",
-        "fara:7692"
+        "ofac:Jose Libardo QUIJANO TORRES (Individual)",
+        "ofac:Jose Oscar GARCIA BATTE (Individual)",
+        "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)"
       ],
       "why": "[first_appearance] ofac filed for Colombia after first recorded of silence (profile score: 6). Signal: FENIX HUMAN RESOURCES S.A.S. (Entity) | [influence_before_action] fara on 2026-02-12 \u2192 ofac on 2026-04-17 (64d gap). No prior fara+action sequence in preceding 180d.",
       "_components": [
         {
           "type": "first_appearance",
           "title": "Colombia \u2014 ofac after first recorded silence",
-          "score": 18.611,
+          "score": 12.475,
           "countries": [
             "CO"
           ],
@@ -25730,43 +26285,39 @@
             "CO"
           ],
           "signal_keys": [
-            "fara:7692",
-            "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)"
+            "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)",
+            "fara:7692"
           ],
           "why": "fara on 2026-02-12 \u2192 ofac on 2026-04-17 (64d gap). No prior fara+action sequence in preceding 180d."
         }
       ],
-      "narrative": {
-        "headline": "FARA Filing Preceded OFAC Sanctions on Colombian Labor Network by 64 Days",
-        "body": "OFAC sanctioned a cluster of Colombian entities and individuals\u2014FENIX HUMAN RESOURCES S.A.S., GLOBAL QOWA AL BASHERIA S.A.S., and the Garcia Batte brothers\u2014on April 17, 2026, 64 days after a FARA filing flagged the same network. The FARA registration surfaced foreign influence activity that U.S. investigators then traced to sanctionable conduct, suggesting the filing was an upstream investigative trigger.",
-        "prompt": "I just saw that a FARA filing in February 2026 preceded OFAC sanctions by 64 days against a Colombian labor and services network\u2014FENIX HUMAN RESOURCES S.A.S., GLOBAL QOWA AL BASHERIA S.A.S., Jose Oscar Garcia Batte, Omar Fernando Garcia Batte, and Jose Libardo Quijano Torres. Why does this matter? FARA filings expose foreign influence operations, and when they precede sanctions, it suggests U.S. authorities used the foreign-agent disclosure as an investigative lead. Who benefits or loses: anyone doing business with these entities faces exposure; competitors or counterparties may have unknowing liability. Is this routine? No\u2014a 64-day FARA-to-OFAC sequence with no prior pattern in 180 days is anomalous. What to watch next: Are there additional entities linked to INTERNATIONAL SERVICES AGENCY S.A.S. not yet sanctioned? Has the FARA registrant been identified, and what foreign principal did they represent? Further OFAC tranches targeting the same network would confirm this is an active, expanding enforcement action."
-      }
+      "narrative": null
     },
     {
       "type": "convergence",
       "title": "Mexico \u2014 first appearance + influence \u2192 action",
-      "score": 26.109,
+      "score": 20.006,
       "countries": [
         "MX"
       ],
       "signal_keys": [
-        "ofac:COMERCIALIZADORA Y ARRENDADORA DE MEXICO",
-        "lda:2546e933-cf40-44b7-8a69-91c428ae13e8",
         "ofac:QUIMICA SOLUCIONES Y LOGISTICA INTEGRAL ",
-        "ofac:DESARROLLOS CARTOK S.A. DE C.V. (Entity)",
-        "ofac:Jose de Jesus RAMIREZ TORRES (Individual",
-        "ofac:DIAMANTE CASINO (Entity)",
         "ofac:CORPORATIVO Y ENLACE RAM S.A. DE C.V. (E",
         "ofac:BOTANICA 2000 (Entity)",
+        "ofac:DIAMANTE CASINO (Entity)",
         "ofac:Ramiro Baltazar FELIX HERAS (Individual)",
-        "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual"
+        "lda:2546e933-cf40-44b7-8a69-91c428ae13e8",
+        "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual",
+        "ofac:Jose de Jesus RAMIREZ TORRES (Individual",
+        "ofac:DESARROLLOS CARTOK S.A. DE C.V. (Entity)",
+        "ofac:COMERCIALIZADORA Y ARRENDADORA DE MEXICO"
       ],
       "why": "[first_appearance] ofac filed for Mexico after first recorded of silence (profile score: 4). Signal: Jose de Jesus RAMIREZ TORRES (Individual) | [influence_before_action] lda on 2026-03-16 \u2192 ofac on 2026-04-14 (29d gap). No prior lda+action sequence in preceding 180d.",
       "_components": [
         {
           "type": "first_appearance",
           "title": "Mexico \u2014 ofac after first recorded silence",
-          "score": 18.51,
+          "score": 12.407,
           "countries": [
             "MX"
           ],
@@ -25801,8 +26352,39 @@
     },
     {
       "type": "first_appearance",
+      "title": "United Arab Emirates \u2014 ofac after first recorded silence",
+      "score": 17.316,
+      "countries": [
+        "AE"
+      ],
+      "signal_keys": [
+        "ofac:Janelyn Eusebio EMPERADOR (Individual)",
+        "ofac:Mohammad VAHIDI (Individual)",
+        "ofac:CHABOK FZCO (Entity)",
+        "ofac:TAYLOR SHIPPING FZCO (Entity)",
+        "ofac:SHIPSTAR SHIPCHANDLING LLC (Entity)",
+        "ofac:ACS TRADING LLC (Entity)"
+      ],
+      "why": "ofac filed for United Arab Emirates after first recorded of silence (profile score: 4). Signal: Janelyn Eusebio EMPERADOR (Individual)",
+      "narrative": null
+    },
+    {
+      "type": "first_appearance",
+      "title": "Vietnam \u2014 ofac after first recorded silence",
+      "score": 17.316,
+      "countries": [
+        "VN"
+      ],
+      "signal_keys": [
+        "ofac:THIEN AN HOA BINH COMPANY LIMITED (Entit"
+      ],
+      "why": "ofac filed for Vietnam after first recorded of silence (profile score: 4). Signal: THIEN AN HOA BINH COMPANY LIMITED (Entity)",
+      "narrative": null
+    },
+    {
+      "type": "first_appearance",
       "title": "Iraq \u2014 ofac after first recorded silence",
-      "score": 21.713,
+      "score": 14.555,
       "countries": [
         "IQ"
       ],
@@ -25817,42 +26399,21 @@
     },
     {
       "type": "first_appearance",
-      "title": "United Arab Emirates \u2014 ofac after first recorded silence",
-      "score": 16.199,
+      "title": "Tunisia \u2014 dsca after first recorded silence",
+      "score": 9.0,
       "countries": [
-        "AE"
+        "TN"
       ],
       "signal_keys": [
-        "ofac:Mohammad VAHIDI (Individual)",
-        "ofac:CHABOK FZCO (Entity)",
-        "ofac:TAYLOR SHIPPING FZCO (Entity)",
-        "ofac:SHIPSTAR SHIPCHANDLING LLC (Entity)",
-        "ofac:ACS TRADING LLC (Entity)"
+        "dsca:Border Security Project Phase III"
       ],
-      "why": "ofac filed for United Arab Emirates after first recorded of silence (profile score: 4). Signal: Mohammad VAHIDI (Individual)",
-      "narrative": {
-        "headline": "UAE-based shell network hit by OFAC in coordinated Iran sanctions sweep",
-        "body": "OFAC designated five UAE-registered entities and individuals in one week, all linked to sanctioned Iranian networks including Mahan Air and IRGC-connected figures. The mechanism is UAE free-zone companies being used as procurement and shipping fronts for Iranian sanctions evasion.",
-        "prompt": "I just saw that OFAC sanctioned five UAE-based companies and individuals in a single week \u2014 CHABOK FZCO, TAYLOR SHIPPING FZCO, SHIPSTAR SHIPCHANDLING LLC, ACS TRADING LLC, and Mohammad VAHIDI \u2014 all linked to Iranian sanctioned networks including Mahan Air and figures tied to the IRGC. Why does this matter? UAE free zones are a known chokepoint for Iranian sanctions evasion, and coordinated multi-entity designations usually signal a larger enforcement action or intelligence operation. Who are the key nodes here \u2014 what is HOUSE OF SHIPPING INVESTMENT FZCO, and how does SHAMKHANI connect to Taylor Shipping? Is this cluster of designations routine or part of a named operation? What should I watch for next: follow-on designations of UAE banks or brokers that serviced these entities, and whether UAE regulators respond with their own enforcement."
-      }
-    },
-    {
-      "type": "first_appearance",
-      "title": "United Kingdom \u2014 ofac after first recorded silence",
-      "score": 13.573,
-      "countries": [
-        "GB"
-      ],
-      "signal_keys": [
-        "ofac:Seyed Naiemaei Badroddin MOOSAVI (Indivi"
-      ],
-      "why": "ofac filed for United Kingdom after first recorded of silence (profile score: 5). Signal: Seyed Naiemaei Badroddin MOOSAVI (Individual)",
+      "why": "dsca filed for Tunisia after first recorded of silence (profile score: 2). Signal: Border Security Project Phase III",
       "narrative": null
     },
     {
       "type": "first_appearance",
       "title": "Russia \u2014 fara after first recorded silence",
-      "score": 11.411,
+      "score": 7.649,
       "countries": [
         "RU"
       ],
@@ -25865,7 +26426,7 @@
     {
       "type": "first_appearance",
       "title": "Egypt \u2014 fara after first recorded silence",
-      "score": 10.429,
+      "score": 6.991,
       "countries": [
         "EG"
       ],
@@ -25878,7 +26439,7 @@
     {
       "type": "first_appearance",
       "title": "Lithuania \u2014 dsca after first recorded silence",
-      "score": 9.62,
+      "score": 6.448,
       "countries": [
         "LT"
       ],
@@ -25886,6 +26447,20 @@
         "dsca:AIM-9X Sidewinder Block II Missiles"
       ],
       "why": "dsca filed for Lithuania after first recorded of silence (profile score: 2). Signal: AIM-9X Sidewinder Block II Missiles",
+      "narrative": null
+    },
+    {
+      "type": "influence_before_action",
+      "title": "Panama \u2014 lda \u2192 ofac (62d)",
+      "score": 4.955,
+      "countries": [
+        "PA"
+      ],
+      "signal_keys": [
+        "ofac:NAXOS MARITIME AND TRADING S.A. (Entity)",
+        "lda:ca9dd4da-876f-4b86-9823-c580d39d74da"
+      ],
+      "why": "lda on 2026-02-25 \u2192 ofac on 2026-04-28 (62d gap). No prior lda+action sequence in preceding 180d.",
       "narrative": null
     }
   ]

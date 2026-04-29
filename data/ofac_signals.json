@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T17:49:55.211849+00:00",
+  "generated_at": "2026-04-29T21:30:08.246630+00:00",
   "sources": [
     "ofac"
   ],
@@ -1081,6 +1081,955 @@
         "ILLICIT-DRUGS-EO14059"
       ],
       "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57361"
+    },
+    {
+      "uid": 57126,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "MIRAAN (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: MIHIR SHIPPING INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57126"
+    },
+    {
+      "uid": 57127,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "BANGUS (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: COSTIN SHIPPING LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57127"
+    },
+    {
+      "uid": 57128,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "GALVIN (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: NAXOS MARITIME AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57128"
+    },
+    {
+      "uid": 57129,
+      "iso": "GB",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "SHUQUN LTD (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57129"
+    },
+    {
+      "uid": 57130,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "HH GLORY (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: SKYROS MARITIME AND TRADING S.A.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57130"
+    },
+    {
+      "uid": 57132,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "LIN 9 (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: PATRIOT INC.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57132"
+    },
+    {
+      "uid": 57134,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "COSTIN SHIPPING LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57134"
+    },
+    {
+      "uid": 57135,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "MIHIR SHIPPING INC. (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57135"
+    },
+    {
+      "uid": 57137,
+      "iso": "PA",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "NAXOS MARITIME AND TRADING S.A. (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57137"
+    },
+    {
+      "uid": 57138,
+      "iso": "PA",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "SKYROS MARITIME AND TRADING S.A. (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57138"
+    },
+    {
+      "uid": 57139,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "PATRIOT INC. (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57139"
+    },
+    {
+      "uid": 57140,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Morteza Ali BAKHSHI (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57140"
+    },
+    {
+      "uid": 57141,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Samad Vafayi QUSHCHI (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57141"
+    },
+    {
+      "uid": 57142,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Majid SHASHAEH (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57142"
+    },
+    {
+      "uid": 57143,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "AKU TEJARAT RAVIZH KISH COMPANY (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57143"
+    },
+    {
+      "uid": 57145,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Masoud KAVOUSI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: KARMANIYA TEJARAT ASAR KISH COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57145"
+    },
+    {
+      "uid": 57146,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "KARMANIYA TEJARAT ASAR KISH COMPANY (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57146"
+    },
+    {
+      "uid": 57147,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Vahid FALAHATKARI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: KARMANIYA TEJARAT ASAR KISH COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57147"
+    },
+    {
+      "uid": 57148,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "KHAVAR TEJARAT ARKA KISH COMPANY (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57148"
+    },
+    {
+      "uid": 57149,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Ehsan MOSLEHI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: KHAVAR TEJARAT ARKA KISH COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57149"
+    },
+    {
+      "uid": 57150,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Ehsan Saidi NASAB (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: KHAVAR TEJARAT ARKA KISH COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57150"
+    },
+    {
+      "uid": 57151,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Mahmud TADAYYON (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: NAGHSH SIMORGH SAHAND LLC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57151"
+    },
+    {
+      "uid": 57152,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "NAGHSH SIMORGH SAHAND LLC (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57152"
+    },
+    {
+      "uid": 57153,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Hamid Reza RAMAZAN (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: NAGHSH SIMORGH SAHAND LLC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57153"
+    },
+    {
+      "uid": 57154,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Abdolazim GHANBARIAN (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: NAGHSH SIMORGH SAHAND LLC)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57154"
+    },
+    {
+      "uid": 57155,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "RAHBAR TEJARI SETAREH TABAN KISH COMPANY (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57155"
+    },
+    {
+      "uid": 57156,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Alireza KAHKOUI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: RAHBAR TEJARI SETAREH TABAN KISH COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57156"
+    },
+    {
+      "uid": 57157,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Amir HOSSEINI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: RAHBAR TEJARI SETAREH TABAN KISH COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57157"
+    },
+    {
+      "uid": 57158,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "TEJARAT SARIR AFROOZ KISH COMPANY (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57158"
+    },
+    {
+      "uid": 57159,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Fahim MALEKI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: TEJARAT SARIR AFROOZ KISH COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57159"
+    },
+    {
+      "uid": 57160,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Maryam ANBARDARAN (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: TEJARAT SARIR AFROOZ KISH COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57160"
+    },
+    {
+      "uid": 57167,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "NOOSEB TRADE LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57167"
+    },
+    {
+      "uid": 57168,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "RQI COMMODITY HK LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57168"
+    },
+    {
+      "uid": 57169,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "GASOLIX INTERNATIONAL CORPORATION LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57169"
+    },
+    {
+      "uid": 57170,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "GLOBENTURE LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57170"
+    },
+    {
+      "uid": 57171,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "REDWING GLOBAL LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57171"
+    },
+    {
+      "uid": 57173,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "FARAB SOROUSH AFAGH QESHM COMPANY (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57173"
+    },
+    {
+      "uid": 57174,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "FRATELLO CARBONE TRADING LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57174"
+    },
+    {
+      "uid": 57175,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Janelyn Eusebio EMPERADOR (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57175"
+    },
+    {
+      "uid": 57176,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "TAI LUNG TRADING LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: SEYYED MOHAMMAD MOSANNA'I NAJIBI AND PARTNERS COMPANY)",
+      "programs": [
+        "SDGT"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57176"
+    },
+    {
+      "uid": 57177,
+      "iso": "GB",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "SANOVO LTD (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: EMPERADOR, Janelyn Eusebio)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57177"
+    },
+    {
+      "uid": 57178,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Sorayya Mehri HAJIBABA (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: FARAB SOROUSH AFAGH QESHM COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57178"
+    },
+    {
+      "uid": 57179,
+      "iso": "GB",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "QIANZA LTD (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: EMPERADOR, Janelyn Eusebio)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57179"
+    },
+    {
+      "uid": 57180,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "NIX ENERGY LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57180"
+    },
+    {
+      "uid": 57313,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "Seyyed Mohammed Mehdi AL GHAFUR (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: FARAB SOROUSH AFAGH QESHM COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57313"
+    },
+    {
+      "uid": 57397,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "LISBOA SHIPPING COMPANY LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57397"
+    },
+    {
+      "uid": 57398,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "LISBOA (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: LISBOA SHIPPING COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57398"
+    },
+    {
+      "uid": 57399,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "ANKA ENERGY AND LOGISTICS COMPANY (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57399"
+    },
+    {
+      "uid": 57400,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "LPG SEVAN (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: ANKA ENERGY AND LOGISTICS COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57400"
+    },
+    {
+      "uid": 57401,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "TING TAO COMPANY LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57401"
+    },
+    {
+      "uid": 57402,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "LYNN (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: TING TAO COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57402"
+    },
+    {
+      "uid": 57403,
+      "iso": "VN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "THIEN AN HOA BINH COMPANY LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57403"
+    },
+    {
+      "uid": 57404,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "GLOBAL VIVIAN (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: THIEN AN HOA BINH COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57404"
+    },
+    {
+      "uid": 57433,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "LAUREL SHIPPING LTD (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57433"
+    },
+    {
+      "uid": 57434,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "LEPUS NAVIGATION LTD (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57434"
+    },
+    {
+      "uid": 57435,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "DOFA SHIPPING LTD (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57435"
+    },
+    {
+      "uid": 57437,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "ANSHUN II (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: LAUREL SHIPPING LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57437"
+    },
+    {
+      "uid": 57438,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "SMD WORLD (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: LEPUS NAVIGATION LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57438"
+    },
+    {
+      "uid": 57439,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "EDOR (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: DOFA SHIPPING LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57439"
+    },
+    {
+      "uid": 57440,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "BENTLEY (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: EVY BLUE LTD)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57440"
+    },
+    {
+      "uid": 57441,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "EXTENSIVE SHIPPING LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57441"
+    },
+    {
+      "uid": 57442,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "COVENIO (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: EXTENSIVE SHIPPING LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57442"
+    },
+    {
+      "uid": 57443,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "XIFOIDES GROUP LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57443"
+    },
+    {
+      "uid": 57444,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "GOLDEN SUNRISE (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: XIFOIDES GROUP LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57444"
+    },
+    {
+      "uid": 57445,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "ZHOUSHAN YAOHAI SHIPPING CO., LTD. (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57445"
+    },
+    {
+      "uid": 57446,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "ZHEN ZHU (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: ZHOUSHAN YAOHAI SHIPPING CO., LTD.)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57446"
+    },
+    {
+      "uid": 57448,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "NICE GIFT LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57448"
+    },
+    {
+      "uid": 57449,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "REAYOU COMPANY LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57449"
+    },
+    {
+      "uid": 57450,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "YEGUA TRADING LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57450"
+    },
+    {
+      "uid": 57451,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "MAGNOLIA (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: NICE GIFT LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57451"
+    },
+    {
+      "uid": 57452,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "STELLAR BEVERLY (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: YEGUA TRADING LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57452"
+    },
+    {
+      "uid": 57453,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "SEEKER 8 (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: REAYOU COMPANY LIMITED)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57453"
+    },
+    {
+      "uid": 57454,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-04-28",
+      "title": "HENGLI PETROCHEMICAL DALIAN REFINERY CO., LTD. (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57454"
     }
   ]
 }

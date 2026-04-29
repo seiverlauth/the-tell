@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T22:58:08.358205+00:00",
+  "generated_at": "2026-04-29T21:30:12.186606+00:00",
   "sources": [
     "federalregister"
   ],
@@ -5776,6 +5776,149 @@
       "description": "Notice of fees imposed on surety companies and reinsuring companies. \u00b7 The Department of the Treasury, Bureau of the Fiscal Service, is increasing the fees it imposes on and collects from surety companies and reinsuring companies, effective January 1, 2026.",
       "raw_score": null,
       "page_url": "https://www.federalregister.gov/documents/2026/04/23/2026-07873/application-and-renewal-fees-imposed-on-surety-companies-and-reinsuring-companies-increase-in-fees"
+    },
+    {
+      "document_number": "2026-08007",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-24",
+      "title": "Internal Revenue Service Advisory Council; Request for Nominations",
+      "value_usd": null,
+      "description": "Request for nominations and applications. \u00b7 The Internal Revenue Service (IRS) is accepting applications for the Internal Revenue Service Advisory Council (IRSAC) from individuals representing a cross-section of the taxpaying public with substantial, disparate experience in: tax preparation for individuals, small businesses and large, multi-national corporations; tax-exempt and government entities; information reporting; and taxpayer or consumer advocacy. Nominations of qualified individuals may come from individuals or organizations.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/24/2026-08007/internal-revenue-service-advisory-council-request-for-nominations"
+    },
+    {
+      "document_number": "2026-07994",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-24",
+      "title": "Notice of OFAC Sanctions Action",
+      "value_usd": null,
+      "description": "Notice. \u00b7 The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing the names of one or more persons and aircraft that have been placed on OFAC's Specially Designated Nationals and Blocked Persons List (SDN List) based on OFAC's determination that one or more applicable legal criteria were satisfied. All property and interests in property subject to U.S. jurisdiction of these persons are blocked, and U.S. persons are generally prohibited from engaging in transactions with them. The aircraft placed on the SDN List have been identified as property in which a blocked person has an interest.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/24/2026-07994/notice-of-ofac-sanctions-action"
+    },
+    {
+      "document_number": "2026-08151",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-27",
+      "title": "Notice of OFAC Sanctions Action",
+      "value_usd": null,
+      "description": "Notice. \u00b7 The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing the names of one or more persons that have been placed on OFAC's Specially Designated Nationals and Blocked Persons List (SDN List) based on OFAC's determination that one or more applicable legal criteria were satisfied. All property and interests in property subject to U.S. jurisdiction of these persons are blocked, and U.S. persons are generally prohibited from engaging in transactions with them.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/27/2026-08151/notice-of-ofac-sanctions-action"
+    },
+    {
+      "document_number": "2026-08148",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-27",
+      "title": "Security Review Committee",
+      "value_usd": null,
+      "description": "Final rule. \u00b7 The Secretary of State is promulgating rules defining the membership and operating procedures of the Department of State's Security Review Committee, an internal panel that reviews serious security incidents.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/27/2026-08148/security-review-committee"
+    },
+    {
+      "document_number": "2026-08143",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-27",
+      "title": "Streamlining Regulations Concerning Public Welfare Investments, Open Market Collateralized Loan Obligations, and Federal Savings Association Nondiscrimination Requirements",
+      "value_usd": null,
+      "description": "Notice of proposed rulemaking. \u00b7 The Office of the Comptroller of the Currency invites public comment on a notice of proposed rulemaking (proposed rule) to rescind or amend certain regulations that are unnecessary, based on anything other than the best reading of the underlying statutory authority, or lacking clear statutory authority, consistent with the criteria set out in the Executive Order titled Ensuring Lawful Governance and Implementing the President's \"Department of Government Efficiency\" Deregulatory Initiative. The proposed rule would remove certain references to minority- and women-owned entities; remove the portion of the credit risk retention requirements that provides an alternative compliance option for lead arrangers of open market collateralized loan obligations; and remove certain duplicative non-discrimination requirements for Federal savings associations.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/27/2026-08143/streamlining-regulations-concerning-public-welfare-investments-open-market-collateralized-loan"
+    },
+    {
+      "document_number": "2026-08344",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-29",
+      "title": "Section 45Z Clean Fuel Production Credit; Hearing",
+      "value_usd": null,
+      "description": "Notice of proposed rulemaking; notice of hearing. \u00b7 This document provides a notice of public hearing on the notice of proposed rulemaking (REG-121244-23) published in the Federal Register on Wednesday, February 4, 2026. These proposed regulations would provide rules for determining clean fuel production credits, including credit eligibility rules, emissions rates, and certification and registration requirements.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/29/2026-08344/section-45z-clean-fuel-production-credit-hearing"
+    },
+    {
+      "document_number": "2026-08341",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-29",
+      "title": "Order Preempting the Illinois Interchange Fee Prohibition Act",
+      "value_usd": null,
+      "description": "Interim final order; request for comments. \u00b7 The OCC is issuing an interim final order concluding that Federal law preempts the Illinois Interchange Fee Prohibition Act, which purports to prohibit national banks and Federal savings associations from charging or receiving interchange fees on the tax and gratuity portions of payment card transactions; and restrict the use of payment card transaction data. The OCC invites public comments on this interim final order.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/29/2026-08341/order-preempting-the-illinois-interchange-fee-prohibition-act"
+    },
+    {
+      "document_number": "2026-08328",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-29",
+      "title": "National Bank Non-Interest Charges and Fees",
+      "value_usd": null,
+      "description": "Interim final rule; request for comments. \u00b7 The OCC is adopting an interim final rule to clarify that national banks' power to charge non-interest charges and fees includes the power to assess, collect, impose, levy, receive, reserve, take, or otherwise obtain non-interest charges and fees, including interchange fees from credit and debit card operations. Further, the interim final rule explains that national banks may charge non-interest charges or fees, even when such charges and fees are set by or in consultation with third parties. The OCC invites public comments on this interim final rule.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/29/2026-08328/national-bank-non-interest-charges-and-fees"
+    },
+    {
+      "document_number": "2026-08297",
+      "iso": "US",
+      "source": "federalregister",
+      "signal_date": "2026-04-29",
+      "title": "Notice of Technical Corrections to the Harmonized Tariff Schedule of the United States for Duties Imposed by Presidential Proclamation 11021",
+      "value_usd": null,
+      "description": "Notice. \u00b7 The President issued Proclamation 11021 \"Strengthening Actions Taken to Adjust Imports of Aluminum, Steel, and Copper Into the United States,\" (Presidential Proclamation) on April 2, 2026, to adjust imports of metal products to address more effectively threats to the national security. In the Presidential Proclamation, the President authorized the Secretary of Commerce (the Secretary) to publish modifications to the Harmonized Tariff Schedule of the United States (HTSUS) to effectuate or implement the Presidential Proclamation. The Secretary also is authorized to make any technical corrections to any Annex of the Presidential Proclamation. This notice issues two technical corrections to Annex IV of the Proclamation and a clarification.",
+      "raw_score": 10.0,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/29/2026-08297/notice-of-technical-corrections-to-the-harmonized-tariff-schedule-of-the-united-states-for-duties"
+    },
+    {
+      "document_number": "2026-08295",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-29",
+      "title": "Submission for OMB Review; Comment Request",
+      "value_usd": null,
+      "description": "30-day information collection notice. \u00b7 The DoD has submitted to OMB for clearance the following proposal for collection of information under the provisions of the Paperwork Reduction Act.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/29/2026-08295/submission-for-omb-review-comment-request"
+    },
+    {
+      "document_number": "2026-08294",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-29",
+      "title": "Submission for OMB Review; Comment Request",
+      "value_usd": null,
+      "description": "30-day information collection notice. \u00b7 The DoD has submitted to OMB for clearance the following proposal for collection of information under the provisions of the Paperwork Reduction Act.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/29/2026-08294/submission-for-omb-review-comment-request"
+    },
+    {
+      "document_number": "2026-08292",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-29",
+      "title": "Submission for OMB Review; Comment Request",
+      "value_usd": null,
+      "description": "30-Day information collection notice. \u00b7 The DoD has submitted to OMB for clearance the following proposal for collection of information under the provisions of the Paperwork Reduction Act.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/29/2026-08292/submission-for-omb-review-comment-request"
+    },
+    {
+      "document_number": "2026-08278",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-29",
+      "title": "Management of Federal Agency Disbursements",
+      "value_usd": null,
+      "description": "Notice of proposed rulemaking with request for comment. \u00b7 Executive Order (E.O.) 14247, Modernizing Payments To and From America's Bank Account, directs the Secretary of the Treasury to cease issuing paper checks for all Federal disbursements to the extent permitted by law and to review and, as appropriate, revise procedures for granting limited exceptions where electronic payment methods are not feasible. In accordance with the E.O., the Department of the Treasury (Treasury), Bureau of the Fiscal Service (\"Fiscal Service\" or \"we\"), is proposing to amend its regulation that sets forth the limited circumstances under which paper check disbursements may be made by federal agencies.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/29/2026-08278/management-of-federal-agency-disbursements"
     }
   ]
 }

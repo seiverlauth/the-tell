@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T22:58:06.939986+00:00",
+  "generated_at": "2026-04-29T21:30:11.159132+00:00",
   "sources": [
     "lda"
   ],
@@ -11385,6 +11385,41 @@
         "FOR"
       ],
       "url": "https://lda.gov/filings/public/filing/04ed815d-3559-4dd3-b6d4-aa67b3e17ab4/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "49b78c11-ed17-4bfa-a8a2-931ff7422111",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-28",
+      "title": "Trade, Transportation \u2014 Europort, Inc. via Mo Strategies, Inc.",
+      "value_usd": null,
+      "description": "Facilitating discussions regarding Polish port projects.",
+      "lobbying_firm": "Mo Strategies, Inc.",
+      "issue_codes": [
+        "TRA",
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/49b78c11-ed17-4bfa-a8a2-931ff7422111/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "2d9f5efb-638f-44d5-8d64-06de41382563",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-28",
+      "title": "Homeland Security, Budget, Transportation \u2014 Florida Ports Council via Lsn Partners, Llc",
+      "value_usd": null,
+      "description": "Port related issues and initiatives.",
+      "lobbying_firm": "Lsn Partners, Llc",
+      "issue_codes": [
+        "BUD",
+        "HOM",
+        "TRA"
+      ],
+      "url": "https://lda.gov/filings/public/filing/2d9f5efb-638f-44d5-8d64-06de41382563/print/",
       "raw_score": null,
       "weight": 1.0
     }

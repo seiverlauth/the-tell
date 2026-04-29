@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T22:56:13.957694+00:00",
+  "generated_at": "2026-04-29T21:28:25.396886+00:00",
   "sources": [
     "dsca"
   ],
@@ -14296,6 +14296,18 @@
       "cn_number": null,
       "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/04/lithuania-aim-9x-sidewinder-block-ii-missiles/",
       "wp_id": 679144
+    },
+    {
+      "iso": "TN",
+      "source": "dsca",
+      "signal_date": "2026-04-27",
+      "title": "Border Security Project Phase III",
+      "value_usd": 95000000.0,
+      "description": "Home Bureau of Political-Military Affairs Remarks & Releases \u2026 Tunisia \u2013 Border Security Project Phase III hide Tunisia \u2013 Border Security Project Phase III Foreign Military Sales: Congressional Notification Bureau of Political-Military Affairs April 27, 2026 The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of Tunisia to buy equipment in support of its Border Security Project Phase III.",
+      "raw_score": 2.0,
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/04/tunisia-border-security-project-phase-iii/",
+      "wp_id": 679764
     }
   ]
 }
