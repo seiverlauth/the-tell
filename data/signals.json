@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T21:30:20.328569+00:00",
+  "generated_at": "2026-04-29T23:04:33.851943+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -26156,8 +26156,8 @@
             "CN"
           ],
           "signal_keys": [
-            "ofac:Feiwu BIAN (Individual)",
-            "lda:b607d4b4-b2a3-471c-8470-71fb5718c3a8"
+            "lda:b607d4b4-b2a3-471c-8470-71fb5718c3a8",
+            "ofac:Feiwu BIAN (Individual)"
           ],
           "why": "lda on 2026-02-17 \u2192 ofac on 2026-04-16 (58d gap). No prior lda+action sequence in preceding 180d."
         }
@@ -26254,10 +26254,10 @@
       "signal_keys": [
         "ofac:GLOBAL QOWA AL BASHERIA S.A.S. (Entity)",
         "fara:7692",
+        "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)",
         "ofac:Omar Fernando GARCIA BATTE (Individual)",
-        "ofac:Jose Libardo QUIJANO TORRES (Individual)",
         "ofac:Jose Oscar GARCIA BATTE (Individual)",
-        "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)"
+        "ofac:Jose Libardo QUIJANO TORRES (Individual)"
       ],
       "why": "[first_appearance] ofac filed for Colombia after first recorded of silence (profile score: 6). Signal: FENIX HUMAN RESOURCES S.A.S. (Entity) | [influence_before_action] fara on 2026-02-12 \u2192 ofac on 2026-04-17 (64d gap). No prior fara+action sequence in preceding 180d.",
       "_components": [
@@ -26301,16 +26301,16 @@
         "MX"
       ],
       "signal_keys": [
-        "ofac:QUIMICA SOLUCIONES Y LOGISTICA INTEGRAL ",
-        "ofac:CORPORATIVO Y ENLACE RAM S.A. DE C.V. (E",
-        "ofac:BOTANICA 2000 (Entity)",
-        "ofac:DIAMANTE CASINO (Entity)",
-        "ofac:Ramiro Baltazar FELIX HERAS (Individual)",
-        "lda:2546e933-cf40-44b7-8a69-91c428ae13e8",
-        "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual",
         "ofac:Jose de Jesus RAMIREZ TORRES (Individual",
+        "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual",
+        "ofac:QUIMICA SOLUCIONES Y LOGISTICA INTEGRAL ",
         "ofac:DESARROLLOS CARTOK S.A. DE C.V. (Entity)",
-        "ofac:COMERCIALIZADORA Y ARRENDADORA DE MEXICO"
+        "ofac:DIAMANTE CASINO (Entity)",
+        "ofac:COMERCIALIZADORA Y ARRENDADORA DE MEXICO",
+        "lda:2546e933-cf40-44b7-8a69-91c428ae13e8",
+        "ofac:CORPORATIVO Y ENLACE RAM S.A. DE C.V. (E",
+        "ofac:Ramiro Baltazar FELIX HERAS (Individual)",
+        "ofac:BOTANICA 2000 (Entity)"
       ],
       "why": "[first_appearance] ofac filed for Mexico after first recorded of silence (profile score: 4). Signal: Jose de Jesus RAMIREZ TORRES (Individual) | [influence_before_action] lda on 2026-03-16 \u2192 ofac on 2026-04-14 (29d gap). No prior lda+action sequence in preceding 180d.",
       "_components": [
@@ -26342,8 +26342,8 @@
             "MX"
           ],
           "signal_keys": [
-            "lda:2546e933-cf40-44b7-8a69-91c428ae13e8",
-            "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual"
+            "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual",
+            "lda:2546e933-cf40-44b7-8a69-91c428ae13e8"
           ],
           "why": "lda on 2026-03-16 \u2192 ofac on 2026-04-14 (29d gap). No prior lda+action sequence in preceding 180d."
         }
@@ -26457,8 +26457,8 @@
         "PA"
       ],
       "signal_keys": [
-        "ofac:NAXOS MARITIME AND TRADING S.A. (Entity)",
-        "lda:ca9dd4da-876f-4b86-9823-c580d39d74da"
+        "lda:ca9dd4da-876f-4b86-9823-c580d39d74da",
+        "ofac:NAXOS MARITIME AND TRADING S.A. (Entity)"
       ],
       "why": "lda on 2026-02-25 \u2192 ofac on 2026-04-28 (62d gap). No prior lda+action sequence in preceding 180d.",
       "narrative": null
