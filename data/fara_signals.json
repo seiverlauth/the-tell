@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T23:04:26.248607+00:00",
+  "generated_at": "2026-04-30T23:17:38.725672+00:00",
   "sources": [
     "fara"
   ],
@@ -2516,5 +2516,6 @@
       "weight": 1.0,
       "page_url": "https://efile.fara.gov/docs/7716-Registration-Statement-20260415-1.pdf"
     }
-  ]
+  ],
+  "error": "[Errno 54] Connection reset by peer"
 }

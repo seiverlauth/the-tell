@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T23:04:33.851943+00:00",
+  "generated_at": "2026-04-30T23:17:51.610145+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -13,6 +13,137 @@
     "sam"
   ],
   "signals": [
+    {
+      "filing_uuid": "dad964a1-68d8-4ecf-9af2-2e1563182ebf",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-30",
+      "title": "Defense, Homeland Security, Science/Technology \u2014 Axon Enterprise, Inc. via Red Door Consulting, Llc",
+      "value_usd": null,
+      "description": "The benefits of body worn cameras, TASERS, and non-lethal drones and related operating systems for achieving administrat\u2026",
+      "lobbying_firm": "Red Door Consulting, Llc",
+      "issue_codes": [
+        "DEF",
+        "FIR",
+        "HOM",
+        "IMM",
+        "LAW",
+        "SCI",
+        "VET"
+      ],
+      "url": "https://lda.gov/filings/public/filing/dad964a1-68d8-4ecf-9af2-2e1563182ebf/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "3bbea680-3980-4b52-ad03-6a7eb428b16a",
+      "iso": "KR",
+      "source": "lda",
+      "signal_date": "2026-04-30",
+      "title": "Energy, Science/Technology, Automotive \u2014 Sk Americas, Inc. via Capitol Resources, Llc",
+      "value_usd": null,
+      "description": "Automotive Energy Science/Technology",
+      "lobbying_firm": "Capitol Resources, Llc",
+      "issue_codes": [
+        "AUT",
+        "ENG",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/3bbea680-3980-4b52-ad03-6a7eb428b16a/print/",
+      "profile": {
+        "name": "South Korea",
+        "score": 4,
+        "factors": [
+          "US basing",
+          "nuclear program",
+          "regional power"
+        ],
+        "rationale": "Major US basing \u2014 28,000 troops, USFK (+1), latent nuclear capability \u2014 active discussion of indigenous program (+2), regional power and semiconductor/industrial hub (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "db13f2c6-203a-4e17-9d16-e8362e19106b",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-30",
+      "title": "Science/Technology \u2014 Vaultes, Llc via Tcga Group, Llc",
+      "value_usd": null,
+      "description": "Cybersecurity",
+      "lobbying_firm": "Tcga Group, Llc",
+      "issue_codes": [
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/db13f2c6-203a-4e17-9d16-e8362e19106b/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "fbfab5f5-b7ef-439b-89a7-a4e3954f8d2c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-30",
+      "title": "Defense \u2014 Burrell International Group Llc (On Behalf Of Sentry View Systems, Inc.) via Ervin Graves Strategy Group, Llc",
+      "value_usd": null,
+      "description": "Department of the Air Force nuclear security infrastructure, including remote visual assessment modernization for ICBM l\u2026",
+      "lobbying_firm": "Ervin Graves Strategy Group, Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/fbfab5f5-b7ef-439b-89a7-a4e3954f8d2c/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "bc0e8408-acff-4b71-b591-58320d1d0607",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-29",
+      "title": "Defense \u2014 Kosmos Energy via The Roosevelt Group",
+      "value_usd": null,
+      "description": "Congressional advocacy",
+      "lobbying_firm": "The Roosevelt Group",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/bc0e8408-acff-4b71-b591-58320d1d0607/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "32fd4f46-2f4f-4deb-b1fd-51f6247cc84c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-29",
+      "title": "Defense \u2014 Novamet Specialty Products via Strategic Marketing Innovations",
+      "value_usd": null,
+      "description": "Critical minerals/ materials",
+      "lobbying_firm": "Strategic Marketing Innovations",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/32fd4f46-2f4f-4deb-b1fd-51f6247cc84c/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
     {
       "filing_uuid": "49b78c11-ed17-4bfa-a8a2-931ff7422111",
       "iso": "XX",
@@ -26122,7 +26253,7 @@
     {
       "type": "convergence",
       "title": "China \u2014 first appearance + influence \u2192 action",
-      "score": 57.121,
+      "score": 54.329,
       "countries": [
         "CN"
       ],
@@ -26137,7 +26268,7 @@
         {
           "type": "first_appearance",
           "title": "China \u2014 ofac after first recorded silence",
-          "score": 43.29,
+          "score": 40.498,
           "countries": [
             "CN"
           ],
@@ -26156,8 +26287,8 @@
             "CN"
           ],
           "signal_keys": [
-            "lda:b607d4b4-b2a3-471c-8470-71fb5718c3a8",
-            "ofac:Feiwu BIAN (Individual)"
+            "ofac:Feiwu BIAN (Individual)",
+            "lda:b607d4b4-b2a3-471c-8470-71fb5718c3a8"
           ],
           "why": "lda on 2026-02-17 \u2192 ofac on 2026-04-16 (58d gap). No prior lda+action sequence in preceding 180d."
         }
@@ -26167,7 +26298,7 @@
     {
       "type": "first_appearance",
       "title": "Iran \u2014 ofac after first recorded silence",
-      "score": 38.961,
+      "score": 36.448,
       "countries": [
         "IR"
       ],
@@ -26191,7 +26322,7 @@
     {
       "type": "first_appearance",
       "title": "Turkey \u2014 ofac after first recorded silence",
-      "score": 21.717,
+      "score": 20.317,
       "countries": [
         "TR"
       ],
@@ -26204,7 +26335,7 @@
     {
       "type": "first_appearance",
       "title": "India \u2014 ofac after first recorded silence",
-      "score": 21.713,
+      "score": 20.313,
       "countries": [
         "IN"
       ],
@@ -26219,7 +26350,7 @@
     {
       "type": "first_appearance",
       "title": "United Kingdom \u2014 ofac after first recorded silence",
-      "score": 21.645,
+      "score": 20.249,
       "countries": [
         "GB"
       ],
@@ -26234,7 +26365,7 @@
     {
       "type": "first_appearance",
       "title": "Panama \u2014 ofac after first recorded silence",
-      "score": 21.645,
+      "score": 20.249,
       "countries": [
         "PA"
       ],
@@ -26247,24 +26378,24 @@
     {
       "type": "convergence",
       "title": "Colombia \u2014 first appearance + influence \u2192 action",
-      "score": 20.289,
+      "score": 19.485,
       "countries": [
         "CO"
       ],
       "signal_keys": [
-        "ofac:GLOBAL QOWA AL BASHERIA S.A.S. (Entity)",
         "fara:7692",
-        "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)",
+        "ofac:GLOBAL QOWA AL BASHERIA S.A.S. (Entity)",
         "ofac:Omar Fernando GARCIA BATTE (Individual)",
-        "ofac:Jose Oscar GARCIA BATTE (Individual)",
-        "ofac:Jose Libardo QUIJANO TORRES (Individual)"
+        "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)",
+        "ofac:Jose Libardo QUIJANO TORRES (Individual)",
+        "ofac:Jose Oscar GARCIA BATTE (Individual)"
       ],
       "why": "[first_appearance] ofac filed for Colombia after first recorded of silence (profile score: 6). Signal: FENIX HUMAN RESOURCES S.A.S. (Entity) | [influence_before_action] fara on 2026-02-12 \u2192 ofac on 2026-04-17 (64d gap). No prior fara+action sequence in preceding 180d.",
       "_components": [
         {
           "type": "first_appearance",
           "title": "Colombia \u2014 ofac after first recorded silence",
-          "score": 12.475,
+          "score": 11.671,
           "countries": [
             "CO"
           ],
@@ -26296,20 +26427,20 @@
     {
       "type": "convergence",
       "title": "Mexico \u2014 first appearance + influence \u2192 action",
-      "score": 20.006,
+      "score": 19.206,
       "countries": [
         "MX"
       ],
       "signal_keys": [
-        "ofac:Jose de Jesus RAMIREZ TORRES (Individual",
-        "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual",
-        "ofac:QUIMICA SOLUCIONES Y LOGISTICA INTEGRAL ",
         "ofac:DESARROLLOS CARTOK S.A. DE C.V. (Entity)",
-        "ofac:DIAMANTE CASINO (Entity)",
-        "ofac:COMERCIALIZADORA Y ARRENDADORA DE MEXICO",
-        "lda:2546e933-cf40-44b7-8a69-91c428ae13e8",
         "ofac:CORPORATIVO Y ENLACE RAM S.A. DE C.V. (E",
+        "ofac:Jose de Jesus RAMIREZ TORRES (Individual",
         "ofac:Ramiro Baltazar FELIX HERAS (Individual)",
+        "ofac:QUIMICA SOLUCIONES Y LOGISTICA INTEGRAL ",
+        "lda:2546e933-cf40-44b7-8a69-91c428ae13e8",
+        "ofac:DIAMANTE CASINO (Entity)",
+        "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual",
+        "ofac:COMERCIALIZADORA Y ARRENDADORA DE MEXICO",
         "ofac:BOTANICA 2000 (Entity)"
       ],
       "why": "[first_appearance] ofac filed for Mexico after first recorded of silence (profile score: 4). Signal: Jose de Jesus RAMIREZ TORRES (Individual) | [influence_before_action] lda on 2026-03-16 \u2192 ofac on 2026-04-14 (29d gap). No prior lda+action sequence in preceding 180d.",
@@ -26317,7 +26448,7 @@
         {
           "type": "first_appearance",
           "title": "Mexico \u2014 ofac after first recorded silence",
-          "score": 12.407,
+          "score": 11.607,
           "countries": [
             "MX"
           ],
@@ -26353,7 +26484,7 @@
     {
       "type": "first_appearance",
       "title": "United Arab Emirates \u2014 ofac after first recorded silence",
-      "score": 17.316,
+      "score": 16.199,
       "countries": [
         "AE"
       ],
@@ -26371,7 +26502,7 @@
     {
       "type": "first_appearance",
       "title": "Vietnam \u2014 ofac after first recorded silence",
-      "score": 17.316,
+      "score": 16.199,
       "countries": [
         "VN"
       ],
@@ -26384,7 +26515,7 @@
     {
       "type": "first_appearance",
       "title": "Iraq \u2014 ofac after first recorded silence",
-      "score": 14.555,
+      "score": 13.616,
       "countries": [
         "IQ"
       ],
@@ -26400,7 +26531,7 @@
     {
       "type": "first_appearance",
       "title": "Tunisia \u2014 dsca after first recorded silence",
-      "score": 9.0,
+      "score": 8.419,
       "countries": [
         "TN"
       ],
@@ -26413,7 +26544,7 @@
     {
       "type": "first_appearance",
       "title": "Russia \u2014 fara after first recorded silence",
-      "score": 7.649,
+      "score": 7.156,
       "countries": [
         "RU"
       ],
@@ -26426,7 +26557,7 @@
     {
       "type": "first_appearance",
       "title": "Egypt \u2014 fara after first recorded silence",
-      "score": 6.991,
+      "score": 6.54,
       "countries": [
         "EG"
       ],
@@ -26439,7 +26570,7 @@
     {
       "type": "first_appearance",
       "title": "Lithuania \u2014 dsca after first recorded silence",
-      "score": 6.448,
+      "score": 6.033,
       "countries": [
         "LT"
       ],

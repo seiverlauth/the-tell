@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T21:30:08.246630+00:00",
+  "generated_at": "2026-04-30T23:17:38.185459+00:00",
   "sources": [
     "ofac"
   ],
@@ -2030,6 +2030,19 @@
         "IRAN-EO13902"
       ],
       "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57454"
+    },
+    {
+      "uid": 57505,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-04-30",
+      "title": "Joseph Kabange KABILA (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: M23; Linked To: CONGO RIVER ALLIANCE)",
+      "programs": [
+        "DRCONGO"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57505"
     }
   ]
 }

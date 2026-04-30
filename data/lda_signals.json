@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T23:04:28.534051+00:00",
+  "generated_at": "2026-04-30T23:17:45.408978+00:00",
   "sources": [
     "lda"
   ],
@@ -11420,6 +11420,110 @@
         "TRA"
       ],
       "url": "https://lda.gov/filings/public/filing/2d9f5efb-638f-44d5-8d64-06de41382563/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "bc0e8408-acff-4b71-b591-58320d1d0607",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-29",
+      "title": "Defense \u2014 Kosmos Energy via The Roosevelt Group",
+      "value_usd": null,
+      "description": "Congressional advocacy",
+      "lobbying_firm": "The Roosevelt Group",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/bc0e8408-acff-4b71-b591-58320d1d0607/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "32fd4f46-2f4f-4deb-b1fd-51f6247cc84c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-29",
+      "title": "Defense \u2014 Novamet Specialty Products via Strategic Marketing Innovations",
+      "value_usd": null,
+      "description": "Critical minerals/ materials",
+      "lobbying_firm": "Strategic Marketing Innovations",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/32fd4f46-2f4f-4deb-b1fd-51f6247cc84c/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "dad964a1-68d8-4ecf-9af2-2e1563182ebf",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-30",
+      "title": "Defense, Homeland Security, Science/Technology \u2014 Axon Enterprise, Inc. via Red Door Consulting, Llc",
+      "value_usd": null,
+      "description": "The benefits of body worn cameras, TASERS, and non-lethal drones and related operating systems for achieving administrat\u2026",
+      "lobbying_firm": "Red Door Consulting, Llc",
+      "issue_codes": [
+        "DEF",
+        "FIR",
+        "HOM",
+        "IMM",
+        "LAW",
+        "SCI",
+        "VET"
+      ],
+      "url": "https://lda.gov/filings/public/filing/dad964a1-68d8-4ecf-9af2-2e1563182ebf/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "3bbea680-3980-4b52-ad03-6a7eb428b16a",
+      "iso": "KR",
+      "source": "lda",
+      "signal_date": "2026-04-30",
+      "title": "Energy, Science/Technology, Automotive \u2014 Sk Americas, Inc. via Capitol Resources, Llc",
+      "value_usd": null,
+      "description": "Automotive Energy Science/Technology",
+      "lobbying_firm": "Capitol Resources, Llc",
+      "issue_codes": [
+        "AUT",
+        "ENG",
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/3bbea680-3980-4b52-ad03-6a7eb428b16a/print/",
+      "raw_score": 4.0,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "db13f2c6-203a-4e17-9d16-e8362e19106b",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-30",
+      "title": "Science/Technology \u2014 Vaultes, Llc via Tcga Group, Llc",
+      "value_usd": null,
+      "description": "Cybersecurity",
+      "lobbying_firm": "Tcga Group, Llc",
+      "issue_codes": [
+        "SCI"
+      ],
+      "url": "https://lda.gov/filings/public/filing/db13f2c6-203a-4e17-9d16-e8362e19106b/print/",
+      "raw_score": null,
+      "weight": 1.0
+    },
+    {
+      "filing_uuid": "fbfab5f5-b7ef-439b-89a7-a4e3954f8d2c",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-04-30",
+      "title": "Defense \u2014 Burrell International Group Llc (On Behalf Of Sentry View Systems, Inc.) via Ervin Graves Strategy Group, Llc",
+      "value_usd": null,
+      "description": "Department of the Air Force nuclear security infrastructure, including remote visual assessment modernization for ICBM l\u2026",
+      "lobbying_firm": "Ervin Graves Strategy Group, Llc",
+      "issue_codes": [
+        "DEF"
+      ],
+      "url": "https://lda.gov/filings/public/filing/fbfab5f5-b7ef-439b-89a7-a4e3954f8d2c/print/",
       "raw_score": null,
       "weight": 1.0
     }

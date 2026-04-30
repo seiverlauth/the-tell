@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T23:04:29.518916+00:00",
+  "generated_at": "2026-04-30T23:17:46.587981+00:00",
   "sources": [
     "federalregister"
   ],
@@ -5919,6 +5919,17 @@
       "description": "Notice of proposed rulemaking with request for comment. \u00b7 Executive Order (E.O.) 14247, Modernizing Payments To and From America's Bank Account, directs the Secretary of the Treasury to cease issuing paper checks for all Federal disbursements to the extent permitted by law and to review and, as appropriate, revise procedures for granting limited exceptions where electronic payment methods are not feasible. In accordance with the E.O., the Department of the Treasury (Treasury), Bureau of the Fiscal Service (\"Fiscal Service\" or \"we\"), is proposing to amend its regulation that sets forth the limited circumstances under which paper check disbursements may be made by federal agencies.",
       "raw_score": null,
       "page_url": "https://www.federalregister.gov/documents/2026/04/29/2026-08278/management-of-federal-agency-disbursements"
+    },
+    {
+      "document_number": "2026-08440",
+      "iso": null,
+      "source": "federalregister",
+      "signal_date": "2026-04-30",
+      "title": "Submission for OMB Review; Comment Request",
+      "value_usd": null,
+      "description": "30-Day information collection notice. \u00b7 The DoD has submitted to OMB for clearance the following proposal for collection of information under the provisions of the Paperwork Reduction Act.",
+      "raw_score": null,
+      "page_url": "https://www.federalregister.gov/documents/2026/04/30/2026-08440/submission-for-omb-review-comment-request"
     }
   ]
 }
