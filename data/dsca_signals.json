@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T23:15:56.423036+00:00",
+  "generated_at": "2026-05-01T22:56:19.207935+00:00",
   "sources": [
     "dsca"
   ],
@@ -14308,6 +14308,66 @@
       "cn_number": null,
       "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/04/tunisia-border-security-project-phase-iii/",
       "wp_id": 679764
+    },
+    {
+      "iso": "IL",
+      "source": "dsca",
+      "signal_date": "2026-05-01",
+      "title": "Advanced Precision Kill Weapon System",
+      "value_usd": 992400000.0,
+      "description": "Transmittal No. 26-60 The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of Israel for its purchase of Advanced Precision Kill Weapon System (APKWS) and related equipment.",
+      "raw_score": 7.0,
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/05/israel-advanced-precision-kill-weapon-system/",
+      "wp_id": 680745
+    },
+    {
+      "iso": "KW",
+      "source": "dsca",
+      "signal_date": "2026-05-01",
+      "title": "Integrated Battle Command System",
+      "value_usd": 2500000000.0,
+      "description": "Transmittal No. 26-70 The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of Kuwait for its purchase of and Integrated Battle Command System and related equipment.",
+      "raw_score": 3.0,
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/05/kuwait-integrated-battle-command-system/",
+      "wp_id": 680761
+    },
+    {
+      "iso": "QA",
+      "source": "dsca",
+      "signal_date": "2026-05-01",
+      "title": "Advanced Precision Kill Weapons System",
+      "value_usd": 992400000.0,
+      "description": "Transmittal No. 26-66 The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of Qatar for its purchase of Advanced Precision Kill Weapon System (APKWS).",
+      "raw_score": 4.0,
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/05/qatar-advanced-precision-kill-weapons-system/",
+      "wp_id": 680764
+    },
+    {
+      "iso": "QA",
+      "source": "dsca",
+      "signal_date": "2026-05-01",
+      "title": "Patriot Missile Replenishment",
+      "value_usd": 4010000000.0,
+      "description": "Transmittal No. 26-59 The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of Qatar for its purchase of PATRIOT Air and Missile Defense replenishment services and related equipment.",
+      "raw_score": 4.0,
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/05/qatar-patriot-missile-replenishment/",
+      "wp_id": 680768
+    },
+    {
+      "iso": "AE",
+      "source": "dsca",
+      "signal_date": "2026-05-01",
+      "title": "Advanced Precision Kill Weapons System",
+      "value_usd": 147600000.0,
+      "description": "Transmittal No. 26-65 The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of the United Arab Emirates for its purchase of Advanced Precision Kill Weapon System (APKWS) and related equipment.",
+      "raw_score": 4.0,
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/05/united-arab-emirates-advanced-precision-kill-weapons-system/",
+      "wp_id": 680774
     }
   ]
 }

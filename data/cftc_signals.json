@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T23:17:51.458771+00:00",
+  "generated_at": "2026-05-01T22:58:43.300829+00:00",
   "sources": [
     "cftc"
   ],
@@ -153,6 +153,43 @@
       ],
       "commodity": "Wheat",
       "net_position": -5550
+    },
+    {
+      "iso": "RU",
+      "source": "cftc",
+      "signal_date": "2026-04-28",
+      "title": "Wheat \u2014 hedge funds adding longs (+2.3\u03c3)",
+      "value_usd": null,
+      "description": "Institutional traders (managed money) are net long Wheat at 11,725 contracts \u2014 2.3\u03c3 above the 52-week norm. Exposed countries: Russia, Ukraine, Australia, Canada, India.",
+      "z_score": 2.273,
+      "basket": [
+        "RU",
+        "UA",
+        "US",
+        "AU",
+        "CA",
+        "IN"
+      ],
+      "commodity": "Wheat",
+      "net_position": 11725
+    },
+    {
+      "iso": "CN",
+      "source": "cftc",
+      "signal_date": "2026-04-28",
+      "title": "Corn \u2014 hedge funds adding longs (+2.4\u03c3)",
+      "value_usd": null,
+      "description": "Institutional traders (managed money) are net long Corn at 265,572 contracts \u2014 2.4\u03c3 above the 52-week norm. Exposed countries: Ukraine, Brazil, Argentina, China.",
+      "z_score": 2.355,
+      "basket": [
+        "US",
+        "UA",
+        "BR",
+        "AR",
+        "CN"
+      ],
+      "commodity": "Corn",
+      "net_position": 265572
     }
   ]
 }

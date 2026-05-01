@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T23:17:51.610145+00:00",
+  "generated_at": "2026-05-01T22:58:43.453301+00:00",
   "sources": [
     "anchor",
     "bis",
@@ -13,6 +13,408 @@
     "sam"
   ],
   "signals": [
+    {
+      "iso": "IL",
+      "source": "dsca",
+      "signal_date": "2026-05-01",
+      "title": "Advanced Precision Kill Weapon System",
+      "value_usd": 992400000.0,
+      "description": "Transmittal No. 26-60 The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of Israel for its purchase of Advanced Precision Kill Weapon System (APKWS) and related equipment.",
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/05/israel-advanced-precision-kill-weapon-system/",
+      "wp_id": 680745,
+      "profile": {
+        "name": "Israel",
+        "score": 7,
+        "factors": [
+          "nuclear program",
+          "active conflict",
+          "US basing",
+          "regional power",
+          "sanctions"
+        ],
+        "rationale": "Undeclared nuclear weapons program (+2), active conflict \u2014 Gaza war, Lebanon, regional escalation (+2), major US security guarantor and basing access (+1), regional power (+1), active sanctions against counterparties (+1)"
+      },
+      "layer": "military",
+      "quality": 1.0,
+      "dollar_mod": 1.2247515066700128,
+      "is_fr_policy": null
+    },
+    {
+      "iso": "KW",
+      "source": "dsca",
+      "signal_date": "2026-05-01",
+      "title": "Integrated Battle Command System",
+      "value_usd": 2500000000.0,
+      "description": "Transmittal No. 26-70 The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of Kuwait for its purchase of and Integrated Battle Command System and related equipment.",
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/05/kuwait-integrated-battle-command-system/",
+      "wp_id": 680761,
+      "profile": {
+        "name": "Kuwait",
+        "score": 3,
+        "factors": [
+          "hydrocarbons",
+          "US basing"
+        ],
+        "rationale": "Major hydrocarbon reserves (+2), US basing and pre-positioned equipment (+1)"
+      },
+      "layer": "military",
+      "quality": 1.0,
+      "dollar_mod": 1.254845500650403,
+      "is_fr_policy": null
+    },
+    {
+      "iso": "QA",
+      "source": "dsca",
+      "signal_date": "2026-05-01",
+      "title": "Advanced Precision Kill Weapons System",
+      "value_usd": 992400000.0,
+      "description": "Transmittal No. 26-66 The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of Qatar for its purchase of Advanced Precision Kill Weapon System (APKWS).",
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/05/qatar-advanced-precision-kill-weapons-system/",
+      "wp_id": 680764,
+      "profile": {
+        "name": "Qatar",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "LNG",
+          "US basing",
+          "proxy hub"
+        ],
+        "rationale": "World's largest LNG exporter \u2014 hydrocarbon reserves (+2), Al Udeid Air Base \u2014 largest US air base in Middle East (+1), proxy hub \u2014 Hamas, Taliban mediation (+1)"
+      },
+      "layer": "military",
+      "quality": 1.0,
+      "dollar_mod": 1.2247515066700128,
+      "is_fr_policy": null
+    },
+    {
+      "iso": "QA",
+      "source": "dsca",
+      "signal_date": "2026-05-01",
+      "title": "Patriot Missile Replenishment",
+      "value_usd": 4010000000.0,
+      "description": "Transmittal No. 26-59 The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of Qatar for its purchase of PATRIOT Air and Missile Defense replenishment services and related equipment.",
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/05/qatar-patriot-missile-replenishment/",
+      "wp_id": 680768,
+      "profile": {
+        "name": "Qatar",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "LNG",
+          "US basing",
+          "proxy hub"
+        ],
+        "rationale": "World's largest LNG exporter \u2014 hydrocarbon reserves (+2), Al Udeid Air Base \u2014 largest US air base in Middle East (+1), proxy hub \u2014 Hamas, Taliban mediation (+1)"
+      },
+      "layer": "military",
+      "quality": 1.0,
+      "dollar_mod": 1.2702358279465136,
+      "is_fr_policy": null
+    },
+    {
+      "iso": "AE",
+      "source": "dsca",
+      "signal_date": "2026-05-01",
+      "title": "Advanced Precision Kill Weapons System",
+      "value_usd": 147600000.0,
+      "description": "Transmittal No. 26-65 The U.S. Department of State has made a determination approving a possible Foreign Military Sale to the Government of the United Arab Emirates for its purchase of Advanced Precision Kill Weapon System (APKWS) and related equipment.",
+      "cn_number": null,
+      "page_url": "https://www.state.gov/releases/bureau-of-political-military-affairs/2026/05/united-arab-emirates-advanced-precision-kill-weapons-system/",
+      "wp_id": 680774,
+      "profile": {
+        "name": "United Arab Emirates",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "US basing",
+          "proxy hub"
+        ],
+        "rationale": "Major hydrocarbon reserves (+2), US basing access \u2014 Al Dhafra Air Base (+1), regional proxy hub \u2014 Sudan, Libya, Horn of Africa (+1)"
+      },
+      "layer": "military",
+      "quality": 1.0,
+      "dollar_mod": 1.1626814768115268,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "4d1c43a5-1d99-4228-bea3-5520f6bbebf7",
+      "iso": "DE",
+      "source": "lda",
+      "signal_date": "2026-05-01",
+      "title": "Trade \u2014 Carl Zeiss, Inc. via Carl Zeiss, Inc.",
+      "value_usd": null,
+      "description": "Tariffs on US imports and export control policy",
+      "lobbying_firm": "Carl Zeiss, Inc.",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/4d1c43a5-1d99-4228-bea3-5520f6bbebf7/print/",
+      "profile": {
+        "name": "Germany",
+        "score": 4,
+        "factors": [
+          "US basing",
+          "nuclear hosting",
+          "regional power"
+        ],
+        "rationale": "Major US basing \u2014 EUCOM, Ramstein, Landstuhl (+1), US tactical nuclear weapons hosted (+2 latent nuclear), regional power and NATO anchor (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "78f972a1-3602-48d4-9ead-76a871e14ee7",
+      "iso": "XX",
+      "source": "lda",
+      "signal_date": "2026-05-01",
+      "title": "Trade \u2014 Leather And Hide Council Of America via Sandler, Travis & Rosenberg, P.A.",
+      "value_usd": null,
+      "description": "Promote leather exports",
+      "lobbying_firm": "Sandler, Travis & Rosenberg, P.A.",
+      "issue_codes": [
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/78f972a1-3602-48d4-9ead-76a871e14ee7/print/",
+      "profile": null,
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "filing_uuid": "717c1938-524b-4f41-8dbc-5de8ec92dadb",
+      "iso": "DE",
+      "source": "lda",
+      "signal_date": "2026-05-01",
+      "title": "Manufacturing \u2014 Resuscitec Gmbh via Covenant Government Affairs, Llc",
+      "value_usd": null,
+      "description": "Germany; Resuscitec's next-generation combat casualty care and emergency resuscitation capability within DOD, VA, and civilian em\u2026",
+      "lobbying_firm": "Covenant Government Affairs, Llc",
+      "issue_codes": [
+        "MAN"
+      ],
+      "url": "https://lda.gov/filings/public/filing/717c1938-524b-4f41-8dbc-5de8ec92dadb/print/",
+      "profile": {
+        "name": "Germany",
+        "score": 4,
+        "factors": [
+          "US basing",
+          "nuclear hosting",
+          "regional power"
+        ],
+        "rationale": "Major US basing \u2014 EUCOM, Ramstein, Landstuhl (+1), US tactical nuclear weapons hosted (+2 latent nuclear), regional power and NATO anchor (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57464,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "QINGDAO HAIYE OIL TERMINAL CO., LTD. (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57464",
+      "profile": {
+        "name": "China",
+        "score": 10,
+        "factors": [
+          "South China Sea",
+          "nuclear program",
+          "rare earths",
+          "BRI",
+          "regional power"
+        ],
+        "rationale": "Contests control of South China Sea \u2014 primary Indo-Pacific chokepoint (+3), major hydrocarbon reserves and transit dependency (+2), active nuclear program \u2014 second-strike capable ICBM/SLBM (+2), dominant rare earth extraction and processing \u2014 ~60% of global supply (+2), regional power and primary proxy hub \u2014 BRI, Pacific islands, Africa, Belt and Road infrastructure leverage (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57465,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "Xinchun LI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: QINGDAO HAIYE OIL TERMINAL CO., LTD.)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57465",
+      "profile": {
+        "name": "China",
+        "score": 10,
+        "factors": [
+          "South China Sea",
+          "nuclear program",
+          "rare earths",
+          "BRI",
+          "regional power"
+        ],
+        "rationale": "Contests control of South China Sea \u2014 primary Indo-Pacific chokepoint (+3), major hydrocarbon reserves and transit dependency (+2), active nuclear program \u2014 second-strike capable ICBM/SLBM (+2), dominant rare earth extraction and processing \u2014 ~60% of global supply (+2), regional power and primary proxy hub \u2014 BRI, Pacific islands, Africa, Belt and Road infrastructure leverage (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57466,
+      "iso": "GB",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "THRIVING TIMES INTERNATIONAL CO LTD (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57466",
+      "profile": {
+        "name": "United Kingdom",
+        "score": 5,
+        "factors": [
+          "nuclear program",
+          "regional power",
+          "US partner",
+          "maritime chokepoint"
+        ],
+        "rationale": "Active nuclear weapons program \u2014 Trident (+2), regional power and global basing network (+1), major US interoperability partner \u2014 Five Eyes, AUKUS (+1), controls Gibraltar and Diego Garcia chokepoints (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57488,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "NASSER GHASEMI RAD AND ASSOCIATES PARTNERSHIP COMPANY (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57488",
+      "profile": {
+        "name": "Iran",
+        "score": 9,
+        "factors": [
+          "maritime chokepoint",
+          "Strait of Hormuz",
+          "nuclear program",
+          "hydrocarbons",
+          "sanctions",
+          "proxy hub"
+        ],
+        "rationale": "Controls northern shore of Strait of Hormuz \u2014 world's most critical oil chokepoint (+3), active nuclear program (+2), massive hydrocarbon reserves (+2), active sanctions regime (+1), regional proxy hub \u2014 Hezbollah, Houthis, Iraq militias (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57493,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "Pedram PIROUZAN (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57493",
+      "profile": {
+        "name": "United Arab Emirates",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "US basing",
+          "proxy hub"
+        ],
+        "rationale": "Major hydrocarbon reserves (+2), US basing access \u2014 Al Dhafra Air Base (+1), regional proxy hub \u2014 Sudan, Libya, Horn of Africa (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57506,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "MULLINGAR TRADING COMPANY LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57506",
+      "profile": {
+        "name": "China",
+        "score": 10,
+        "factors": [
+          "South China Sea",
+          "nuclear program",
+          "rare earths",
+          "BRI",
+          "regional power"
+        ],
+        "rationale": "Contests control of South China Sea \u2014 primary Indo-Pacific chokepoint (+3), major hydrocarbon reserves and transit dependency (+2), active nuclear program \u2014 second-strike capable ICBM/SLBM (+2), dominant rare earth extraction and processing \u2014 ~60% of global supply (+2), regional power and primary proxy hub \u2014 BRI, Pacific islands, Africa, Belt and Road infrastructure leverage (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "uid": 57524,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "AL SAHRA TRADE PETRO DMCC (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57524",
+      "profile": {
+        "name": "United Arab Emirates",
+        "score": 4,
+        "factors": [
+          "hydrocarbons",
+          "US basing",
+          "proxy hub"
+        ],
+        "rationale": "Major hydrocarbon reserves (+2), US basing access \u2014 Al Dhafra Air Base (+1), regional proxy hub \u2014 Sudan, Libya, Horn of Africa (+1)"
+      },
+      "layer": "regulatory",
+      "quality": 0.9,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
     {
       "filing_uuid": "dad964a1-68d8-4ecf-9af2-2e1563182ebf",
       "iso": "XX",
@@ -107,6 +509,41 @@
       "is_fr_policy": null
     },
     {
+      "filing_uuid": "71dd44e0-6f4d-4070-b93b-b45a8fef3b24",
+      "iso": "CH",
+      "source": "lda",
+      "signal_date": "2026-04-30",
+      "title": "Energy, Foreign Affairs, Trade \u2014 Glencore Limited via Michael Best Strategies Llc",
+      "value_usd": null,
+      "description": "Issues related to natural resources and commodities trading",
+      "lobbying_firm": "Michael Best Strategies Llc",
+      "issue_codes": [
+        "CDT",
+        "ENG",
+        "ENV",
+        "FOR",
+        "FUE",
+        "MAN",
+        "NAT",
+        "TRD"
+      ],
+      "url": "https://lda.gov/filings/public/filing/71dd44e0-6f4d-4070-b93b-b45a8fef3b24/print/",
+      "profile": {
+        "name": "Switzerland",
+        "score": 2,
+        "factors": [
+          "arms intermediary hub",
+          "commodity trading",
+          "financial flows"
+        ],
+        "rationale": "Dominant global arms intermediary and commodity trading hub \u2014 Glencore, Gunvor, Trafigura all domiciled here (+1), hosting point for sanctioned-state financial flows and offshore wealth (+1)"
+      },
+      "layer": "influence",
+      "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
       "filing_uuid": "bc0e8408-acff-4b71-b591-58320d1d0607",
       "iso": "XX",
       "source": "lda",
@@ -141,6 +578,77 @@
       "profile": null,
       "layer": "influence",
       "quality": 0.5,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "iso": "RU",
+      "source": "cftc",
+      "signal_date": "2026-04-28",
+      "title": "Wheat \u2014 hedge funds adding longs (+2.3\u03c3)",
+      "value_usd": null,
+      "description": "Institutional traders (managed money) are net long Wheat at 11,725 contracts \u2014 2.3\u03c3 above the 52-week norm. Exposed countries: Russia, Ukraine, Australia, Canada, India.",
+      "z_score": 2.273,
+      "basket": [
+        "RU",
+        "UA",
+        "US",
+        "AU",
+        "CA",
+        "IN"
+      ],
+      "commodity": "Wheat",
+      "net_position": 11725,
+      "profile": {
+        "name": "Russia",
+        "score": 10,
+        "factors": [
+          "nuclear program",
+          "hydrocarbons",
+          "active conflict",
+          "sanctions",
+          "regional power",
+          "Arctic",
+          "proxy hub"
+        ],
+        "rationale": "Active nuclear weapons \u2014 largest arsenal (+2), major hydrocarbon producer and pipeline network (+2), active conflict \u2014 Ukraine war (+2), comprehensive sanctions regime (+1), regional power and global proxy hub (+1), controls Arctic sea routes (+1), strategic minerals (+1)"
+      },
+      "layer": "financial",
+      "quality": 0.55,
+      "dollar_mod": 1.0,
+      "is_fr_policy": null
+    },
+    {
+      "iso": "CN",
+      "source": "cftc",
+      "signal_date": "2026-04-28",
+      "title": "Corn \u2014 hedge funds adding longs (+2.4\u03c3)",
+      "value_usd": null,
+      "description": "Institutional traders (managed money) are net long Corn at 265,572 contracts \u2014 2.4\u03c3 above the 52-week norm. Exposed countries: Ukraine, Brazil, Argentina, China.",
+      "z_score": 2.355,
+      "basket": [
+        "US",
+        "UA",
+        "BR",
+        "AR",
+        "CN"
+      ],
+      "commodity": "Corn",
+      "net_position": 265572,
+      "profile": {
+        "name": "China",
+        "score": 10,
+        "factors": [
+          "South China Sea",
+          "nuclear program",
+          "rare earths",
+          "BRI",
+          "regional power"
+        ],
+        "rationale": "Contests control of South China Sea \u2014 primary Indo-Pacific chokepoint (+3), major hydrocarbon reserves and transit dependency (+2), active nuclear program \u2014 second-strike capable ICBM/SLBM (+2), dominant rare earth extraction and processing \u2014 ~60% of global supply (+2), regional power and primary proxy hub \u2014 BRI, Pacific islands, Africa, Belt and Road infrastructure leverage (+1)"
+      },
+      "layer": "financial",
+      "quality": 0.55,
       "dollar_mod": 1.0,
       "is_fr_policy": null
     },
@@ -26253,31 +26761,37 @@
     {
       "type": "convergence",
       "title": "China \u2014 first appearance + influence \u2192 action",
-      "score": 54.329,
+      "score": 60.105,
       "countries": [
         "CN"
       ],
       "signal_keys": [
-        "ofac:TAI LUNG TRADING LIMITED (Entity)",
         "ofac:Feiwu BIAN (Individual)",
+        "ofac:Xinchun LI (Individual)",
+        "ofac:QINGDAO HAIYE OIL TERMINAL CO., LTD. (En",
+        "ofac:TAI LUNG TRADING LIMITED (Entity)",
+        "ofac:MULLINGAR TRADING COMPANY LIMITED (Entit",
         "lda:b607d4b4-b2a3-471c-8470-71fb5718c3a8",
         "ofac:COSTIN SHIPPING LIMITED (Entity)"
       ],
-      "why": "[first_appearance] ofac filed for China after first recorded of silence (profile score: 10). Signal: COSTIN SHIPPING LIMITED (Entity) | [influence_before_action] lda on 2026-02-17 \u2192 ofac on 2026-04-16 (58d gap). No prior lda+action sequence in preceding 180d.",
+      "why": "[first_appearance] ofac filed for China after first recorded of silence (profile score: 10). Signal: QINGDAO HAIYE OIL TERMINAL CO., LTD. (Entity) | [influence_before_action] lda on 2026-02-17 \u2192 ofac on 2026-04-16 (58d gap). No prior lda+action sequence in preceding 180d.",
       "_components": [
         {
           "type": "first_appearance",
           "title": "China \u2014 ofac after first recorded silence",
-          "score": 40.498,
+          "score": 46.274,
           "countries": [
             "CN"
           ],
           "signal_keys": [
+            "ofac:QINGDAO HAIYE OIL TERMINAL CO., LTD. (En",
+            "ofac:Xinchun LI (Individual)",
+            "ofac:MULLINGAR TRADING COMPANY LIMITED (Entit",
             "ofac:COSTIN SHIPPING LIMITED (Entity)",
             "ofac:TAI LUNG TRADING LIMITED (Entity)",
             "ofac:Feiwu BIAN (Individual)"
           ],
-          "why": "ofac filed for China after first recorded of silence (profile score: 10). Signal: COSTIN SHIPPING LIMITED (Entity)"
+          "why": "ofac filed for China after first recorded of silence (profile score: 10). Signal: QINGDAO HAIYE OIL TERMINAL CO., LTD. (Entity)"
         },
         {
           "type": "influence_before_action",
@@ -26298,11 +26812,12 @@
     {
       "type": "first_appearance",
       "title": "Iran \u2014 ofac after first recorded silence",
-      "score": 36.448,
+      "score": 41.647,
       "countries": [
         "IR"
       ],
       "signal_keys": [
+        "ofac:NASSER GHASEMI RAD AND ASSOCIATES PARTNE",
         "ofac:Morteza Ali BAKHSHI (Individual)",
         "ofac:Masoud KAVOUSI (Individual)",
         "ofac:Ehsan MOSLEHI (Individual)",
@@ -26316,13 +26831,29 @@
         "ofac:SEPEHR KAVEH KISH INTERNATIONAL TRADING ",
         "ofac:SAMAN AIR SERVICES COMPANY (Entity)"
       ],
-      "why": "ofac filed for Iran after first recorded of silence (profile score: 9). Signal: Morteza Ali BAKHSHI (Individual)",
+      "why": "ofac filed for Iran after first recorded of silence (profile score: 9). Signal: NASSER GHASEMI RAD AND ASSOCIATES PARTNERSHIP COMPANY (Entity)",
+      "narrative": null
+    },
+    {
+      "type": "first_appearance",
+      "title": "United Kingdom \u2014 ofac after first recorded silence",
+      "score": 23.137,
+      "countries": [
+        "GB"
+      ],
+      "signal_keys": [
+        "ofac:THRIVING TIMES INTERNATIONAL CO LTD (Ent",
+        "ofac:SHUQUN LTD (Entity)",
+        "ofac:SANOVO LTD (Entity)",
+        "ofac:Seyed Naiemaei Badroddin MOOSAVI (Indivi"
+      ],
+      "why": "ofac filed for United Kingdom after first recorded of silence (profile score: 5). Signal: THRIVING TIMES INTERNATIONAL CO LTD (Entity)",
       "narrative": null
     },
     {
       "type": "first_appearance",
       "title": "Turkey \u2014 ofac after first recorded silence",
-      "score": 20.317,
+      "score": 19.006,
       "countries": [
         "TR"
       ],
@@ -26335,7 +26866,7 @@
     {
       "type": "first_appearance",
       "title": "India \u2014 ofac after first recorded silence",
-      "score": 20.313,
+      "score": 19.003,
       "countries": [
         "IN"
       ],
@@ -26349,23 +26880,8 @@
     },
     {
       "type": "first_appearance",
-      "title": "United Kingdom \u2014 ofac after first recorded silence",
-      "score": 20.249,
-      "countries": [
-        "GB"
-      ],
-      "signal_keys": [
-        "ofac:SHUQUN LTD (Entity)",
-        "ofac:SANOVO LTD (Entity)",
-        "ofac:Seyed Naiemaei Badroddin MOOSAVI (Indivi"
-      ],
-      "why": "ofac filed for United Kingdom after first recorded of silence (profile score: 5). Signal: SHUQUN LTD (Entity)",
-      "narrative": null
-    },
-    {
-      "type": "first_appearance",
       "title": "Panama \u2014 ofac after first recorded silence",
-      "score": 20.249,
+      "score": 18.943,
       "countries": [
         "PA"
       ],
@@ -26378,24 +26894,24 @@
     {
       "type": "convergence",
       "title": "Colombia \u2014 first appearance + influence \u2192 action",
-      "score": 19.485,
+      "score": 18.732,
       "countries": [
         "CO"
       ],
       "signal_keys": [
-        "fara:7692",
-        "ofac:GLOBAL QOWA AL BASHERIA S.A.S. (Entity)",
-        "ofac:Omar Fernando GARCIA BATTE (Individual)",
+        "ofac:Jose Oscar GARCIA BATTE (Individual)",
         "ofac:FENIX HUMAN RESOURCES S.A.S. (Entity)",
         "ofac:Jose Libardo QUIJANO TORRES (Individual)",
-        "ofac:Jose Oscar GARCIA BATTE (Individual)"
+        "ofac:Omar Fernando GARCIA BATTE (Individual)",
+        "ofac:GLOBAL QOWA AL BASHERIA S.A.S. (Entity)",
+        "fara:7692"
       ],
       "why": "[first_appearance] ofac filed for Colombia after first recorded of silence (profile score: 6). Signal: FENIX HUMAN RESOURCES S.A.S. (Entity) | [influence_before_action] fara on 2026-02-12 \u2192 ofac on 2026-04-17 (64d gap). No prior fara+action sequence in preceding 180d.",
       "_components": [
         {
           "type": "first_appearance",
           "title": "Colombia \u2014 ofac after first recorded silence",
-          "score": 11.671,
+          "score": 10.918,
           "countries": [
             "CO"
           ],
@@ -26425,30 +26941,50 @@
       "narrative": null
     },
     {
+      "type": "first_appearance",
+      "title": "United Arab Emirates \u2014 ofac after first recorded silence",
+      "score": 18.51,
+      "countries": [
+        "AE"
+      ],
+      "signal_keys": [
+        "ofac:Pedram PIROUZAN (Individual)",
+        "ofac:AL SAHRA TRADE PETRO DMCC (Entity)",
+        "ofac:Janelyn Eusebio EMPERADOR (Individual)",
+        "ofac:Mohammad VAHIDI (Individual)",
+        "ofac:CHABOK FZCO (Entity)",
+        "ofac:TAYLOR SHIPPING FZCO (Entity)",
+        "ofac:SHIPSTAR SHIPCHANDLING LLC (Entity)",
+        "ofac:ACS TRADING LLC (Entity)"
+      ],
+      "why": "ofac filed for United Arab Emirates after first recorded of silence (profile score: 4). Signal: Pedram PIROUZAN (Individual)",
+      "narrative": null
+    },
+    {
       "type": "convergence",
       "title": "Mexico \u2014 first appearance + influence \u2192 action",
-      "score": 19.206,
+      "score": 18.458,
       "countries": [
         "MX"
       ],
       "signal_keys": [
-        "ofac:DESARROLLOS CARTOK S.A. DE C.V. (Entity)",
-        "ofac:CORPORATIVO Y ENLACE RAM S.A. DE C.V. (E",
-        "ofac:Jose de Jesus RAMIREZ TORRES (Individual",
-        "ofac:Ramiro Baltazar FELIX HERAS (Individual)",
-        "ofac:QUIMICA SOLUCIONES Y LOGISTICA INTEGRAL ",
         "lda:2546e933-cf40-44b7-8a69-91c428ae13e8",
-        "ofac:DIAMANTE CASINO (Entity)",
+        "ofac:QUIMICA SOLUCIONES Y LOGISTICA INTEGRAL ",
+        "ofac:BOTANICA 2000 (Entity)",
         "ofac:Jesus Reymundo RAMOS VAZQUEZ (Individual",
         "ofac:COMERCIALIZADORA Y ARRENDADORA DE MEXICO",
-        "ofac:BOTANICA 2000 (Entity)"
+        "ofac:DESARROLLOS CARTOK S.A. DE C.V. (Entity)",
+        "ofac:DIAMANTE CASINO (Entity)",
+        "ofac:Ramiro Baltazar FELIX HERAS (Individual)",
+        "ofac:CORPORATIVO Y ENLACE RAM S.A. DE C.V. (E",
+        "ofac:Jose de Jesus RAMIREZ TORRES (Individual"
       ],
       "why": "[first_appearance] ofac filed for Mexico after first recorded of silence (profile score: 4). Signal: Jose de Jesus RAMIREZ TORRES (Individual) | [influence_before_action] lda on 2026-03-16 \u2192 ofac on 2026-04-14 (29d gap). No prior lda+action sequence in preceding 180d.",
       "_components": [
         {
           "type": "first_appearance",
           "title": "Mexico \u2014 ofac after first recorded silence",
-          "score": 11.607,
+          "score": 10.859,
           "countries": [
             "MX"
           ],
@@ -26483,26 +27019,22 @@
     },
     {
       "type": "first_appearance",
-      "title": "United Arab Emirates \u2014 ofac after first recorded silence",
-      "score": 16.199,
+      "title": "Qatar \u2014 dsca after 401d silence",
+      "score": 15.767,
       "countries": [
-        "AE"
+        "QA"
       ],
       "signal_keys": [
-        "ofac:Janelyn Eusebio EMPERADOR (Individual)",
-        "ofac:Mohammad VAHIDI (Individual)",
-        "ofac:CHABOK FZCO (Entity)",
-        "ofac:TAYLOR SHIPPING FZCO (Entity)",
-        "ofac:SHIPSTAR SHIPCHANDLING LLC (Entity)",
-        "ofac:ACS TRADING LLC (Entity)"
+        "dsca:Advanced Precision Kill Weapons System",
+        "dsca:Patriot Missile Replenishment"
       ],
-      "why": "ofac filed for United Arab Emirates after first recorded of silence (profile score: 4). Signal: Janelyn Eusebio EMPERADOR (Individual)",
+      "why": "dsca filed for Qatar after 401d of silence (profile score: 4). Signal: Advanced Precision Kill Weapons System",
       "narrative": null
     },
     {
       "type": "first_appearance",
       "title": "Vietnam \u2014 ofac after first recorded silence",
-      "score": 16.199,
+      "score": 15.154,
       "countries": [
         "VN"
       ],
@@ -26515,7 +27047,7 @@
     {
       "type": "first_appearance",
       "title": "Iraq \u2014 ofac after first recorded silence",
-      "score": 13.616,
+      "score": 12.738,
       "countries": [
         "IQ"
       ],
@@ -26531,7 +27063,7 @@
     {
       "type": "first_appearance",
       "title": "Tunisia \u2014 dsca after first recorded silence",
-      "score": 8.419,
+      "score": 7.876,
       "countries": [
         "TN"
       ],
@@ -26544,7 +27076,7 @@
     {
       "type": "first_appearance",
       "title": "Russia \u2014 fara after first recorded silence",
-      "score": 7.156,
+      "score": 6.694,
       "countries": [
         "RU"
       ],
@@ -26557,7 +27089,7 @@
     {
       "type": "first_appearance",
       "title": "Egypt \u2014 fara after first recorded silence",
-      "score": 6.54,
+      "score": 6.118,
       "countries": [
         "EG"
       ],
@@ -26570,7 +27102,7 @@
     {
       "type": "first_appearance",
       "title": "Lithuania \u2014 dsca after first recorded silence",
-      "score": 6.033,
+      "score": 5.644,
       "countries": [
         "LT"
       ],
@@ -26588,8 +27120,8 @@
         "PA"
       ],
       "signal_keys": [
-        "lda:ca9dd4da-876f-4b86-9823-c580d39d74da",
-        "ofac:NAXOS MARITIME AND TRADING S.A. (Entity)"
+        "ofac:NAXOS MARITIME AND TRADING S.A. (Entity)",
+        "lda:ca9dd4da-876f-4b86-9823-c580d39d74da"
       ],
       "why": "lda on 2026-02-25 \u2192 ofac on 2026-04-28 (62d gap). No prior lda+action sequence in preceding 180d.",
       "narrative": null

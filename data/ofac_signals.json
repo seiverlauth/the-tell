@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T23:17:38.185459+00:00",
+  "generated_at": "2026-05-01T22:58:03.592902+00:00",
   "sources": [
     "ofac"
   ],
@@ -2043,6 +2043,370 @@
         "DRCONGO"
       ],
       "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57505"
+    },
+    {
+      "uid": 57464,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "QINGDAO HAIYE OIL TERMINAL CO., LTD. (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57464"
+    },
+    {
+      "uid": 57465,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "Xinchun LI (Individual)",
+      "value_usd": null,
+      "description": "(Linked To: QINGDAO HAIYE OIL TERMINAL CO., LTD.)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57465"
+    },
+    {
+      "uid": 57466,
+      "iso": "GB",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "THRIVING TIMES INTERNATIONAL CO LTD (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57466"
+    },
+    {
+      "uid": 57467,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "NEW FUSION (Vessel)",
+      "value_usd": null,
+      "description": "(Linked To: THRIVING TIMES INTERNATIONAL CO LTD)",
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57467"
+    },
+    {
+      "uid": 57468,
+      "iso": null,
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "ONBOARD SHIP MANAGEMENT LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13846"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57468"
+    },
+    {
+      "uid": 57488,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "NASSER GHASEMI RAD AND ASSOCIATES PARTNERSHIP COMPANY (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57488"
+    },
+    {
+      "uid": 57489,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "Nasser GHASEMI RAD (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57489"
+    },
+    {
+      "uid": 57490,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "TAHAYYORI AND ASSOCIATES PARTNERSHIP COMPANY (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57490"
+    },
+    {
+      "uid": 57491,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "Ehsan TAHAYYORI (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57491"
+    },
+    {
+      "uid": 57492,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57492"
+    },
+    {
+      "uid": 57493,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "Pedram PIROUZAN (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57493"
+    },
+    {
+      "uid": 57494,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "Hossein Mohammad REZAEI (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57494"
+    },
+    {
+      "uid": 57504,
+      "iso": "IR",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "Masoud Mohammad REZAEI (Individual)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57504"
+    },
+    {
+      "uid": 57506,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "MULLINGAR TRADING COMPANY LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57506"
+    },
+    {
+      "uid": 57507,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "ATLAS INTERNATIONAL TRADING LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57507"
+    },
+    {
+      "uid": 57508,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "BLINCHE TRADING LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57508"
+    },
+    {
+      "uid": 57509,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "CENTRAL PARK LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57509"
+    },
+    {
+      "uid": 57510,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "LIGHTBORN GOODS TRADING LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57510"
+    },
+    {
+      "uid": 57511,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "SINOBOS LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57511"
+    },
+    {
+      "uid": 57512,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "SISU PRIME LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57512"
+    },
+    {
+      "uid": 57515,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "TERODA INTERNATIONAL LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57515"
+    },
+    {
+      "uid": 57516,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "VERDITA TRADING LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57516"
+    },
+    {
+      "uid": 57517,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "ZOELLA TRADING LIMITED (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57517"
+    },
+    {
+      "uid": 57519,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "DECCAN STAR TRADING L.L.C (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57519"
+    },
+    {
+      "uid": 57524,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "AL SAHRA TRADE PETRO DMCC (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57524"
+    },
+    {
+      "uid": 57525,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "WIGAN TRADING LLC (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57525"
+    },
+    {
+      "uid": 57526,
+      "iso": "AE",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "BAB AL KHANDAQ TRADING COMPANY LLC (Entity)",
+      "value_usd": null,
+      "description": "(Linked To: PEDRAM PIROUZAN AND ASSOCIATES PARTNERSHIP COMPANY)",
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57526"
+    },
+    {
+      "uid": 57527,
+      "iso": "CN",
+      "source": "ofac",
+      "signal_date": "2026-05-01",
+      "title": "ARCHITECTONIC CORP LIMITED (Entity)",
+      "value_usd": null,
+      "description": null,
+      "programs": [
+        "IRAN-EO13902"
+      ],
+      "page_url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=57527"
     }
   ]
 }
